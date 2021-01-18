@@ -1,0 +1,38 @@
+.new-products {
+    margin-bottom: 10rem;
+}
+
+.new-products__heading {
+    margin-bottom: 4.5rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 27.7rem;
+        height: 6.53rem;
+        background-image: url('../img/splashes/new-products-heading-splash.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -1;
+        pointer-events: none;
+       
+    }
+}
+
+
+.new-products__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1.5rem;
+}
+
+.new-products__list-item {
+    width: 25%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}

@@ -6,7 +6,6 @@
     @return m#{i}n(#{$numbers});
 }
 
-
 @mixin noHighlight() {
     -webkit-tap-highlight-color: transparent;
 }
@@ -38,7 +37,6 @@
     }
 }
 
-
 @mixin fullpageBG {
     position: relative;
     background: none;
@@ -52,6 +50,12 @@
         bottom: 0;
         @content;
     }
+}
+
+@mixin noDrag() {
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-app-region: no-drag;
 }
 
 @mixin objectFitCover() {
@@ -82,7 +86,6 @@
     object-position: center bottom;
     font-family: 'object-fit: contain; object-position: center bottom;';
 }
-
 
 @mixin noScrollbar {
     &::-webkit-scrollbar * {
