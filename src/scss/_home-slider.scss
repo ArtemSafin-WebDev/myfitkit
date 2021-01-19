@@ -181,6 +181,29 @@
     background-image: url('../img/splashes/home-slider-bottom-corner-pale-yellow-splash.svg');
 }
 
+.home-slider__card-bottom-left-pale-yellow-dash,
+.home-slider__card-bottom-left-biege-dash {
+    position: absolute;
+    width: 13.6rem;
+    height: 0.4rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: -1;
+    pointer-events: none;
+    left: 32.2rem;
+    bottom: -.65rem;
+}
+
+.home-slider__card-bottom-left-pale-yellow-dash {
+    background-image: url('../img/splashes/home-slider-bottom-left-pale-yellow-dash.svg');
+}
+
+.home-slider__card-bottom-left-biege-dash {
+    background-image: url('../img/splashes/home-slider-bottom-left-biege-dash.svg');
+}
+
 .home-slider__card-content {
     padding: 8.8rem 10.8rem;
     margin-right: auto;
