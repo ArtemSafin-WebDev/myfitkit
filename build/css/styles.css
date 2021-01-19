@@ -2131,7 +2131,11 @@ select:-webkit-autofill:focus {
   position: relative;
   border-radius: 2.6rem;
   overflow: hidden;
-  margin-bottom: 2.2rem; }
+  margin-bottom: 2.2rem;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden; }
   .our-blog__card-image-container::before {
     content: '';
     padding-bottom: 67%;
