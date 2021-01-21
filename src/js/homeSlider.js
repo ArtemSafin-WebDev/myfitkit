@@ -1,6 +1,6 @@
-import { Swiper, Pagination, Navigation, EffectFade } from 'swiper';
+import { Swiper, Pagination, Navigation, EffectFade, Parallax } from 'swiper';
 
-Swiper.use([Pagination, Navigation, EffectFade]);
+Swiper.use([Pagination, Navigation, EffectFade, Parallax]);
 
 export default function homeSlider() {
     const elements = Array.from(document.querySelectorAll('.js-home-slider'));
@@ -10,12 +10,14 @@ export default function homeSlider() {
 
         new Swiper(container, {
             watchOverflow: true,
-            effect: 'fade',
-            speed: 600,
+            // effect: 'fade',
+            speed: 400,
+            parallax: true,
             longSwipesRatio: 0.25,
-            fadeEffect: {
-                crossFade: true
-            },
+            spaceBetween: 150,
+            // fadeEffect: {
+            //     crossFade: true
+            // },
             navigation: {
                 nextEl: element.querySelector('.home-slider__arrow--next'),
                 prevEl: element.querySelector('.home-slider__arrow--prev')

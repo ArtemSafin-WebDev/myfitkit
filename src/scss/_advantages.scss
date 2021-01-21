@@ -14,7 +14,6 @@
 }
 
 .advantages__list-item {
-   
     padding: 2rem 4rem;
 
     &:nth-child(3n + 1) {
@@ -43,6 +42,27 @@
 }
 
 .advantages__card {
+    position: relative;
+
+
+    &:hover {
+        .advantages__card-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transition: opacity .3s, visibility .3s;
+        }
+
+        .advantages__card-wrapper {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .3s, visibility 0s linear .3s;
+        }
+    }
+}
+
+
+.advantages__card-wrapper {
+    transition: opacity .3s, visibility .3s;
     display: flex;
 }
 
@@ -81,4 +101,71 @@
     font-weight: bold;
     font-size: 2rem;
     line-height: 2.4rem;
+}
+
+
+
+.advantages__card-dropdown {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 30;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility 0s linear .3s;
+    cursor: default;
+}
+
+.advantages__card-dropdown-inner {
+    width: 42rem;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.advantages__card-dropdown-bg {
+    max-width: 100%;
+    max-height: none;
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  
+
+    &--1 {
+        width: 42rem;
+        margin-top: -2rem;
+        margin-left: -1rem;
+    }
+
+
+    &--2 {
+        width: 51.6rem;
+        margin-top: -2rem;
+        margin-left: -2rem;
+    }
+
+    &--3 {
+        width: 41rem;
+        margin-left: 3rem;
+    }
+   
+
+    @include objectFitContain();
+}
+
+.advantages__card-dropdown-text {
+    max-width: 18rem;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    color: #531918;
+    font-family: var(--roboto);
 }

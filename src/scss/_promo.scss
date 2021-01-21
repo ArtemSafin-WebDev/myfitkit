@@ -26,9 +26,14 @@
     padding: 5rem;
     padding-top: 6rem;
     position: relative;
+    transition: transform .3s;
     &:link,
     &:visited {
         color: var(--brown);
+    }
+
+    .no-touch &:hover {
+        transform: scale(.995);
     }
 
     &--1 {

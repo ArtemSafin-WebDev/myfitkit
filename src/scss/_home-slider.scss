@@ -243,7 +243,9 @@
     }
 
     .swiper-container {
-        overflow: visible;
+        padding: 4rem;
+        margin: -4rem;
+        // overflow: visible;
     }
 }
 
@@ -272,7 +274,7 @@
     top: 50%;
     transform: translateY(-50%);
     color: var(--brown);
-    transition: color .2s, opacity .2s, visibility .2s;
+    transition: color .2s, opacity .2s, visibility .2s, transform .2s;
     z-index: 15;
     cursor: pointer;
     &.swiper-button-disabled {
@@ -282,18 +284,27 @@
         cursor: default;
     }
 
-    &:not(.swiper-button-disabled) {
-        &:hover {
-            color: var(--primary-color);
-        }
-    }
+   
 
     &--prev {
         left: -3.6rem;
+
+        &:not(.swiper-button-disabled) {
+            &:hover {
+                transform: translateY(-50%) translateX(-1rem);
+            }
+        }
+
     }
 
     &--next {
         right: -3.6rem;
+
+        &:not(.swiper-button-disabled) {
+            &:hover {
+                transform: translateY(-50%) translateX(1rem);
+            }
+        }
     }
 
   
@@ -308,7 +319,7 @@
 
 .home-slider__pagination {
     position: absolute;
-    bottom: 3.8rem;
+    bottom: 7.8rem;
     display: flex;
     align-items: center;
     left: 11rem;
