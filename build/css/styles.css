@@ -2329,10 +2329,10 @@ select:-webkit-autofill:focus {
   padding: 5rem;
   padding-top: 6rem;
   position: relative;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s; }
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s; }
   .promo__card:link, .promo__card:visited {
     color: var(--brown); }
   .no-touch .promo__card:hover {
@@ -2564,6 +2564,63 @@ select:-webkit-autofill:focus {
       z-index: -1;
       pointer-events: none;
       background-image: url("../img/splashes/promo-card-bottom-red-dash.svg"); }
+  .promo__card--4::before {
+    content: '';
+    right: 9rem;
+    top: -.6rem;
+    width: 16.5rem;
+    position: absolute;
+    height: 0.4rem;
+    background-image: url("../img/splashes/promo-4-top-splash.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none; }
+  .promo__card--4::after {
+    content: '';
+    position: absolute;
+    width: 12.9rem;
+    height: 0.5rem;
+    pointer-events: none;
+    background-image: url("../img/splashes/promo-4-bottom-splash.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    left: 4.4rem;
+    bottom: -.6rem; }
+  .promo__card--4 .promo__card-title {
+    font-weight: 900;
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 2.4rem; }
+  .promo__card--4 .promo__card-numbers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+  .promo__card--4 .promo__card-number-digits {
+    font-weight: 900;
+    font-size: 3.2rem;
+    line-height: 4.4rem;
+    letter-spacing: -0.05rem; }
+  .promo__card--4 .promo__card-number {
+    font-size: 1.4rem;
+    line-height: 1;
+    color: #df633c;
+    text-align: center;
+    margin-right: 1rem; }
+    .promo__card--4 .promo__card-number:last-child {
+      margin-right: 0; }
+  .promo__card--4 .promo__card-number-text {
+    font-family: var(--roboto);
+    margin-top: -0.3rem; }
+  .promo__card--4 .promo__card-btn {
+    margin-top: auto; }
+  .promo__card--4 .promo__card-image {
+    width: 38.6rem;
+    position: absolute;
+    right: 0;
+    bottom: 0; }
 
 .new-products {
   margin-bottom: 10rem; }
