@@ -3,7 +3,27 @@
     position: relative;
     z-index: 600;
 
-    
+    &--biege {
+        background-color: #FAEFE6;
+
+        &::before {
+            content: '';
+            height: 18.2rem;
+            width: 100%;
+            background-size: auto 100%;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-image: url('../img/splashes/header-biege-splashes.png');
+            pointer-events: none;
+            z-index: -1;
+            max-width: none;
+            position: absolute;
+            left: 50%;
+            margin-left: -4rem;
+            top: 0;
+            transform: translateX(-50%);
+        }
+    }
 }
 
 .page-header__row {
@@ -11,11 +31,14 @@
     align-items: center;
     justify-content: space-between;
     min-height: 8rem;
-    // background-color: #fff;
+   
     color: var(--brown);
     position: relative;
     z-index: 1;
+}
 
+
+.page-header:not(.page-header--biege) .page-header__row {
     &::before {
         content: '';
         width: 66.9rem;
@@ -31,7 +54,6 @@
         pointer-events: none;
     }
 }
-
 
 
 .page-header__city-link {
@@ -164,6 +186,13 @@
         background-position: center bottom;
     }
   
+
+    .page-header--biege & {
+        &::before {
+            background-image: url('../img/splashes/logo-splash-biege.svg');
+        }
+      
+    }
     
 }
 

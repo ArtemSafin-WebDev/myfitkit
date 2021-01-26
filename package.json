@@ -23,6 +23,7 @@
     "css-vars-ponyfill": "^2.1.2",
     "custom-event-polyfill": "^1.0.7",
     "detect-it": "^3.0.5",
+    "events-polyfill": "^2.1.2",
     "inputmask": "^4.0.8",
     "lazysizes": "^5.2.0",
     "moment": "^2.24.0",

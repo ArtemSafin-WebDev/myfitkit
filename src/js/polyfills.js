@@ -2,7 +2,7 @@
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 import smoothscroll from 'smoothscroll-polyfill';
-import 'custom-event-polyfill';
+import 'events-polyfill';
 import 'classlist-polyfill';
 
 smoothscroll.polyfill();
