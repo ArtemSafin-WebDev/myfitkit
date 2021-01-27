@@ -1,5 +1,9 @@
 .home-slider {
     margin-bottom: 6rem;
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 5rem;
+    }
 }
 
 .home-slider__card {
@@ -8,7 +12,7 @@
     align-items: center;
     position: relative;
     z-index: 2;
-  
+
     justify-content: space-between;
     background-size: cover;
     background-position: right center;
@@ -18,6 +22,14 @@
     transform: translateZ(0);
 
     background-image: var(--desktop-bg);
+
+    @include breakpoint(tablet) {
+        min-height: 48rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        min-height: 42rem;
+    }
 
     @include breakpoint(mobile) {
         background-image: var(--mobile-bg);
@@ -39,9 +51,16 @@
     position: absolute;
     left: 0;
     top: 0;
+
     width: 100%;
     height: 100%;
-    @include objectFitCoverRightCenter();
+    max-width: none;
+    @include objectFitCoverLeftCenter();
+
+    @include breakpoint(tablet) {
+        left: -5rem;
+        width: calc(100% + 5rem);
+    }
 }
 
 .home-slider__card-pale-yellow-splash,
@@ -49,7 +68,7 @@
     position: absolute;
     width: 47.9rem;
     height: 51.3rem;
-   
+
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -57,6 +76,13 @@
     bottom: -4.3rem;
     pointer-events: none;
     z-index: -1;
+
+    @include breakpoint(small-tablet) {
+        width: 40.6rem;
+        height: 43.5rem;
+        left: -3.7rem;
+        bottom: -3rem;
+    }
 }
 
 .home-slider__card-pale-yellow-splash {
@@ -74,12 +100,19 @@
     bottom: -4.1rem;
     width: 50rem;
     height: 51.7rem;
- 
+
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
     pointer-events: none;
+
+    @include breakpoint(small-tablet) {
+        width: 42.5rem;
+        height: 44rem;
+        right: -4rem;
+        bottom: -2rem;
+    }
 }
 
 .home-slider__card-saturated-yellow-splash {
@@ -95,9 +128,9 @@
     position: absolute;
     width: 4.7rem;
     height: 6.7rem;
-    top: -.3rem;
+    top: -0.3rem;
     right: -1.1rem;
-    
+
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -121,11 +154,16 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-   
-    bottom: -.8rem;
+
+    bottom: -0.8rem;
     right: 41%;
     z-index: -1;
     pointer-events: none;
+
+    @include breakpoint(small-tablet) {
+        right: 30%;
+        bottom: -.7rem;
+    }
 }
 
 .home-slider__card-bottom-long-yellow-splash {
@@ -142,13 +180,12 @@
     z-index: 12;
     pointer-events: none;
     right: 9.1rem;
-    top: -.8rem;
+    top: -0.8rem;
     width: 10.8rem;
     height: 0.384rem;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-  
 }
 
 .home-slider__card-top-yellow-splash {
@@ -193,7 +230,11 @@
     z-index: -1;
     pointer-events: none;
     left: 32.2rem;
-    bottom: -.65rem;
+    bottom: -0.65rem;
+
+    @include breakpoint(small-tablet) {
+        display: none;
+    }
 }
 
 .home-slider__card-bottom-left-pale-yellow-dash {
@@ -209,8 +250,17 @@
     margin-right: auto;
     position: relative;
     z-index: 15;
-}
 
+    @include breakpoint(tablet) {
+        padding-left: 8.1rem;
+        padding-right: 8.1rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        padding-left: 6.2rem;
+        padding-right: 0;
+    }
+}
 
 .home-slider__card-image {
     width: 46.5rem;
@@ -221,9 +271,26 @@
     position: relative;
     margin-bottom: -10rem;
 
+    @include breakpoint(tablet) {
+        width: 40.9rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        width: 34rem;
+        margin-right: 15rem;
+        margin-left: 1rem;
+        margin-bottom: -11rem;
+    }
+
     &--2 {
         margin-bottom: -6rem;
         margin-right: 10rem;
+
+        @include breakpoint(small-tablet) {
+            margin-right: 15rem;
+            margin-left: -4rem;
+            width: 34rem;
+        }
     }
 }
 
@@ -233,6 +300,18 @@
     font-size: 4.4rem;
     line-height: 4.8rem;
     letter-spacing: -0.05rem;
+
+    @include breakpoint(tablet) {
+        font-weight: 900;
+        font-size: 4rem;
+        line-height: 4.8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        font-weight: 900;
+        font-size: 3.2rem;
+        line-height: 4.2rem;
+    }
 }
 
 .home-slider__wrapper {
@@ -248,7 +327,6 @@
         // overflow: visible;
     }
 }
-
 
 .home-slider__card-btn {
     &::before {
@@ -268,37 +346,50 @@
     }
 }
 
-
 .home-slider__arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     color: var(--brown);
-    transition: color .2s, opacity .2s, visibility .2s, transform .2s;
+    transition: color 0.2s, opacity 0.2s, visibility 0.2s, transform 0.2s;
     z-index: 15;
     cursor: pointer;
     &.swiper-button-disabled {
         opacity: 0;
         visibility: hidden;
-        transition: color .2s, opacity .2s, visibility 0s linear .2s;
+        transition: color 0.2s, opacity 0.2s, visibility 0s linear 0.2s;
         cursor: default;
     }
 
-   
-
     &--prev {
         left: -3.6rem;
+
+        @include breakpoint(tablet) {
+            left: -3rem;
+        }
+
+
+        @include breakpoint(small-tablet) {
+            left: -2.2rem;
+        }
 
         &:not(.swiper-button-disabled) {
             &:hover {
                 transform: translateY(-50%) translateX(-1rem);
             }
         }
-
     }
 
     &--next {
         right: -3.6rem;
+
+        @include breakpoint(tablet) {
+            right: -3rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            right: -2.2rem;
+        }
 
         &:not(.swiper-button-disabled) {
             &:hover {
@@ -307,15 +398,23 @@
         }
     }
 
-  
     svg {
         display: block;
         width: 6.2rem;
         height: 4.2rem;
         fill: currentColor;
+
+        @include breakpoint(tablet) {
+            width: 5.5rem;
+            height: 3.7rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            width: 3.9rem;
+            height: 2.7rem;
+        }
     }
 }
-
 
 .home-slider__pagination {
     position: absolute;
@@ -325,6 +424,16 @@
     left: 11rem;
     z-index: 30;
     padding: 1.2rem;
+
+    @include breakpoint(tablet) {
+        bottom: 8rem;
+        left: 8.1rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        left: 6.1rem;
+        bottom: 7rem;
+    }
 }
 
 .home-slider__pagination-bullet {
@@ -336,7 +445,8 @@
     width: auto;
     height: auto;
     background: none;
-    transition: color .2s;
+    transition: color 0.2s;
+    font-size: 1.8rem;
     &::before {
         content: '';
         position: absolute;
@@ -348,11 +458,10 @@
         background-color: #fff;
         transform: translate(-50%, -50%);
         opacity: 0;
-        transition: opacity .2s;
+        transition: opacity 0.2s;
         // pointer-events: none;
         z-index: -1;
     }
-
 
     &.swiper-pagination-bullet-active {
         color: var(--brown);
@@ -361,7 +470,6 @@
         }
     }
 }
-
 
 .home-slider__pagination-bullet-divider {
     margin: 0 1.9rem;

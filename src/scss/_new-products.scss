@@ -1,9 +1,21 @@
 .new-products {
     margin-bottom: 10rem;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 9rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 8rem;
+    }
 }
 
 .new-products__heading {
     margin-bottom: 4.5rem;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 3rem;
+    }
 
     &::before {
         content: '';
@@ -35,4 +47,13 @@
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
+
+
+    @include breakpoint(small-tablet) {
+        width: 33.33%;
+        &:nth-child(n+4) {
+            display: none;
+
+        }
+    }
 }

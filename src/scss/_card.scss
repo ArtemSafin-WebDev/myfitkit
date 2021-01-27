@@ -8,13 +8,13 @@
         .card__outer-wrapper {
             opacity: 1;
             visibility: inherit;
-            transition: opacity .3s, visibility .3s;
+            transition: opacity 0.3s, visibility 0.3s;
         }
 
         .card__gallery-pagination {
             opacity: 1;
             visibility: inherit;
-            transition: opacity .3s, visibility .3s;
+            transition: opacity 0.3s, visibility 0.3s;
         }
     }
 }
@@ -152,6 +152,11 @@
             color: inherit;
         }
     }
+
+    @include breakpoint(tablet) {
+        font-size: 2rem;
+        line-height: 2.6rem;
+    }
 }
 
 .card__description {
@@ -169,6 +174,10 @@
             color: inherit;
         }
     }
+
+    @include breakpoint(tablet) {
+        
+    }
 }
 
 .card__price-from {
@@ -177,7 +186,11 @@
     line-height: 1.2;
     color: var(--brown);
     font-family: var(--roboto);
-    
+
+    @include breakpoint(small-tablet) {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
 
     &--no-price-variants {
         position: relative;
@@ -205,7 +218,7 @@
     flex-direction: column;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .3s, visibility 0s linear .3s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
 
     &--no-price-variants {
         bottom: -3.2rem;
@@ -244,7 +257,6 @@
     font-size: 1.4rem;
     line-height: 2.2rem;
     color: #8b8b8b;
-  
 }
 
 .card__price-variants-card-price {
@@ -253,7 +265,6 @@
     line-height: 1.2;
     color: var(--brown);
 }
-
 
 .card__gallery-pagination {
     position: absolute;
@@ -266,7 +277,7 @@
     justify-content: center;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .3s, visibility 0s linear .3s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
 
     &.swiper-pagination-lock {
         display: none;
@@ -275,11 +286,11 @@
         width: 0.8rem;
         height: 0.8rem;
         border-radius: 50%;
-        background: #D9D9D9;
-        margin: 0 .5rem;
+        background: #d9d9d9;
+        margin: 0 0.5rem;
         flex-shrink: 0;
         opacity: 1;
-        transition: background-color .2s;
+        transition: background-color 0.2s;
     }
 
     .swiper-pagination-bullet-active {

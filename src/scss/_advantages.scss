@@ -1,9 +1,21 @@
 .advantages {
     margin-bottom: 7rem;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 5rem;
+    }
 }
 
 .advantages__content {
     padding: 0rem 3.2rem;
+
+    @include breakpoint(tablet) {
+        padding: 0;
+    }
 }
 
 .advantages__list {
@@ -11,10 +23,17 @@
 
     justify-content: space-between;
     margin: -2rem -4rem;
+    @include breakpoint(small-tablet) {
+        margin: -1rem;
+    }
 }
 
 .advantages__list-item {
     padding: 2rem 4rem;
+
+    @include breakpoint(small-tablet) {
+        padding: 1rem;
+    }
 
     &:nth-child(3n + 1) {
         .advantages__card-content {
@@ -44,25 +63,23 @@
 .advantages__card {
     position: relative;
 
-
     &:hover {
         .advantages__card-dropdown {
             opacity: 1;
             visibility: visible;
-            transition: opacity .3s, visibility .3s;
+            transition: opacity 0.3s, visibility 0.3s;
         }
 
         .advantages__card-wrapper {
             opacity: 0;
             visibility: hidden;
-            transition: opacity .3s, visibility 0s linear .3s;
+            transition: opacity 0.3s, visibility 0s linear 0.3s;
         }
     }
 }
 
-
 .advantages__card-wrapper {
-    transition: opacity .3s, visibility .3s;
+    transition: opacity 0.3s, visibility 0.3s;
     display: flex;
 }
 
@@ -73,6 +90,18 @@
     margin-right: 2.2rem;
 
     @include objectFitContain();
+
+    @include breakpoint(tablet) {
+        width: 5.1rem;
+        height: 5.1rem;
+        margin-right: 2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        width: 4.5rem;
+        height: 4.5rem;
+        margin-right: 1.7rem;
+    }
 }
 
 .advantages__card-content {
@@ -82,7 +111,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem 0;
+    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+
+    @include breakpoint(tablet) {
+        padding-top: 0;
+        padding-bottom: 1.5rem;
+    }
     &::before {
         content: '';
         width: 100%;
@@ -101,9 +136,17 @@
     font-weight: bold;
     font-size: 2rem;
     line-height: 2.4rem;
+
+    @include breakpoint(tablet) {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
 }
-
-
 
 .advantages__card-dropdown {
     position: absolute;
@@ -113,7 +156,7 @@
     z-index: 30;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .3s, visibility 0s linear .3s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
     cursor: default;
 }
 
@@ -125,7 +168,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 }
 
 .advantages__card-dropdown-bg {
@@ -138,14 +180,12 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
-  
 
     &--1 {
         width: 42rem;
         margin-top: -2rem;
         margin-left: -1rem;
     }
-
 
     &--2 {
         width: 51.6rem;
@@ -157,7 +197,6 @@
         width: 41rem;
         margin-left: 3rem;
     }
-   
 
     @include objectFitContain();
 }

@@ -1,5 +1,9 @@
 .our-blog {
     margin-bottom: 13rem;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 10rem;
+    }
 }
 
 .our-blog__heading {
@@ -23,6 +27,25 @@
     }
 }
 
+.our-blog__content {
+    position: relative;
+    z-index: 1;
+    &::before {
+        content: '';
+        z-index: -1;
+        pointer-events: none;
+        width: 25.4rem;
+        height: 23.9rem;
+        background-image: url('../img/splashes/our-blog-splash.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        left: -3rem;
+        top: -3rem;
+    }
+}
+
 .our-blog__list {
     display: flex;
     flex-wrap: wrap;
@@ -34,6 +57,13 @@
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(tablet) {
+        width: 33.33%;
+        &:nth-child(n+4) {
+            display: none;
+        }
+    }
 }
 
 .our-blog__card {

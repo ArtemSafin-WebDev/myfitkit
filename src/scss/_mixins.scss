@@ -74,6 +74,11 @@
     object-position: right center;
     font-family: 'object-fit: cover; object-position: right center;';
 }
+@mixin objectFitCoverLeftCenter() {
+    object-fit: cover;
+    object-position: left center;
+    font-family: 'object-fit: cover; object-position: left center;';
+}
 
 @mixin objectFitContain() {
     object-fit: contain;

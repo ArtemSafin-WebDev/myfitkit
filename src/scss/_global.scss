@@ -17,6 +17,10 @@
     --roboto: 'Roboto', sans-serif;
     --open-sans: 'Open Sans', sans-serif;
     --ruda: 'Ruda', sans-serif;
+
+    @include breakpoint(small-tablet) {
+        --content-padding: 3rem;
+    }
 }
 
 html {
@@ -25,6 +29,26 @@ html {
     -webkit-text-size-adjust: 100%;
   
     @include noHighlight();
+
+
+    @media screen and (max-width: 1258px) {
+        font-size: 9px;
+    }
+
+
+    @media screen and (max-width: 1200px) {
+        font-size: 8.6px;
+    }
+    @media screen and (max-width: 1160px) {
+        font-size: 8px;
+    }
+    @media screen and (max-width: 1060px) {
+        font-size: 7.5px;
+    }
+
+    @media screen and (max-width: 1024px) {
+        font-size: 10px;
+    }
 }
 
 body {

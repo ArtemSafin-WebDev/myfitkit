@@ -64,6 +64,7 @@
 
     &:nth-child(3) {
         flex-basis: 30rem;
+        flex-shrink: 0;
         .page-footer__col-heading::after {
             background-image: url('../img/splashes/footer-menu-splash-3.svg');
             width: 15rem;

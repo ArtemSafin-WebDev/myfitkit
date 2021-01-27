@@ -1,10 +1,9 @@
-
 .page-header {
     position: relative;
     z-index: 600;
 
     &--biege {
-        background-color: #FAEFE6;
+        background-color: #faefe6;
 
         &::before {
             content: '';
@@ -31,12 +30,11 @@
     align-items: center;
     justify-content: space-between;
     min-height: 8rem;
-   
+
     color: var(--brown);
     position: relative;
     z-index: 1;
 }
-
 
 .page-header:not(.page-header--biege) .page-header__row {
     &::before {
@@ -52,9 +50,22 @@
         position: absolute;
         top: -3rem;
         pointer-events: none;
+
+        @include breakpoint(tablet) {
+            width: 53.3rem;
+            height: 16.7rem;
+            right: 3rem;
+            top: 0;
+        }
+
+        @include breakpoint(small-tablet) {
+            width: 44rem;
+            height: 16rem;
+            right: -4rem;
+            top: -1rem;
+        }
     }
 }
-
 
 .page-header__city-link {
     display: inline-flex;
@@ -62,7 +73,7 @@
     font-size: 1.6rem;
     line-height: 1.9rem;
     color: var(--primary-color);
-    transition: color .2s;
+    transition: color 0.2s;
     font-family: var(--roboto);
     svg {
         width: 1.2rem;
@@ -79,18 +90,28 @@
     }
 }
 
-
 .page-header__navigation {
     width: 40%;
     flex-grow: 1;
     display: flex;
-    align-items: center;
+
+    align-self: stretch;
 }
 
 .page-header__navigation-links {
     display: flex;
-    align-items: baseline;
+    align-items: stretch;
     flex-basis: 28.8rem;
+
+    @include breakpoint(tablet) {
+        flex-basis: 30.5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        flex-basis: 20rem;
+        flex-grow: 1;
+        justify-content: center;
+    }
     &:first-child {
         margin-left: auto;
         .page-header__navigation-link {
@@ -126,9 +147,51 @@
     font-weight: bold;
     font-size: 1.8rem;
     line-height: 2.4rem;
-    transition: color .2s;
+    transition: color 0.2s;
     padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    white-space: nowrap;
+
+    @include breakpoint(tablet) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        align-items: center;
+    }
+
+    .no-touch &:hover {
+        color: var(--primary-color);
+        .page-header__navigation-link-text::after {
+            opacity: 1;
+        }
+    }
+}
+
+.page-header__navigation-link {
+    @include breakpoint(small-tablet) {
+        display: none;
+    }
+}
+
+.page-header__navigation-link-wrapper {
+    .page-header__navigation-link {
+        margin: 0 !important;
+    }
+    @include breakpoint(small-tablet) {
+        .page-header__navigation-link {
+            display: flex;
+        }
+    }
+}
+
+.page-header__navigation-link-text {
     position: relative;
+
     &::after {
         content: '';
         position: absolute;
@@ -143,13 +206,7 @@
         background-position: center;
         opacity: 0;
         pointer-events: none;
-        transition: opacity .2s;
-    }
-    .no-touch &:hover {
-        color: var(--primary-color);
-        &::after {
-            opacity: 1;
-        }
+        transition: opacity 0.2s;
     }
 }
 
@@ -159,6 +216,20 @@
     width: 19.2rem;
     // position: relative;
     align-self: flex-start;
+
+    @include breakpoint(tablet) {
+        width: 15rem;
+        margin: 0;
+    }
+
+
+    @include breakpoint(small-tablet) {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        width: 12rem;
+    }
 }
 
 .page-header__navigation-logo {
@@ -173,6 +244,17 @@
 
     z-index: 10;
 
+    @include breakpoint(tablet) {
+        width: 15rem;
+        height: 20rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        width: 14rem;
+        height: 18rem;
+    }
+
+
     &::before {
         content: '';
         position: absolute;
@@ -184,48 +266,74 @@
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: center bottom;
+
+        @include breakpoint(tablet) {
+            top: -1rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            top: 0;
+        }
     }
-  
 
     .page-header--biege & {
         &::before {
             background-image: url('../img/splashes/logo-splash-biege.svg');
         }
-      
     }
-    
 }
-
-
 
 .page-header__navigation-logo-image {
     width: 6.8rem;
-    height: 12rem;
+    height: auto;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 1.2rem;
-}
 
+    @include breakpoint(tablet) {
+        width: 6rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        width: 5.5rem;
+    }
+}
 
 .page-header__city,
 .page-header__btns {
     flex-basis: 18rem;
+    flex-shrink: 0;
+
+    @include breakpoint(tablet) {
+        flex-basis: 15rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        flex-basis: auto;
+    }
 }
 
 .page-header__city {
     margin-right: 2rem;
     position: relative;
-    bottom: -.25rem;
+    bottom: -0.25rem;
+
+    @include breakpoint(small-tablet) {
+        bottom: auto;
+    }
 }
-
-
 
 .page-header__btns {
     display: flex;
     align-items: center;
     margin-left: 2rem;
     justify-content: flex-end;
+
+    @include breakpoint(small-tablet) {
+        width: 21.5rem;
+        justify-content: space-between;
+    }
 }
 
 .page-header__btn {
@@ -257,7 +365,6 @@
     }
 }
 
-
 .page-header__btn-count {
     position: absolute;
     width: 2rem;
@@ -270,7 +377,145 @@
     color: white;
     text-align: center;
     background-color: var(--brown);
-    transition: background-color .2s;
+    transition: background-color 0.2s;
     right: -1rem;
     top: -1rem;
+}
+
+.page-header__navigation-link-wrapper {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 2rem;
+    // position: relative;
+
+    @include breakpoint(small-tablet) {
+        margin-right: 0;
+    }
+
+    &:hover {
+        .page-header__navigation-dropdown {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+    }
+}
+
+.page-header__navigation-dropdown {
+    position: absolute;
+    padding-top: 1rem;
+    top: 100%;
+    left: 0;
+    width: calc(100vw - var(--content-padding) * 2);
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+    display: none;
+}
+
+.page-header__navigation-dropdown-inner {
+    background-color: #fff;
+    border-radius: 4rem;
+    padding: 4rem;
+}
+
+.page-header__navigation-dropdown-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -2.5rem -3rem;
+}
+
+.page-header__navigation-dropdown-list-item {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    padding: 2.5rem 3rem;
+}
+
+.page-header__navigation-dropdown-card {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: var(--roboto);
+    &:link,
+    &:visited {
+        color: var(--brown);
+    }
+}
+
+.page-header__navigation-dropdown-card-image-container {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    &::after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+    }
+}
+
+.page-header__navigation-dropdown-card-image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    @include objectFitContain();
+    z-index: 1;
+}
+
+.page-header__navigation-dropdown-card-title {
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-header__navigation-dropdown-card-desc {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #555555;
+}
+
+.page-header__navigation-dropdown-card-price {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+}
+
+.page-header__table-burger {
+    flex-shrink: 0;
+    margin-right: 3.4rem;
+    display: none;
+    align-self: center;
+    @include breakpoint(small-tablet) {
+        display: block;
+    }
+}
+
+.page-header__table-burger-content {
+    display: flex;
+    flex-direction: column;
+
+    span {
+        width: 28px;
+        height: 3px;
+        background: #531918;
+        border-radius: 10px;
+        display: block;
+        margin-bottom: 7px;
+
+        &:nth-child(2) {
+            width: 22px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 }

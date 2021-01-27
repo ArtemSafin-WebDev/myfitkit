@@ -1,11 +1,22 @@
 .promo {
     margin-bottom: 10rem;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 8rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 7rem;
+    }
 }
 
 .promo__list {
     display: flex;
     flex-wrap: wrap;
     margin: -1.4rem;
+    @include breakpoint(small-tablet) {
+        margin: -2rem;
+    }
 }
 
 .promo__list-item {
@@ -13,6 +24,10 @@
     padding: 1.4rem;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(small-tablet) {
+        padding: 2rem;
+    }
 }
 
 .promo__card {
@@ -36,6 +51,16 @@
         transform: scale(0.995);
     }
 
+    @include breakpoint(tablet) {
+        padding: 4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        padding: 3rem;
+        padding-bottom: 4rem;
+        min-height: 43.4rem;
+    }
+
     &--1 {
         background-color: var(--pale-yellow);
         color: var(--brown);
@@ -49,6 +74,19 @@
             color: var(--brown);
         }
 
+        @include breakpoint(tablet) {
+            background-size: 33.3rem 32.2rem;
+            background-position: bottom right 4.7rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            background-size: 27.8rem 26.8rem;
+            background-position: center bottom 4.4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         .promo__card-top-dash {
             width: 12.2rem;
             height: 0.53rem;
@@ -60,6 +98,10 @@
             left: 6.7rem;
             top: -0.7rem;
             pointer-events: none;
+
+            @include breakpoint(small-tablet) {
+                left: 3.4rem;
+            }
         }
 
         .promo__card-bottom-left-dash {
@@ -74,6 +116,10 @@
             background-position: center;
             z-index: -1;
             pointer-events: none;
+
+            @include breakpoint(small-tablet) {
+                left: 4.4rem;
+            }
         }
 
         .promo__card-title {
@@ -82,6 +128,23 @@
             line-height: 4.4rem;
             letter-spacing: -0.05rem;
             margin-bottom: 2rem;
+
+            @include breakpoint(tablet) {
+                font-weight: 900;
+                font-size: 3.4rem;
+                line-height: 4.4rem;
+
+                br {
+                    display: none;
+                }
+            }
+
+            @include breakpoint(small-tablet) {
+                font-size: 3.2rem;
+                line-height: 4rem;
+                margin-bottom: 1rem;
+                text-align: center;
+            }
         }
 
         .promo__card-text {
@@ -89,10 +152,28 @@
             line-height: 2.6rem;
             margin-bottom: 3rem;
             font-family: var(--roboto);
+
+            @include breakpoint(small-tablet) {
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+                text-align: center;
+                margin-bottom: 2rem;
+
+                align-self: stretch;
+
+                br {
+                    display: none;
+                }
+            }
         }
 
         .promo__card-btn {
             margin-top: auto;
+
+            @include breakpoint(small-tablet) {
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
 
         .promo__card-image {
@@ -103,6 +184,19 @@
             right: 0rem;
             @include objectFitContain();
             z-index: -1;
+
+            @include breakpoint(tablet) {
+                width: 35rem;
+                bottom: -3.2rem;
+                right: 3.8rem;
+            }
+
+            @include breakpoint(small-tablet) {
+                width: 28rem;
+                bottom: 2.8rem;
+                right: 50%;
+                transform: translateX(50%);
+            }
         }
     }
 
@@ -128,6 +222,13 @@
             background-position: center;
             left: -4.1rem;
             top: -4.6rem;
+
+            @include breakpoint(small-tablet) {
+                width: 22.8rem;
+                height: 20rem;
+                top: -2.7rem;
+                left: -2.3rem;
+            }
         }
 
         &::after {
@@ -143,6 +244,13 @@
             background-position: center;
             background-size: contain;
             background-repeat: no-repeat;
+
+            @include breakpoint(small-tablet) {
+                width: 19.2rem;
+                height: 18.3rem;
+                bottom: -2.2rem;
+                right: -2.2rem;
+            }
         }
 
         .promo__card-image {
@@ -152,6 +260,18 @@
             right: 2.7rem;
             bottom: -5.8rem;
             max-width: none;
+
+            @include breakpoint(tablet) {
+                width: 31.2rem;
+                right: 1rem;
+                bottom: -5rem;
+            }
+
+            @include breakpoint(small-tablet) {
+                width: 24.2rem;
+                right: 0;
+                bottom: -1rem;
+            }
         }
 
         .promo__card-btn {
@@ -170,6 +290,10 @@
                 z-index: -1;
                 position: absolute;
             }
+
+            @include breakpoint(small-tablet) {
+                margin-left: 1rem;
+            }
         }
 
         .promo__card-left-scratches {
@@ -183,6 +307,13 @@
             background-position: center;
             position: absolute;
             pointer-events: none;
+
+            @include breakpoint(small-tablet) {
+                width: 3rem;
+                height: 2.9rem;
+                bottom: 1.8rem;
+                left: -0.5rem;
+            }
         }
 
         .promo__card-right-scratches {
@@ -196,6 +327,13 @@
             pointer-events: none;
             right: 0;
             top: 0.5rem;
+
+            @include breakpoint(small-tablet) {
+                width: 5.4rem;
+                height: 3.7rem;
+                right: 0;
+                top: 2.4rem;
+            }
         }
 
         .promo__card-red-right-dash {
@@ -208,6 +346,11 @@
             position: absolute;
             right: 9rem;
             top: -0.6rem;
+
+            @include breakpoint(small-tablet) {
+                width: 8.9rem;
+                right: 4.5rem;
+            }
         }
 
         .promo__card-red-left-dash {
@@ -221,6 +364,11 @@
             background-repeat: no-repeat;
             background-image: url('../img/splashes/promo-red-left-dash.svg');
             position: absolute;
+
+            @include breakpoint(small-tablet) {
+                width: 9.6rem;
+                left: 3.5rem;
+            }
         }
 
         .promo__card-calligraphic-text {
@@ -229,6 +377,18 @@
             margin-left: 1rem;
             pointer-events: none;
             margin-bottom: 2rem;
+
+            @include breakpoint(tablet) {
+                width: 28.4rem;
+                margin-left: 0.7rem;
+                margin-top: 2rem;
+            }
+
+            @include breakpoint(small-tablet) {
+                width: 26.2rem;
+                margin-left: 0.7rem;
+                margin-top: 2.8rem;
+            }
         }
     }
 
@@ -239,6 +399,12 @@
         &:link,
         &:visited {
             color: white;
+        }
+
+        @include breakpoint(small-tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         &::before {
@@ -254,6 +420,13 @@
             background-image: url('../img/splashes/promo-card-strawberry-large-splash.svg');
             z-index: -1;
             pointer-events: none;
+
+            @include breakpoint(small-tablet) {
+                width: 34.5rem;
+                height: 36.4rem;
+                top: -3.6rem;
+                right: -3rem;
+            }
         }
 
         &::after {
@@ -269,6 +442,11 @@
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
+
+            @include breakpoint(small-tablet) {
+                left: 4rem;
+                top: -0.5rem;
+            }
         }
 
         .promo__card-title {
@@ -277,6 +455,21 @@
             line-height: 4.4rem;
             letter-spacing: -0.05rem;
             margin-bottom: 2.5rem;
+
+            @include breakpoint(tablet) {
+                font-weight: 900;
+                font-size: 3.4rem;
+                line-height: 4.4rem;
+                margin-bottom: 2rem;
+            }
+
+            @include breakpoint(small-tablet) {
+                font-weight: 900;
+                font-size: 3.2rem;
+                line-height: 4rem;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
         }
 
         .promo__card-text {
@@ -284,10 +477,22 @@
             line-height: 2.6rem;
             margin-bottom: 3rem;
             font-family: var(--roboto);
+
+            @include breakpoint(small-tablet) {
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+                margin-bottom: 2rem;
+                text-align: center;
+            }
         }
 
         .promo__card-btn {
             margin-top: auto;
+
+            @include breakpoint(small-tablet) {
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
 
         .promo__card-image {
@@ -298,6 +503,18 @@
             pointer-events: none;
             right: 1rem;
             bottom: -4.2rem;
+
+            @include breakpoint(tablet) {
+                width: 31rem;
+                right: 1.2rem;
+                bottom: -3rem;
+            }
+
+            @include breakpoint(small-tablet) {
+                width: 28.7rem;
+                right: 0;
+                bottom: -2.7rem;
+            }
         }
 
         .promo__card-bottom-red-dash {
@@ -312,10 +529,20 @@
             z-index: -1;
             pointer-events: none;
             background-image: url('../img/splashes/promo-card-bottom-red-dash.svg');
+
+            @include breakpoint(small-tablet) {
+                left: 5rem;
+            }
         }
     }
 
     &--4 {
+
+        @include breakpoint(small-tablet) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         &::before {
             content: '';
             right: 9rem;
@@ -349,10 +576,36 @@
             line-height: 4.4rem;
             letter-spacing: -0.5px;
             margin-bottom: 2.4rem;
+
+            @include breakpoint(tablet) {
+                font-weight: 900;
+                font-size: 3.4rem;
+                line-height: 4.4rem;
+                margin-bottom: 2rem;
+            }
+
+            @include breakpoint(small-tablet) {
+                font-weight: 900;
+                font-size: 3.2rem;
+                line-height: 4rem;
+                margin-bottom: 1rem;
+                text-align: center;
+                margin-left: -1rem;
+                margin-right: -1rem;
+                br {
+                    display: none;
+                }
+            }
         }
 
         .promo__card-numbers {
             display: flex;
+            position: relative;
+            z-index: 40;
+
+            @include breakpoint(small-tablet) {
+                display: none;
+            }
         }
 
         .promo__card-number-digits {
@@ -360,6 +613,12 @@
             font-size: 3.2rem;
             line-height: 4.4rem;
             letter-spacing: -0.05rem;
+
+            @include breakpoint(tablet) {
+                font-weight: 900;
+                font-size: 3rem;
+                line-height: 4.4rem;
+            }
         }
 
         .promo__card-number {
@@ -368,6 +627,11 @@
             color: #df633c;
             text-align: center;
             margin-right: 1rem;
+
+            @include breakpoint(tablet) {
+                font-size: 1.4rem;
+                line-height: 1;
+            }
             &:last-child {
                 margin-right: 0;
             }
@@ -380,6 +644,10 @@
 
         .promo__card-btn {
             margin-top: auto;
+            @include breakpoint(small-tablet) {
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
 
         .promo__card-image {
@@ -387,6 +655,15 @@
             position: absolute;
             right: 0;
             bottom: 0;
+
+            @include breakpoint(tablet) {
+                width: 32.5rem;
+                height: auto;
+            }
+
+            @include breakpoint(small-tablet) {
+                
+            }
         }
     }
 
@@ -510,7 +787,7 @@
             background-image: url('../img/splashes/promo-6-bottom-dash.svg');
             position: absolute;
             left: 19.4rem;
-            bottom: -.8rem;
+            bottom: -0.8rem;
         }
     }
 }
