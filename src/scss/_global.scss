@@ -9,14 +9,14 @@
 :root {
     --max-container-width: 128rem;
     --content-padding: 4rem;
-    --primary-color: #E62F48;
-    --pale-yellow: #FEEFD3;
-    --saturated-yellow: #F2CD30;
+    --primary-color: #e62f48;
+    --pale-yellow: #feefd3;
+    --saturated-yellow: #f2cd30;
     --brown: #531918;
     --grey: #555555;
     --roboto: 'Roboto', sans-serif;
-    --open-sans: 'Open Sans', sans-serif;
-    --ruda: 'Ruda', sans-serif;
+    --open-sans: 'Open Sans', 'Roboto', sans-serif;
+    --ruda: 'Ruda', 'Roboto', sans-serif;
 
     @include breakpoint(small-tablet) {
         --content-padding: 3rem;
@@ -30,14 +30,12 @@ html {
     box-sizing: border-box;
     font-size: 10px;
     -webkit-text-size-adjust: 100%;
-  
-    @include noHighlight();
 
+    @include noHighlight();
 
     @media screen and (max-width: 1258px) {
         font-size: 9px;
     }
-
 
     @media screen and (max-width: 1200px) {
         font-size: 8.6px;
@@ -171,7 +169,7 @@ button {
 a {
     background-color: transparent;
     text-decoration: none;
-    transition: color .2s;
+    transition: color 0.2s;
     &:link,
     &:visited {
         color: inherit;
@@ -181,7 +179,7 @@ a {
 svg {
     flex-shrink: 0;
     fill: currentColor;
-    transition: fill .2s;
+    transition: fill 0.2s;
 }
 
 img {
@@ -209,7 +207,8 @@ th {
     font-weight: 400;
 }
 
-td, th {
+td,
+th {
     text-align: left;
     vertical-align: top;
 }

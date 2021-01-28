@@ -1,0 +1,329 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__content">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Главная
+                    </a>
+
+                    <a class="breadcrumbs__link active">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Корзина
+                    </a>
+                </li>
+            </ul>
+            <h1 class="main-heading">
+                <span class="main-heading__cart">
+                    Корзина
+                    <span class="main-heading__cart-count">
+                        3
+                    </span>
+                </span>
+            </h1>
+        </div>
+    </div>
+</div>
+<section class="cart">
+    <div class="container">
+        <form class="cart__row">
+            <div class="cart__left-col">
+                <ul class="cart__items-list">
+                    <li class="cart__items-list-item">
+                        <div class="cart__item js-cart-item">
+                            <div class="cart__item-image-block">
+                                <div class="cart__item-image-container cart__item-image-container--yellow-splash">
+                                    <img src="img/cards/1-1.png" alt="" class="cart__item-image">
+                                </div>
+                                <div class="cart__item-content">
+                                    <h4 class="cart__item-title">
+                                        Protein Cake
+                                    </h4>
+                                    <div class="cart__item-description">
+                                        <p>
+                                            Печенье глазированное <br>
+                                            Вкус: Banana Pudding
+                                        </p>
+                                        <p>
+                                            24 шт.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cart__item-quantity-block">
+                                <div class="cart__item-column-name">
+                                    Количество
+                                </div>
+                                <button class="cart__item-quantity-block-btn cart__item-quantity-block-btn--minus"
+                                    type="button" disabled>
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-minus">
+                                        <use xlink:href="#minus"></use>
+                                    </svg>
+                                </button>
+                                <div class="cart__item-quantity-input-wrapper">
+                                    <input type="text" name="quantity" class="cart__item-quantity-input" readonly
+                                        value="1">
+                                </div>
+                                <button class="cart__item-quantity-block-btn cart__item-quantity-block-btn--plus"
+                                    type="button">
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-plus">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="cart__item-price-block">
+                                <div class="cart__item-column-name">
+                                    Цена
+                                </div>
+                                <div class="cart__item-price-block-inner">
+                                    <div class="cart__item-price-regular">
+                                        2 880 ₽
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart__item-price-block">
+                                <div class="cart__item-column-name">
+                                    Сумма
+                                </div>
+                                <div class="cart__item-price-block-inner">
+                                    <div class="cart__item-price-total">
+                                        2 880 ₽
+                                    </div>
+                                </div>
+
+                            </div>
+                            <button class="cart__item-remove-btn" type="button">
+
+                                <svg width="16" height="16" aria-hidden="true" class="icon-cross">
+                                    <use xlink:href="#cross"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="cart__items-list-item">
+                        <div class="cart__item js-cart-item">
+                            <div class="cart__item-image-block">
+                                <div class="cart__item-image-container cart__item-image-container--yellow-splash">
+                                    <img src="img/cards/4-1.png" alt="" class="cart__item-image">
+                                    <span class="cart__item-sale-label">
+                                        SALE
+                                    </span>
+                                </div>
+                                <div class="cart__item-content">
+                                    <h4 class="cart__item-title">
+                                        Protein Cake
+                                    </h4>
+                                    <div class="cart__item-description">
+                                        <p>
+                                            Печенье глазированное <br>
+                                            Вкус: Banana Pudding
+                                        </p>
+                                        <p>
+                                            24 шт.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cart__item-quantity-block">
+                                <div class="cart__item-column-name">
+                                    Количество
+                                </div>
+                                <button class="cart__item-quantity-block-btn cart__item-quantity-block-btn--minus"
+                                    type="button" disabled>
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-minus">
+                                        <use xlink:href="#minus"></use>
+                                    </svg>
+                                </button>
+                                <div class="cart__item-quantity-input-wrapper">
+                                    <input type="text" name="quantity" class="cart__item-quantity-input" readonly
+                                        value="1">
+                                </div>
+                                <button class="cart__item-quantity-block-btn cart__item-quantity-block-btn--plus"
+                                    type="button">
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-plus">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="cart__item-price-block">
+                                <div class="cart__item-column-name">
+                                    Цена
+                                </div>
+                                <div class="cart__item-price-block-inner">
+                                    <div class="cart__item-price-regular">
+                                        2 880 ₽
+                                    </div>
+                                    <div class="cart__item-old-price">
+                                        3 120 ₽
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart__item-price-block">
+                                <div class="cart__item-column-name">
+                                    Сумма
+                                </div>
+                                <div class="cart__item-price-block-inner">
+                                    <div class="cart__item-price-total">
+                                        2 880 ₽
+                                    </div>
+                                    <div class="cart__item-old-price">
+                                        3 120 ₽
+                                    </div>
+                                </div>
+
+                            </div>
+                            <button class="cart__item-remove-btn" type="button">
+
+                                <svg width="16" height="16" aria-hidden="true" class="icon-cross">
+                                    <use xlink:href="#cross"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="cart__items-list-item">
+                        <div class="cart__item js-cart-item">
+                            <div class="cart__item-image-block">
+                                <div class="cart__item-image-container cart__item-image-container--yellow-splash">
+                                    <img src="img/cards/3-1.png" alt="" class="cart__item-image">
+                                </div>
+                                <div class="cart__item-content">
+                                    <h4 class="cart__item-title">
+                                        Protein Cake
+                                    </h4>
+                                    <div class="cart__item-description">
+                                        <p>
+                                            Печенье глазированное <br>
+                                            Вкус: Banana Pudding
+                                        </p>
+                                        <p>
+                                            24 шт.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cart__item-quantity-block">
+                                <div class="cart__item-column-name">
+                                    Количество
+                                </div>
+                                <button class="cart__item-quantity-block-btn cart__item-quantity-block-btn--minus"
+                                    type="button" disabled>
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-minus">
+                                        <use xlink:href="#minus"></use>
+                                    </svg>
+                                </button>
+                                <div class="cart__item-quantity-input-wrapper">
+                                    <input type="text" name="quantity" class="cart__item-quantity-input" readonly
+                                        value="1">
+                                </div>
+                                <button class="cart__item-quantity-block-btn cart__item-quantity-block-btn--plus"
+                                    type="button">
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-plus">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="cart__item-price-block">
+                                <div class="cart__item-column-name">
+                                    Цена
+                                </div>
+                                <div class="cart__item-price-block-inner">
+                                    <div class="cart__item-price-regular">
+                                        2 880 ₽
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart__item-price-block">
+                                <div class="cart__item-column-name">
+                                    Сумма
+                                </div>
+                                <div class="cart__item-price-block-inner">
+                                    <div class="cart__item-price-total">
+                                        2 880 ₽
+                                    </div>
+                                </div>
+
+                            </div>
+                            <button class="cart__item-remove-btn" type="button">
+
+                                <svg width="16" height="16" aria-hidden="true" class="icon-cross">
+                                    <use xlink:href="#cross"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="cart__right-col">
+
+                <div class="cart__promo">
+                    <div class="cart__promo-input-wrapper">
+                        <input type="text" class="cart__promo-input" placeholder="Промокод">
+                        <button type="button" class="cart__promo-btn">
+                            <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="cart__promo-message">
+                        Промокод <strong>«darom»</strong> активирован!
+                    </div>
+
+
+                </div>
+
+                <div class="cart__summary">
+                    <h3 class="cart__summary-heading">
+                        Стоимость заказа
+                    </h3>
+                    <table class="cart__summary-table">
+                        <tbody>
+                            <tr>
+                                <th>
+                                    Скидка
+                                </th>
+                                <td>
+                                    812 ₽
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    <span class="cart__summary-table-th-total">
+                                        Итого
+                                    </span>
+                                </th>
+                                <td>
+                                    <span class="cart__summary-table-td-total">
+                                        10 948 ₽
+                                    </span>
+
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="cart__submit-btn">
+                    Оформить заказ
+                </button>
+
+            </div>
+        </form>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

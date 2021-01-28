@@ -77,4 +77,8 @@
     &.active {
         color: #8b8b8b;
     }
+
+    .no-touch &:not(.active):hover {
+        color: var(--brown);
+    }
 }
