@@ -21,6 +21,9 @@
     @include breakpoint(small-tablet) {
         --content-padding: 3rem;
     }
+    @include breakpoint(mobile) {
+        --content-padding: 2.4rem;
+    }
 }
 
 html {
@@ -47,6 +50,19 @@ html {
     }
 
     @media screen and (max-width: 1024px) {
+        font-size: 10px;
+    }
+
+    @media screen and (max-width: 968px) {
+        font-size: 9px;
+    }
+    @media screen and (max-width: 840px) {
+        font-size: 8px;
+    }
+    @media screen and (max-width: 800px) {
+        font-size: 7px;
+    }
+    @media screen and (max-width: 768px) {
         font-size: 10px;
     }
 }

@@ -18,6 +18,7 @@ function initializeCardSlider(card) {
         effect: 'fade',
         speed: 600,
         longSwipesRatio: 0.25,
+        // nested: window.matchMedia('(max-width: 640px)').matches ? true : false,
         fadeEffect: {
             crossFade: true
         },
@@ -26,28 +27,28 @@ function initializeCardSlider(card) {
             type: 'bullets',
             clickable: true
         }
-    })
+    });
 
     const slidesCount = instance.slides.length;
 
-    container.addEventListener('mouseenter', ()=> {
+    container.addEventListener('mouseenter', () => {
         trackingCursor = true;
-    })
+    });
     container.addEventListener('mouseleave', () => {
         trackingCursor = false;
         instance.slideTo(0);
-    })
+    });
 
     container.addEventListener('mousemove', e => {
         if (!trackingCursor) return;
         e.stopPropagation();
-      
+
         const rect = e.currentTarget.getBoundingClientRect();
         const offsetX = parseInt(e.clientX - rect.left, 10);
-        
+
         const width = e.currentTarget.offsetWidth;
 
-        const progress = Math.ceil(offsetX / width * slidesCount);
+        const progress = Math.ceil((offsetX / width) * slidesCount);
         let activeSlideIndex = progress - 1;
 
         if (DEBUG) {
@@ -55,11 +56,9 @@ function initializeCardSlider(card) {
                 activeSlideIndex,
                 progress,
                 offsetX
-            })
+            });
         }
-        
-        
-       
+
         if (activeSlideIndex !== currentSlideIndex) {
             instance.slideTo(activeSlideIndex);
         }
@@ -69,9 +68,10 @@ function initializeCardSlider(card) {
 window.initializeCardSlider = initializeCardSlider;
 
 export function cardSliders() {
-    const elements = Array.from(document.querySelectorAll('.card'))
+    if (window.matchMedia('(max-width: 640px)').matches) return;
+    const elements = Array.from(document.querySelectorAll('.card'));
 
     elements.forEach(card => {
         initializeCardSlider(card);
-    })
+    });
 }

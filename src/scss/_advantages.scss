@@ -26,6 +26,14 @@
     @include breakpoint(small-tablet) {
         margin: -1rem;
     }
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        flex-direction: column;
+        justify-content: initial;
+        padding-left: 2rem;
+        padding-right: 1rem;
+    }
 }
 
 .advantages__list-item {
@@ -33,6 +41,15 @@
 
     @include breakpoint(small-tablet) {
         padding: 1rem;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        margin-bottom: 2.6rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+       
     }
 
     &:nth-child(3n + 1) {
@@ -101,6 +118,12 @@
         width: 4.5rem;
         height: 4.5rem;
         margin-right: 1.7rem;
+    }
+
+    @include breakpoint(mobile) {
+        width: 4.4rem;
+        height: 4.4rem;
+        margin-right: 2rem;
     }
 }
 

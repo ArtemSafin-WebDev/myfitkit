@@ -5,6 +5,8 @@ import homeSlider from './homeSlider';
 import { cardSliders } from './cardSliders';
 import selectType from './selectType';
 import customSelects from './customSelects';
+import newProductsSlider from './newProductsSlider';
+import ourBlogSlider from './ourBlogSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -13,6 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
     cardSliders();
     selectType();
     customSelects();
+    newProductsSlider();
+    ourBlogSlider();
 });
 
 window.addEventListener('load', function() {

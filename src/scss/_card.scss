@@ -157,6 +157,11 @@
         font-size: 2rem;
         line-height: 2.6rem;
     }
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
 }
 
 .card__description {
@@ -175,8 +180,10 @@
         }
     }
 
-    @include breakpoint(tablet) {
-        
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        margin-bottom: 0.3rem;
     }
 }
 
@@ -189,6 +196,11 @@
 
     @include breakpoint(small-tablet) {
         font-size: 2rem;
+        line-height: 2.2rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
         line-height: 2.2rem;
     }
 

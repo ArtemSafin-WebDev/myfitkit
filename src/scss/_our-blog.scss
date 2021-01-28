@@ -4,10 +4,17 @@
     @include breakpoint(tablet) {
         margin-bottom: 10rem;
     }
+
+    @include breakpoint(mobile) {
+        order: 12;
+    }
 }
 
 .our-blog__heading {
     margin-bottom: 5.8rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
 
     &::before {
         content: '';
@@ -23,13 +30,28 @@
         background-position: center;
         z-index: -1;
         pointer-events: none;
-        margin-top: .5rem;
+        margin-top: 0.5rem;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
     }
 }
 
 .our-blog__content {
     position: relative;
     z-index: 1;
+
+    .swiper-container {
+        overflow: visible;
+        @include breakpointMF(small-tablet) {
+            margin: 0;
+            position: static;
+        }
+    }
+
+    
+
     &::before {
         content: '';
         z-index: -1;
@@ -43,6 +65,15 @@
         position: absolute;
         left: -3rem;
         top: -3rem;
+
+        @include breakpoint(small-tablet) {
+            width: 19.2rem;
+            height: 18rem;
+        }
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
     }
 }
 
@@ -50,6 +81,19 @@
     display: flex;
     flex-wrap: wrap;
     margin: -1.5rem;
+
+    @include breakpointMF(small-tablet) {
+        position: static;
+        width: auto;
+        height: auto;
+        box-sizing: border-box;
+        transition: none;
+    }
+
+    @include breakpoint(mobile) {
+        flex-wrap: nowrap;
+        margin: 0;
+    }
 }
 
 .our-blog__list-item {
@@ -58,11 +102,20 @@
     display: flex;
     flex-direction: column;
 
+
+  
+
     @include breakpoint(tablet) {
         width: 33.33%;
-        &:nth-child(n+4) {
+        &:nth-child(n + 4) {
             display: none;
         }
+    }
+
+    @include breakpoint(mobile) {
+        display: flex !important;
+        width: 22rem;
+        padding: 0;
     }
 }
 
@@ -88,6 +141,16 @@
     margin-bottom: 2.2rem;
     transform: translateZ(0);
     backface-visibility: hidden;
+
+    @include breakpoint(small-tablet) {
+        border-radius: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+        border-radius: 1.8rem;
+        margin-bottom: 1.4rem;
+    }
     &::before {
         content: '';
         padding-bottom: 67%;
@@ -112,7 +175,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    transition: transform .4s;
+    transition: transform 0.4s;
     transform: translateZ(0);
     backface-visibility: hidden;
     @include objectFitCover();
@@ -131,6 +194,13 @@
     background: #f2994a;
     font-family: var(--roboto);
     z-index: 5;
+
+    @include breakpoint(mobile) {
+        font-size: 1.1rem;
+        line-height: 1.8rem;
+        left: 1rem;
+        bottom: 1rem;
+    }
 }
 
 .our-blog__card-title {
@@ -138,4 +208,9 @@
     line-height: 2.6rem;
     font-weight: 400;
     font-family: var(--roboto);
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
 }

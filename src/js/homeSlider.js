@@ -10,14 +10,12 @@ export default function homeSlider() {
 
         new Swiper(container, {
             watchOverflow: true,
-            // effect: 'fade',
+
             speed: 400,
-            parallax: true,
+            parallax: window.matchMedia('(max-width: 640px)').matches ? false : true,
             longSwipesRatio: 0.25,
-            spaceBetween: 150,
-            // fadeEffect: {
-            //     crossFade: true
-            // },
+            spaceBetween: 0,
+
             navigation: {
                 nextEl: element.querySelector('.home-slider__arrow--next'),
                 prevEl: element.querySelector('.home-slider__arrow--prev')
@@ -37,6 +35,11 @@ export default function homeSlider() {
                             </svg>
                         </span>
                     `;
+                }
+            },
+            breakpoints: {
+                641: {
+                    spaceBetween: 150
                 }
             }
         });

@@ -4,6 +4,10 @@
     @include breakpoint(small-tablet) {
         margin-bottom: 5rem;
     }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
 }
 
 .home-slider__card {
@@ -33,6 +37,13 @@
 
     @include breakpoint(mobile) {
         background-image: var(--mobile-bg);
+        min-height: 58rem;
+        padding-left: var(--content-padding);
+        padding-right: var(--content-padding);
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
     }
 }
 
@@ -45,6 +56,10 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+
+    @include breakpoint(mobile) {
+        border-radius: 0;
+    }
 }
 
 .home-slider__card-bg-image {
@@ -60,6 +75,10 @@
     @include breakpoint(tablet) {
         left: -5rem;
         width: calc(100% + 5rem);
+    }
+
+    @include breakpoint(mobile) {
+        @include objectFitCover();
     }
 }
 
@@ -82,6 +101,10 @@
         height: 43.5rem;
         left: -3.7rem;
         bottom: -3rem;
+    }
+
+    @include breakpoint(mobile) {
+        display: none;
     }
 }
 
@@ -113,6 +136,10 @@
         right: -4rem;
         bottom: -2rem;
     }
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .home-slider__card-saturated-yellow-splash {
@@ -136,6 +163,10 @@
     background-repeat: no-repeat;
     z-index: -1;
     pointer-events: none;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .home-slider__card-corner-yellow-splash {
@@ -162,7 +193,11 @@
 
     @include breakpoint(small-tablet) {
         right: 30%;
-        bottom: -.7rem;
+        bottom: -0.7rem;
+    }
+
+    @include breakpoint(mobile) {
+        display: none;
     }
 }
 
@@ -186,6 +221,10 @@
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .home-slider__card-top-yellow-splash {
@@ -208,6 +247,10 @@
     background-position: center;
     left: -1.2rem;
     bottom: -1.3rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .home-slider__card-bottom-corner-biege-splash {
@@ -260,6 +303,15 @@
         padding-left: 6.2rem;
         padding-right: 0;
     }
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        margin: 0;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        
+    }
 }
 
 .home-slider__card-image {
@@ -282,6 +334,8 @@
         margin-bottom: -11rem;
     }
 
+  
+
     &--2 {
         margin-bottom: -6rem;
         margin-right: 10rem;
@@ -291,6 +345,22 @@
             margin-left: -4rem;
             width: 34rem;
         }
+
+
+       
+    }
+
+    @include breakpoint(mobile) {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -2rem;
+        width: 28.7rem;
+        height: auto;
+        max-width: 100%;
+        margin: 0;
+
+        
     }
 }
 
@@ -301,16 +371,28 @@
     line-height: 4.8rem;
     letter-spacing: -0.05rem;
 
+    &--white-on-mobile {
+        @include breakpoint(mobile) {
+            color: white;
+        }
+    }
+
     @include breakpoint(tablet) {
-        font-weight: 900;
         font-size: 4rem;
         line-height: 4.8rem;
     }
 
     @include breakpoint(small-tablet) {
-        font-weight: 900;
         font-size: 3.2rem;
         line-height: 4.2rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 2.8rem;
+        line-height: 3.2rem;
+        text-align: center;
+        margin: 0;
+        margin-top: 8rem;
     }
 }
 
@@ -318,13 +400,22 @@
     position: relative;
 
     .swiper-slide {
-        margin-right: 6rem;
+       
+
+        .swiper-container:not(.swiper-container-initialized) & {
+            margin-right: 6rem;
+        }
     }
 
     .swiper-container {
         padding: 4rem;
         margin: -4rem;
         // overflow: visible;
+    }
+
+    @include breakpoint(mobile) {
+        margin-left: calc(-1 * var(--content-padding));
+        margin-right: calc(-1 * var(--content-padding));
     }
 }
 
@@ -344,6 +435,10 @@
         transform: translateY(-50%);
         left: -4.7rem;
     }
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .home-slider__arrow {
@@ -354,6 +449,10 @@
     transition: color 0.2s, opacity 0.2s, visibility 0.2s, transform 0.2s;
     z-index: 15;
     cursor: pointer;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
     &.swiper-button-disabled {
         opacity: 0;
         visibility: hidden;
@@ -367,7 +466,6 @@
         @include breakpoint(tablet) {
             left: -3rem;
         }
-
 
         @include breakpoint(small-tablet) {
             left: -2.2rem;
@@ -434,6 +532,14 @@
         left: 6.1rem;
         bottom: 7rem;
     }
+
+    @include breakpoint(mobile) {
+        position: static;
+        left: auto;
+        bottom: auto;
+        justify-content: center;
+        margin-top: 1.4rem;
+    }
 }
 
 .home-slider__pagination-bullet {
@@ -447,6 +553,11 @@
     background: none;
     transition: color 0.2s;
     font-size: 1.8rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -459,12 +570,22 @@
         transform: translate(-50%, -50%);
         opacity: 0;
         transition: opacity 0.2s;
-        // pointer-events: none;
+
         z-index: -1;
+
+        @include breakpoint(mobile) {
+            width: 2.8rem;
+            height: 2.8rem;
+            background: #f4decc;
+        }
     }
 
     &.swiper-pagination-bullet-active {
         color: var(--brown);
+
+        @include breakpoint(mobile) {
+            color: white;
+        }
         &::before {
             opacity: 1;
         }
@@ -487,5 +608,9 @@
 
     &:last-child {
         display: none;
+    }
+
+    @include breakpoint(mobile) {
+        margin: 0 1.6rem;
     }
 }

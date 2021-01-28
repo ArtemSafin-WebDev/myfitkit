@@ -2,6 +2,14 @@
     position: relative;
     z-index: 600;
 
+    @include breakpoint(mobile) {
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
     &--biege {
         background-color: #faefe6;
 
@@ -34,6 +42,25 @@
     color: var(--brown);
     position: relative;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        min-height: 3rem;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            top: 0;
+            height: 11.7rem;
+            background-image: url('../img/splashes/header-mobile-white-splash.svg');
+            background-size: auto 100%;
+            background-position: center top;
+            background-repeat: no-repeat;
+            z-index: -1;
+            pointer-events: none;
+        }
+    }
 }
 
 .page-header:not(.page-header--biege) .page-header__row {
@@ -64,7 +91,13 @@
             right: -4rem;
             top: -1rem;
         }
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
     }
+
+  
 }
 
 .page-header__city-link {
@@ -111,6 +144,10 @@
         flex-basis: 20rem;
         flex-grow: 1;
         justify-content: center;
+    }
+
+    @include breakpoint(mobile) {
+        display: none;
     }
     &:first-child {
         margin-left: auto;
@@ -230,6 +267,9 @@
         transform: translateX(-50%);
         width: 12rem;
     }
+
+
+
 }
 
 .page-header__navigation-logo {
@@ -252,6 +292,14 @@
     @include breakpoint(small-tablet) {
         width: 14rem;
         height: 18rem;
+    }
+
+    @include breakpoint(mobile) {
+        width: 10.1rem;
+        height: 13.6rem;
+        top: 0rem;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
 
@@ -298,6 +346,12 @@
     @include breakpoint(small-tablet) {
         width: 5.5rem;
     }
+
+    @include breakpoint(mobile) {
+        width: 4.2rem;
+        top: 2.5rem;
+        margin-left: -0.2rem;
+    }
 }
 
 .page-header__city,
@@ -311,6 +365,10 @@
 
     @include breakpoint(small-tablet) {
         flex-basis: auto;
+    }
+
+    @include breakpoint(mobile) {
+        display: none !important;
     }
 }
 
@@ -488,7 +546,7 @@
     font-weight: 700;
 }
 
-.page-header__table-burger {
+.page-header__tablet-burger {
     flex-shrink: 0;
     margin-right: 3.4rem;
     display: none;
@@ -496,9 +554,13 @@
     @include breakpoint(small-tablet) {
         display: block;
     }
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
-.page-header__table-burger-content {
+.page-header__tablet-burger-content {
     display: flex;
     flex-direction: column;
 
