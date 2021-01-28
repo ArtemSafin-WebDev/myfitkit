@@ -247,6 +247,18 @@ td, th {
     }
 }
 
+.hide-on-mobile {
+    @include breakpoint(mobile) {
+        display: none !important;
+    }
+}
+
+.show-on-mobile {
+    @include breakpointMF(small-tablet) {
+        display: none !important;
+    }
+}
+
 ::selection {
     color: white;
     background-color: var(--primary-color);

@@ -1,14 +1,11 @@
 .breadcrumbs {
-  
     position: relative;
-    z-index: 700;
-
-   
+    z-index: 300;
 }
 
 .breadcrumbs__content {
     padding-bottom: 2rem;
-    
+
     padding-top: 6rem;
     position: relative;
 
@@ -24,6 +21,10 @@
         background-position: left center;
         background-image: url('../img/splashes/breadcrumbs-dash.svg');
     }
+
+    @include breakpoint(mobile) {
+        padding-top: 10rem;
+    }
 }
 
 .breadcrumbs__list {
@@ -31,6 +32,10 @@
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 1.4rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .breadcrumbs__link {
@@ -40,7 +45,12 @@
     font-family: var(--roboto);
     display: inline-flex;
     align-items: center;
-    transition: color .2s;
+    transition: color 0.2s;
+
+    @include breakpoint(small-tablet) {
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+    }
 
     &:first-child {
         svg {
@@ -55,17 +65,16 @@
         margin-left: 1.5rem;
         fill: currentColor;
 
+        @include breakpoint(small-tablet) {
+            margin: 0 1rem;
+        }
     }
     &:link,
     &:visited {
         color: var(--primary-color);
     }
 
-
     &.active {
-        color: #8B8B8B;
+        color: #8b8b8b;
     }
-
-
-    
 }

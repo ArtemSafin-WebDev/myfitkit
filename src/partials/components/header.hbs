@@ -1,13 +1,37 @@
 <header class="page-header {{#if biegeHeader}} page-header--biege {{/if}}">
     <div class="container">
         <div class="page-header__row">
-            <button class="page-header__tablet-burger">
-                <span class="page-header__tablet-burger-content">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </span>
-            </button>
+            <div class="page-header__tablet-burger">
+                <button class="page-header__tablet-burger-btn js-tablet-burger-btn">
+                    <span class="page-header__tablet-burger-content">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+                <div class="page-header__tablet-burger-dropdown">
+                    <div class="page-header__tablet-burger-dropdown-inner">
+                        <ul class="page-header__tablet-burger-menu-list">
+                            <li class="page-header__tablet-burger-menu-list-item">
+                                <a href="#" class="page-header__tablet-burger-menu-link">
+                                    Конструктор
+                                </a>
+                            </li>
+                            <li class="page-header__tablet-burger-menu-list-item">
+                                <a href="#" class="page-header__tablet-burger-menu-link">
+                                    Оплата и доставка
+                                </a>
+                            </li>
+                            <li class="page-header__tablet-burger-menu-list-item">
+                                <a href="#" class="page-header__tablet-burger-menu-link">
+                                    Блог
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="page-header__city">
                 <a href="#" class="page-header__city-link">
                     <svg width="12" height="16" aria-hidden="true" class="icon-location">

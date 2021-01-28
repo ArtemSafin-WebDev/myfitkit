@@ -7,6 +7,7 @@ import selectType from './selectType';
 import customSelects from './customSelects';
 import newProductsSlider from './newProductsSlider';
 import ourBlogSlider from './ourBlogSlider';
+import tabletBurger from './tabletBurger';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     customSelects();
     newProductsSlider();
     ourBlogSlider();
+    tabletBurger();
 });
 
 window.addEventListener('load', function() {

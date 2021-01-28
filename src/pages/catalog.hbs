@@ -22,7 +22,7 @@
                 </li>
             </ul>
             <h1 class="main-heading">
-                Каталог продукции
+                Каталог <span class="hide-on-mobile">продукции</span>
             </h1>
         </div>
     </div>
@@ -47,87 +47,100 @@
                 </button>
                 <div class="catalog__select-type-dropdown">
                     <div class="catalog__select-type-dropdown-inner">
-                        <label class="catalog__select-type-checkbox">
-                            <input type="checkbox" name="type" value="1" class="catalog__select-type-checkbox-input">
-                            <span class="catalog__select-type-checkbox-mark">
-                                <svg width="16" height="16" aria-hidden="true" class="icon-checkmark">
-                                    <use xlink:href="#checkmark"></use>
-                                </svg>
-                            </span>
-                            <span class="catalog__select-type-checkbox-image-container">
-                                <img src="img/catalog-checkboxes/1.jpg" alt=""
-                                    class="catalog__select-type-checkbox-image">
-                            </span>
-                            <span class="catalog__select-type-checkbox-content">
-                                <strong class="catalog__select-type-checkbox-title">
-                                    Protein Cake
-                                </strong>
-                                <span class="catalog__select-type-checkbox-description">
-                                    Печенье глазированное
+                        <a href="#" class="catalog__select-type-dropdown-mobile-header js-close-select-type">
+                            Тип продукта
+
+                            <svg width="16" height="16" aria-hidden="true" class="icon-arrow-down">
+                                <use xlink:href="#arrow-down"></use>
+                            </svg>
+                        </a>
+                        <div class="catalog__select-type-dropdown-checkbox-wrapper">
+                            <label class="catalog__select-type-checkbox">
+                                <input type="checkbox" name="type" value="1"
+                                    class="catalog__select-type-checkbox-input">
+                                <span class="catalog__select-type-checkbox-mark">
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-checkmark">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
                                 </span>
-                            </span>
-                        </label>
-                        <label class="catalog__select-type-checkbox">
-                            <input type="checkbox" name="type" value="1" class="catalog__select-type-checkbox-input">
-                            <span class="catalog__select-type-checkbox-mark">
-                                <svg width="16" height="16" aria-hidden="true" class="icon-checkmark">
-                                    <use xlink:href="#checkmark"></use>
-                                </svg>
-                            </span>
-                            <span class="catalog__select-type-checkbox-image-container">
-                                <img src="img/catalog-checkboxes/2.jpg" alt=""
-                                    class="catalog__select-type-checkbox-image">
-                            </span>
-                            <span class="catalog__select-type-checkbox-content">
-                                <strong class="catalog__select-type-checkbox-title">
-                                    Protein Cookie
-                                </strong>
-                                <span class="catalog__select-type-checkbox-description">
-                                    Печенье высокобелковое
+                                <span class="catalog__select-type-checkbox-image-container">
+                                    <img src="img/catalog-checkboxes/1.jpg" alt=""
+                                        class="catalog__select-type-checkbox-image">
                                 </span>
-                            </span>
-                        </label>
-                        <label class="catalog__select-type-checkbox">
-                            <input type="checkbox" name="type" value="1" class="catalog__select-type-checkbox-input">
-                            <span class="catalog__select-type-checkbox-mark">
-                                <svg width="16" height="16" aria-hidden="true" class="icon-checkmark">
-                                    <use xlink:href="#checkmark"></use>
-                                </svg>
-                            </span>
-                            <span class="catalog__select-type-checkbox-image-container">
-                                <img src="img/catalog-checkboxes/3.jpg" alt=""
-                                    class="catalog__select-type-checkbox-image">
-                            </span>
-                            <span class="catalog__select-type-checkbox-content">
-                                <strong class="catalog__select-type-checkbox-title">
-                                    Choco Protein Cookie
-                                </strong>
-                                <span class="catalog__select-type-checkbox-description">
-                                    Печенье высокобелковое
-                                    глазированное
+                                <span class="catalog__select-type-checkbox-content">
+                                    <strong class="catalog__select-type-checkbox-title">
+                                        Protein Cake
+                                    </strong>
+                                    <span class="catalog__select-type-checkbox-description">
+                                        Печенье глазированное
+                                    </span>
                                 </span>
-                            </span>
-                        </label>
-                        <label class="catalog__select-type-checkbox">
-                            <input type="checkbox" name="type" value="1" class="catalog__select-type-checkbox-input">
-                            <span class="catalog__select-type-checkbox-mark">
-                                <svg width="16" height="16" aria-hidden="true" class="icon-checkmark">
-                                    <use xlink:href="#checkmark"></use>
-                                </svg>
-                            </span>
-                            <span class="catalog__select-type-checkbox-image-container">
-                                <img src="img/catalog-checkboxes/4.jpg" alt=""
-                                    class="catalog__select-type-checkbox-image">
-                            </span>
-                            <span class="catalog__select-type-checkbox-content">
-                                <strong class="catalog__select-type-checkbox-title">
-                                    Extra Protein Cake
-                                </strong>
-                                <span class="catalog__select-type-checkbox-description">
-                                    Печенье глазированное
+                            </label>
+                            <label class="catalog__select-type-checkbox">
+                                <input type="checkbox" name="type" value="1"
+                                    class="catalog__select-type-checkbox-input">
+                                <span class="catalog__select-type-checkbox-mark">
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-checkmark">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
                                 </span>
-                            </span>
-                        </label>
+                                <span class="catalog__select-type-checkbox-image-container">
+                                    <img src="img/catalog-checkboxes/2.jpg" alt=""
+                                        class="catalog__select-type-checkbox-image">
+                                </span>
+                                <span class="catalog__select-type-checkbox-content">
+                                    <strong class="catalog__select-type-checkbox-title">
+                                        Protein Cookie
+                                    </strong>
+                                    <span class="catalog__select-type-checkbox-description">
+                                        Печенье высокобелковое
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="catalog__select-type-checkbox">
+                                <input type="checkbox" name="type" value="1"
+                                    class="catalog__select-type-checkbox-input">
+                                <span class="catalog__select-type-checkbox-mark">
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-checkmark">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="catalog__select-type-checkbox-image-container">
+                                    <img src="img/catalog-checkboxes/3.jpg" alt=""
+                                        class="catalog__select-type-checkbox-image">
+                                </span>
+                                <span class="catalog__select-type-checkbox-content">
+                                    <strong class="catalog__select-type-checkbox-title">
+                                        Choco Protein Cookie
+                                    </strong>
+                                    <span class="catalog__select-type-checkbox-description">
+                                        Печенье высокобелковое
+                                        глазированное
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="catalog__select-type-checkbox">
+                                <input type="checkbox" name="type" value="1"
+                                    class="catalog__select-type-checkbox-input">
+                                <span class="catalog__select-type-checkbox-mark">
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-checkmark">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="catalog__select-type-checkbox-image-container">
+                                    <img src="img/catalog-checkboxes/4.png" alt=""
+                                        class="catalog__select-type-checkbox-image">
+                                </span>
+                                <span class="catalog__select-type-checkbox-content">
+                                    <strong class="catalog__select-type-checkbox-title">
+                                        Extra Protein Cake
+                                    </strong>
+                                    <span class="catalog__select-type-checkbox-description">
+                                        Печенье глазированное
+                                    </span>
+                                </span>
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1134,7 +1147,25 @@
 <section class="promo">
     <div class="container">
         <ul class="promo__list">
-            <li class="promo__list-item">
+            <li class="promo__list-item show-on-mobile">
+                <a href="#" class="promo__card promo__card--1">
+                    <span class="promo__card-top-dash"></span>
+                    <span class="promo__card-bottom-left-dash"></span>
+                    <h4 class="promo__card-title">
+                        Конструктор<br> боксов
+                    </h4>
+                    <div class="promo__card-text">
+                        <p>
+                            Создай свой набор<br> вкусов!
+                        </p>
+                    </div>
+                    <div class="btn promo__card-btn">
+                        Собрать бокс
+                    </div>
+                    <img src="img/promo/1.png" alt="" class="promo__card-image">
+                </a>
+            </li>
+            <li class="promo__list-item hide-on-mobile">
                 <a href="#" class="promo__card promo__card--5">
                     <span class="promo__card-top-dash"></span>
                     <span class="promo__card-bottom-left-dash"></span>
@@ -1148,7 +1179,7 @@
                     <img src="img/promo/1.png" alt="" class="promo__card-image">
                 </a>
             </li>
-            <li class="promo__list-item">
+            <li class="promo__list-item hide-on-mobile">
                 <a href="#" class="promo__card promo__card--6">
                     <span class="promo__card-top-dash"></span>
                     <span class="promo__card-bottom-left-dash"></span>

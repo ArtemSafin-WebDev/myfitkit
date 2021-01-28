@@ -3,11 +3,17 @@ export default function selectType() {
 
     elements.forEach(element => {
         const btn = element.querySelector('.catalog__select-type-btn');
+        const closeSelectType = element.querySelector('.js-close-select-type')
 
         btn.addEventListener('click', event => {
             event.preventDefault();
 
             element.classList.toggle('active');
+        })
+
+        closeSelectType.addEventListener('click', event => {
+            event.preventDefault();
+            element.classList.remove('active');
         })
     })
 

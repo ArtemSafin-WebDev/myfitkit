@@ -80,6 +80,10 @@
         flex-basis: 35rem;
         margin-right: 8.8rem;
 
+        @include breakpoint(tablet) {
+            margin-right: 5.5rem;
+        }
+
         .page-footer__col-heading::after {
             background-image: url('../img/splashes/footer-menu-splash-1.svg');
             flex-grow: 0;
@@ -121,12 +125,13 @@
         margin: 0 !important;
         width: 33.33%;
         padding: 1.4rem;
-        display: contents;
+      
     }
 
     @include breakpoint(mobile) {
         padding: 0;
         width: 100%;
+        display: contents;
     }
 }
 
@@ -423,8 +428,9 @@
 .page-footer__contacts-wrapper {
     display: flex;
     flex-direction: column;
-
+    flex-grow: 1;
     @include breakpoint(mobile) {
         position: relative;
+        flex-grow: 0;
     }
 }
