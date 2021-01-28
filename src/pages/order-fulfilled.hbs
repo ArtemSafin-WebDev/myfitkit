@@ -1,0 +1,102 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__content">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Главная
+                    </a>
+
+
+                    <a class="breadcrumbs__link active">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Заказ оформлен
+                    </a>
+                </li>
+            </ul>
+            <h1 class="main-heading">
+                Заказ оформлен
+            </h1>
+        </div>
+    </div>
+</div>
+
+
+<section class="order-fullfilled">
+    <div class="container">
+        <div class="order-fullfilled__row">
+            <div class="order-fullfilled__card">
+                <div class="order-fullfilled__info">
+                    <h2 class="order-fullfilled__info-heading">
+                        Номер заказа: 123456
+                    </h2>
+                    <table class="order-fullfilled__table">
+                        
+                        <tbody>
+                            <tr>
+                                <th>
+                                    Дата заказа
+                                </th>
+                                <td>
+                                    04.10.2020
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Статус оплаты
+                                </th>
+                                <td>
+                                    оплачено
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Способ доставки
+                                </th>
+                                <td>
+                                    курьером
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Статус заказа
+                                </th>
+                                <td>
+                                    <strong>
+                                        в обработке
+                                    </strong>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="order-fullfilled__message">
+                    Вы можете следить за выполнением своего заказа в <a href="#">
+                        личном кабинете
+                    </a>
+                </div>
+
+                <a href="#" class="order-fullfilled__back-link">
+                    <svg width="16" height="16" aria-hidden="true" class="icon-arrow-left">
+                        <use xlink:href="#arrow-left"></use>
+                    </svg>
+                    Вернуться к покупкам
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

@@ -217,6 +217,10 @@
     &:visited {
         color: white;
     }
+
+    .no-touch &:hover {
+        text-decoration: underline;
+    }
 }
 
 .page-footer__copyright {
@@ -365,7 +369,7 @@
         width: 3.2rem;
         height: 3.2rem;
         flex-shrink: 0;
-
+        transition: fill .2s, transform .2s;
         @include breakpoint(mobile) {
             width: 3rem;
             height: 3rem;
@@ -378,6 +382,12 @@
                 width: 3.4rem;
                 height: 1.8rem;
             }
+        }
+    }
+
+    .no-touch &:hover {
+        svg {
+            transform: scale(1.05);
         }
     }
 }

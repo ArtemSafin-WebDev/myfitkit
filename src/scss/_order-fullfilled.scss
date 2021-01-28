@@ -1,0 +1,167 @@
+.order-fullfilled {
+    padding-top: 4rem;
+    margin-bottom: 10rem;
+}
+
+.order-fullfilled__row {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-fullfilled__card {
+    margin: 0 auto;
+    width: 40.8rem;
+}
+
+.order-fullfilled__info {
+    background: #faefe6;
+    border-radius: 1.6rem;
+    padding: 2rem 3rem;
+    padding-bottom: 3rem;
+    color: var(--brown);
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 1;
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url('../img/splashes/order-fullfilled-top-dash.svg');
+        background-size: contain;
+        width: 8.5rem;
+        height: 0.3rem;
+        right: 4rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        top: -.4rem;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    &::after {
+        content: '';
+        background-image: url('../img/splashes/order-fulldilled-bottom-dash.svg');
+        background-size: contain;
+        position: absolute;
+        left: 2rem;
+        bottom: -.4rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -1;
+        pointer-events: none;
+        width: 10.4rem;
+        height: 0.3rem;
+    }
+}
+
+.order-fullfilled__info-heading {
+    font-weight: 900;
+    font-size: 2.4rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.order-fullfilled__table {
+    display: block;
+    font-family: var(--roboto);
+    th,
+    td,
+    tbody,
+    thead {
+        display: flex;
+        flex-direction: column;
+    }
+
+    tr {
+        display: flex;
+        margin-bottom: 0.8rem;
+        align-items: baseline;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    th {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        flex-grow: 1;
+        display: flex;
+        font-weight: 400;
+        flex-direction: row;
+        &::after {
+            content: '';
+            width: 1rem;
+            flex-grow: 1;
+            height: 2px;
+            background-image: url('../img/cart/dashed-line-pattern.svg');
+            background-repeat: repeat-x;
+            background-size: auto 2px;
+            background-position: left center;
+            align-self: flex-end;
+            margin: 0 0.8rem;
+            position: relative;
+            top: -0.4rem;
+        }
+    }
+
+    td {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+
+        strong {
+            font-weight: 700;
+        }
+    }
+
+    td {
+        text-align: right;
+    }
+}
+
+.order-fullfilled__message {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    font-family: var(--roboto);
+    color: var(--brown);
+    margin-bottom: 3rem;
+    a {
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
+
+        .no-touch &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.order-fullfilled__back-link {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    font-family: var(--roboto);
+    color: var(--brown);
+
+    svg {
+        width: 1.2rem;
+        height: 2rem;
+        fill:  #555555;
+        flex-shrink: 0;
+        margin-right: 1.2rem;
+        transition: fill .2s;
+    }
+    &:link,
+    &:visited {
+        color: var(--brown);
+    }
+
+    .no-touch &:hover {
+        color: var(--primary-color);
+
+        svg {
+            fill: var(--primary-color);
+        }
+    }
+}
