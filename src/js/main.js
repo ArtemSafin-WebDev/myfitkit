@@ -10,6 +10,7 @@ import ourBlogSlider from './ourBlogSlider';
 import tabletBurger from './tabletBurger';
 import cartItems from './cartItems';
 import validation from './validation';
+import blogGallery from './blogGallery';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -23,9 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
     tabletBurger();
     cartItems();
     validation();
+    blogGallery();
 });
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
-    setTimeout(() => document.body.classList.add('animatable'), 300)
-})
+    setTimeout(() => document.body.classList.add('animatable'), 300);
+});

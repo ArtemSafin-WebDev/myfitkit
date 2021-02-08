@@ -18,7 +18,7 @@ function initializeCardSlider(card) {
         effect: 'fade',
         speed: 600,
         longSwipesRatio: 0.25,
-        // nested: window.matchMedia('(max-width: 640px)').matches ? true : false,
+      
         fadeEffect: {
             crossFade: true
         },

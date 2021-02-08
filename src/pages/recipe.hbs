@@ -1,0 +1,344 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__content breadcrumbs__content--no-dash">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Главная
+                    </a>
+
+                    <a class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Блог
+                    </a>
+                    <a class="breadcrumbs__link active">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Заголовок рецепта
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<article class="blog-detail">
+    <div class="container">
+        <header class="blog-detail__header">
+            <h1 class="main-heading blog-detail__heading">
+                Заголовок рецепта
+            </h1>
+        </header>
+        <time datetime="2020-10-14 19:00" class="blog-detail__date"> 14 октября 2020</time>
+        <div class="blog-detail__intro-image-container">
+            <img src="img/recipe/recipe-bg.jpg" alt="" class="blog-detail__intro-image">
+        </div>
+        <div class="blog-detail__content">
+            <p>
+                <strong>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua.
+                </strong>
+            </p>
+            <p>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                id est laborum.
+            </p>
+            <div class="blog-detail__recipe">
+                <div class="blog-detail__recipe-col">
+                    <h3 class="blog-detail__recipe-col-heading">
+                        Состав
+                    </h3>
+                    <ol class="blog-detail__recipe-list">
+                        <li class="blog-detail__recipe-list-item">
+                            <div class="blog-detail__recipe-card">
+                                <h4 class="blog-detail__recipe-card-heading">
+                                    Название ингредиента 1
+                                </h4>
+                                <div class="blog-detail__recipe-card-text">
+                                    Вес: 10 гр.
+                                </div>
+                            </div>
+                        </li>
+                        <li class="blog-detail__recipe-list-item">
+                            <div class="blog-detail__recipe-card">
+                                <h4 class="blog-detail__recipe-card-heading">
+                                    Название ингредиента 2
+                                </h4>
+                                <div class="blog-detail__recipe-card-text">
+                                    Вес: 10 гр.
+                                </div>
+                            </div>
+                        </li>
+                        <li class="blog-detail__recipe-list-item">
+                            <div class="blog-detail__recipe-card">
+                                <h4 class="blog-detail__recipe-card-heading">
+                                    Название ингредиента 3
+                                </h4>
+                                <div class="blog-detail__recipe-card-text">
+                                    Вес: 10 гр.
+                                </div>
+                            </div>
+                        </li>
+                        <li class="blog-detail__recipe-list-item">
+                            <div class="blog-detail__recipe-card">
+                                <h4 class="blog-detail__recipe-card-heading">
+                                    Название ингредиента 4
+                                </h4>
+                                <div class="blog-detail__recipe-card-text">
+                                    Вес: 10 гр.
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="blog-detail__recipe-col">
+                    <h3 class="blog-detail__recipe-col-heading">
+                        Пищевая ценность (на 100г)
+                    </h3>
+                    <div class="blog-detail__recipe-table">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        Калорийность (ккал):
+                                    </th>
+                                    <td>
+                                        196,1
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Белки (г):
+                                    </th>
+                                    <td>18</td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Жиры (г):
+                                    </th>
+                                    <td>
+                                        4,5
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Углеводы (г):
+                                    </th>
+                                    <td>
+                                        16,15
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Клетчатка (г):
+                                    </th>
+                                    <td>
+                                        9,5
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <h3>
+                Заголовок
+            </h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+            <div class="blog-detail__gallery">
+                <h3 class="blog-detail__gallery-block-heading">
+                    Галерея
+                </h3>
+                <div class="blog-detail__gallery-slider js-blog-gallery">
+                    <button class="blog-detail__gallery-slider-arrow blog-detail__gallery-slider-arrow--prev">
+                        <svg width="12" height="16" aria-hidden="true" class="icon-stylized-arrow-left">
+                            <use xlink:href="#stylized-arrow-left"></use>
+                        </svg>
+                    </button>
+                    <button class="blog-detail__gallery-slider-arrow blog-detail__gallery-slider-arrow--next">
+                        <svg width="12" height="16" aria-hidden="true" class="icon-stylized-arrow-right">
+                            <use xlink:href="#stylized-arrow-right"></use>
+                        </svg>
+                    </button>
+                    <div class="blog-detail__gallery-slider-content">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="blog-detail__gallery-slider-card">
+                                        <img src="img/recipe/gallery.jpg" alt=""
+                                            class="blog-detail__gallery-slider-card-image">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="blog-detail__gallery-slider-card">
+                                        <img src="img/recipe/gallery.jpg" alt=""
+                                            class="blog-detail__gallery-slider-card-image">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="blog-detail__gallery-slider-card">
+                                        <img src="img/recipe/gallery.jpg" alt=""
+                                            class="blog-detail__gallery-slider-card-image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-detail__gallery-slider-pagination">
+
+                    </div>
+                </div>
+            </div>
+            <div class="blog-detail__video">
+                <h3 class="blog-detail__video-block-heading">
+                    Видео приготовления
+                </h3>
+                <a href="#" class="blog-detail__video-image-container">
+                    <img src="img/blog-detail/video-preview.jpg" alt="" class="blog-detail__video-image">
+                    <div class="blog-detail__video-play">
+                        <svg width="12" height="16" aria-hidden="true" class="icon-play">
+                            <use xlink:href="#play"></use>
+                        </svg>
+                    </div>
+                </a>
+                <h4 class="blog-detail__video-heading">
+                    Название видео
+                </h4>
+            </div>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+            </p>
+        </div>
+        <footer class="blog-detail__footer">
+            <a href="#" class="blog-detail__back-link">
+                <svg width="12" height="16" aria-hidden="true" class="icon-arrow-left">
+                    <use xlink:href="#arrow-left"></use>
+                </svg>
+                Все публикации
+            </a>
+            <div class="blog-detail__sharing">
+                <h4 class="blog-detail__sharing-heading">
+                    Поделитесь с друзьями
+                </h4>
+                <ul class="blog-detail__list">
+                    <li class="blog-detail__list-item">
+                        <a href="#" class="blog-detail__sharing-link">
+                            <svg width="12" height="16" aria-hidden="true" class="icon-vk">
+                                <use xlink:href="#vk"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="blog-detail__list-item">
+                        <a href="#" class="blog-detail__sharing-link">
+                            <svg width="12" height="16" aria-hidden="true" class="icon-twitter">
+                                <use xlink:href="#twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="blog-detail__list-item">
+                        <a href="#" class="blog-detail__sharing-link">
+                            <svg width="12" height="16" aria-hidden="true" class="icon-facebook">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</article>
+
+
+<section class="our-blog">
+    <div class="container">
+        <h2 class="section-heading our-blog__heading our-blog__heading--similar-articles">
+            Другие рецепты
+        </h2>
+        <div class="our-blog__content js-our-blog-slider">
+            <div class="swiper-container">
+                <ul class="swiper-wrapper our-blog__list">
+                    <li class="swiper-slide our-blog__list-item">
+                        <a href="#" class="our-blog__card">
+                            <div class="our-blog__card-image-container">
+                                <img src="img/our-blog/1.jpg" alt="" class="our-blog__card-image">
+                                <div class="our-blog__card-tag">
+                                    Название рубрики
+                                </div>
+                            </div>
+                            <h4 class="our-blog__card-title">
+                                Рецепт 1
+                            </h4>
+                        </a>
+                    </li>
+                    <li class="swiper-slide our-blog__list-item">
+                        <a href="#" class="our-blog__card">
+                            <div class="our-blog__card-image-container">
+                                <img src="img/our-blog/2.jpg" alt="" class="our-blog__card-image">
+                                <div class="our-blog__card-tag">
+                                    Название рубрики
+                                </div>
+                            </div>
+                            <h4 class="our-blog__card-title">
+                                 Рецепт 2
+                            </h4>
+                        </a>
+                    </li>
+                    <li class="swiper-slide our-blog__list-item">
+                        <a href="#" class="our-blog__card">
+                            <div class="our-blog__card-image-container">
+                                <img src="img/our-blog/3.jpg" alt="" class="our-blog__card-image">
+                                <div class="our-blog__card-tag">
+                                    Название рубрики
+                                </div>
+                            </div>
+                            <h4 class="our-blog__card-title">
+                                Рецепт 3
+                            </h4>
+                        </a>
+                    </li>
+                    <li class="swiper-slide our-blog__list-item">
+                        <a href="#" class="our-blog__card">
+                            <div class="our-blog__card-image-container">
+                                <img src="img/our-blog/1.jpg" alt="" class="our-blog__card-image">
+                                <div class="our-blog__card-tag">
+                                    Название рубрики
+                                </div>
+                            </div>
+                            <h4 class="our-blog__card-title">
+                                   Рецепт 4
+                            </h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}
