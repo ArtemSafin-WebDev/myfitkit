@@ -12,6 +12,8 @@
 
 .our-blog__heading {
     margin-bottom: 5.8rem;
+
+  
     @include breakpoint(mobile) {
         margin-bottom: 2rem;
     }
@@ -34,6 +36,16 @@
 
         @include breakpoint(mobile) {
             display: none;
+        }
+    }
+
+
+    &--similar-articles {
+        text-transform: none;
+        &::before {
+            content: '';
+            background-image: url('../img/splashes/similar-articles-heading-splash.png');
+           
         }
     }
 }

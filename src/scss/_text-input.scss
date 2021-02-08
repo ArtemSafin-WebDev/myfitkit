@@ -1,0 +1,40 @@
+
+
+.text-input-label {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: #8b8b8b;
+    margin-bottom: 0.6rem;
+    font-family: var(--roboto);
+    display: block;
+}
+
+.text-input {
+    height: 5.4rem;
+    border: 1px solid #BEBEBE;
+    border-radius: 1.4rem;
+    font-size: 1.6rem;
+    padding: 0 1.4rem;
+    color: var(--brown);
+    font-family: var(--roboto);
+    transition: border-color .2s;
+
+    &.parsley-error {
+        border-color: var(--primary-color);
+    }
+    @include noAutofillBg();
+    @include placeholder {
+        color: #8B8B8B;
+    }
+}
+
+
+.text-input ~ .parsley-errors-list {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    color: var(--primary-color);
+    font-family: var(--roboto);
+    &.filled {
+        margin-top: 0.5rem;
+    }
+}

@@ -1,0 +1,101 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__content">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Главная
+                    </a>
+
+
+                    <a class="breadcrumbs__link active">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Регистрация
+                    </a>
+                </li>
+            </ul>
+            <h1 class="main-heading">
+                Регистрация
+            </h1>
+        </div>
+    </div>
+</div>
+
+
+<section class="register">
+    <div class="container">
+        <form action="/" method="POST" class="register__form" data-need-validation>
+            <div class="register__form-row">
+                <label for="email" class="text-input-label register__form-label">
+                    E-mail *
+                </label>
+                <input type="email" class="text-input register__form-input" name="email" id="email" required>
+            </div>
+            <div class="register__form-row">
+                <label for="firstname" class="text-input-label register__form-label">
+                    Имя *
+                </label>
+                <input type="text" class="text-input register__form-input" name="firstname" id="firstname" required>
+            </div>
+            <div class="register__form-row">
+                <label for="lastname" class="text-input-label register__form-label">
+                    Фамилия
+                </label>
+                <input type="text" class="text-input register__form-input" name="lastname" id="lastname">
+            </div>
+            <div class="register__form-row">
+                <div class="register__inputs-row">
+                    <div class="register__inputs-col">
+                        <label for="password1" class="text-input-label register__form-label">
+                            Пароль *
+                        </label>
+                        <input type="password" class="text-input register__form-input" id="password1" name="password1"
+                            required>
+                    </div>
+                    <div class="register__inputs-col">
+                        <label for="password2" class="text-input-label register__form-label">
+                            Пароль *
+                        </label>
+                        <input type="password" class="text-input register__form-input" id="password2" name="password2"
+                            required>
+                    </div>
+                </div>
+            </div>
+            <button class="btn register__submit-btn" type="submit">
+                Регистрация
+            </button>
+            <div class="register__policy">
+                <label class="register__policy-checkbox">
+                    <input type="checkbox" class="register__policy-checkbox-input" name="policy" required>
+                    <span class="register__policy-checkbox-mark">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-checkmark">
+                            <use xlink:href="#checkmark"></use>
+                        </svg>
+                    </span>
+                    <span class="register__policy-checkbox-text">
+                        Согласен с условиями <a href="#">
+                            политики конфиденциальности
+                        </a>
+                    </span>
+                </label>
+            </div>
+            <div class="register__not-registered">
+                <p>
+                    Зарегистрированы? <a href="#">Вход в кабинет</a>
+                </p>
+            </div>
+        </form>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

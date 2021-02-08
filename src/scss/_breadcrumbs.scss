@@ -22,6 +22,12 @@
         background-image: url('../img/splashes/breadcrumbs-dash.svg');
     }
 
+    &--no-dash {
+        &::before {
+            display: none;
+        }
+    }
+
     @include breakpoint(mobile) {
         padding-top: 10rem;
     }

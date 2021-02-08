@@ -9,6 +9,7 @@ import newProductsSlider from './newProductsSlider';
 import ourBlogSlider from './ourBlogSlider';
 import tabletBurger from './tabletBurger';
 import cartItems from './cartItems';
+import validation from './validation';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     ourBlogSlider();
     tabletBurger();
     cartItems();
+    validation();
 });
 
 window.addEventListener('load', function() {
