@@ -22,9 +22,6 @@
 }
 
 .modals__modal-inner {
-    background-color: #fff;
-    filter: drop-shadow(0px 0.4rem 6rem rgba(0, 0, 0, 0.1));
-    border-radius: 4rem;
     margin: auto;
 }
 
@@ -37,6 +34,9 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    background-color: #fff;
+    filter: drop-shadow(0px 0.4rem 6rem rgba(0, 0, 0, 0.1));
+    border-radius: 4rem;
     z-index: 1;
     &::before,
     &::after {
@@ -67,6 +67,143 @@
 .modals__modal-inner--city {
     padding: 5rem;
     max-width: 106rem;
+}
+
+.modals__modal-inner--components {
+    padding: 4rem;
+    
+    border-radius: 3rem;
+    max-width: 93.4rem;
+    margin: auto;
+    position: relative;
+    background: #df633c;
+    color: white;
+    background-image: url('../img/splashes/components-modal-splash.svg');
+    background-size: 49rem auto;
+    background-repeat: no-repeat;
+    background-position: left -4rem top;
+    .modals__modal-close {
+        top: 2.2rem;
+        right: 2.8rem;
+        left: auto;
+        bottom: auto;
+
+        svg {
+            width: 1.9rem;
+            height: 1.9rem;
+        }
+
+        .no-touch &:hover {
+
+            svg {
+                fill: var(--brown);
+            }
+            
+        }
+    }
+}
+
+.modals__components-modal-heading {
+    font-weight: 900;
+    font-size: 3.2rem;
+    line-height: 4.4rem;
+    letter-spacing: -0.05rem;
+    margin-bottom: 1.4rem;
+}
+
+.modals__components-modal-row {
+    display: flex;
+}
+
+.modals__components-modal-left-col {
+    width: 27.8rem;
+    margin-right: 4rem;
+    flex-shrink: 0;
+}
+
+.modals__components-modal-right-col {
+    width: 40%;
+    flex-grow: 1;
+}
+
+.modals__components-modal-small-heading {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.8rem;
+    margin-bottom: 1.4rem;
+    font-family: var(--roboto);
+}
+
+.modals__components-modal-table {
+    font-family: var(--roboto);
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+
+    display: flex;
+    flex-direction: column;
+    font-family: var(--roboto);
+    table,
+    tbody,
+    thead,
+    th,
+    td {
+        display: flex;
+        flex-direction: column;
+    }
+
+    tr {
+        display: flex;
+        margin-bottom: 0.5rem;
+        align-items: baseline;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    th,
+    td {
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+    }
+
+    th {
+        font-weight: 400;
+        flex-grow: 1;
+
+        display: flex;
+        flex-direction: row;
+        &::after {
+            content: '';
+            width: 1rem;
+            flex-grow: 1;
+            height: 2px;
+            background-image: url('../img/cart/dashed-line-pattern.svg');
+            background-repeat: repeat-x;
+            background-size: auto 2px;
+            background-position: left center;
+            align-self: flex-end;
+            margin: 0 0.3rem;
+            position: relative;
+            top: -0.4rem;
+        }
+    }
+
+    td {
+        text-align: left;
+        flex-shrink: 0;
+        width: 9rem;
+    }
+}
+
+.modals__components-modal-per-portion {
+    margin-bottom: 0.4rem;
+}
+
+.modals__components-modal-text {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    padding-right: 2rem;
+    font-family: var(--roboto);
 }
 
 .modals__modal-close {
@@ -156,7 +293,7 @@
     color: var(--primary-color);
     margin-left: 2rem;
     position: relative;
-    bottom: -.3rem;
+    bottom: -0.3rem;
     &:link,
     &:visited {
         color: var(--primary-color);
@@ -168,8 +305,6 @@
         fill: currentColor;
         margin-right: 1rem;
     }
-
-    
 }
 
 .modals__modal-city-form {
@@ -209,7 +344,6 @@
     -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
     page-break-inside: avoid; /* Firefox */
     break-inside: avoid; /* IE 10+ */
-
 
     &.hidden {
         display: none;

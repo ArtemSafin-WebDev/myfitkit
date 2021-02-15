@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>
-        MyFitkit - Статья
+        MyFitkit - Карточка товара 2
     </title>
 </head>
 
@@ -277,7 +277,6 @@
             </div>
         </header>        <main class="page-main">
 
-
 <div class="breadcrumbs">
     <div class="container">
         <div class="breadcrumbs__content breadcrumbs__content--no-dash">
@@ -289,8 +288,7 @@
                         </svg>
                         Главная
                     </a>
-
-                    <a class="breadcrumbs__link">
+                    <a href="#" class="breadcrumbs__link">
                         <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
                             <use xlink:href="#arrow-right"></use>
                         </svg>
@@ -300,179 +298,594 @@
                         <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
                             <use xlink:href="#arrow-right"></use>
                         </svg>
-                        Заголовок публикации
+                        Заголовок рецепта
                     </a>
                 </li>
             </ul>
-
         </div>
     </div>
 </div>
-<article class="blog-detail">
+<section class="product">
     <div class="container">
-        <header class="blog-detail__header">
-            <h1 class="main-heading blog-detail__heading">
-                Заголовок публикации
-                <a href="#" class="mobile-back-link">
-                    <svg width="12" height="16" aria-hidden="true" class="icon-arrow-left">
-                        <use xlink:href="#arrow-left"></use>
-                    </svg>
-                    Блог
-                </a>
-            </h1>
-        </header>
-        <time datetime="2020-10-14 19:00" class="blog-detail__date"> 14 октября 2020</time>
-        <div class="blog-detail__intro-image-container">
-            <img src="img/blog-detail/blog-detail-intro-image.jpg" alt="" class="blog-detail__intro-image">
-        </div>
-        <div class="blog-detail__content">
-            <p>
-                <strong>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua.
-                </strong>
-            </p>
-            <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-                laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
-                id est laborum.
-            </p>
-            <h3>
-                Заголовок
-            </h3>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
-            </p>
-            <div class="blog-detail__video">
-                <a href="#video-modal" class="blog-detail__video-image-container js-open-modal">
-                    <img src="img/blog-detail/video-preview.jpg" alt="" class="blog-detail__video-image">
-                    <div class="blog-detail__video-play">
-                        <svg width="12" height="16" aria-hidden="true" class="icon-play">
-                            <use xlink:href="#play"></use>
-                        </svg>
+        <div class="product__main-content">
+            <div class="product__row">
+                <div class="product__left-col">
+                    <div class="product__gallery js-product-gallery">
+                        <div class="product__gallery-left-col">
+                            <div class="product__gallery-thumbs-slider">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="product__gallery-thumbs-slider-card">
+                                                <img src="img/product/thumbs/1.png" alt=""
+                                                    class="product__gallery-thumbs-slider-card-image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product__gallery-thumbs-slider-card">
+                                                <img src="img/product/thumbs/2.png" alt=""
+                                                    class="product__gallery-thumbs-slider-card-image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product__gallery-thumbs-slider-card">
+                                                <img src="img/product/thumbs/3.png" alt=""
+                                                    class="product__gallery-thumbs-slider-card-image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product__gallery-thumbs-slider-card">
+                                                <img src="img/product/thumbs/2.png" alt=""
+                                                    class="product__gallery-thumbs-slider-card-image">
+
+                                                <svg width="12" height="16" aria-hidden="true" class="icon-play">
+                                                    <use xlink:href="#play"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__gallery-right-col">
+                            <div class="product__gallery-main-slider">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="#product-gallery-modal"
+                                                class="product__gallery-main-slider-card js-open-modal">
+                                                <img src="img/product/product-main-card-image.png" alt=""
+                                                    class="product__gallery-main-slider-card-image">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#product-gallery-modal"
+                                                class="product__gallery-main-slider-card js-open-modal">
+                                                <img src="img/product/product-main-card-image.png" alt=""
+                                                    class="product__gallery-main-slider-card-image">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#product-gallery-modal"
+                                                class="product__gallery-main-slider-card js-open-modal">
+                                                <img src="img/product/product-main-card-image.png" alt=""
+                                                    class="product__gallery-main-slider-card-image">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#video-modal"
+                                                class="product__gallery-main-slider-card js-open-modal">
+                                                <img src="img/product/product-main-card-image.png" alt=""
+                                                    class="product__gallery-main-slider-card-image">
+
+                                                <svg width="12" height="16" aria-hidden="true" class="icon-play">
+                                                    <use xlink:href="#play"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </a>
-                <h4 class="blog-detail__video-heading">
-                    Название видео
-                </h4>
+
+                </div>
+                <div class="product__right-col">
+                    <div class="product__sale-label">
+                        SALE
+                    </div>
+                    <div class="product__category">
+                        Печенье глазированное
+                    </div>
+                    <h1 class="main-heading product__main-heading">
+                        Protein Cake Ассорти
+                    </h1>
+                    <form action="/" method="POST" class="product__form product__form--short">
+
+                        <div class="product__choose-quantity">
+                            <h4 class="product__form-heading">
+                                Количество в боксе:
+                            </h4>
+                            <div class="product__choose-quantity-checkboxes">
+                                <label class="product__choose-quantity-checkbox">
+                                    <input type="radio" class="product__choose-quantity-checkbox-input" name="quantity"
+                                        value="1" checked>
+                                    <span class="product__choose-quantity-checkbox-text">
+                                        14 шт.
+                                    </span>
+                                </label>
+                                <label class="product__choose-quantity-checkbox">
+                                    <input type="radio" class="product__choose-quantity-checkbox-input" name="quantity"
+                                        value="2">
+                                    <span class="product__choose-quantity-checkbox-text">
+                                        6 шт.
+                                    </span>
+                                </label>
+
+                            </div>
+                        </div>
+                        <div class="product__total">
+                            <div class="product__count">
+                                <div class="cart__item-quantity-block js-cart-item">
+
+                                    <button class="cart__item-quantity-block-btn cart__item-quantity-block-btn--minus"
+                                        type="button" disabled>
+                                        <svg width="16" height="16" aria-hidden="true" class="icon-minus">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="cart__item-quantity-input-wrapper">
+                                        <input type="text" name="quantity" class="cart__item-quantity-input" readonly
+                                            value="1">
+                                    </div>
+                                    <button class="cart__item-quantity-block-btn cart__item-quantity-block-btn--plus"
+                                        type="button">
+                                        <svg width="16" height="16" aria-hidden="true" class="icon-plus">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product__price">
+                                <div class="product__new-price">
+                                    2 592 ₽
+                                </div>
+                                <div class="product__old-price">
+                                    2 880 ₽
+                                </div>
+                            </div>
+                            <button class="btn product__submit" type="submit">
+                                В корзину
+                            </button>
+                        </div>
+
+                    </form>
+                    <div class="product__components">
+                        <h3 class="product__components-heading">
+                            Состав ассорти
+                            <div class="product__components-heading-count">
+                                (в боксе 8 шт.)
+                            </div>
+                        </h3>
+                        <div class="product__choose-taste-slider js-choose-taste-slider">
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#components-modal" class="product__components-card js-open-modal">
+                                            <div class="product__components-card-image-container">
+                                                <img src="img/components/1.png" alt="">
+                                                <div class="product__components-card-count">
+                                                    3 шт.
+                                                </div>
+                                            </div>
+                                            <h4 class="product__components-card-title">
+                                                Banana Pudding
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#components-modal" class="product__components-card js-open-modal">
+                                            <div class="product__components-card-image-container">
+                                                <img src="img/components/2.png" alt="">
+
+                                            </div>
+                                            <h4 class="product__components-card-title">
+                                                Lemon-Lime
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#components-modal" class="product__components-card js-open-modal">
+                                            <div class="product__components-card-image-container">
+                                                <img src="img/components/3.png" alt="">
+
+                                            </div>
+                                            <h4 class="product__components-card-title">
+                                                Strawberry Cream
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#components-modal" class="product__components-card js-open-modal">
+                                            <div class="product__components-card-image-container">
+                                                <img src="img/components/4.png" alt="">
+
+                                            </div>
+                                            <h4 class="product__components-card-title">
+                                                Honey Cream
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#components-modal" class="product__components-card js-open-modal">
+                                            <div class="product__components-card-image-container">
+                                                <img src="img/components/5.png" alt="">
+
+                                            </div>
+                                            <h4 class="product__components-card-title">
+                                                Peanut Paste
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#components-modal" class="product__components-card js-open-modal">
+                                            <div class="product__components-card-image-container">
+                                                <img src="img/components/6.png" alt="">
+
+                                            </div>
+                                            <h4 class="product__components-card-title">
+                                                Double Chocolate
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#components-modal" class="product__components-card js-open-modal">
+                                            <div class="product__components-card-image-container">
+                                                <img src="img/components/1.png" alt="">
+                                                <div class="product__components-card-count">
+                                                    3 шт.
+                                                </div>
+                                            </div>
+                                            <h4 class="product__components-card-title">
+                                                Banana Pudding
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#components-modal" class="product__components-card js-open-modal">
+                                            <div class="product__components-card-image-container">
+                                                <img src="img/components/2.png" alt="">
+
+                                            </div>
+                                            <h4 class="product__components-card-title">
+                                                Lemon-Lime
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#components-modal" class="product__components-card js-open-modal">
+                                            <div class="product__components-card-image-container">
+                                                <img src="img/components/3.png" alt="">
+
+                                            </div>
+                                            <h4 class="product__components-card-title">
+                                                Strawberry Cream
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#components-modal" class="product__components-card js-open-modal">
+                                            <div class="product__components-card-image-container">
+                                                <img src="img/components/4.png" alt="">
+
+                                            </div>
+                                            <h4 class="product__components-card-title">
+                                                Honey Cream
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#components-modal" class="product__components-card js-open-modal">
+                                            <div class="product__components-card-image-container">
+                                                <img src="img/components/5.png" alt="">
+
+                                            </div>
+                                            <h4 class="product__components-card-title">
+                                                Peanut Paste
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#components-modal" class="product__components-card js-open-modal">
+                                            <div class="product__components-card-image-container">
+                                                <img src="img/components/6.png" alt="">
+
+                                            </div>
+                                            <h4 class="product__components-card-title">
+                                                Double Chocolate
+                                            </h4>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <button class="product__choose-taste-slider-arrow product__choose-taste-slider-arrow--prev">
+                                <svg width="12" height="16" aria-hidden="true" class="icon-stylized-arrow-left">
+                                    <use xlink:href="#stylized-arrow-left"></use>
+                                </svg>
+                            </button>
+                            <button class="product__choose-taste-slider-arrow product__choose-taste-slider-arrow--next">
+                                <svg width="12" height="16" aria-hidden="true" class="icon-stylized-arrow-right">
+                                    <use xlink:href="#stylized-arrow-right"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="product__description">
+                        <p>
+                            Protein Cake лучше описывать по слоям:<br>
+                            Первый слой — нежнейшее протеиновое печенье.<br> Второй слой — суфле-тянучка, обогащенное
+                            белком.<br>
+                            Третий слой — протеиновая шоколадная глазурь.<br>
+                            Разнообразие вкусов и отсутствие сахара в составе тебе точно понравятся. Это не просто
+                            очередная
+                            протеиновая сладость, это настоящий десерт, который Можно, Нужно и Дайте ещё!<br>
+                            Банановый вкус в линейке Protein Cake подойдет тем, кому нравятся фруктово-сливочные
+                            сочетания.
+                            Настоящие ценители сравнивают этот вкус с банановым молочным коктейлем.<br> А что он
+                            напомнит
+                            тебе?
+                        </p>
+                        <span class="product__description-bottom-dash"></span>
+                    </div>
+
+                </div>
             </div>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
-            </p>
         </div>
-        <footer class="blog-detail__footer">
-            <a href="#" class="blog-detail__back-link">
-                <svg width="12" height="16" aria-hidden="true" class="icon-arrow-left">
-                    <use xlink:href="#arrow-left"></use>
-                </svg>
-                Все публикации
-            </a>
-            <div class="blog-detail__sharing">
-                <h4 class="blog-detail__sharing-heading">
-                    Поделитесь с друзьями
-                </h4>
-                <ul class="blog-detail__list">
-                    <li class="blog-detail__list-item">
-                        <a href="#" class="blog-detail__sharing-link">
-                            <svg width="12" height="16" aria-hidden="true" class="icon-vk">
-                                <use xlink:href="#vk"></use>
-                            </svg>
+        <div class="payment-and-shipping__shipping">
+            <h2 class="section-heading payment-and-shipping__heading payment-and-shipping__shipping-heading">
+                Доставка
+            </h2>
+            <div class="payment-and-shipping__shipping-general-conditions">
+                <a href="#city-modal" class="payment-and-shipping__shipping-city js-open-modal">
+                    <svg width="12" height="16" aria-hidden="true" class="icon-location">
+                        <use xlink:href="#location"></use>
+                    </svg>
+                    Москва
+                </a>
+                <div class="payment-and-shipping__shipping-free">
+                    При заказе от <strong>2 400 ₽</strong> — бесплатно!
+                </div>
+            </div>
+            <div class="payment-and-shipping__shipping-choices">
+                <ul class="payment-and-shipping__shipping-choices-list">
+                    <li class="payment-and-shipping__shipping-choices-list-item">
+                        <div class="payment-and-shipping__shipping-choices-card">
+        
+                            <div class="payment-and-shipping__shipping-choices-card-content">
+                                <h4 class="payment-and-shipping__shipping-choices-card-heading">
+                                    <div class="payment-and-shipping__shipping-choices-card-icon-container">
+                                        <img src="img/payment-and-shipping/shipping-icon-1.svg" alt=""
+                                            class="payment-and-shipping__shipping-choices-card-icon payment-and-shipping__shipping-choices-card-icon--location"
+                                            width="50">
+                                    </div>
+                                    Самовывоз из пункта выдачи
+                                </h4>
+                                <div class="payment-and-shipping__shipping-choices-card-details">
+                                    Стоимость: <strong>270</strong>₽<br>Срок: <strong>2-3</strong> дня
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="payment-and-shipping__shipping-choices-list-item">
+                        <div class="payment-and-shipping__shipping-choices-card">
+        
+                            <div class="payment-and-shipping__shipping-choices-card-content">
+                                <h4 class="payment-and-shipping__shipping-choices-card-heading">
+                                    <div class="payment-and-shipping__shipping-choices-card-icon-container">
+                                        <img src="img/payment-and-shipping/shipping-icon-2.svg" alt=""
+                                            class="payment-and-shipping__shipping-choices-card-icon payment-and-shipping__shipping-choices-card-icon--car"
+                                            width="50">
+                                    </div>
+                                    Курьером
+                                </h4>
+                                <div class="payment-and-shipping__shipping-choices-card-details">
+                                    Стоимость: <strong>200</strong>₽<br>Срок: <strong>2-3</strong> дня
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="payment-and-shipping__shipping-choices-list-item">
+                        <div class="payment-and-shipping__shipping-choices-card">
+        
+                            <div class="payment-and-shipping__shipping-choices-card-content">
+                                <h4 class="payment-and-shipping__shipping-choices-card-heading">
+                                    <div class="payment-and-shipping__shipping-choices-card-icon-container">
+                                        <img src="img/payment-and-shipping/shipping-icon-3.svg" alt=""
+                                            class="payment-and-shipping__shipping-choices-card-icon payment-and-shipping__shipping-choices-card-icon--mail"
+                                            width="50">
+                                    </div>
+        
+                                    Почта России
+                                </h4>
+                                <div class="payment-and-shipping__shipping-choices-card-details">
+                                    Стоимость: <strong>500</strong>₽<br>Срок: до <strong>14</strong> дней
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>        <div class="product__videos">
+            <h2 class="section-heading product__videos-heading">
+                ВИДЕО О ПРОДУКТЕ
+            </h2>
+            <div class="product__videos-slider js-products-video-slider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#video-modal" class="product__videos-slider-card js-open-modal">
+                                <div class="product__videos-slider-card-image-container">
+                                    <img src="img/product/product-video-preview.jpg" alt=""
+                                        class="product__videos-slider-card-preview">
+
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-play">
+                                        <use xlink:href="#play"></use>
+                                    </svg>
+                                </div>
+                                <h4 class="product__videos-slider-card-title">
+                                    Название видео
+                                </h4>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#video-modal" class="product__videos-slider-card js-open-modal">
+                                <div class="product__videos-slider-card-image-container">
+                                    <img src="img/product/product-video-preview.jpg" alt=""
+                                        class="product__videos-slider-card-preview">
+
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-play">
+                                        <use xlink:href="#play"></use>
+                                    </svg>
+                                </div>
+                                <h4 class="product__videos-slider-card-title">
+                                    Название видео
+                                </h4>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#video-modal" class="product__videos-slider-card js-open-modal">
+                                <div class="product__videos-slider-card-image-container">
+                                    <img src="img/product/product-video-preview.jpg" alt=""
+                                        class="product__videos-slider-card-preview">
+
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-play">
+                                        <use xlink:href="#play"></use>
+                                    </svg>
+                                </div>
+                                <h4 class="product__videos-slider-card-title">
+                                    Название видео
+                                </h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button class="product__videos-slider-arrow product__videos-slider-arrow--prev">
+                    <svg width="12" height="16" aria-hidden="true" class="icon-stylized-arrow-left">
+                        <use xlink:href="#stylized-arrow-left"></use>
+                    </svg>
+                </button>
+                <button class="product__videos-slider-arrow product__videos-slider-arrow--next">
+                    <svg width="12" height="16" aria-hidden="true" class="icon-stylized-arrow-right">
+                        <use xlink:href="#stylized-arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <ul class="promo__list">
+            <li class="promo__list-item show-on-mobile">
+                <a href="#" class="promo__card promo__card--1">
+                    <span class="promo__card-top-dash"></span>
+                    <span class="promo__card-bottom-left-dash"></span>
+                    <h4 class="promo__card-title">
+                        Конструктор<br> боксов
+                    </h4>
+                    <div class="promo__card-text">
+                        <p>
+                            Создай свой набор<br> вкусов!
+                        </p>
+                    </div>
+                    <div class="btn promo__card-btn">
+                        Собрать бокс
+                    </div>
+                    <img src="img/promo/1.png" alt="" class="promo__card-image">
+                </a>
+            </li>
+            <li class="promo__list-item hide-on-mobile">
+                <a href="#" class="promo__card promo__card--5">
+                    <span class="promo__card-top-dash"></span>
+                    <span class="promo__card-bottom-left-dash"></span>
+                    <h4 class="promo__card-title">
+                        Конструктор<br> боксов
+                    </h4>
+
+                    <div class="btn promo__card-btn">
+                        Собрать бокс
+                    </div>
+                    <img src="img/promo/1.png" alt="" class="promo__card-image">
+                </a>
+            </li>
+            <li class="promo__list-item hide-on-mobile">
+                <a href="#" class="promo__card promo__card--6">
+                    <span class="promo__card-top-dash"></span>
+                    <span class="promo__card-bottom-left-dash"></span>
+                    <h4 class="promo__card-title">
+                        Все о нашей<br> компании
+                    </h4>
+
+                    <div class="btn btn--yellow promo__card-btn">
+                        Подробнее
+                    </div>
+                    <img src="img/promo/strawberry.png" alt="" class="promo__card-image">
+                </a>
+            </li>
+        </ul>
+
+        <div class="product__similar-products">
+            <h2 class="section-heading product__similar-products-heading">
+                ПОХОЖИЕ ПРОДУКТЫ
+            </h2>
+            <div class="product__similar-products-results">
+                <ul class="product__similar-products-list">
+                    <li class="product__similar-products-list-item">
+                        <a href="#"
+                            class="product__similar-products-card product__similar-products-card--yellow-backplate">
+                            <div class="product__similar-products-card-image-container">
+                                <img src="img/cards/1-1.png" alt="" class="product__similar-products-card-image">
+                            </div>
+                            <h4 class="product__similar-products-card-title">
+                                Protein Cake
+                            </h4>
                         </a>
                     </li>
-                    <li class="blog-detail__list-item">
-                        <a href="#" class="blog-detail__sharing-link">
-                            <svg width="12" height="16" aria-hidden="true" class="icon-twitter">
-                                <use xlink:href="#twitter"></use>
-                            </svg>
+                    <li class="product__similar-products-list-item">
+                        <a href="#"
+                            class="product__similar-products-card product__similar-products-card--yellow-backplate">
+                            <div class="product__similar-products-card-image-container">
+                                <img src="img/cards/2-1.png" alt="" class="product__similar-products-card-image">
+                            </div>
+                            <h4 class="product__similar-products-card-title">
+                                Protein Cake
+                            </h4>
                         </a>
                     </li>
-                    <li class="blog-detail__list-item">
-                        <a href="#" class="blog-detail__sharing-link">
-                            <svg width="12" height="16" aria-hidden="true" class="icon-facebook">
-                                <use xlink:href="#facebook"></use>
-                            </svg>
+                    <li class="product__similar-products-list-item">
+                        <a href="#"
+                            class="product__similar-products-card product__similar-products-card--yellow-backplate">
+                            <div class="product__similar-products-card-image-container">
+                                <img src="img/cards/3-1.png" alt="" class="product__similar-products-card-image">
+                            </div>
+                            <h4 class="product__similar-products-card-title">
+                                Choco Protein Cookie
+                            </h4>
+                        </a>
+                    </li>
+                    <li class="product__similar-products-list-item">
+                        <a href="#"
+                            class="product__similar-products-card product__similar-products-card--yellow-backplate">
+                            <div class="product__similar-products-card-image-container">
+                                <img src="img/cards/4-1.png" alt="" class="product__similar-products-card-image">
+                            </div>
+                            <h4 class="product__similar-products-card-title">
+                                Extra Protein Cake
+                            </h4>
                         </a>
                     </li>
                 </ul>
             </div>
-        </footer>
-    </div>
-</article>
 
-
-<section class="our-blog">
-    <div class="container">
-        <h2 class="section-heading our-blog__heading our-blog__heading--similar-articles">
-            Похожие статьи
-        </h2>
-        <div class="our-blog__content js-our-blog-slider">
-            <div class="swiper-container">
-                <ul class="swiper-wrapper our-blog__list">
-                    <li class="swiper-slide our-blog__list-item">
-                        <a href="#" class="our-blog__card">
-                            <div class="our-blog__card-image-container">
-                                <img src="img/our-blog/1.jpg" alt="" class="our-blog__card-image">
-                                <div class="our-blog__card-tag">
-                                    Название рубрики
-                                </div>
-                            </div>
-                            <h4 class="our-blog__card-title">
-                                Заголовок публикации
-                            </h4>
-                        </a>
-                    </li>
-                    <li class="swiper-slide our-blog__list-item">
-                        <a href="#" class="our-blog__card">
-                            <div class="our-blog__card-image-container">
-                                <img src="img/our-blog/2.jpg" alt="" class="our-blog__card-image">
-                                <div class="our-blog__card-tag">
-                                    Название рубрики
-                                </div>
-                            </div>
-                            <h4 class="our-blog__card-title">
-                                Заголовок публикации
-                            </h4>
-                        </a>
-                    </li>
-                    <li class="swiper-slide our-blog__list-item">
-                        <a href="#" class="our-blog__card">
-                            <div class="our-blog__card-image-container">
-                                <img src="img/our-blog/3.jpg" alt="" class="our-blog__card-image">
-                                <div class="our-blog__card-tag">
-                                    Название рубрики
-                                </div>
-                            </div>
-                            <h4 class="our-blog__card-title">
-                                Средний заголовок публикации
-                            </h4>
-                        </a>
-                    </li>
-                    <li class="swiper-slide our-blog__list-item">
-                        <a href="#" class="our-blog__card">
-                            <div class="our-blog__card-image-container">
-                                <img src="img/our-blog/1.jpg" alt="" class="our-blog__card-image">
-                                <div class="our-blog__card-tag">
-                                    Название рубрики
-                                </div>
-                            </div>
-                            <h4 class="our-blog__card-title">
-                                Заголовок публикации
-                            </h4>
-                        </a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </div>
 </section>
