@@ -9505,7 +9505,7 @@ textarea.text-input {
     z-index: -1;
     pointer-events: none; }
   .account__nav-list-item.active .account__nav-link {
-    color: #8B8B8B; }
+    color: #8b8b8b; }
   .no-touch .account__nav-link:hover {
     color: var(--primary-color); }
 
@@ -9528,8 +9528,8 @@ textarea.text-input {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin-right: 1rem;
-    -webkit-transition: fill .2s;
-    transition: fill .2s; }
+    -webkit-transition: fill 0.2s;
+    transition: fill 0.2s; }
   .no-touch .account__exit-link:hover {
     color: var(--primary-color); }
     .no-touch .account__exit-link:hover svg {
@@ -9591,7 +9591,7 @@ textarea.text-input {
     background-image: url("../img/splashes/action-card-top-dash.svg");
     background-repeat: no-repeat;
     right: 4rem;
-    top: -.4rem; }
+    top: -0.4rem; }
   .account__actions-link::after {
     content: '';
     width: 10.4rem;
@@ -9604,7 +9604,7 @@ textarea.text-input {
     background-image: url("../img/splashes/action-card-bottom-dash.svg");
     background-repeat: no-repeat;
     left: 2rem;
-    bottom: -.4rem; }
+    bottom: -0.4rem; }
   .account__actions-link:link, .account__actions-link:visited {
     color: var(--brown); }
 
@@ -9643,10 +9643,131 @@ textarea.text-input {
   line-height: 2.2rem;
   text-align: center;
   font-family: var(--roboto);
-  margin-left: .5rem;
+  margin-left: 0.5rem;
   margin-bottom: 1.2rem;
   color: white;
   font-weight: 400; }
+
+.account__my-orders-list-item {
+  margin-bottom: 2rem; }
+  .account__my-orders-list-item:last-child {
+    margin-bottom: 0; }
+
+.account__my-orders-card {
+  position: relative;
+  padding: 3rem;
+  background: #faefe6;
+  border-radius: 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+  .account__my-orders-card::before {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    width: 8.5rem;
+    height: 0.2rem;
+    background-image: url("../img/splashes/cart-summary-top-dash.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    right: 4rem;
+    top: -0.4rem; }
+  .account__my-orders-card::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    width: 10.4rem;
+    height: 0.3rem;
+    bottom: -0.4rem;
+    left: 2rem;
+    background-image: url("../img/splashes/cart-summary-bottom-dash.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
+  .account__my-orders-card--completed {
+    background-color: #F2F2F2; }
+    .account__my-orders-card--completed::before {
+      background-image: url("../img/splashes/cart-summary-top-dash-grey.svg"); }
+    .account__my-orders-card--completed::after {
+      background-image: url("../img/splashes/cart-summary-bottom-dash-grey.svg"); }
+
+.account__my-orders-card-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 33rem;
+  margin-right: 5rem; }
+
+.account__my-orders-card-info-top-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin-bottom: 2rem; }
+
+.account__my-orders-card-title {
+  font-weight: 900;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin-right: 2rem; }
+
+.account__my-orders-card-date {
+  color: #8b8b8b;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-family: var(--roboto); }
+
+.account__my-orders-card-info-bottom-row {
+  font-size: 2rem;
+  line-height: 2.8rem;
+  font-family: var(--roboto); }
+  .account__my-orders-card-info-bottom-row strong {
+    font-weight: 700; }
+
+.account__my-orders-card-status {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  font-family: var(--roboto);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.account__my-orders-card-details-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: var(--roboto);
+  font-weight: bold;
+  font-size: 1.8rem;
+  line-height: 2.4rem; }
+  .account__my-orders-card-details-link svg {
+    width: 1rem;
+    height: 1.6rem;
+    fill: #555555;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-left: 1.2rem;
+    -webkit-transition: fill .2s;
+    transition: fill .2s; }
+  .no-touch .account__my-orders-card-details-link:hover {
+    color: var(--primary-color); }
+    .no-touch .account__my-orders-card-details-link:hover svg {
+      fill: var(--primary-color); }
 
 .modals__modal {
   position: fixed;

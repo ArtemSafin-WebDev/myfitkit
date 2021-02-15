@@ -1,0 +1,185 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__content">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Главная
+                    </a>
+                    <a href="#" class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Личный кабинет
+                    </a>
+
+
+                    <a class="breadcrumbs__link active">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Мои заказы
+                    </a>
+                </li>
+            </ul>
+            <h1 class="main-heading">
+                Мои заказы
+            </h1>
+        </div>
+    </div>
+</div>
+
+<section class="account">
+    <div class="container">
+        <div class="account__row">
+            <div class="account__left-col">
+                <ul class="account__my-orders-list">
+                    <li class="account__my-orders-list-item">
+                        <div class="account__my-orders-card">
+                            <div class="account__my-orders-card-info">
+                                <div class="account__my-orders-card-info-top-row">
+                                    <h4 class="account__my-orders-card-title">
+                                        Заказ 12321
+                                    </h4>
+                                    <div class="account__my-orders-card-date">
+                                        12.10.2020
+                                    </div>
+                                </div>
+                                <div class="account__my-orders-card-info-bottom-row">
+                                    <strong>
+                                        1
+                                    </strong>
+                                    товар на сумму
+                                    <strong>
+                                        2 880 ₽
+                                    </strong>
+
+                                </div>
+
+                            </div>
+                            <div class="account__my-orders-card-status">
+                                Принят, ожидается оплата
+                            </div>
+                            <a href="#" class="account__my-orders-card-details-link">
+                                Подробнее
+                                <svg width="12" height="16" aria-hidden="true" class="icon-arrow-right">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="account__my-orders-list-item">
+                        <div class="account__my-orders-card">
+                            <div class="account__my-orders-card-info">
+                                <div class="account__my-orders-card-info-top-row">
+                                    <h4 class="account__my-orders-card-title">
+                                        Заказ 12320
+                                    </h4>
+                                    <div class="account__my-orders-card-date">
+                                        11.10.2020
+                                    </div>
+                                </div>
+                                <div class="account__my-orders-card-info-bottom-row">
+                                    <strong>
+                                        2
+                                    </strong>
+                                    товарa на сумму
+                                    <strong>
+                                        4 948 ₽
+                                    </strong>
+
+                                </div>
+
+                            </div>
+                            <div class="account__my-orders-card-status">
+                                Оплачен, готовится к отправке
+                            </div>
+                            <a href="#" class="account__my-orders-card-details-link">
+                                Подробнее
+                                <svg width="12" height="16" aria-hidden="true" class="icon-arrow-right">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="account__my-orders-list-item">
+                        <div class="account__my-orders-card account__my-orders-card--completed">
+                            <div class="account__my-orders-card-info">
+                                <div class="account__my-orders-card-info-top-row">
+                                    <h4 class="account__my-orders-card-title">
+                                        Заказ 12319
+                                    </h4>
+                                    <div class="account__my-orders-card-date">
+                                        24.06.2020
+                                    </div>
+                                </div>
+                                <div class="account__my-orders-card-info-bottom-row">
+                                    <strong>
+                                        1
+                                    </strong>
+                                    товар на сумму
+                                    <strong>
+                                        2 880 ₽
+                                    </strong>
+
+                                </div>
+
+                            </div>
+                            <div class="account__my-orders-card-status">
+                                Заказ выполнен
+                            </div>
+                            <a href="#" class="account__my-orders-card-details-link">
+                                Подробнее
+                                <svg width="12" height="16" aria-hidden="true" class="icon-arrow-right">
+                                    <use xlink:href="#arrow-right"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="account__right-col">
+                <nav class="account__nav">
+                    <ul class="account__nav-list">
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Кабинет
+                            </a>
+                        </li>
+                        <li class="account__nav-list-item active">
+                            <a href="#" class="account__nav-link">
+                                Мои заказы
+                            </a>
+                        </li>
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Личные данные
+                            </a>
+                        </li>
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Адреса доставки
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#" class="account__exit-link">
+                    <svg width="16" height="16" aria-hidden="true" class="icon-exit">
+                        <use xlink:href="#exit"></use>
+                    </svg>
+                    Выйти из кабинета
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}
