@@ -25,7 +25,7 @@
                 </svg>
             </button>
             <div class="modals__modal-product-gallery modals__modal-product-gallery--modal">
-                <div class="product__gallery js-product-gallery">
+                <div class="product__gallery product__gallery--inside-modal js-product-gallery">
                     <div class="product__gallery-left-col">
                         <div class="product__gallery-thumbs-slider">
                             <div class="swiper-container">
@@ -103,7 +103,7 @@
         </div>
     </div>
 
-    <div class="modals__modal js-modal" id="city-modal">
+    <div class="modals__modal modals__modal--city js-modal" id="city-modal">
         <div class="modals__modal-inner modals__modal-inner--city js-city-search">
             <button class="modals__modal-close js-close-modal">
                 <svg width="12" height="16" aria-hidden="true" class="icon-stylized-cross">
@@ -112,7 +112,10 @@
             </button>
             <div class="modals__modal-city">
                 <h3 class="modals__modal-city-heading">
-                    Ваш город
+                    <div class="modals__modal-city-heading-text">
+                        Ваш город
+                    </div>
+
                     <div class="modals__modal-current-city">
                         <svg width="12" height="16" aria-hidden="true" class="icon-location">
                             <use xlink:href="#location"></use>
@@ -121,10 +124,10 @@
                     </div>
                 </h3>
                 <form action="/" method="POST" class="modals__modal-city-form">
-                    <label for="city-name" class="text-input-label register__form-label">
+                    <label for="city-name" class="text-input-label modals__modal-city-form-label">
                         Название города
                     </label>
-                    <input type="search" class="text-input register__form-input" name="city-name" id="city-name">
+                    <input type="search" class="text-input modals__modal-city-form-input" name="city-name" id="city-name" placeholder="Название города">
                     <div class="modals__modal-city-form-submit">
                         <svg width="16" height="16" aria-hidden="true" class="icon-search">
                             <use xlink:href="#search"></use>

@@ -6,9 +6,9 @@
     height: 100%;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
-    z-index: 700;
+    z-index: 1000;
     background: rgba(black, 0.6);
-    padding: 5rem var(--content-padding);
+    padding: 5rem calc(var(--content-padding) + 1rem);
     display: flex;
     flex-direction: column;
     transition: opacity 0.3s, visibility 0s linear 0.3s;
@@ -18,6 +18,16 @@
         opacity: 1;
         visibility: visible;
         transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    @include breakpoint(mobile) {
+        padding: var(--content-padding);
+    }
+
+    &--city {
+        @include breakpoint(mobile) {
+            padding: 0;
+        }
     }
 }
 
@@ -53,6 +63,14 @@
         background-position: center;
         background-image: url('../img/splashes/modal-top-left-splash.svg');
         max-height: 100%;
+        max-width: 100%;
+
+        @include breakpoint(tablet) {
+            width: 45.6rem;
+            height: 49.1rem;
+            top: -3.8rem;
+            left: -5.2rem;
+        }
     }
 
     &::after {
@@ -61,17 +79,93 @@
         top: auto;
         right: -3.6rem;
         bottom: -10rem;
+
+        @include breakpoint(tablet) {
+            right: -4.2rem;
+            bottom: -10rem;
+        }
     }
 }
 
 .modals__modal-inner--city {
     padding: 5rem;
     max-width: 106rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        padding: 0;
+        border-radius: 0;
+        padding: var(--content-padding);
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+        &::before,
+        &::after {
+            display: none;
+        }
+
+        .modals__modal-close {
+            right: var(--content-padding);
+            top: 2.2rem;
+            left: auto;
+            bottom: auto;
+            svg {
+                fill: #555555;
+              
+            }
+        }
+    }
+}
+
+.modals__modal-inner--video {
+    @include breakpoint(tablet) {
+        padding: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        border-radius: 0;
+        &::before,
+        &::after {
+            display: none;
+        }
+
+        .modals__modal-video-player-container {
+            border-radius: 0;
+            // margin-left: calc(-1 * var(--content-padding));
+            // margin-right: calc(-1 * var(--content-padding));
+        }
+
+        .modals__modal-close {
+            right: 0;
+            bottom: 100%;
+            margin-bottom: 2rem;
+            left: auto;
+            top: auto;
+        }
+    }
+}
+
+.modals__modal-inner--product {
+    @include breakpoint(mobile) {
+        padding: 2rem;
+        border-radius: 2rem;
+        .modals__modal-close {
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+            left: auto;
+            bottom: auto;
+
+            svg {
+                fill: #555555;
+            }
+        }
+    }
 }
 
 .modals__modal-inner--components {
     padding: 4rem;
-    
+
     border-radius: 3rem;
     max-width: 93.4rem;
     margin: auto;
@@ -82,11 +176,20 @@
     background-size: 49rem auto;
     background-repeat: no-repeat;
     background-position: left -4rem top;
+
+    @include breakpoint(mobile) {
+        padding: 3rem;
+        background-position: left -5.4rem top;
+    }
     .modals__modal-close {
         top: 2.2rem;
         right: 2.8rem;
         left: auto;
         bottom: auto;
+
+        @include breakpoint(mobile) {
+            right: 2.4rem;
+        }
 
         svg {
             width: 1.9rem;
@@ -94,11 +197,9 @@
         }
 
         .no-touch &:hover {
-
             svg {
                 fill: var(--brown);
             }
-            
         }
     }
 }
@@ -109,21 +210,52 @@
     line-height: 4.4rem;
     letter-spacing: -0.05rem;
     margin-bottom: 1.4rem;
+
+    @include breakpoint(mobile) {
+        font-weight: 900;
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .modals__components-modal-row {
     display: flex;
+
+    @include breakpoint(small-tablet) {
+        flex-direction: column;
+    }
 }
 
 .modals__components-modal-left-col {
     width: 27.8rem;
     margin-right: 4rem;
     flex-shrink: 0;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(small-tablet) {
+        width: 100%;
+        margin: 0;
+        flex-shrink: 1;
+        margin-bottom: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
 }
 
 .modals__components-modal-right-col {
     width: 40%;
     flex-grow: 1;
+    @include breakpoint(small-tablet) {
+        width: 100%;
+        margin: 0;
+        flex-shrink: 1;
+        flex-grow: 0;
+    }
 }
 
 .modals__components-modal-small-heading {
@@ -132,6 +264,12 @@
     line-height: 2.8rem;
     margin-bottom: 1.4rem;
     font-family: var(--roboto);
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .modals__components-modal-table {
@@ -142,6 +280,11 @@
     display: flex;
     flex-direction: column;
     font-family: var(--roboto);
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
     table,
     tbody,
     thead,
@@ -164,6 +307,10 @@
     td {
         font-size: 1.8rem;
         line-height: 2.6rem;
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
     }
 
     th {
@@ -217,6 +364,16 @@
         display: block;
         fill: white;
         transition: fill 0.3s;
+
+        @include breakpoint(tablet) {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+
+        @include breakpoint(mobile) {
+            width: 2rem;
+            height: 2rem;
+        }
     }
 
     .no-touch &:hover {
@@ -272,6 +429,10 @@
     .product__gallery {
         margin: 0;
     }
+
+    @include breakpoint(tablet) {
+        padding: 0;
+    }
 }
 
 .modals__modal-city-heading {
@@ -281,6 +442,12 @@
     font-size: 2.4rem;
     line-height: 1.2;
     margin-bottom: 2rem;
+}
+
+.modals__modal-city-heading-text {
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .modals__modal-current-city {
@@ -304,6 +471,18 @@
         flex-shrink: 0;
         fill: currentColor;
         margin-right: 1rem;
+
+        @include breakpoint(mobile) {
+            width: 1rem;
+            height: 1.4rem;
+            margin-right: 1rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        margin-left: 0;
+        position: static;
+        bottom: auto;
     }
 }
 
@@ -328,16 +507,26 @@
         top: 50%;
         transform: translate(-50%, -50%);
         fill: currentColor;
+        @include breakpoint(mobile) {
+            width: 2.2rem;
+            height: 2.2rem;
+        }
     }
 
-    // .no-touch &:hover {
-    //     color: var(--primary-color);
-    // }
+    @include breakpoint(mobile) {
+        width: 5rem;
+        height: 5rem;
+    }
 }
 
 .modals__modal-city-results-list {
     column-count: 4;
     column-gap: 3rem;
+
+    @include breakpoint(mobile) {
+        column-count: 1;
+        column-gap: 0;
+    }
 }
 
 .modals__modal-city-results-list-item {
@@ -355,6 +544,7 @@
     line-height: 3.6rem;
     font-family: var(--roboto);
     color: black;
+    display: block;
     &:link,
     &:visited {
         color: black;
@@ -362,5 +552,25 @@
 
     .no-touch &:hover {
         color: var(--primary-color);
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        padding: 0.8rem 0;
+    }
+}
+
+.modals__modal-city-form-input {
+    @include breakpointMF(small-tablet) {
+        @include placeholder {
+            opacity: 0;
+        }
+    }
+}
+
+.modals__modal-city-form-label {
+    @include breakpoint(mobile) {
+        display: none;
     }
 }

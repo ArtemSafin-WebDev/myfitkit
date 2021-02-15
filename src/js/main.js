@@ -20,6 +20,7 @@ import phoneMask from './phoneMask';
 import tabs from './tabs';
 import citySearch from './citySearch';
 import cartPopup from './cartPopup';
+import similarProductsSlider from './similarProductsSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     phoneMask();
     citySearch();
     cartPopup();
+    similarProductsSlider();
 });
 
 window.addEventListener('load', function() {

@@ -131,6 +131,12 @@
     position: relative;
     z-index: 1;
 
+    @include breakpoint(tablet) {
+        .cart--checkout & {
+            max-width: 46rem;
+        }
+    }
+
     @include breakpoint(mobile) {
         padding: 2.5rem;
         padding-top: 2rem;

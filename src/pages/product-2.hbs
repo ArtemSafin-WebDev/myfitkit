@@ -16,13 +16,13 @@
                         <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
                             <use xlink:href="#arrow-right"></use>
                         </svg>
-                        Блог
+                        Каталог
                     </a>
                     <a class="breadcrumbs__link active">
                         <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
                             <use xlink:href="#arrow-right"></use>
                         </svg>
-                        Заголовок рецепта
+                        Protein Cake Banana Pudding
                     </a>
                 </li>
             </ul>
@@ -110,21 +110,26 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="product__gallery-main-slider-pagination">
+
+                            </div>
                         </div>
                     </div>
 
                 </div>
                 <div class="product__right-col">
-                    <div class="product__sale-label">
-                        SALE
+                    <div class="product__heading-block">
+                        <div class="product__sale-label">
+                            SALE
+                        </div>
+                        <div class="product__category">
+                            Печенье глазированное
+                        </div>
+                        <h1 class="main-heading product__main-heading">
+                            Protein Cake Ассорти
+                        </h1>
                     </div>
-                    <div class="product__category">
-                        Печенье глазированное
-                    </div>
-                    <h1 class="main-heading product__main-heading">
-                        Protein Cake Ассорти
-                    </h1>
-                    <form action="/" method="POST" class="product__form product__form--short">
+                    <form action="/" method="POST" class="product__form product__form--short" id="product-card-form">
 
                         <div class="product__choose-quantity">
                             <h4 class="product__form-heading">
@@ -172,10 +177,10 @@
                             </div>
                             <div class="product__price">
                                 <div class="product__new-price">
-                                    2 592 ₽
+                                    1 900 ₽
                                 </div>
                                 <div class="product__old-price">
-                                    2 880 ₽
+                                    2 090 ₽
                                 </div>
                             </div>
                             <button class="btn product__submit" type="submit">
@@ -484,60 +489,7 @@
             </li>
         </ul>
 
-        <div class="product__similar-products">
-            <h2 class="section-heading product__similar-products-heading">
-                ПОХОЖИЕ ПРОДУКТЫ
-            </h2>
-            <div class="product__similar-products-results">
-                <ul class="product__similar-products-list">
-                    <li class="product__similar-products-list-item">
-                        <a href="#"
-                            class="product__similar-products-card product__similar-products-card--yellow-backplate">
-                            <div class="product__similar-products-card-image-container">
-                                <img src="img/cards/1-1.png" alt="" class="product__similar-products-card-image">
-                            </div>
-                            <h4 class="product__similar-products-card-title">
-                                Protein Cake
-                            </h4>
-                        </a>
-                    </li>
-                    <li class="product__similar-products-list-item">
-                        <a href="#"
-                            class="product__similar-products-card product__similar-products-card--yellow-backplate">
-                            <div class="product__similar-products-card-image-container">
-                                <img src="img/cards/2-1.png" alt="" class="product__similar-products-card-image">
-                            </div>
-                            <h4 class="product__similar-products-card-title">
-                                Protein Cake
-                            </h4>
-                        </a>
-                    </li>
-                    <li class="product__similar-products-list-item">
-                        <a href="#"
-                            class="product__similar-products-card product__similar-products-card--yellow-backplate">
-                            <div class="product__similar-products-card-image-container">
-                                <img src="img/cards/3-1.png" alt="" class="product__similar-products-card-image">
-                            </div>
-                            <h4 class="product__similar-products-card-title">
-                                Choco Protein Cookie
-                            </h4>
-                        </a>
-                    </li>
-                    <li class="product__similar-products-list-item">
-                        <a href="#"
-                            class="product__similar-products-card product__similar-products-card--yellow-backplate">
-                            <div class="product__similar-products-card-image-container">
-                                <img src="img/cards/4-1.png" alt="" class="product__similar-products-card-image">
-                            </div>
-                            <h4 class="product__similar-products-card-title">
-                                Extra Protein Cake
-                            </h4>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
+        {{> similar-products }}
     </div>
 </section>
 

@@ -108,6 +108,8 @@
         min-width: auto;
         padding-left: 5rem;
         padding-right: 5rem;
+        padding-top: 1.4rem;
+        padding-bottom: 1.4rem;
     }
 }
 
@@ -117,4 +119,10 @@
     padding-right: 4.8rem;
     font-weight: 700;
     margin-top: 1rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding-top: 1.4rem;
+        padding-bottom: 1.4rem;
+    }
 }

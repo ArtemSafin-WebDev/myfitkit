@@ -9,9 +9,9 @@ export default function productsVideoSlider() {
         const container = element.querySelector('.swiper-container');
 
         new Swiper(container, {
-            slidesPerView: 2,
-            slidesPerGroup: 2,
-            spaceBetween: 30,
+            slidesPerView: 'auto',
+            
+            spaceBetween: 20,
             watchOverflow: true,
             threshold: 5,
             centerInsufficientSlides: true,
@@ -19,6 +19,13 @@ export default function productsVideoSlider() {
             navigation: {
                 nextEl: element.querySelector('.product__videos-slider-arrow--next'),
                 prevEl: element.querySelector('.product__videos-slider-arrow--prev')
+            },
+            breakpoints: {
+                641: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 2,
+                    spaceBetween: 30
+                }
             }
         });
     });

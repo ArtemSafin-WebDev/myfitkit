@@ -22,7 +22,7 @@ export default function chooseTasteSlider() {
             }
         }
         const instance = new Swiper(container, {
-            slidesPerView: 6,
+            slidesPerView: 'auto',
             spaceBetween: 20,
             watchOverflow: true,
             threshold: 5,
@@ -35,6 +35,20 @@ export default function chooseTasteSlider() {
             on: {
                 init: handleProgress,
                 slideChange: handleProgress
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 7,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 9,
+                    spaceBetween: 20,
+                },
+                1400: {
+                    slidesPerView: 6,
+                    spaceBetween: 20,
+                }
             }
         });
 
