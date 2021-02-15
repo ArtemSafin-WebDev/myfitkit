@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>
-        MyFitkit - Оформление заказа
+        MyFitkit - Заказ
     </title>
 </head>
 
@@ -292,500 +292,316 @@
                         <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
                             <use xlink:href="#arrow-right"></use>
                         </svg>
-                        Корзина
+                        Личный кабинет
                     </a>
 
 
+                    <a class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Мои заказы
+                    </a>
                     <a class="breadcrumbs__link active">
                         <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
                             <use xlink:href="#arrow-right"></use>
                         </svg>
-                        Оформление заказа
+                        Заказ 12321
                     </a>
                 </li>
             </ul>
             <h1 class="main-heading">
-                Оформление заказа
+                Мои заказы
             </h1>
         </div>
     </div>
 </div>
 
-<section class="cart cart--checkout">
+<section class="account">
     <div class="container">
-        <form class="cart__row">
-            <div class="cart__left-col">
-                <div class="cart__checkout">
-                    <div class="cart__checkout-authorize">
+        <div class="account__row">
+            <div class="account__left-col">
+                <div class="account__my-order-info">
+                    <div class="account__my-orders-card account__my-orders-card--standalone">
+                        <div class="account__my-orders-card-info">
+                            <div class="account__my-orders-card-info-top-row">
+                                <h2 class="account__my-orders-card-title">
+                                    Заказ 12321
+                                </h2>
+                                <div class="account__my-orders-card-date">
+                                    12.10.2020
+                                </div>
+                            </div>
+                            <div class="account__my-orders-card-info-bottom-row">
+                                <strong>
+                                    1
+                                </strong>
+                                товар на сумму
+                                <strong>
+                                    2 880 ₽
+                                </strong>
+
+                            </div>
+
+                        </div>
+                        <div class="account__my-orders-card-status">
+                            Принят, ожидается оплата
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="account__my-order-included">
+                    <h2 class="account__my-order-heading">
+                        Содержимое заказа
+                    </h2>
+                    <ul class="cart__checkout-order-list">
+                        <li class="cart__checkout-order-list-item">
+                            <div class="cart__checkout-order-card">
+                                <h4 class="cart__checkout-order-card-name">
+                                    Protein Cake
+                                </h4>
+                                <div class="cart__checkout-order-card-row">
+                                    <div class="cart__checkout-order-card-name-col">
+                                        <div class="cart__checkout-order-card-description">
+                                            <p>Печенье глазированное
+                                                <br>
+                                                Вкус: Banana Pudding
+                                            </p>
+                                            <p>
+                                                24 шт.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="cart__checkout-order-card-quantity-col">
+                                        <div class="cart__checkout-order-card-col-title">
+                                            Кол-во
+                                        </div>
+                                        <div class="cart__checkout-order-card-col-number">
+                                            1 шт.
+                                        </div>
+                                    </div>
+                                    <div class="cart__checkout-order-card-price-col">
+                                        <div class="cart__checkout-order-card-col-title">
+                                            Цена
+                                        </div>
+                                        <div class="cart__checkout-order-card-col-number">
+                                            2 880 ₽
+                                        </div>
+                                    </div>
+                                    <div class="cart__checkout-order-card-total-col">
+                                        <div class="cart__checkout-order-card-col-title">
+                                            Сумма
+                                        </div>
+                                        <div class="cart__checkout-order-card-col-number">
+                                            <strong>
+                                                2 880 ₽
+                                            </strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cart__checkout-order-list-item">
+                            <div class="cart__checkout-order-card">
+                                <h4 class="cart__checkout-order-card-name">
+                                    Extra Protein Cake
+                                </h4>
+                                <div class="cart__checkout-order-card-row">
+                                    <div class="cart__checkout-order-card-name-col">
+                                        <div class="cart__checkout-order-card-description">
+                                            <p>Печенье глазированное
+                                                <br>
+                                                Вкус: Banana Pudding
+                                            </p>
+                                            <p>
+                                                24 шт.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="cart__checkout-order-card-quantity-col">
+                                        <div class="cart__checkout-order-card-col-title">
+                                            Кол-во
+                                        </div>
+                                        <div class="cart__checkout-order-card-col-number">
+                                            1 шт.
+                                        </div>
+                                    </div>
+                                    <div class="cart__checkout-order-card-price-col">
+                                        <div class="cart__checkout-order-card-col-title">
+                                            Цена
+                                        </div>
+                                        <div class="cart__checkout-order-card-col-number">
+                                            2 880 ₽
+                                            <div class="cart__checkout-order-card-col-number-old">
+                                                3 120 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cart__checkout-order-card-total-col">
+                                        <div class="cart__checkout-order-card-col-title">
+                                            Сумма
+                                        </div>
+                                        <div class="cart__checkout-order-card-col-number">
+                                            <strong>
+                                                2 880 ₽
+                                            </strong>
+                                            <div class="cart__checkout-order-card-col-number-old">
+                                                3 120 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cart__checkout-order-list-item">
+                            <div class="cart__checkout-order-card">
+                                <h4 class="cart__checkout-order-card-name">
+                                    Protein Cake
+                                </h4>
+                                <div class="cart__checkout-order-card-row">
+                                    <div class="cart__checkout-order-card-name-col">
+                                        <div class="cart__checkout-order-card-description">
+                                            <p>Печенье глазированное
+                                                <br>
+                                                Вкус: Banana Pudding
+                                            </p>
+                                            <p>
+                                                24 шт.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="cart__checkout-order-card-quantity-col">
+                                        <div class="cart__checkout-order-card-col-title">
+                                            Кол-во
+                                        </div>
+                                        <div class="cart__checkout-order-card-col-number">
+                                            1 шт.
+                                        </div>
+                                    </div>
+                                    <div class="cart__checkout-order-card-price-col">
+                                        <div class="cart__checkout-order-card-col-title">
+                                            Цена
+                                        </div>
+                                        <div class="cart__checkout-order-card-col-number">
+                                            2 880 ₽
+                                        </div>
+                                    </div>
+                                    <div class="cart__checkout-order-card-total-col">
+                                        <div class="cart__checkout-order-card-col-title">
+                                            Сумма
+                                        </div>
+                                        <div class="cart__checkout-order-card-col-number">
+                                            <strong>
+                                                2 880 ₽
+                                            </strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="account__my-order-delivery">
+                    <h2 class="account__my-order-heading">
+                        Доставка
+                    </h2>
+                    <div class="account__my-order-delivery-text">
                         <p>
-                            Если вы уже заказывали в нашем магазине, пожалуйста, авторизируйтесь
+                            <strong>
+                                Курьером
+                            </strong>
                         </p>
-                        <a href="#">
-                            Авторизироваться
-                        </a>
+                        <p>
+                            г. Москва, ул. Ленина, 3, кв. 125<br>
+                            Способ доставки: курьером
+                        </p>
                     </div>
-                    <div class="cart__checkout-your-data">
-                        <h2 class="cart__checkout-heading">
-                            Ваши данные
-                        </h2>
-                        <div class="cart__checkout-your-data-row">
-                            <div class="cart__checkout-your-data-col">
-                                <div class="cart__checkout-your-data-input-wrapper">
-                                    <label for="firstname" class="text-input-label register__form-label">
-                                        Имя *
-                                    </label>
-                                    <input type="text" class="text-input register__form-input" name="firstname"
-                                        id="firstname" required>
-                                </div>
-                            </div>
-                            <div class="cart__checkout-your-data-col">
-                                <div class="cart__checkout-your-data-input-wrapper">
-                                    <label for="lastname" class="text-input-label register__form-label">
-                                        Фамилия
-                                    </label>
-                                    <input type="text" class="text-input register__form-input" name="lastname"
-                                        id="lastname">
-                                </div>
-                            </div>
-                            <div class="cart__checkout-your-data-col">
-                                <div class="cart__checkout-your-data-input-wrapper">
-                                    <label for="email" class="text-input-label register__form-label">
-                                        E-mail *
-                                    </label>
-                                    <input type="email" class="text-input register__form-input" name="email" id="email"
-                                        required>
-                                </div>
-                            </div>
-                            <div class="cart__checkout-your-data-col">
-                                <div class="cart__checkout-your-data-input-wrapper">
-                                    <label for="phone" class="text-input-label register__form-label">
-                                        Телефон *
-                                    </label>
-                                    <input type="tel" class="text-input register__form-inpu js-phone-input" name="phone"
-                                        id="phone" required data-parsley-phone>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cart__checkout-delivery js-tabs">
-                        <h2 class="cart__checkout-heading">
-                            Доставка
+                </div>
+                <div class="account__my-order-summary">
+                    <div class="cart__summary">
 
-                            <a href="#city-modal" class="cart__checkout-city js-open-modal">
-                                <svg width="16" height="16" aria-hidden="true" class="icon-location">
-                                    <use xlink:href="#location"></use>
-                                </svg>
-                                Москва
-                            </a>
-                        </h2>
-                        <div class="tabs-nav cart__checkout-tabs-nav">
-                            <label class="tabs-nav__checkbox">
-                                <input type="radio" class="tabs-nav__checkbox-input" name="delivery-type"
-                                    value="courier">
-                                <span class="tabs-nav__checkbox-content">
-                                    Курьером
-                                </span>
-                            </label>
-                            <label class="tabs-nav__checkbox">
-                                <input type="radio" class="tabs-nav__checkbox-input" name="delivery-type" value="point">
-                                <span class="tabs-nav__checkbox-content">
-                                    Пункт выдачи
-                                </span>
-                            </label>
-                            <label class="tabs-nav__checkbox">
-                                <input type="radio" class="tabs-nav__checkbox-input" name="delivery-type"
-                                    value="pochta">
-                                <span class="tabs-nav__checkbox-content">
-                                    Почта России
-                                </span>
-                            </label>
-                        </div>
-                        <div class="tabs-items">
-                            <div class="tabs-items__item">
-                                <div class="cart__checkout-address">
-                                    <div class="cart__checkout-address-wrapper">
-                                        <label for="street" class="text-input-label register__form-label">
-                                            Улица *
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="street"
-                                            id="street" required>
-                                    </div>
-                                    <div class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
-                                        <label for="home" class="text-input-label register__form-label">
-                                            Дом *
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="home" id="home"
-                                            required>
-                                    </div>
-                                    <div class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
-                                        <label for="section" class="text-input-label register__form-label">
-                                            Строение
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="section"
-                                            id="section">
-                                    </div>
-                                    <div class="cart__checkout-address-wrapper cart__checkout-address-wrapper--medium">
-                                        <label for="flat" class="text-input-label register__form-label">
-                                            Кв. / офис *
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="flat" id="flat"
-                                            required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tabs-items__item">
-                                <div class="cart__checkout-point-delivery">
-                                    <div class="cart__checkout-point-delivery-row">
-                                        <div class="cart__checkout-point-delivery-left-col">
-                                            <div class="cart__checkout-point-delivery-variants">
-                                                <ul class="cart__checkout-point-delivery-variants-list">
-                                                    <li class="cart__checkout-point-delivery-variants-list-item">
-                                                        <label class="standard-radio">
-                                                            <input type="radio" name="point" value="1"
-                                                                class="standard-radio__input" checked>
-                                                            <span class="standard-radio__checkmark">
-
-                                                            </span>
-                                                            <span class="standard-radio__text">
-                                                                г. Москва, ул. Ленина, д.3
-                                                                Пн-Вс с 10:00 до 21:00
-                                                                Доставка — через 4 дня
-                                                            </span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="cart__checkout-point-delivery-variants-list-item">
-                                                        <label class="standard-radio">
-                                                            <input type="radio" name="point" value="2"
-                                                                class="standard-radio__input">
-                                                            <span class="standard-radio__checkmark">
-
-                                                            </span>
-                                                            <span class="standard-radio__text">
-                                                                г. Москва, ул. Ленина, д.3
-                                                                Пн-Вс с 10:00 до 21:00
-                                                                Доставка — через 4 дня
-                                                            </span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="cart__checkout-point-delivery-variants-list-item">
-                                                        <label class="standard-radio">
-                                                            <input type="radio" name="point" value="3"
-                                                                class="standard-radio__input">
-                                                            <span class="standard-radio__checkmark">
-
-                                                            </span>
-                                                            <span class="standard-radio__text">
-                                                                г. Москва, ул. Ленина, д.3
-                                                                Пн-Вс с 10:00 до 21:00
-                                                                Доставка — через 4 дня
-                                                            </span>
-                                                        </label>
-                                                    </li>
-                                                    <li class="cart__checkout-point-delivery-variants-list-item">
-                                                        <label class="standard-radio">
-                                                            <input type="radio" name="point" value="4"
-                                                                class="standard-radio__input">
-                                                            <span class="standard-radio__checkmark">
-
-                                                            </span>
-                                                            <span class="standard-radio__text">
-                                                                г. Москва, ул. Ленина, д.3
-                                                                Пн-Вс с 10:00 до 21:00
-                                                                Доставка — через 4 дня
-                                                            </span>
-                                                        </label>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="cart__checkout-point-delivery-right-col">
-                                            <div class="cart__checkout-point-delivery-points-map-container">
-                                                <div class="cart__checkout-point-delivery-points-map" id="points-map">
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tabs-items__item">
-                                <div class="cart__checkout-address">
-                                    <div class="cart__checkout-address-wrapper">
-                                        <label for="street" class="text-input-label register__form-label">
-                                            Улица *
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="street"
-                                            id="street" required>
-                                    </div>
-                                    <div class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
-                                        <label for="home" class="text-input-label register__form-label">
-                                            Дом *
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="home" id="home"
-                                            required>
-                                    </div>
-                                    <div class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
-                                        <label for="section" class="text-input-label register__form-label">
-                                            Строение
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="section"
-                                            id="section">
-                                    </div>
-                                    <div class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
-                                        <label for="flat" class="text-input-label register__form-label">
-                                            Кв. / офис *
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="flat" id="flat"
-                                            required>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cart__checkout-payment">
-                        <h2 class="cart__checkout-heading">
-                            Оплата
-                        </h2>
-                        <h3 class="cart__checkout-payment-heading">
-                            Картой онлайн
+                        <h3 class="cart__summary-heading">
+                            Стоимость заказа
                         </h3>
-                        <div class="cart__checkout-payment-text">
-                            Visa, MasterCard, МИР, Яндекс деньги, Qiwi Кошелек, WebMoney, Элекснет.
-                        </div>
+                        <table class="cart__summary-table">
+                            <tbody>
+                                <tr>
+                                    <th>
+                                        Скидка
+                                    </th>
+                                    <td>
+                                        312 ₽
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Доставка
+                                    </th>
+                                    <td>
+                                        200 ₽
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        <span class="cart__summary-table-th-total">
+                                            Итого
+                                        </span>
+                                    </th>
+                                    <td>
+                                        <span class="cart__summary-table-td-total">
+                                            4 948 ₽
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="cart__checkout-order">
-                        <h2 class="cart__checkout-heading">
-                            Ваш заказ
-                        </h2>
-                        <ul class="cart__checkout-order-list">
-                            <li class="cart__checkout-order-list-item">
-                                <div class="cart__checkout-order-card">
-                                    <h4 class="cart__checkout-order-card-name">
-                                        Protein Cake
-                                    </h4>
-                                    <div class="cart__checkout-order-card-row">
-                                        <div class="cart__checkout-order-card-name-col">
-                                            <div class="cart__checkout-order-card-description">
-                                                <p>Печенье глазированное
-                                                    <br>
-                                                    Вкус: Banana Pudding
-                                                </p>
-                                                <p>
-                                                    24 шт.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="cart__checkout-order-card-quantity-col">
-                                            <div class="cart__checkout-order-card-col-title">
-                                                Кол-во
-                                            </div>
-                                            <div class="cart__checkout-order-card-col-number">
-                                                1 шт.
-                                            </div>
-                                        </div>
-                                        <div class="cart__checkout-order-card-price-col">
-                                            <div class="cart__checkout-order-card-col-title">
-                                                Цена
-                                            </div>
-                                            <div class="cart__checkout-order-card-col-number">
-                                                2 880 ₽
-                                            </div>
-                                        </div>
-                                        <div class="cart__checkout-order-card-total-col">
-                                            <div class="cart__checkout-order-card-col-title">
-                                                Сумма
-                                            </div>
-                                            <div class="cart__checkout-order-card-col-number">
-                                                <strong>
-                                                    2 880 ₽
-                                                </strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="cart__checkout-order-list-item">
-                                <div class="cart__checkout-order-card">
-                                    <h4 class="cart__checkout-order-card-name">
-                                        Extra Protein Cake
-                                    </h4>
-                                    <div class="cart__checkout-order-card-row">
-                                        <div class="cart__checkout-order-card-name-col">
-                                            <div class="cart__checkout-order-card-description">
-                                                <p>Печенье глазированное
-                                                    <br>
-                                                    Вкус: Banana Pudding
-                                                </p>
-                                                <p>
-                                                    24 шт.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="cart__checkout-order-card-quantity-col">
-                                            <div class="cart__checkout-order-card-col-title">
-                                                Кол-во
-                                            </div>
-                                            <div class="cart__checkout-order-card-col-number">
-                                                1 шт.
-                                            </div>
-                                        </div>
-                                        <div class="cart__checkout-order-card-price-col">
-                                            <div class="cart__checkout-order-card-col-title">
-                                                Цена
-                                            </div>
-                                            <div class="cart__checkout-order-card-col-number">
-                                                2 880 ₽
-                                                <div class="cart__checkout-order-card-col-number-old">
-                                                    3 120 ₽
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="cart__checkout-order-card-total-col">
-                                            <div class="cart__checkout-order-card-col-title">
-                                                Сумма
-                                            </div>
-                                            <div class="cart__checkout-order-card-col-number">
-                                                <strong>
-                                                    2 880 ₽
-                                                </strong>
-                                                <div class="cart__checkout-order-card-col-number-old">
-                                                    3 120 ₽
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="cart__checkout-order-list-item">
-                                <div class="cart__checkout-order-card">
-                                    <h4 class="cart__checkout-order-card-name">
-                                        Protein Cake
-                                    </h4>
-                                    <div class="cart__checkout-order-card-row">
-                                        <div class="cart__checkout-order-card-name-col">
-                                            <div class="cart__checkout-order-card-description">
-                                                <p>Печенье глазированное
-                                                    <br>
-                                                    Вкус: Banana Pudding
-                                                </p>
-                                                <p>
-                                                    24 шт.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="cart__checkout-order-card-quantity-col">
-                                            <div class="cart__checkout-order-card-col-title">
-                                                Кол-во
-                                            </div>
-                                            <div class="cart__checkout-order-card-col-number">
-                                                1 шт.
-                                            </div>
-                                        </div>
-                                        <div class="cart__checkout-order-card-price-col">
-                                            <div class="cart__checkout-order-card-col-title">
-                                                Цена
-                                            </div>
-                                            <div class="cart__checkout-order-card-col-number">
-                                                2 880 ₽
-                                            </div>
-                                        </div>
-                                        <div class="cart__checkout-order-card-total-col">
-                                            <div class="cart__checkout-order-card-col-title">
-                                                Сумма
-                                            </div>
-                                            <div class="cart__checkout-order-card-col-number">
-                                                <strong>
-                                                    2 880 ₽
-                                                </strong>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="cart__checkout-comment">
-                        <h2 class="cart__checkout-heading">
-                            Комментарий
-                        </h2>
-                        <textarea class="text-input">
-
-                        </textarea>
-                    </div>
-
-                </div>
-
-            </div>
-            <div class="cart__right-col">
-
-
-
-                <div class="cart__summary">
-
-                    <h3 class="cart__summary-heading">
-                        Стоимость заказа
-                    </h3>
-                    <table class="cart__summary-table">
-                        <tbody>
-                            <tr>
-                                <th>
-                                    Скидка
-                                </th>
-                                <td>
-                                    812 ₽
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    Доставка
-                                </th>
-                                <td>
-                                    200 ₽
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>
-                                    <span class="cart__summary-table-th-total">
-                                        Итого
-                                    </span>
-                                </th>
-                                <td>
-                                    <span class="cart__summary-table-td-total">
-                                        11 148 ₽
-                                    </span>
-
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <button class="cart__submit-btn" type="submit">
-                    Подтвердить заказ
-                </button>
-
-                <label class="standard-checkbox">
-                    <input type="checkbox" class="standard-checkbox__input" name="policy" required>
-                    <span class="standard-checkbox__mark">
-                        <svg width="16" height="16" aria-hidden="true" class="icon-checkmark">
-                            <use xlink:href="#checkmark"></use>
+                    <button class="cart__submit-btn" type="submit">
+                        Повторить заказ
+                    </button>
+                    <a href="#" class="blog-detail__back-link">
+                        <svg width="12" height="16" aria-hidden="true" class="icon-arrow-left">
+                            <use xlink:href="#arrow-left"></use>
                         </svg>
-                    </span>
-                    <span class="standard-checkbox__text">
-                        Согласен с условиями <a href="#">
-                            политики конфиденциальности
-                        </a>
-                    </span>
-                </label>
+                        Все заказы
+                    </a>
+                </div>
 
             </div>
-        </form>
-        <a href="#" class="cart__checkout-back-link">
-            <svg width="16" height="16" aria-hidden="true" class="icon-arrow-left">
-                <use xlink:href="#arrow-left"></use>
-            </svg>
-            Вернуться в корзину
-        </a>
+            <div class="account__right-col">
+                <nav class="account__nav">
+                    <ul class="account__nav-list">
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Кабинет
+                            </a>
+                        </li>
+                        <li class="account__nav-list-item active">
+                            <a href="#" class="account__nav-link">
+                                Мои заказы
+                            </a>
+                        </li>
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Личные данные
+                            </a>
+                        </li>
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Адреса доставки
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#" class="account__exit-link">
+                    <svg width="16" height="16" aria-hidden="true" class="icon-exit">
+                        <use xlink:href="#exit"></use>
+                    </svg>
+                    Выйти из кабинета
+                </a>
+            </div>
+        </div>
     </div>
 </section>
 

@@ -7597,7 +7597,8 @@ textarea.text-input {
   font-weight: bold;
   font-size: 1.8rem;
   line-height: 2.4rem;
-  color: var(--brown); }
+  color: var(--brown);
+  font-family: var(--roboto); }
   @media only screen and (max-width: 640px) {
     .blog-detail__back-link {
       display: none; } }
@@ -9691,11 +9692,16 @@ textarea.text-input {
     background-repeat: no-repeat;
     background-position: center; }
   .account__my-orders-card--completed {
-    background-color: #F2F2F2; }
+    background-color: #f2f2f2; }
     .account__my-orders-card--completed::before {
       background-image: url("../img/splashes/cart-summary-top-dash-grey.svg"); }
     .account__my-orders-card--completed::after {
       background-image: url("../img/splashes/cart-summary-bottom-dash-grey.svg"); }
+  .account__my-orders-card--standalone {
+    padding: 0;
+    background: transparent; }
+    .account__my-orders-card--standalone::before, .account__my-orders-card--standalone::after {
+      display: none; }
 
 .account__my-orders-card-info {
   display: -webkit-box;
@@ -9722,6 +9728,10 @@ textarea.text-input {
   font-size: 2.4rem;
   line-height: 1.2;
   margin-right: 2rem; }
+  .account__my-orders-card--standalone .account__my-orders-card-title {
+    font-size: 3.2rem;
+    line-height: 4.4rem;
+    letter-spacing: -0.05rem; }
 
 .account__my-orders-card-date {
   color: #8b8b8b;
@@ -9762,12 +9772,43 @@ textarea.text-input {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     margin-left: 1.2rem;
-    -webkit-transition: fill .2s;
-    transition: fill .2s; }
+    -webkit-transition: fill 0.2s;
+    transition: fill 0.2s; }
   .no-touch .account__my-orders-card-details-link:hover {
     color: var(--primary-color); }
     .no-touch .account__my-orders-card-details-link:hover svg {
       fill: var(--primary-color); }
+
+.account__my-order-info {
+  margin-bottom: 4rem; }
+
+.account__my-order-included {
+  margin-bottom: 4rem;
+  max-width: 62rem; }
+
+.account__my-order-heading {
+  font-weight: 900;
+  font-size: 3.2rem;
+  line-height: 4.4rem;
+  letter-spacing: -0.05rem;
+  margin-bottom: 2rem; }
+
+.account__my-order-delivery {
+  margin-bottom: 4rem; }
+
+.account__my-order-delivery-text {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  font-family: var(--roboto); }
+  .account__my-order-delivery-text strong {
+    font-weight: 700; }
+  .account__my-order-delivery-text p {
+    margin-bottom: 1.2rem; }
+    .account__my-order-delivery-text p:last-child {
+      margin-bottom: 0; }
+
+.account__my-order-summary {
+  max-width: 40rem; }
 
 .modals__modal {
   position: fixed;

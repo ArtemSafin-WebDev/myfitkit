@@ -192,8 +192,6 @@
     display: flex;
     align-items: flex-end;
 
-
-
     &::before {
         content: '';
         position: absolute;
@@ -224,9 +222,8 @@
         background-position: center;
     }
 
-
     &--completed {
-        background-color: #F2F2F2;
+        background-color: #f2f2f2;
 
         &::before {
             background-image: url('../img/splashes/cart-summary-top-dash-grey.svg');
@@ -234,6 +231,15 @@
 
         &::after {
             background-image: url('../img/splashes/cart-summary-bottom-dash-grey.svg');
+        }
+    }
+
+    &--standalone {
+        padding: 0;
+        background: transparent;
+        &::before,
+        &::after {
+            display: none;
         }
     }
 }
@@ -256,6 +262,12 @@
     font-size: 2.4rem;
     line-height: 1.2;
     margin-right: 2rem;
+
+    .account__my-orders-card--standalone & {
+        font-size: 3.2rem;
+        line-height: 4.4rem;
+        letter-spacing: -0.05rem;
+    }
 }
 
 .account__my-orders-card-date {
@@ -289,14 +301,14 @@
     font-weight: bold;
     font-size: 1.8rem;
     line-height: 2.4rem;
-    
+
     svg {
         width: 1rem;
         height: 1.6rem;
         fill: #555555;
         flex-shrink: 0;
         margin-left: 1.2rem;
-        transition: fill .2s;
+        transition: fill 0.2s;
     }
 
     .no-touch &:hover {
@@ -306,4 +318,46 @@
             fill: var(--primary-color);
         }
     }
+}
+
+.account__my-order-info {
+    margin-bottom: 4rem;
+}
+
+.account__my-order-included {
+    margin-bottom: 4rem;
+    max-width: 62rem;
+}
+
+.account__my-order-heading {
+    font-weight: 900;
+    font-size: 3.2rem;
+    line-height: 4.4rem;
+    letter-spacing: -0.05rem;
+    margin-bottom: 2rem;
+}
+
+.account__my-order-delivery {
+    margin-bottom: 4rem;
+}
+
+.account__my-order-delivery-text {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    font-family: var(--roboto);
+    strong {
+        font-weight: 700;
+    }
+
+    p {
+        margin-bottom: 1.2rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+.account__my-order-summary {
+    max-width: 40rem;
 }

@@ -308,6 +308,7 @@
     font-size: 1.8rem;
     line-height: 2.4rem;
     color: var(--brown);
+    font-family: var(--roboto);
 
     @include breakpoint(mobile) {
         display: none;
