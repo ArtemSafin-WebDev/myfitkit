@@ -1,0 +1,51 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__content">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Главная
+                    </a>
+
+
+                    <a class="breadcrumbs__link active">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Восстановить пароль
+                    </a>
+                </li>
+            </ul>
+            <h1 class="main-heading">
+                Восстановить пароль
+            </h1>
+        </div>
+    </div>
+</div>
+
+
+<section class="login">
+    <div class="container">
+        <form action="/" method="POST" class="login__form" data-need-validation>
+            <div class="login__form-row">
+                <label for="email" class="text-input-label login__form-label">
+                    E-mail *
+                </label>
+                <input type="email" class="text-input login__form-input" name="email" id="email" required>
+            </div>
+            <button class="btn login__submit-recover">
+                Отправить
+            </button>
+        </form>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

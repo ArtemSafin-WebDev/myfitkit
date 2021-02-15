@@ -1,5 +1,16 @@
 .blog-detail {
     margin-bottom: 6rem;
+
+    @include breakpoint(tablet) {
+        margin-top: -2rem;
+    }
+
+    @include breakpoint(mobile) {
+        position: relative;
+        z-index: 600;
+       
+        margin-bottom: 3rem;
+    }
 }
 
 .blog-detail__header {
@@ -13,6 +24,15 @@
     margin-bottom: 3rem;
     font-family: var(--roboto);
     display: block;
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
 }
 
 .blog-detail__intro-image-container {
@@ -27,6 +47,36 @@
         display: block;
         width: 100%;
         padding-bottom: 39%;
+
+        @include breakpoint(tablet) {
+            padding-bottom: 44.5%;
+        }
+
+        @include breakpoint(small-tablet) {
+            padding-bottom: 56%;
+        }
+
+        @include breakpoint(mobile) {
+            padding-bottom: 60%;
+        }
+    }
+
+    @include breakpoint(tablet) {
+        margin-bottom: 4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        border-radius: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+        border-radius: 0;
+        width: auto;
+        margin-left: calc(-1 * var(--content-padding));
+        margin-right: calc(-1 * var(--content-padding));
+        // padding-left: var(--content-padding);
+        // padding-right: var(--content-padding);
+        margin-bottom: 3rem;
     }
 }
 
@@ -46,14 +96,33 @@
     width: 100%;
     margin: 0 auto;
     max-width: 106.2rem;
+
+    @include breakpoint(tablet) {
+        max-width: 78.2rem;
+    }
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        margin: 0;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
     strong {
         font-weight: bold;
         font-size: 2rem;
         line-height: 2.8rem;
+
+        @include breakpoint(mobile) {
+            font-weight: 400;
+        }
     }
 
     p {
         margin-top: 2rem;
+
+        @include breakpoint(mobile) {
+            margin-top: 1rem;
+        }
         &:first-child {
             margin-top: 0;
         }
@@ -69,6 +138,12 @@
         font-size: 2.4rem;
         line-height: 2.8rem;
         margin-top: 4rem;
+
+        @include breakpoint(mobile) {
+            font-size: 2rem;
+            line-height: 2.6rem;
+            margin-top: 2rem;
+        }
     }
 }
 
@@ -80,11 +155,24 @@
     max-width: 84.4rem;
     display: block;
 
+    @include breakpoint(mobile) {
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+        width: auto;
+        margin-bottom: 2rem;
+        margin-top: 4rem;
+    }
+
     .blog-detail__video-block-heading,
     .blog-detail__gallery-block-heading {
         text-align: center;
         margin-top: 0;
         margin-bottom: 2rem;
+
+        @include breakpoint(mobile) {
+            text-align: left;
+        }
     }
 
     .blog-detail__video-heading {
@@ -94,10 +182,15 @@
         color: #555555;
         margin: 0;
         margin-top: 2rem;
+
+        @include breakpoint(mobile) {
+            color: var(--brown);
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            margin-top: 1rem;
+        }
     }
 }
-
-
 
 .blog-detail__gallery-slider-card,
 .blog-detail__video-image-container {
@@ -107,10 +200,18 @@
     display: block;
     backface-visibility: hidden;
     transform: translateZ(0);
+
+    @include breakpoint(mobile) {
+        border-radius: 0;
+    }
     &::after {
         content: '';
         display: block;
         padding-bottom: 60%;
+
+        @include breakpoint(small-tablet) {
+            padding-bottom: 70%;
+        }
     }
 
     .no-touch &:hover {
@@ -121,12 +222,24 @@
     }
 }
 
+.blog-detail__video-image-container {
+    @include breakpoint(mobile) {
+        margin-left: calc(-1 * var(--content-padding));
+        margin-right: calc(-1 * var(--content-padding));
+    }
+}
+
+.blog-detail__gallery-slider {
+    @include breakpoint(mobile) {
+        margin-left: calc(-1 * var(--content-padding));
+        margin-right: calc(-1 * var(--content-padding));
+    }
+}
 
 .blog-detail__gallery-slider-card {
     border-radius: 0;
     overflow: visible;
 }
-
 
 .blog-detail__gallery-slider-card-image,
 .blog-detail__video-image {
@@ -152,13 +265,40 @@
 }
 
 .blog-detail__footer {
-    border-top: 1px solid #ececec;
     margin-top: 4rem;
     padding-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-family: var(--roboto);
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        pointer-events: none;
+        background-size: 100% 100%;
+        height: 0.3rem;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: left center;
+        background-image: url('../img/splashes/cart-item-dash.svg');
+    }
+
+    @include breakpoint(tablet) {
+        max-width: 78.2rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include breakpoint(small-tablet) {
+        margin-top: 3rem;
+    }
+    @include breakpoint(mobile) {
+        padding-top: 1.6rem;
+    }
 }
 
 .blog-detail__back-link {
@@ -168,6 +308,10 @@
     font-size: 1.8rem;
     line-height: 2.4rem;
     color: var(--brown);
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
     svg {
         width: 1.2rem;
         height: 2rem;
@@ -193,6 +337,11 @@
 .blog-detail__sharing {
     display: flex;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        justify-content: space-between;
+    }
 }
 
 .blog-detail__sharing-heading {
@@ -201,6 +350,17 @@
     line-height: 2.2rem;
     color: #8b8b8b;
     margin-right: 3.5rem;
+
+    @include breakpoint(tablet) {
+        display: none;
+    }
+
+    @include breakpoint(mobile) {
+        display: block;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        margin-right: 2rem;
+    }
 }
 
 .blog-detail__list {
@@ -259,19 +419,39 @@
     display: flex;
     align-items: flex-start;
     margin-top: 4rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column-reverse;
+        align-items: initial;
+        margin-top: 2rem;
+    }
 }
 
 .blog-detail__recipe-col {
     .blog-detail__recipe-col-heading {
         margin-bottom: 2rem;
         margin-top: 0;
+
+        @include breakpoint(mobile) {
+            margin-bottom: 1rem;
+        }
     }
     &:nth-child(1) {
         width: 28rem;
         margin-right: 5rem;
+
+        @include breakpoint(mobile) {
+            width: 100%;
+            margin: 0;
+        }
     }
     &:nth-child(2) {
         width: 38rem;
+
+        @include breakpoint(mobile) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
     }
 }
 
@@ -283,6 +463,10 @@
     position: relative;
     padding-left: 4.2rem;
     margin-bottom: 1.5rem;
+
+    @include breakpoint(mobile) {
+        padding-left: 3.7rem;
+    }
     &::before {
         content: counter(ordered-list);
         font-size: 1.6rem;
@@ -302,6 +486,13 @@
         justify-content: center;
         text-align: center;
         color: white;
+
+        @include breakpoint(mobile) {
+            width: 2.6rem;
+            height: 2.7rem;
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+        }
     }
     &:last-child {
         margin-bottom: 0;
@@ -310,18 +501,33 @@
 
 .blog-detail__recipe-card {
     padding-top: 0.5rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 0.2rem;
+    }
     .blog-detail__recipe-card-heading {
         font-weight: bold;
         font-size: 1.8rem;
         line-height: 2.4rem;
         margin-bottom: 0.4rem;
         margin-top: 0;
+
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            margin: 0;
+        }
     }
 }
 
 .blog-detail__recipe-card-text {
     font-size: 1.8rem;
     line-height: 2.6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
 }
 
 .blog-detail__recipe-table {
@@ -338,6 +544,10 @@
         display: flex;
         align-items: baseline;
         margin-bottom: 0.6rem;
+
+        @include breakpoint(mobile) {
+            margin-bottom: 1rem;
+        }
         &:last-child {
             margin-bottom: 0;
         }
@@ -349,6 +559,11 @@
         line-height: 2.6rem;
         text-align: left;
         font-weight: 400;
+
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+        }
     }
 
     th {
@@ -372,8 +587,6 @@
     }
 }
 
-
-
 .blog-detail__gallery-slider {
     position: relative;
 }
@@ -383,16 +596,20 @@
     align-items: center;
     justify-content: center;
     margin-top: 2.6rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 1.2rem;
+    }
     .swiper-pagination-bullet {
         border: none;
-        margin: 0 .5rem;
+        margin: 0 0.5rem;
         width: 0.8rem;
         height: 0.8rem;
-        background: #D9D9D9;
+        background: #d9d9d9;
         border-radius: 50%;
         outline: none;
         flex-shrink: 0;
-        transition: background-color .2s;
+        transition: background-color 0.2s;
         opacity: 1 !important;
         &.swiper-pagination-bullet-active {
             background-color: var(--brown);
@@ -411,7 +628,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     z-index: 40;
-    transition: opacity .3s, visibility .3s;
+    transition: opacity 0.3s, visibility 0.3s;
     &--prev {
         left: 0;
         transform: translateY(-50%) translateX(-50%);
@@ -430,31 +647,43 @@
         transform: translate(-50%, -50%);
     }
 
-
     &.swiper-button-disabled {
         visibility: hidden;
         opacity: 0;
-        transition: opacity .2s, visibility 0s linear .2s;
+        transition: opacity 0.2s, visibility 0s linear 0.2s;
+    }
+
+    @include breakpoint(mobile) {
+        display: none;
     }
 }
-
 
 .blog-detail__gallery-slider-content {
     border-radius: 1.8rem;
     overflow: hidden;
 
+  
 
     .swiper-slide {
-
         &:first-child {
             border-top-left-radius: 1.8rem;
             border-bottom-left-radius: 1.8rem;
             overflow: hidden;
+            @include breakpoint(mobile) {
+                border-radius: 0;
+            }
         }
         &:last-child {
             border-top-right-radius: 1.8rem;
             border-bottom-right-radius: 1.8rem;
             overflow: hidden;
+            @include breakpoint(mobile) {
+                border-radius: 0;
+            }
         }
+    }
+
+    @include breakpoint(mobile) {
+        border-radius: 0;
     }
 }

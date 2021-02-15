@@ -47,6 +47,10 @@
             background-image: url('../img/splashes/similar-articles-heading-splash.png');
            
         }
+
+        @include breakpoint(mobile) {
+            text-align: left;
+        }
     }
 }
 

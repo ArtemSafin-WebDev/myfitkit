@@ -122,18 +122,28 @@
 }
 
 .card__gallery-slider-card--yellow-backplate {
-    background-image: url('../img/splashes/card-yellow-backplate.svg');
+    &::before {
+        background-image: url('../img/splashes/card-yellow-backplate.svg');
+    }
+   
 }
 .card__gallery-slider-card--brown-backplate {
-    background-image: url('../img/splashes/card-brown-backplate.svg');
+    &::before {
+        background-image: url('../img/splashes/card-brown-backplate.svg');
+    }
 }
 
+
 .card__gallery-slider-card--orange-backplate {
-    background-image: url('../img/splashes/card-orange-backplate.svg');
+    &::before {
+        background-image: url('../img/splashes/card-orange-backplate.svg');
+    }
 }
 
 .card__gallery-slider-card--pink-backplate {
-    background-image: url('../img/splashes/card-pink-backplate.svg');
+    &::before {
+        background-image: url('../img/splashes/card-pink-backplate.svg');
+    }
 }
 
 .card__title {

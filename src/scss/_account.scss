@@ -1,0 +1,180 @@
+.account {
+    padding-top: 4rem;
+    margin-bottom: 10rem;
+}
+
+.account__row {
+    display: flex;
+}
+
+.account__left-col {
+    width: 50%;
+    flex-grow: 1;
+}
+
+.account__right-col {
+    width: 30rem;
+    margin-left: 3rem;
+}
+
+.account__nav {
+    margin-top: -1.4rem;
+}
+
+.account__nav-list-item {
+   
+}
+
+.account__nav-link {
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    padding: 1.4rem 1rem;
+    position: relative;
+    display: block;
+    font-family: var(--roboto);
+    z-index: 1;
+    &::before {
+        content: '';
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.3rem;
+        background-size: 100% 100%;
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-image: url('../img/splashes/payment-card-dash.svg');
+        position: absolute;
+        z-index: -1;
+        pointer-events: none;
+    }
+    .account__nav-list-item.active & {
+        color: #8B8B8B;
+    }
+
+    .no-touch &:hover {
+        color: var(--primary-color);
+    }
+}
+
+
+.account__exit-link {
+    display: flex;
+    align-items: center;
+   
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    padding: 1.4rem 1rem;
+    font-family: var(--roboto);
+    font-weight: 400;
+    svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: #555555;
+        flex-shrink: 0;
+        margin-right: 1rem;
+        transition: fill .2s;
+    }
+
+    .no-touch &:hover {
+        color: var(--primary-color);
+
+        svg {
+            fill: var(--primary-color);
+        }
+    }
+}
+
+.account__actions-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1.5rem;
+}
+
+.account__actions-list-item {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.account__actions-link {
+    display: flex;
+    flex-direction: column;
+    background: #faefe6;
+    border-radius: 1.6rem;
+    padding: 3rem;
+    min-height: 15rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    position: relative;
+
+    .no-touch &:hover {
+        color: var(--primary-color);
+    }
+
+    &::before {
+        content: '';
+        width: 8.5rem;
+        height: 0.2rem;
+        position: absolute;
+        pointer-events: none;
+        z-index: -1;
+        background-size: contain;
+        background-position: center;
+        background-image: url('../img/splashes/action-card-top-dash.svg');
+        background-repeat: no-repeat;
+        right: 4rem;
+        top: -.4rem;
+    }
+
+    &::after {
+        content: '';
+        width: 10.4rem;
+        height: 0.3rem;
+        position: absolute;
+        pointer-events: none;
+        z-index: -1;
+        background-size: contain;
+        background-position: center;
+        background-image: url('../img/splashes/action-card-bottom-dash.svg');
+        background-repeat: no-repeat;
+        left: 2rem;
+        bottom: -.4rem;
+    }
+
+    &:link,
+    &:visited {
+        color: var(--brown);
+    }
+}
+
+.account__actions-link-text {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account__actions-link-count {
+    width: 1.9rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: var(--brown);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    text-align: center;
+    font-family: var(--roboto);
+    margin-left: .5rem;
+    margin-bottom: 1.2rem;
+    color: white;
+    font-weight: 400;
+}

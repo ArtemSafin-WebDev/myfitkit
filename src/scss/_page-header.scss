@@ -466,6 +466,13 @@
     }
 
     &:hover {
+        .page-header__navigation-link {
+            color: var(--primary-color);
+        }
+
+        .page-header__navigation-link-text::after {
+            opacity: 1;
+        }
         .page-header__navigation-dropdown {
             opacity: 1;
             visibility: inherit;
@@ -479,31 +486,68 @@
     padding-top: 1rem;
     top: 100%;
     left: 0;
-    width: calc(100vw - var(--content-padding) * 2);
+    width: 100%;
     z-index: 100;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0s linear 0.3s;
-    display: none;
+    filter: drop-shadow(0px 0.4rem 6rem rgba(0, 0, 0, 0.1));
 }
 
 .page-header__navigation-dropdown-inner {
     background-color: #fff;
     border-radius: 4rem;
-    padding: 4rem;
+    padding: 6rem;
+    position: relative;
+
+
+    @include breakpoint(tablet) {
+        padding: 4rem;
+    }
+    &::before,
+    &::after {
+        content: '';
+        width: 45.6rem;
+        height: 49rem;
+        position: absolute;
+        left: -5.2rem;
+        top: -3.8rem;
+        pointer-events: none;
+        z-index: -1;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url('../img/splashes/modal-top-left-splash.svg');
+    }
+
+    &::after {
+        content: '';
+        left: auto;
+        top: auto;
+        right: -3.6rem;
+        bottom: -10rem;
+    }
 }
 
 .page-header__navigation-dropdown-list {
     display: flex;
     flex-wrap: wrap;
-    margin: -2.5rem -3rem;
+    margin: -2rem -1.2rem;
 }
 
 .page-header__navigation-dropdown-list-item {
     display: flex;
     flex-direction: column;
-    width: 25%;
-    padding: 2.5rem 3rem;
+    width: 16.66%;
+    padding: 2rem 1.2rem;
+
+    @include breakpoint(tablet) {
+        width: 25%;
+    }
+
+    @include breakpoint(small-tablet) {
+        width: 33.33%;
+    }
 }
 
 .page-header__navigation-dropdown-card {
@@ -520,8 +564,53 @@
 
 .page-header__navigation-dropdown-card-image-container {
     position: relative;
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &--yellow-backplate {
+        &::before {
+            background-image: url('../img/splashes/card-yellow-backplate.svg');
+        }
+    }
+
+    &--pink-backplate {
+        &::before {
+            background-image: url('../img/splashes/card-pink-backplate.svg');
+        }
+    }
+
+    &--orange-backplate {
+        &::before {
+            background-image: url('../img/splashes/card-orange-backplate.svg');
+        }
+    }
+    &--red-backplate {
+        &::before {
+            background-image: url('../img/splashes/card-red-backplate.svg');
+        }
+    }
+
+    &--brown-backplate {
+        &::before {
+            background-image: url('../img/splashes/card-brown-backplate.svg');
+        }
+    }
+
+    &--all-backplate {
+        background-image: url('../img/splashes/card-splash-all.svg');
+    }
+   
     &::after {
         content: '';
         display: block;
@@ -533,9 +622,11 @@
     position: absolute;
     left: 50%;
     top: 50%;
+    width: auto;
+    height: auto;
     transform: translate(-50%, -50%);
-    width: 90%;
-    height: 90%;
+    max-width: 70%;
+    max-height: 70%;
     @include objectFitContain();
     z-index: 1;
 }

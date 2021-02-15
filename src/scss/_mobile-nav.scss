@@ -10,7 +10,7 @@
     box-shadow: 0.4rem 0px 2.5rem rgba(255, 0, 0, 0.16);
     padding: 0 1rem;
     display: none;
-    z-index: 400;
+    z-index: 800;
     @include breakpoint(mobile) {
         display: block;
     }

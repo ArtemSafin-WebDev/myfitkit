@@ -11,6 +11,15 @@ import tabletBurger from './tabletBurger';
 import cartItems from './cartItems';
 import validation from './validation';
 import blogGallery from './blogGallery';
+import chooseTasteSlider from './chooseTasteSlider';
+import productGallery from './productGallery';
+
+import productsVideoSlider from './productsVideoSlider';
+import modals from './modals';
+import phoneMask from './phoneMask';
+import tabs from './tabs';
+import citySearch from './citySearch';
+import cartPopup from './cartPopup';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -25,6 +34,14 @@ document.addEventListener('DOMContentLoaded', function() {
     cartItems();
     validation();
     blogGallery();
+    chooseTasteSlider();
+    productGallery();
+    tabs();
+    productsVideoSlider();
+    modals();
+    phoneMask();
+    citySearch();
+    cartPopup();
 });
 
 window.addEventListener('load', function() {

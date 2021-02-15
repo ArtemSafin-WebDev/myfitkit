@@ -33,7 +33,7 @@
     <div class="container">
         <div class="payment-and-shipping__payment">
             <h2 class="section-heading payment-and-shipping__heading">
-                ОПЛАТА
+                Оплата
             </h2>
             <div class="payment-and-shipping__heading-text">
                 <p>
@@ -143,11 +143,11 @@
             </div>
         </div>
         <div class="payment-and-shipping__shipping">
-            <h2 class="section-heading payment-and-shipping__heading">
-                ДОСТАВКА
+            <h2 class="section-heading payment-and-shipping__heading payment-and-shipping__shipping-heading">
+                Доставка
             </h2>
             <div class="payment-and-shipping__shipping-general-conditions">
-                <a href="#" class="payment-and-shipping__shipping-city">
+                <a href="#city-modal" class="payment-and-shipping__shipping-city js-open-modal">
                     <svg width="12" height="16" aria-hidden="true" class="icon-location">
                         <use xlink:href="#location"></use>
                     </svg>
@@ -161,10 +161,14 @@
                 <ul class="payment-and-shipping__shipping-choices-list">
                     <li class="payment-and-shipping__shipping-choices-list-item">
                         <div class="payment-and-shipping__shipping-choices-card">
-                            <img src="img/payment-and-shipping/shipping-icon-1.svg" alt=""
-                                class="payment-and-shipping__shipping-choices-card-icon" width="50">
+
                             <div class="payment-and-shipping__shipping-choices-card-content">
                                 <h4 class="payment-and-shipping__shipping-choices-card-heading">
+                                    <div class="payment-and-shipping__shipping-choices-card-icon-container">
+                                        <img src="img/payment-and-shipping/shipping-icon-1.svg" alt=""
+                                            class="payment-and-shipping__shipping-choices-card-icon payment-and-shipping__shipping-choices-card-icon--location"
+                                            width="50">
+                                    </div>
                                     Самовывоз из пункта выдачи
                                 </h4>
                                 <div class="payment-and-shipping__shipping-choices-card-details">
@@ -175,10 +179,14 @@
                     </li>
                     <li class="payment-and-shipping__shipping-choices-list-item">
                         <div class="payment-and-shipping__shipping-choices-card">
-                            <img src="img/payment-and-shipping/shipping-icon-2.svg" alt=""
-                                class="payment-and-shipping__shipping-choices-card-icon" width="50">
+
                             <div class="payment-and-shipping__shipping-choices-card-content">
                                 <h4 class="payment-and-shipping__shipping-choices-card-heading">
+                                    <div class="payment-and-shipping__shipping-choices-card-icon-container">
+                                        <img src="img/payment-and-shipping/shipping-icon-2.svg" alt=""
+                                            class="payment-and-shipping__shipping-choices-card-icon payment-and-shipping__shipping-choices-card-icon--car"
+                                            width="50">
+                                    </div>
                                     Курьером
                                 </h4>
                                 <div class="payment-and-shipping__shipping-choices-card-details">
@@ -189,10 +197,15 @@
                     </li>
                     <li class="payment-and-shipping__shipping-choices-list-item">
                         <div class="payment-and-shipping__shipping-choices-card">
-                            <img src="img/payment-and-shipping/shipping-icon-3.svg" alt=""
-                                class="payment-and-shipping__shipping-choices-card-icon" width="50">
+
                             <div class="payment-and-shipping__shipping-choices-card-content">
                                 <h4 class="payment-and-shipping__shipping-choices-card-heading">
+                                    <div class="payment-and-shipping__shipping-choices-card-icon-container">
+                                        <img src="img/payment-and-shipping/shipping-icon-3.svg" alt=""
+                                            class="payment-and-shipping__shipping-choices-card-icon payment-and-shipping__shipping-choices-card-icon--mail"
+                                            width="50">
+                                    </div>
+
                                     Почта России
                                 </h4>
                                 <div class="payment-and-shipping__shipping-choices-card-details">

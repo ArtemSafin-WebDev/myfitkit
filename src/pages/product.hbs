@@ -1,0 +1,700 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__content breadcrumbs__content--no-dash">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Главная
+                    </a>
+                    <a href="#" class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Блог
+                    </a>
+                    <a class="breadcrumbs__link active">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Заголовок рецепта
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<section class="product">
+    <div class="container">
+        <div class="product__main-content">
+            <div class="product__row">
+                <div class="product__left-col">
+                    <div class="product__gallery js-product-gallery">
+                        <div class="product__gallery-left-col">
+                            <div class="product__gallery-thumbs-slider">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="product__gallery-thumbs-slider-card">
+                                                <img src="img/product/thumbs/1.png" alt=""
+                                                    class="product__gallery-thumbs-slider-card-image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product__gallery-thumbs-slider-card">
+                                                <img src="img/product/thumbs/2.png" alt=""
+                                                    class="product__gallery-thumbs-slider-card-image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product__gallery-thumbs-slider-card">
+                                                <img src="img/product/thumbs/3.png" alt=""
+                                                    class="product__gallery-thumbs-slider-card-image">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <div class="product__gallery-thumbs-slider-card">
+                                                <img src="img/product/thumbs/2.png" alt=""
+                                                    class="product__gallery-thumbs-slider-card-image">
+
+                                                <svg width="12" height="16" aria-hidden="true" class="icon-play">
+                                                    <use xlink:href="#play"></use>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product__gallery-right-col">
+                            <div class="product__gallery-main-slider">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="#product-gallery-modal" class="product__gallery-main-slider-card js-open-modal">
+                                                <img src="img/product/product-main-card-image.png" alt=""
+                                                    class="product__gallery-main-slider-card-image">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#product-gallery-modal" class="product__gallery-main-slider-card js-open-modal">
+                                                <img src="img/product/product-main-card-image.png" alt=""
+                                                    class="product__gallery-main-slider-card-image">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#product-gallery-modal" class="product__gallery-main-slider-card js-open-modal">
+                                                <img src="img/product/product-main-card-image.png" alt=""
+                                                    class="product__gallery-main-slider-card-image">
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#video-modal" class="product__gallery-main-slider-card js-open-modal">
+                                                <img src="img/product/product-main-card-image.png" alt=""
+                                                    class="product__gallery-main-slider-card-image">
+
+                                                <svg width="12" height="16" aria-hidden="true" class="icon-play">
+                                                    <use xlink:href="#play"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__description">
+                        <p>
+                            Protein Cake лучше описывать по слоям:<br>
+                            Первый слой — нежнейшее протеиновое печенье.<br> Второй слой — суфле-тянучка, обогащенное
+                            белком.<br>
+                            Третий слой — протеиновая шоколадная глазурь.<br>
+                            Разнообразие вкусов и отсутствие сахара в составе тебе точно понравятся. Это не просто
+                            очередная
+                            протеиновая сладость, это настоящий десерт, который Можно, Нужно и Дайте ещё!<br>
+                            Банановый вкус в линейке Protein Cake подойдет тем, кому нравятся фруктово-сливочные
+                            сочетания.
+                            Настоящие ценители сравнивают этот вкус с банановым молочным коктейлем.<br> А что он
+                            напомнит
+                            тебе?
+                        </p>
+                    </div>
+                </div>
+                <div class="product__right-col">
+                    <div class="product__sale-label">
+                        SALE
+                    </div>
+                    <div class="product__category">
+                        Печенье глазированное
+                    </div>
+                    <h1 class="main-heading product__main-heading">
+                        Protein Cake Banana Pudding
+                    </h1>
+                    <form action="/" method="POST" class="product__form">
+                        <div class="product__choose-taste">
+                            <h4 class="product__form-heading">
+                                Выберите вкус:
+                            </h4>
+                            <div class="product__choose-taste-slider js-choose-taste-slider">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <label class="product__choose-taste-checkbox">
+                                                <input type="radio" class="product__choose-taste-checkbox-input"
+                                                    name="taste" value="1" checked>
+                                                <span class="product__choose-taste-checkbox-image-container">
+                                                    <img src="img/choose-taste/1.png" alt=""
+                                                        class="product__choose-taste-checkbox-image">
+                                                    <span class="product__choose-taste-checkbox-discount-amount">
+                                                        10%
+                                                    </span>
+                                                </span>
+                                                <span class="product__choose-taste-checkbox-text">
+                                                    Banana Pudding
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <label class="product__choose-taste-checkbox">
+                                                <input type="radio" class="product__choose-taste-checkbox-input"
+                                                    name="taste" value="2">
+                                                <span class="product__choose-taste-checkbox-image-container">
+                                                    <img src="img/choose-taste/2.png" alt=""
+                                                        class="product__choose-taste-checkbox-image">
+                                                </span>
+                                                <span class="product__choose-taste-checkbox-text">
+                                                    Lemon-Lime
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <label class="product__choose-taste-checkbox">
+                                                <input type="radio" class="product__choose-taste-checkbox-input"
+                                                    name="taste" value="3">
+                                                <span class="product__choose-taste-checkbox-image-container">
+                                                    <img src="img/choose-taste/3.png" alt=""
+                                                        class="product__choose-taste-checkbox-image">
+                                                </span>
+                                                <span class="product__choose-taste-checkbox-text">
+                                                    Strawberry Cream
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <label class="product__choose-taste-checkbox">
+                                                <input type="radio" class="product__choose-taste-checkbox-input"
+                                                    name="taste" value="4">
+                                                <span class="product__choose-taste-checkbox-image-container">
+                                                    <img src="img/choose-taste/4.png" alt=""
+                                                        class="product__choose-taste-checkbox-image">
+                                                </span>
+                                                <span class="product__choose-taste-checkbox-text">
+                                                    Honey Cream
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <label class="product__choose-taste-checkbox">
+                                                <input type="radio" class="product__choose-taste-checkbox-input"
+                                                    name="taste" value="5">
+                                                <span class="product__choose-taste-checkbox-image-container">
+                                                    <img src="img/choose-taste/5.png" alt=""
+                                                        class="product__choose-taste-checkbox-image">
+                                                </span>
+                                                <span class="product__choose-taste-checkbox-text">
+                                                    Peanut Paste
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <label class="product__choose-taste-checkbox">
+                                                <input type="radio" class="product__choose-taste-checkbox-input"
+                                                    name="taste" value="6">
+                                                <span class="product__choose-taste-checkbox-image-container">
+                                                    <img src="img/choose-taste/6.png" alt=""
+                                                        class="product__choose-taste-checkbox-image">
+                                                </span>
+                                                <span class="product__choose-taste-checkbox-text">
+                                                    Double Chocolate
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <label class="product__choose-taste-checkbox">
+                                                <input type="radio" class="product__choose-taste-checkbox-input"
+                                                    name="taste" value="1">
+                                                <span class="product__choose-taste-checkbox-image-container">
+                                                    <img src="img/choose-taste/1.png" alt=""
+                                                        class="product__choose-taste-checkbox-image">
+                                                    <span class="product__choose-taste-checkbox-discount-amount">
+                                                        10%
+                                                    </span>
+                                                </span>
+                                                <span class="product__choose-taste-checkbox-text">
+                                                    Banana Pudding
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <label class="product__choose-taste-checkbox">
+                                                <input type="radio" class="product__choose-taste-checkbox-input"
+                                                    name="taste" value="2">
+                                                <span class="product__choose-taste-checkbox-image-container">
+                                                    <img src="img/choose-taste/2.png" alt=""
+                                                        class="product__choose-taste-checkbox-image">
+                                                </span>
+                                                <span class="product__choose-taste-checkbox-text">
+                                                    Lemon-Lime
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <label class="product__choose-taste-checkbox">
+                                                <input type="radio" class="product__choose-taste-checkbox-input"
+                                                    name="taste" value="3">
+                                                <span class="product__choose-taste-checkbox-image-container">
+                                                    <img src="img/choose-taste/3.png" alt=""
+                                                        class="product__choose-taste-checkbox-image">
+                                                </span>
+                                                <span class="product__choose-taste-checkbox-text">
+                                                    Strawberry Cream
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <label class="product__choose-taste-checkbox">
+                                                <input type="radio" class="product__choose-taste-checkbox-input"
+                                                    name="taste" value="4">
+                                                <span class="product__choose-taste-checkbox-image-container">
+                                                    <img src="img/choose-taste/4.png" alt=""
+                                                        class="product__choose-taste-checkbox-image">
+                                                </span>
+                                                <span class="product__choose-taste-checkbox-text">
+                                                    Honey Cream
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <label class="product__choose-taste-checkbox">
+                                                <input type="radio" class="product__choose-taste-checkbox-input"
+                                                    name="taste" value="5">
+                                                <span class="product__choose-taste-checkbox-image-container">
+                                                    <img src="img/choose-taste/5.png" alt=""
+                                                        class="product__choose-taste-checkbox-image">
+                                                </span>
+                                                <span class="product__choose-taste-checkbox-text">
+                                                    Peanut Paste
+                                                </span>
+                                            </label>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <label class="product__choose-taste-checkbox">
+                                                <input type="radio" class="product__choose-taste-checkbox-input"
+                                                    name="taste" value="6">
+                                                <span class="product__choose-taste-checkbox-image-container">
+                                                    <img src="img/choose-taste/6.png" alt=""
+                                                        class="product__choose-taste-checkbox-image">
+                                                </span>
+                                                <span class="product__choose-taste-checkbox-text">
+                                                    Double Chocolate
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button
+                                    class="product__choose-taste-slider-arrow product__choose-taste-slider-arrow--prev">
+                                    <svg width="12" height="16" aria-hidden="true" class="icon-stylized-arrow-left">
+                                        <use xlink:href="#stylized-arrow-left"></use>
+                                    </svg>
+                                </button>
+                                <button
+                                    class="product__choose-taste-slider-arrow product__choose-taste-slider-arrow--next">
+                                    <svg width="12" height="16" aria-hidden="true" class="icon-stylized-arrow-right">
+                                        <use xlink:href="#stylized-arrow-right"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product__choose-quantity">
+                            <h4 class="product__form-heading">
+                                Количество в боксе:
+                            </h4>
+                            <div class="product__choose-quantity-checkboxes">
+                                <label class="product__choose-quantity-checkbox">
+                                    <input type="radio" class="product__choose-quantity-checkbox-input" name="quantity"
+                                        value="1" checked>
+                                    <span class="product__choose-quantity-checkbox-text">
+                                        24 шт.
+                                    </span>
+                                </label>
+                                <label class="product__choose-quantity-checkbox">
+                                    <input type="radio" class="product__choose-quantity-checkbox-input" name="quantity"
+                                        value="2">
+                                    <span class="product__choose-quantity-checkbox-text">
+                                        16 шт.
+                                    </span>
+                                </label>
+                                <label class="product__choose-quantity-checkbox">
+                                    <input type="radio" class="product__choose-quantity-checkbox-input" name="quantity"
+                                        value="3">
+                                    <span class="product__choose-quantity-checkbox-text">
+                                        10 шт.
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="product__total">
+                            <div class="product__count">
+                                <div class="cart__item-quantity-block js-cart-item">
+
+                                    <button class="cart__item-quantity-block-btn cart__item-quantity-block-btn--minus"
+                                        type="button" disabled>
+                                        <svg width="16" height="16" aria-hidden="true" class="icon-minus">
+                                            <use xlink:href="#minus"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="cart__item-quantity-input-wrapper">
+                                        <input type="text" name="quantity" class="cart__item-quantity-input" readonly
+                                            value="1">
+                                    </div>
+                                    <button class="cart__item-quantity-block-btn cart__item-quantity-block-btn--plus"
+                                        type="button">
+                                        <svg width="16" height="16" aria-hidden="true" class="icon-plus">
+                                            <use xlink:href="#plus"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="product__price">
+                                <div class="product__new-price">
+                                    2 592 ₽
+                                </div>
+                                <div class="product__old-price">
+                                    2 880 ₽
+                                </div>
+                            </div>
+                            <button class="btn product__submit" type="submit">
+                                В корзину
+                            </button>
+                        </div>
+
+                    </form>
+                    <div class="product__specs js-tabs">
+                        <div class="tabs-nav product__specs-tabs-nav">
+                            <a href="#" class="tabs-nav__link product__specs-tabs-nav-btn">
+                                Пищевая ценность
+                            </a>
+                            <a href="#" class="tabs-nav__link product__specs-tabs-nav-btn">
+                                Состав
+                            </a>
+                        </div>
+                        <div class="tabs-items product__specs-tabs-items">
+                            <div class="tabs-items__item product__specs-tabs-item">
+                                <h3 class="product__specs-title">
+                                    На 70 г продукта:
+                                </h3>
+                                <div class="product__specs-table">
+
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th>
+                                                    Калорийность
+                                                </th>
+                                                <td>
+                                                    196,1 ккал
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    Белки
+                                                </th>
+                                                <td>
+                                                    18 г
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    Жиры
+                                                </th>
+                                                <td>
+                                                    4,5 г
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    Углеводы
+                                                </th>
+                                                <td>
+                                                    16,15 г
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    Клетчатка
+                                                </th>
+                                                <td>
+                                                    9,5 г
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tabs-items__item product__specs-tabs-item">
+                                <div class="product__specs-text">
+                                    <p>
+                                        Изомальтоолигосахарид, смесь белков (концентрат молочного белка, концентрат
+                                        сывороточного белка), вода, кокосовое масло, глицерин, сорбитоловый сироп,
+                                        разрыхлитель, ароматизатор идентичный натуральному, суфле
+                                        (изомальтоолигосахарид, концентрат сывороточного белка, вода, глицерин, лимонная
+                                        кислота, ароматизатор идентичный натуральному, сорбат калия, краситель
+                                        натуральный) ...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="payment-and-shipping__shipping">
+            <h2 class="section-heading payment-and-shipping__heading">
+                ДОСТАВКА
+            </h2>
+            <div class="payment-and-shipping__shipping-general-conditions">
+                <a href="#" class="payment-and-shipping__shipping-city">
+                    <svg width="12" height="16" aria-hidden="true" class="icon-location">
+                        <use xlink:href="#location"></use>
+                    </svg>
+                    Москва
+                </a>
+                <div class="payment-and-shipping__shipping-free">
+                    При заказе от <strong>2 400 ₽</strong> — бесплатно!
+                </div>
+            </div>
+            <div class="payment-and-shipping__shipping-choices">
+                <ul class="payment-and-shipping__shipping-choices-list">
+                    <li class="payment-and-shipping__shipping-choices-list-item">
+                        <div class="payment-and-shipping__shipping-choices-card">
+                            <img src="img/payment-and-shipping/shipping-icon-1.svg" alt=""
+                                class="payment-and-shipping__shipping-choices-card-icon" width="50">
+                            <div class="payment-and-shipping__shipping-choices-card-content">
+                                <h4 class="payment-and-shipping__shipping-choices-card-heading">
+                                    Самовывоз из пункта выдачи
+                                </h4>
+                                <div class="payment-and-shipping__shipping-choices-card-details">
+                                    Стоимость: <strong>270</strong>₽<br>Срок: <strong>2-3</strong> дня
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="payment-and-shipping__shipping-choices-list-item">
+                        <div class="payment-and-shipping__shipping-choices-card">
+                            <img src="img/payment-and-shipping/shipping-icon-2.svg" alt=""
+                                class="payment-and-shipping__shipping-choices-card-icon" width="50">
+                            <div class="payment-and-shipping__shipping-choices-card-content">
+                                <h4 class="payment-and-shipping__shipping-choices-card-heading">
+                                    Курьером
+                                </h4>
+                                <div class="payment-and-shipping__shipping-choices-card-details">
+                                    Стоимость: <strong>200</strong>₽<br>Срок: <strong>2-3</strong> дня
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="payment-and-shipping__shipping-choices-list-item">
+                        <div class="payment-and-shipping__shipping-choices-card">
+                            <img src="img/payment-and-shipping/shipping-icon-3.svg" alt=""
+                                class="payment-and-shipping__shipping-choices-card-icon" width="50">
+                            <div class="payment-and-shipping__shipping-choices-card-content">
+                                <h4 class="payment-and-shipping__shipping-choices-card-heading">
+                                    Почта России
+                                </h4>
+                                <div class="payment-and-shipping__shipping-choices-card-details">
+                                    Стоимость: <strong>500</strong>₽<br>Срок: до <strong>14</strong> дней
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="product__videos">
+            <h2 class="section-heading product__videos-heading">
+                ВИДЕО О ПРОДУКТЕ
+            </h2>
+            <div class="product__videos-slider js-products-video-slider">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#video-modal" class="product__videos-slider-card js-open-modal">
+                                <div class="product__videos-slider-card-image-container">
+                                    <img src="img/product/product-video-preview.jpg" alt=""
+                                        class="product__videos-slider-card-preview">
+
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-play">
+                                        <use xlink:href="#play"></use>
+                                    </svg>
+                                </div>
+                                <h4 class="product__videos-slider-card-title">
+                                    Название видео
+                                </h4>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#video-modal" class="product__videos-slider-card js-open-modal">
+                                <div class="product__videos-slider-card-image-container">
+                                    <img src="img/product/product-video-preview.jpg" alt=""
+                                        class="product__videos-slider-card-preview">
+
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-play">
+                                        <use xlink:href="#play"></use>
+                                    </svg>
+                                </div>
+                                <h4 class="product__videos-slider-card-title">
+                                    Название видео
+                                </h4>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#video-modal" class="product__videos-slider-card js-open-modal">
+                                <div class="product__videos-slider-card-image-container">
+                                    <img src="img/product/product-video-preview.jpg" alt=""
+                                        class="product__videos-slider-card-preview">
+
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-play">
+                                        <use xlink:href="#play"></use>
+                                    </svg>
+                                </div>
+                                <h4 class="product__videos-slider-card-title">
+                                    Название видео
+                                </h4>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button class="product__videos-slider-arrow product__videos-slider-arrow--prev">
+                    <svg width="12" height="16" aria-hidden="true" class="icon-stylized-arrow-left">
+                        <use xlink:href="#stylized-arrow-left"></use>
+                    </svg>
+                </button>
+                <button class="product__videos-slider-arrow product__videos-slider-arrow--next">
+                    <svg width="12" height="16" aria-hidden="true" class="icon-stylized-arrow-right">
+                        <use xlink:href="#stylized-arrow-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <ul class="promo__list">
+            <li class="promo__list-item show-on-mobile">
+                <a href="#" class="promo__card promo__card--1">
+                    <span class="promo__card-top-dash"></span>
+                    <span class="promo__card-bottom-left-dash"></span>
+                    <h4 class="promo__card-title">
+                        Конструктор<br> боксов
+                    </h4>
+                    <div class="promo__card-text">
+                        <p>
+                            Создай свой набор<br> вкусов!
+                        </p>
+                    </div>
+                    <div class="btn promo__card-btn">
+                        Собрать бокс
+                    </div>
+                    <img src="img/promo/1.png" alt="" class="promo__card-image">
+                </a>
+            </li>
+            <li class="promo__list-item hide-on-mobile">
+                <a href="#" class="promo__card promo__card--5">
+                    <span class="promo__card-top-dash"></span>
+                    <span class="promo__card-bottom-left-dash"></span>
+                    <h4 class="promo__card-title">
+                        Конструктор<br> боксов
+                    </h4>
+
+                    <div class="btn promo__card-btn">
+                        Собрать бокс
+                    </div>
+                    <img src="img/promo/1.png" alt="" class="promo__card-image">
+                </a>
+            </li>
+            <li class="promo__list-item hide-on-mobile">
+                <a href="#" class="promo__card promo__card--6">
+                    <span class="promo__card-top-dash"></span>
+                    <span class="promo__card-bottom-left-dash"></span>
+                    <h4 class="promo__card-title">
+                        Все о нашей<br> компании
+                    </h4>
+
+                    <div class="btn btn--yellow promo__card-btn">
+                        Подробнее
+                    </div>
+                    <img src="img/promo/strawberry.png" alt="" class="promo__card-image">
+                </a>
+            </li>
+        </ul>
+
+        <div class="product__similar-products">
+            <h2 class="section-heading product__similar-products-heading">
+                ПОХОЖИЕ ПРОДУКТЫ
+            </h2>
+            <div class="product__similar-products-results">
+                <ul class="product__similar-products-list">
+                    <li class="product__similar-products-list-item">
+                        <a href="#" class="product__similar-products-card product__similar-products-card--yellow-backplate">
+                            <div class="product__similar-products-card-image-container">
+                                <img src="img/cards/1-1.png" alt="" class="product__similar-products-card-image">
+                            </div>
+                            <h4 class="product__similar-products-card-title">
+                                Protein Cake
+                            </h4>
+                        </a>
+                    </li>
+                    <li class="product__similar-products-list-item">
+                        <a href="#" class="product__similar-products-card product__similar-products-card--yellow-backplate">
+                            <div class="product__similar-products-card-image-container">
+                                <img src="img/cards/2-1.png" alt="" class="product__similar-products-card-image">
+                            </div>
+                            <h4 class="product__similar-products-card-title">
+                                Protein Cake
+                            </h4>
+                        </a>
+                    </li>
+                    <li class="product__similar-products-list-item">
+                        <a href="#" class="product__similar-products-card product__similar-products-card--yellow-backplate">
+                            <div class="product__similar-products-card-image-container">
+                                <img src="img/cards/3-1.png" alt="" class="product__similar-products-card-image">
+                            </div>
+                            <h4 class="product__similar-products-card-title">
+                                Choco Protein Cookie
+                            </h4>
+                        </a>
+                    </li>
+                    <li class="product__similar-products-list-item">
+                        <a href="#" class="product__similar-products-card product__similar-products-card--yellow-backplate">
+                            <div class="product__similar-products-card-image-container">
+                                <img src="img/cards/4-1.png" alt="" class="product__similar-products-card-image">
+                            </div>
+                            <h4 class="product__similar-products-card-title">
+                                Extra Protein Cake
+                            </h4>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

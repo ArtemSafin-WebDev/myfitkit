@@ -1,6 +1,11 @@
 .breadcrumbs {
     position: relative;
     z-index: 300;
+
+    @include breakpoint(mobile) {
+        z-index: 600;
+        pointer-events: none;
+    }
 }
 
 .breadcrumbs__content {
@@ -8,6 +13,12 @@
 
     padding-top: 6rem;
     position: relative;
+
+   
+
+    @include breakpoint(mobile) {
+        padding-top: 14rem;
+    }
 
     &::before {
         content: '';
@@ -20,6 +31,10 @@
         background-repeat: no-repeat;
         background-position: left center;
         background-image: url('../img/splashes/breadcrumbs-dash.svg');
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
     }
 
     &--no-dash {
@@ -28,9 +43,7 @@
         }
     }
 
-    @include breakpoint(mobile) {
-        padding-top: 10rem;
-    }
+ 
 }
 
 .breadcrumbs__list {
@@ -38,6 +51,10 @@
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 1.4rem;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 1.1rem;
+    }
 
     @include breakpoint(mobile) {
         display: none;
@@ -52,7 +69,7 @@
     display: inline-flex;
     align-items: center;
     transition: color 0.2s;
-
+    pointer-events: initial;
     @include breakpoint(small-tablet) {
         font-size: 1.4rem;
         line-height: 2.4rem;

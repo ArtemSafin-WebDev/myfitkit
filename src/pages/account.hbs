@@ -1,0 +1,109 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__content">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Главная
+                    </a>
+
+
+                    <a class="breadcrumbs__link active">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Личный кабинет
+                    </a>
+                </li>
+            </ul>
+            <h1 class="main-heading">
+                Личный кабинет
+            </h1>
+        </div>
+    </div>
+</div>
+
+<section class="account">
+    <div class="container">
+        <div class="account__row">
+            <div class="account__left-col">
+                <div class="account__actions">
+                    <ul class="account__actions-list">
+                        <li class="account__actions-list-item">
+                            <a href="#" class="account__actions-link">
+                                <div class="account__actions-link-text">
+                                    Мои заказы
+                                    <div class="account__actions-link-count">
+                                        3
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="account__actions-list-item">
+                            <a href="#" class="account__actions-link">
+                                <div class="account__actions-link-text">
+                                    Личные данные
+                                    <div class="account__actions-link-count">
+                                        3
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="account__actions-list-item">
+                            <a href="#" class="account__actions-link">
+                                <div class="account__actions-link-text">
+                                    Адреса доставки
+                                    <div class="account__actions-link-count">
+                                        3
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="account__right-col">
+                <nav class="account__nav">
+                    <ul class="account__nav-list">
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Кабинет
+                            </a>
+                        </li>
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Мои заказы
+                            </a>
+                        </li>
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Личные данные
+                            </a>
+                        </li>
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Адреса доставки
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#" class="account__exit-link">
+                    <svg width="16" height="16" aria-hidden="true" class="icon-exit">
+                        <use xlink:href="#exit"></use>
+                    </svg>
+                    Выйти из кабинета
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}

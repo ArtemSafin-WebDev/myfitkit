@@ -1,6 +1,10 @@
 .login {
     padding-top: 4rem;
     margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 0;
+    }
 }
 
 .login__form {
@@ -8,10 +12,19 @@
     width: 100%;
     max-width: 40rem;
     margin: 0 auto;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        margin: 0;
+    }
 }
 
 .login__form-row {
     margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1rem;
+    }
 }
 
 .login__buttons {
@@ -20,6 +33,10 @@
     align-items: center;
     margin-top: 3rem;
     margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+    }
 }
 
 .login__remember-password-link {
@@ -29,6 +46,11 @@
     font-family: var(--roboto);
     margin-right: 2rem;
     color: var(--primary-color);
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
     &:link,
     &:visited {
         color: var(--primary-color);
@@ -47,6 +69,10 @@
     font-family: var(--roboto);
 
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        padding-top: 1rem;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -62,7 +88,7 @@
 
     a {
         border-bottom: 1px solid var(--primary-color);
-        transition: color .2s, border-color .2s;
+        transition: color 0.2s, border-color 0.2s;
         &:link,
         &:visited {
             color: var(--primary-color);
@@ -74,7 +100,21 @@
     }
 }
 
-
 .login__submit {
     min-width: 18.8rem;
+    font-weight: 700;
+
+    @include breakpoint(mobile) {
+        min-width: auto;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
+
+.login__submit-recover {
+    padding-left: 4.8rem;
+    padding-right: 4.8rem;
+    font-weight: 700;
+    margin-top: 1rem;
 }

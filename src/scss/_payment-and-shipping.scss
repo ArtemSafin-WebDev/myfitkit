@@ -1,13 +1,35 @@
 .payment-and-shipping {
     padding-top: 6rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 0;
+    }
 }
 
 .payment-and-shipping__payment {
     margin-bottom: 4rem;
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 6rem;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
 }
 
 .payment-and-shipping__heading {
     margin-bottom: 4rem;
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.2rem;
+        text-align: left;
+        text-transform: none;
+    }
 
     &::before {
         content: '';
@@ -38,12 +60,24 @@
     line-height: 2.6rem;
     margin-bottom: 2rem;
     font-family: var(--roboto);
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        text-align: left;
+        margin-bottom: 0;
+    }
 }
 
 .payment-and-shipping__payment-details-row {
     display: flex;
     flex-wrap: wrap;
     margin: -1.5rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        margin: 0;
+    }
 }
 
 .payment-and-shipping__payment-details-col {
@@ -51,6 +85,28 @@
     display: flex;
     flex-direction: column;
     width: 33.33%;
+
+    @include breakpoint(small-tablet) {
+        width: 50%;
+        &:nth-child(3) {
+            width: 100%;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 0;
+
+        &:nth-child(2) {
+            .payment-and-shipping__payment-details-list-item:last-child .payment-and-shipping__payment-details-card::before {
+                display: none;
+            }
+        }
+
+        &:nth-child(3) {
+            padding-top: 1rem;
+        }
+    }
 }
 
 .payment-and-shipping__payment-details-list {
@@ -59,7 +115,9 @@
 }
 
 .payment-and-shipping__payment-details-list-item:last-child .payment-and-shipping__payment-details-card::before {
-    display: none;
+    @include breakpointMF(small-tablet) {
+        display: none;
+    }
 }
 
 .payment-and-shipping__payment-details-card {
@@ -89,17 +147,30 @@
     font-weight: bold;
     font-size: 1.8rem;
     line-height: 2.4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
 }
 
 .payment-and-shipping__payment-details-card-text {
     font-size: 1.8rem;
     line-height: 2.6rem;
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
 }
 
 .payment-and-shipping__payment-robo {
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
+
+    @include breakpoint(small-tablet) {
+        margin-top: 0;
+    }
 }
 
 .payment-and-shipping__payment-robo-logo {
@@ -107,14 +178,32 @@
     height: auto;
     display: block;
     margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        width: 13.4rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .payment-and-shipping__payment-robo-text {
     font-family: var(--roboto);
     font-size: 1.8rem;
     line-height: 2.6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
     p {
         margin-top: 2.5rem;
+
+        @include breakpoint(small-tablet) {
+            margin-top: 1rem;
+        }
+
+        @include breakpoint(mobile) {
+            margin-top: 2rem;
+        }
         &:first-child {
             margin-top: 0;
         }
@@ -123,6 +212,11 @@
 
 .payment-and-shipping__shipping {
     margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .payment-and-shipping__shipping-general-conditions {
@@ -130,6 +224,10 @@
     align-items: baseline;
     justify-content: center;
     margin-bottom: 1.8rem;
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
 }
 
 .payment-and-shipping__shipping-city {
@@ -140,6 +238,19 @@
     display: inline-flex;
     align-items: center;
     margin-right: 2.6rem;
+
+    @include breakpoint(tablet) {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        margin-right: 2rem;
+    }
+
+    @include breakpoint(mobile) {
+        margin-right: 0;
+        margin-left: 2rem;
+
+        
+    }
     svg {
         width: 1rem;
         height: 1.3rem;
@@ -158,8 +269,24 @@
     font-size: 1.8rem;
     line-height: 2.4rem;
 
+    @include breakpoint(tablet) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+
+    @include breakpoint(mobile) {
+        margin-top: 1rem;
+        width: 100%;
+    }
+
     strong {
         font-weight: 700;
+    }
+}
+
+.payment-and-shipping__shipping-choices {
+    @include breakpoint(mobile) {
+        margin-top: 1.5rem;
     }
 }
 
@@ -167,6 +294,9 @@
     display: flex;
     flex-wrap: wrap;
     margin: -1.5rem;
+    @include breakpoint(mobile) {
+        margin: -.5rem;
+    }
 }
 
 .payment-and-shipping__shipping-choices-list-item {
@@ -174,6 +304,11 @@
     width: 33.33%;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(mobile) {
+        padding: 0.5rem;
+        width: 100%;
+    }
 }
 
 .payment-and-shipping__shipping-choices-card {
@@ -183,15 +318,120 @@
     border-radius: 1.6rem;
     font-family: var(--roboto);
     padding: 4rem 3rem;
+    padding-left: 10rem;
     position: relative;
     z-index: 1;
+    flex-grow: 1;
+
+    @include breakpoint(tablet) {
+        padding-top: 3rem;
+        padding-left: 8.8rem;
+        padding-bottom: 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        padding: 2rem;
+        padding-left: 6.5rem;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        z-index: -1;
+        width: 8.5rem;
+        height: 0.2rem;
+        background-image: url('../img/splashes/cart-summary-top-dash.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        right: 4rem;
+        top: -0.4rem;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        z-index: -1;
+        width: 10.4rem;
+        height: 0.3rem;
+        bottom: -0.4rem;
+        left: 2rem;
+        background-image: url('../img/splashes/cart-summary-bottom-dash.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
 
 .payment-and-shipping__shipping-choices-card-icon {
     flex-shrink: 0;
     width: 4.8rem;
-    height: 4.8rem;
+    height: 4rem;
     margin-right: 2rem;
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--car {
+        width: 4.7rem;
+        height: 3.6rem;
+    }
+
+    &--mail {
+        width: 3.3rem;
+        height: 2.6rem;
+        margin-right: 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        left: 50%;
+        right: auto;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    @include breakpoint(mobile) {
+        left: auto;
+        right: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        
+        width: 3.2rem;
+        height: 3.2rem;
+
+        &--car {
+            width: 3.2rem;
+            height: 2.4rem;
+        }
+
+        &--mail {
+            width: 2.2rem;
+            height: 1.5rem;
+            margin-right: 2rem;
+        }
+    }
+}
+
+.payment-and-shipping__shipping-choices-card-icon-container {
+    @include breakpoint(small-tablet) {
+        position: relative;
+        width: 4.8rem;
+        height: 4.8rem;
+        flex-shrink: 0;
+        margin-bottom: 1rem;
+    }
+
+
+    @include breakpoint(mobile) {
+        position: static;
+        width: auto;
+        height: auto;
+        flex-shrink: 0;
+        margin: 0;
+    }
 }
 
 .payment-and-shipping__shipping-choices-card-content {
@@ -199,21 +439,51 @@
     width: 50%;
     display: flex;
     flex-direction: column;
-    margin-top: 1.3rem;
 }
 
 .payment-and-shipping__shipping-choices-card-heading {
     font-weight: bold;
     font-size: 1.8rem;
     line-height: 2.4rem;
-    margin-bottom: 1.2rem;
+    min-height: 5rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    @include breakpoint(tablet) {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        min-height: auto;
+        margin-bottom: 1rem;
+        flex-direction: column;
+        align-items: initial;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 0;
+        align-items: center;
+        min-height: 3.2rem;
+        flex-direction: row;
+    }
 }
 
 .payment-and-shipping__shipping-choices-card-details {
     font-size: 1.8rem;
     line-height: 2.4rem;
 
+    @include breakpoint(tablet) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+
     strong {
         font-weight: 700;
+    }
+}
+
+
+.payment-and-shipping__shipping-heading {
+    @include breakpoint(mobile) {
+        margin-bottom: 0;
     }
 }

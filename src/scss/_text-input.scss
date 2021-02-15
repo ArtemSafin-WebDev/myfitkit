@@ -7,6 +7,7 @@
     margin-bottom: 0.6rem;
     font-family: var(--roboto);
     display: block;
+    white-space: nowrap;
 }
 
 .text-input {
@@ -26,6 +27,10 @@
     @include placeholder {
         color: #8B8B8B;
     }
+
+    @include breakpoint(mobile) {
+        height: 5rem;
+    }
 }
 
 
@@ -37,4 +42,14 @@
     &.filled {
         margin-top: 0.5rem;
     }
+}
+
+
+textarea.text-input {
+    resize: none;
+    height: 12rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: block;
+    width: 100%;
 }

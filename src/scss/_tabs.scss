@@ -1,0 +1,93 @@
+.tabs-nav {
+    display: flex;
+    align-items: baseline;
+}
+
+.tabs-nav__checkbox {
+    cursor: pointer;
+    user-select: none;
+    display: block;
+}
+
+.tabs-nav__checkbox-input {
+    @include visuallyHidden();
+}
+
+.tabs-nav__checkbox-content,
+.tabs-nav__link {
+    font-weight: 900;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: #8b8b8b;
+    transition: color 0.2s;
+    padding: 1rem;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    display: block;
+
+    @include breakpoint(tablet) {
+       
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        padding: 1rem 2.4rem;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0.3rem;
+        z-index: -1;
+        pointer-events: none;
+        background-image: url('../img/splashes/product-card-tab-dash.svg');
+        background-size: 100% 100%;
+        background-position: left center;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity 0.2s;
+
+        @include breakpoint(tablet) {
+            height: 0.6rem;
+        }
+    }
+    &:link,
+    &:visited {
+        color: #8b8b8b;
+    }
+
+    .tabs-nav__checkbox-input:checked ~ &,
+    &.active {
+        color: var(--brown);
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+.tabs-items {
+    position: relative;
+}
+
+.tabs-items__item {
+    min-height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding-left: 1rem;
+    &.active {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        z-index: 2;
+        transition: opacity 0.4s, visibility 0.4s;
+    }
+}
