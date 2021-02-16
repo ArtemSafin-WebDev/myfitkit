@@ -72,4 +72,18 @@ document.addEventListener('DOMContentLoaded', function() {
             })
         }
     }
+
+    var writeUsForm = document.querySelector('#write-us-form');
+    if (writeUsForm) {
+        writeUsForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if ($(writeUsForm).parsley().isValid()) {
+                if (typeof window.openModal === 'function') {
+                    window.openModal('#write-us-success');
+                    writeUsForm.reset();
+                    $(writeUsForm).parsley().reset();
+                }
+            }
+        })
+    }
 });

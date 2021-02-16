@@ -1,4 +1,5 @@
 {
     "title": "MyFitkit - Карточка товара",
-    "biegeHeader": true
+    "biegeHeader": true,
+    "mobileAddToCartButton": true
 }

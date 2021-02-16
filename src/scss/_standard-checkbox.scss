@@ -70,3 +70,8 @@
         opacity: 1;
     }
 }
+
+
+.standard-checkbox ~ .parsley-errors-list {
+    display: none;
+}

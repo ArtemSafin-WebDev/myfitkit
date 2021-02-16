@@ -21,6 +21,7 @@ import tabs from './tabs';
 import citySearch from './citySearch';
 import cartPopup from './cartPopup';
 import similarProductsSlider from './similarProductsSlider';
+import scrollToActiveMenuItem from './scrollToActiveMenuItem';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     citySearch();
     cartPopup();
     similarProductsSlider();
+    scrollToActiveMenuItem();
 });
 
 window.addEventListener('load', function() {

@@ -58,6 +58,36 @@
     font-size: 1.2rem;
     line-height: 1.2;
     font-family: var(--roboto);
-    top: -.6rem;
+    top: -0.6rem;
     right: -1.2rem;
+}
+
+.mobile-nav__add-to-cart-btn-wrapper {
+    padding-left: calc(var(--content-padding) - 1rem);
+    padding-right: calc(var(--content-padding) - 1rem);
+    padding-top: 2rem;
+}
+
+.mobile-nav__add-to-cart-btn {
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 1.4rem 2.6rem;
+    background-color: var(--primary-color);
+    font-family: var(--roboto);
+    color: white;
+    border-radius: 6rem;
+    &:link,
+    &:visited {
+        color: white;
+    }
+}
+
+
+.mobile-nav__add-to-cart-btn-total {
+    margin-left: 2rem;
+    font-weight: 400;
 }

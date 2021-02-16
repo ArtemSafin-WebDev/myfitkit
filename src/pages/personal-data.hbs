@@ -1,0 +1,143 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__content">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Главная
+                    </a>
+                    <a href="#" class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Личный кабинет
+                    </a>
+
+
+                    <a class="breadcrumbs__link active">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Личные данные
+                    </a>
+                </li>
+            </ul>
+            <h1 class="main-heading main-heading--hide-on-mobile">
+                Личные данные
+            </h1>
+        </div>
+    </div>
+</div>
+
+<section class="account">
+    <div class="container">
+        <div class="account__row">
+            <div class="account__left-col">
+                <form class="account__personal-data" method="POST" action="/">
+                    <div class="account__personal-data-your-data">
+                        <h2 class="account__personal-data-large-heading">
+                            Ваши данные
+                        </h2>
+                        <div class="account__personal-data-form-row">
+                            <div class="account__personal-data-form-col">
+                                <label for="firstname" class="text-input-label register__form-label">
+                                    Имя *
+                                </label>
+                                <input type="text" class="text-input register__form-input" name="firstname"
+                                    id="firstname" required>
+                            </div>
+                            <div class="account__personal-data-form-col">
+                                <label for="lastname" class="text-input-label register__form-label">
+                                    Фамилия
+                                </label>
+                                <input type="text" class="text-input register__form-input" name="lastname"
+                                    id="lastname">
+                            </div>
+                            <div class="account__personal-data-form-col">
+                                <label for="email" class="text-input-label register__form-label">
+                                    E-mail *
+                                </label>
+                                <input type="email" class="text-input register__form-input" name="email" id="email"
+                                    required>
+                            </div>
+                            <div class="account__personal-data-form-col">
+                                <label for="phone" class="text-input-label register__form-label">
+                                    Телефон *
+                                </label>
+                                <input type="tel" class="text-input register__form-inpu js-phone-input" name="phone"
+                                    id="phone" required data-parsley-phone>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account__personal-data-change-password">
+                        <h2 class="account__personal-data-small-heading">
+                            Поменять пароль
+                        </h2>
+                        <div class="account__personal-data-form-row">
+                            <div class="account__personal-data-form-col">
+                                <label for="password1" class="text-input-label register__form-label">
+                                    Новый пароль
+                                </label>
+                                <input type="password" class="text-input register__form-input" id="password1"
+                                    name="password1" required>
+                            </div>
+                            <div class="account__personal-data-form-col">
+                                <label for="password2" class="text-input-label register__form-label">
+                                    Повторить пароль
+                                </label>
+                                <input type="password" class="text-input register__form-input" id="password2"
+                                    name="password2" required>
+                            </div>
+
+                        </div>
+                    </div>
+                    <button class="btn account__personal-data-submit" type="submit">
+                        Сохранить
+                    </button>
+                </form>
+            </div>
+            <div class="account__right-col">
+                <nav class="account__nav account__nav--compact-on-mobile">
+                    <ul class="account__nav-list">
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Кабинет
+                            </a>
+                        </li>
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Мои заказы
+                            </a>
+                        </li>
+                        <li class="account__nav-list-item  active">
+                            <a href="#" class="account__nav-link">
+                                Личные данные
+                            </a>
+                        </li>
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Адреса доставки
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#" class="account__exit-link account__exit-link--hide-on-mobile">
+                    <svg width="16" height="16" aria-hidden="true" class="icon-exit">
+                        <use xlink:href="#exit"></use>
+                    </svg>
+                    Выйти из кабинета
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}

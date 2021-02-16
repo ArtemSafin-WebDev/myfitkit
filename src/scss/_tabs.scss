@@ -1,6 +1,17 @@
 .tabs-nav {
     display: flex;
     align-items: baseline;
+
+    @include breakpoint(mobile) {
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+
+        @include noScrollbar();
+        margin-left: calc(-1 * var(--content-padding));
+        padding-left: var(--content-padding);
+        margin-right: calc(-1 * var(--content-padding));
+        padding-right: var(--content-padding);
+    }
 }
 
 .tabs-nav__checkbox {
@@ -25,7 +36,7 @@
     position: relative;
     z-index: 1;
     display: block;
-
+    white-space: nowrap;
     @include breakpoint(tablet) {
        
         font-size: 1.8rem;
@@ -36,9 +47,7 @@
     @include breakpoint(mobile) {
         padding: 1.5rem 0;
         margin-right: 3.2rem;
-        &:last-child {
-            margin-right: 0;
-        }
+        
     }
     &::before {
         content: '';

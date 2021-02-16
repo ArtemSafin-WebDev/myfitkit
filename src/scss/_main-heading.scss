@@ -19,6 +19,10 @@
         font-weight: 900;
         font-size: 2.6rem;
         line-height: 3.4rem;
+
+        &--hide-on-mobile {
+            display: none;
+        }
     }
 }
 

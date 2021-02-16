@@ -1,6 +1,15 @@
 <div class="mobile-nav">
 
-
+    {{#if mobileAddToCartButton}}
+    <div class="mobile-nav__add-to-cart-btn-wrapper">
+        <a class="mobile-nav__add-to-cart-btn" type="submit" for="">
+            В корзину 
+            <div class="mobile-nav__add-to-cart-btn-total">
+                2 880 ₽
+            </div>
+        </a>
+    </div>
+    {{/if}}
     <ul class="mobile-nav__list">
         <li class="mobile__nav-list-item">
             <a href="#" class="mobile-nav__btn">

@@ -29,6 +29,13 @@
             padding: 0;
         }
     }
+
+
+    &--write-us {
+        @include breakpoint(mobile) {
+            padding: 0;
+        }
+    }
 }
 
 .modals__modal-inner {
@@ -110,7 +117,6 @@
             bottom: auto;
             svg {
                 fill: #555555;
-              
             }
         }
     }
@@ -572,5 +578,161 @@
 .modals__modal-city-form-label {
     @include breakpoint(mobile) {
         display: none;
+    }
+}
+
+.modals__modal-inner--write-us {
+    max-width: 44rem;
+    padding: 4rem;
+    padding-bottom: 5rem;
+    position: relative;
+    background-color: #fff;
+    filter: drop-shadow(0px 0.4rem 6rem rgba(0, 0, 0, 0.1));
+    border-radius: 4rem;
+    width: 100%;
+
+    @include breakpoint(mobile) {
+        padding: 2rem var(--content-padding);
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+        filter: none;
+        border-radius: 0;
+        min-height: 100%;
+        flex-shrink: 0;
+        .modals__modal-close {
+            right: var(--content-padding);
+            top: 2.2rem;
+            left: auto;
+            bottom: auto;
+            svg {
+                fill: #555555;
+            }
+        }
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -1;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    &::before {
+        width: 45.6rem;
+        height: 49.1rem;
+        background-image: url('../img/splashes/write-us-modal-top-splash.svg');
+        top: -3.8rem;
+        left: -5.2rem;
+    }
+
+    &::after {
+        background-image: url('../img/splashes/write-us-modal-bottom-splash.svg');
+        width: 45.6rem;
+        height: 49.1rem;
+        right: -4.2rem;
+        bottom: -10rem;
+    }
+}
+
+.modals__write-us-heading {
+    font-weight: 900;
+    font-size: 3.2rem;
+    line-height: 4.4rem;
+    letter-spacing: -0.5px;
+    margin-bottom: 2rem;
+
+    @include breakpoint(tablet) {
+        font-size: 3rem;
+        line-height: 4.4rem;
+      
+    }
+
+    @include breakpoint(small-tablet) {
+        font-size: 2.8rem;
+        line-height: 4.4rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+    }
+}
+
+.modals__write-us-row {
+    margin-bottom: 2rem;
+}
+
+.modals__write-us-submit {
+    margin-top: 3rem;
+    display: block;
+    width: 100%;
+    font-weight: 700;
+
+    
+}
+
+.modals__write-us-policy {
+    margin-top: 2rem;
+}
+
+.modals__write-us-success-text {
+    font-family: var(--roboto);
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+    strong {
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 2.8rem;
+
+        @include breakpoint(mobile) {
+            font-size: 1.8rem;
+            line-height: 2.8rem;
+        }
+    }
+
+    p {
+        margin-bottom: 1.4rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include breakpoint(mobile) {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+.modals__write-us-success {
+    min-height: 30rem;
+
+    @include breakpoint(mobile) {
+        min-height: auto;
+    }
+}
+
+
+.modals__modal--write-us--success {
+    @include breakpoint(mobile) {
+        min-height: auto;
+    }
+}
+
+.modals__modal-inner--write-us-success {
+    @include breakpoint(mobile) {
+        min-height: auto;
     }
 }

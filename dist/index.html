@@ -297,6 +297,9 @@
             <a href="catalog.html">
                 Каталог
             </a>
+            <a href="about.html">
+                О компании
+            </a>
             <a href="cart.html">
                 Корзина
             </a>
@@ -318,6 +321,9 @@
             <a href="checkout.html">
                 Оформление заказа
             </a>
+            <a href="checkout-2.html">
+                Оформление заказа 2
+            </a>
             <a href="order-fulfilled.html">
                 Заказ оформлен
             </a>
@@ -336,11 +342,20 @@
             <a href="account.html">
                 Аккаунт
             </a>
+            <a href="personal-data.html">
+                Личные данные
+            </a>
             <a href="myorders.html">
                 Мои заказы
             </a>
             <a href="order.html">
                 Заказ
+            </a>
+            <a href="delivery-addresses.html">
+                Адреса доставки
+            </a>
+            <a href="delivery-edit-address.html">
+                Редактирование адреса доставки
             </a>
         </div>
 
@@ -499,7 +514,6 @@
                 </div>
             </div>
         </footer>        <div class="mobile-nav">
-        
         
             <ul class="mobile-nav__list">
                 <li class="mobile__nav-list-item">
@@ -685,7 +699,8 @@
                             <label for="city-name" class="text-input-label modals__modal-city-form-label">
                                 Название города
                             </label>
-                            <input type="search" class="text-input modals__modal-city-form-input" name="city-name" id="city-name" placeholder="Название города">
+                            <input type="search" class="text-input modals__modal-city-form-input" name="city-name"
+                                id="city-name" placeholder="Название города">
                             <div class="modals__modal-city-form-submit">
                                 <svg width="16" height="16" aria-hidden="true" class="icon-search">
                                     <use xlink:href="#search"></use>
@@ -1119,6 +1134,88 @@
                     </div>
                 </div>
         
+            </div>
+        
+            <div class="modals__modal modals__modal--write-us js-modal" id="write-us-modal">
+                <div class="modals__modal-inner modals__modal-inner--write-us">
+                    <button class="modals__modal-close js-close-modal">
+                        <svg width="12" height="16" aria-hidden="true" class="icon-stylized-cross">
+                            <use xlink:href="#stylized-cross"></use>
+                        </svg>
+                    </button>
+                    <form action="/" method="POST" class="modals__write-us" data-need-validation id="write-us-form">
+                        <h3 class="modals__write-us-heading">
+                            Написать нам
+                        </h3>
+                        <div class="modals__write-us-row">
+                            <label for="firstname" class="text-input-label">
+                                Имя *
+                            </label>
+                            <input type="text" class="text-input" name="firstname" id="firstname" required>
+                        </div>
+                        <div class="modals__write-us-row">
+                            <label for="email" class="text-input-label">
+                                E-mail *
+                            </label>
+                            <input type="email" class="text-input" name="email" id="email" required>
+                        </div>
+                        <div class="modals__write-us-row">
+                            <label for="tel" class="text-input-label">
+                                Телефон
+                            </label>
+                            <input type="tel" class="text-input js-phone-input" name="tel" id="tel" required data-parsley-phone>
+                        </div>
+                        <div class="modals__write-us-row">
+                            <label for="comment" class="text-input-label">
+                                Ваше сообщение
+                            </label>
+                            <textarea class="text-input modals__write-us-textarea"></textarea>
+                        </div>
+                        <button class="btn modals__write-us-submit" type="submit">
+                            Отправить сообщение
+                        </button>
+                        <div class="modals__write-us-policy">
+                            <label class="standard-checkbox">
+                                <input type="checkbox" class="standard-checkbox__input" name="policy" required>
+                                <span class="standard-checkbox__mark">
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-checkmark">
+                                        <use xlink:href="#checkmark"></use>
+                                    </svg>
+                                </span>
+                                <span class="standard-checkbox__text">
+                                    Согласен с условиями <a href="#">
+                                        политики конфиденциальности
+                                    </a>
+                                </span>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modals__modal modals__modal--write-us js-modal" id="write-us-success">
+                <div class="modals__modal-inner modals__modal-inner--write-us modals__modal-inner--write-us-success">
+                    <button class="modals__modal-close js-close-modal">
+                        <svg width="12" height="16" aria-hidden="true" class="icon-stylized-cross">
+                            <use xlink:href="#stylized-cross"></use>
+                        </svg>
+                    </button>
+                    <div class="modals__write-us-success">
+                        <h3 class="modals__write-us-heading">
+                            Написать нам
+                        </h3>
+                        <div class="modals__write-us-success-text">
+                            <p>
+                                <strong>
+                                    Ваше сообщение отправлено!
+                                </strong>
+                            </p>
+                            <p>
+                                В самое ближайшее время мы свяжемся с вами по указанным контактам.
+                            </p>
+                        </div>
+                    </div>
+        
+                </div>
             </div>
         </div>        <div class="cart-popup js-cart-popup">
             <div class="cart-popup__inner">

@@ -52,4 +52,8 @@ textarea.text-input {
     padding-bottom: 1rem;
     display: block;
     width: 100%;
+
+    @include breakpoint(mobile) {
+        height: 8rem;
+    }
 }

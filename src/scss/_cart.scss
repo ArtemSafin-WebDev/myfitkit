@@ -7,7 +7,7 @@
 
     @include breakpoint(mobile) {
         margin-bottom: 10rem;
-        padding-top: 2rem;
+        padding-top: 0;
     }
 }
 .cart__row {
@@ -178,6 +178,11 @@
     font-size: 2.4rem;
     line-height: 1.2;
     margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+    }
 }
 
 .cart__summary-table {
@@ -256,6 +261,8 @@
     font-weight: 700;
     transition: background-color 0.2s, transform 0.3s;
     margin-bottom: 3.2rem;
+    align-self: flex-start;
+
     &:hover {
         // background-color: var(--brown);
         transform: scale(0.98);
@@ -265,6 +272,10 @@
         margin-bottom: 0;
         padding-left: 3.6rem;
         padding-right: 3.6rem;
+
+        .cart--checkout & {
+            margin-bottom: 3rem;
+        }
     }
 
     @include breakpoint(mobile) {
@@ -672,6 +683,9 @@
 
 .cart__checkout {
     max-width: 63rem;
+    @include breakpoint(small-tablet) {
+        max-width: none;
+    }
 }
 .cart__checkout-authorize {
     font-family: var(--roboto);
@@ -679,7 +693,6 @@
     line-height: 2.2rem;
     margin-bottom: 4rem;
 
-   
     a {
         font-weight: bold;
         &:link,
@@ -690,6 +703,12 @@
 
     @include breakpoint(tablet) {
         margin-bottom: 3rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -707,21 +726,45 @@
         line-height: 4.4rem;
         margin-bottom: 1rem;
     }
+
+    @include breakpoint(small-tablet) {
+        font-weight: 900;
+        font-size: 2.8rem;
+        line-height: 4.4rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+    }
 }
 
 .cart__checkout-your-data {
     margin-bottom: 4rem;
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 3rem;
+    }
 }
 
 .cart__checkout-your-data-row {
     display: flex;
     flex-wrap: wrap;
     margin: -1rem;
+
+    @include breakpoint(mobile) {
+        margin: -0.6rem;
+    }
 }
 
 .cart__checkout-your-data-col {
     width: 50%;
     padding: 1rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 0.6rem;
+    }
 }
 
 .cart__checkout-tabs-nav {
@@ -730,18 +773,37 @@
 
 .cart__checkout-address {
     display: flex;
+
+    @include breakpoint(mobile) {
+        flex-wrap: wrap;
+        width: auto;
+        margin: -0.6rem -1rem;
+    }
 }
 
 .cart__checkout-address-wrapper {
     width: 27.8rem;
     margin-right: 2rem;
 
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 0.6rem 1rem;
+        margin: 0;
+    }
+
     &--short {
         width: 6.4rem;
+
+        @include breakpoint(mobile) {
+            width: 33.33%;
+        }
     }
 
     &--medium {
         width: 7.6rem;
+        @include breakpoint(mobile) {
+            width: 33.33%;
+        }
     }
 }
 
@@ -753,11 +815,21 @@
     width: 22.4rem;
     margin-right: 3rem;
     flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        margin-right: 0;
+        flex-shrink: 1;
+        width: 100%;
+    }
 }
 
 .cart__checkout-point-delivery-right-col {
     width: 30%;
     flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .cart__checkout-point-delivery-variants {
@@ -790,6 +862,10 @@
 
 .cart__checkout-payment {
     margin-bottom: 4rem;
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 3rem;
+    }
 }
 
 .cart__checkout-payment-heading {
@@ -802,12 +878,23 @@
     @include breakpoint(tablet) {
         margin-bottom: 0.4rem;
     }
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .cart__checkout-payment-text {
     font-family: var(--roboto);
     font-size: 1.8rem;
     line-height: 2.6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
 }
 
 .cart__checkout-city {
@@ -863,34 +950,62 @@
     font-weight: bold;
     font-size: 1.8rem;
     line-height: 2.4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 0.3rem;
+    }
 }
 
 .cart__checkout-order-card-row {
     display: flex;
     align-items: baseline;
+    @include breakpoint(mobile) {
+        flex-wrap: wrap;
+    }
 }
 
 .cart__checkout-order-card-name-col {
-    width: 22rem;
+    width: 28rem;
     padding-right: 1rem;
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 1rem;
+    }
 }
 
 .cart__checkout-order-card-quantity-col {
     width: 15.5rem;
     padding-right: 1rem;
     position: relative;
+
+    @include breakpoint(mobile) {
+        width: auto;
+        padding: 0;
+        margin-right: 2rem;
+    }
 }
 
 .cart__checkout-order-card-price-col {
     width: 13.8rem;
     padding-right: 1rem;
     position: relative;
+    @include breakpoint(mobile) {
+        width: auto;
+        padding: 0;
+        margin-right: 2rem;
+    }
 }
 
 .cart__checkout-order-card-total-col {
     width: 11rem;
     padding-right: 1rem;
     position: relative;
+    @include breakpoint(mobile) {
+        width: auto;
+        padding: 0;
+        margin-right: 2rem;
+    }
 }
 
 .cart__checkout-order-card-col-number {
@@ -900,6 +1015,11 @@
 
     strong {
         font-weight: 700;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 2.1rem;
     }
 }
 
@@ -917,6 +1037,14 @@
     .cart__checkout-order-list-item:first-child & {
         display: block;
     }
+
+    @include breakpoint(mobile) {
+        display: block;
+        margin-bottom: 0.4rem;
+        position: static;
+        left: auto;
+        bottom: auto;
+    }
 }
 
 .cart__checkout-order-card-description {
@@ -929,14 +1057,31 @@
             margin-bottom: 0;
         }
     }
+
+    @include breakpoint(mobile) {
+    }
 }
 
 .cart__checkout-delivery {
     margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 }
 
 .cart__checkout-order-list {
     margin-top: -2.4rem;
+
+    .account__my-order-heading ~ & {
+        @include breakpoint(tablet) {
+            margin-top: -1rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        margin-top: -1rem;
+    }
 }
 
 .cart__checkout-order-card-col-number-old {
@@ -948,6 +1093,9 @@
 
 .cart__checkout-order {
     margin-bottom: 4rem;
+    @include breakpoint(small-tablet) {
+        margin-bottom: 1rem;
+    }
 }
 
 .cart__checkout-back-link {
@@ -973,6 +1121,10 @@
             fill: var(--primary-color);
         }
     }
+
+    @include breakpoint(tablet) {
+        margin-top: 3.2rem;
+    }
 }
 
 .cart__checkout-comment {
@@ -980,6 +1132,10 @@
 
     @include breakpoint(tablet) {
         margin-bottom: 3rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 2rem;
     }
 }
 
@@ -1029,5 +1185,40 @@
     &:link,
     &:visited {
         color: white;
+    }
+}
+
+.cart__checkout-edit-btn {
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+    font-family: var(--roboto);
+    display: inline-flex;
+    align-items: center;
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+}
+
+.cart__checkout-your-data-text {
+    font-family: var(--roboto);
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin-bottom: 0.3rem;
+
+    @include breakpoint(tablet) {
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+}
+
+.cart__all-orders-btn {
+    @include breakpoint(tablet) {
+        margin-top: 3rem;
     }
 }

@@ -1,6 +1,8 @@
 .blog-detail {
     margin-bottom: 6rem;
 
+   
+
     @include breakpoint(tablet) {
         margin-top: -2rem;
     }
@@ -8,13 +10,21 @@
     @include breakpoint(mobile) {
         position: relative;
         z-index: 600;
-       
+
         margin-bottom: 3rem;
+    }
+
+    &--about {
+        margin-bottom: 10rem;
     }
 }
 
 .blog-detail__header {
     margin-bottom: 0.5rem;
+}
+
+.blog-detail__heading--about {
+    margin-bottom: 3rem;
 }
 
 .blog-detail__date {
@@ -207,7 +217,7 @@
     &::after {
         content: '';
         display: block;
-        padding-bottom: 60%;
+        padding-bottom: 70%;
 
         @include breakpoint(small-tablet) {
             padding-bottom: 70%;
@@ -663,8 +673,6 @@
     border-radius: 1.8rem;
     overflow: hidden;
 
-  
-
     .swiper-slide {
         &:first-child {
             border-top-left-radius: 1.8rem;
@@ -686,5 +694,385 @@
 
     @include breakpoint(mobile) {
         border-radius: 0;
+    }
+}
+
+.blog-detail__about-company-illustrations {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.blog-detail__about-company-illustrations-row {
+    display: flex;
+    margin: -1.5rem;
+    align-items: center;
+    flex-wrap: wrap;
+    @include breakpoint(mobile) {
+        align-items: initial;
+        margin: -0.5rem;
+    }
+}
+
+.blog-detail__about-company-illustrations-col {
+    width: 50%;
+    padding: 1.5rem;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 0.5rem;
+    }
+}
+
+.blog-detail__about-company-illustrations-heading {
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    margin: 0 !important;
+    max-width: calc(50% - 1.5rem);
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    @include breakpoint(mobile) {
+        position: static;
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+        margin-bottom: 2rem !important;
+        max-width: none;
+        top: auto;
+        left: auto;
+    }
+}
+
+.blog-detail__about-company-illustrations-text {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    position: relative;
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+}
+
+.blog-detail__about-company-illustrations-image {
+    width: auto;
+    height: auto;
+    display: block;
+    max-width: 100%;
+
+    &--short {
+        max-width: 37rem;
+
+        @include breakpoint(tablet) {
+            max-width: 100%;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        width: 100%;
+    }
+}
+
+.blog-detail__about-company-illustrations-item {
+    max-width: 84rem;
+    margin: 0 auto;
+
+    &:nth-child(odd) {
+        @include breakpoint(small-tablet) {
+            .blog-detail__about-company-illustrations-col:first-child {
+                margin-top: auto;
+            }
+        }
+
+        @include breakpoint(mobile) {
+            .blog-detail__about-company-illustrations-col:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+    &:nth-child(even) {
+        @include breakpoint(small-tablet) {
+            .blog-detail__about-company-illustrations-col:first-child {
+                margin-bottom: auto;
+            }
+        }
+        @include breakpoint(mobile) {
+            .blog-detail__about-company-illustrations-col:first-child {
+                margin-bottom: 0;
+                order: 10;
+            }
+        }
+    }
+}
+
+.blog-detail__about-company-illustrations-text--has-splash {
+    position: relative;
+    z-index: 1;
+    padding-top: 4rem;
+    &::before {
+        content: '';
+        background-image: url('../img/splashes/about-text-splash.svg');
+        width: 12rem;
+        height: 15.8rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -1;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: -4.6rem;
+
+        @include breakpoint(tablet) {
+            left: 0.6rem;
+        }
+        @include breakpoint(small-tablet) {
+            left: -4.6rem;
+        }
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    @include breakpoint(tablet) {
+        padding-left: 5rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        padding-left: 0;
+        margin-top: auto;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
+}
+
+.blog-detail__about-principles {
+    padding: 5rem 6rem;
+    position: relative;
+    background: #faefe6;
+    color: #df633c;
+    border-radius: 4rem;
+    z-index: 1;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+    @include breakpoint(tablet) {
+        margin-left: calc(-1 * (100vw - 100%) / 2 + var(--content-padding));
+        margin-right: calc(-1 * (100vw - 100%) / 2 + var(--content-padding));
+    }
+
+    @include breakpoint(small-tablet) {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 4rem 3rem;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        background-image: url('../img/splashes/about-principles-left-splash.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 39rem;
+        height: 41rem;
+        z-index: -1;
+        pointer-events: none;
+        position: absolute;
+        bottom: -7.8rem;
+        left: -6.5rem;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    &::after {
+        width: 41.7rem;
+        height: 42.7rem;
+        left: auto;
+        bottom: auto;
+        right: -4.2rem;
+        top: -4.8rem;
+    }
+}
+
+.blog-detail__about-principles-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -1rem -2.5rem;
+    @include breakpoint(small-tablet) {
+        margin: -0.5rem;
+    }
+
+    @include breakpoint(mobile) {
+        margin: -1rem;
+    }
+}
+
+.blog-detail__about-principles-list-item {
+    padding: 1rem 2.5rem;
+    width: 50%;
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+
+    @include breakpoint(small-tablet) {
+        width: 100%;
+        padding: 0.5rem;
+        align-items: center;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+   
+
+   
+    &::before {
+        content: counter(ordered-list);
+        font-weight: 900;
+        font-size: 2rem;
+        line-height: 2.4rem;
+        color: white;
+        flex-shrink: 0;
+        width: 5.5rem;
+        height: 7.3rem;
+        background-image: url('../img/list-orange-splash.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        text-align: center;
+        padding-top: 1.6rem;
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+        padding-bottom: 1.6rem;
+        font-family: var(--ruda);
+        margin-top: -0.4rem;
+        margin-right: 1.6rem;
+
+        @include breakpoint(small-tablet) {
+            margin-top: 0;
+        }
+
+        @include breakpoint(mobile) {
+            width: 4rem;
+            height: 5.3rem;
+            margin-right: 1.5rem;
+            font-weight: 900;
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            padding: 0;
+            padding-top: .95rem;
+        }
+    }
+}
+
+.blog-detail__about-principles-card {
+    font-weight: 50%;
+    flex-grow: 1;
+
+    @include breakpoint(small-tablet) {
+        padding-bottom: 1.5rem;
+
+        br {
+            display: none;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        padding-bottom: 0;
+    }
+}
+
+.blog-detail__about-principles-top-dash,
+.blog-detail__about-principles-bottom-dash {
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.blog-detail__about-principles-top-dash {
+    width: 15.3rem;
+    height: 0.3rem;
+    background-image: url('../img/splashes/about-principles-top-dash.svg');
+    top: -0.3rem;
+    left: 17.2rem;
+}
+
+.blog-detail__about-principles-bottom-dash {
+    width: 14.3rem;
+    height: 0.6rem;
+    bottom: -0.7rem;
+    right: 28rem;
+    background-image: url('../img/splashes/about-principles-bottom-dash.svg');
+}
+
+.blog-detail__about-write-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 4rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 3rem;
+    }
+}
+
+.about-gallery__about-write-us-btn {
+    background: transparent;
+    font-weight: 400;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    margin: 0 auto;
+    padding-left: 6.2rem;
+    padding-right: 6.2rem;
+    text-align: center;
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+
+    .no-touch &:hover {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 1.4rem 3.2rem;
+        display: block;
+        width: 100%;
+     
     }
 }

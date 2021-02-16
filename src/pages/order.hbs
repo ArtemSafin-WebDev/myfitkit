@@ -20,7 +20,7 @@
                     </a>
 
 
-                    <a class="breadcrumbs__link">
+                    <a href="#" class="breadcrumbs__link">
                         <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
                             <use xlink:href="#arrow-right"></use>
                         </svg>
@@ -34,7 +34,7 @@
                     </a>
                 </li>
             </ul>
-            <h1 class="main-heading">
+            <h1 class="main-heading main-heading--hide-on-mobile">
                 Мои заказы
             </h1>
         </div>
@@ -46,17 +46,21 @@
         <div class="account__row">
             <div class="account__left-col">
                 <div class="account__my-order-info">
+
+
                     <div class="account__my-orders-card account__my-orders-card--standalone">
-                        <div class="account__my-orders-card-info">
-                            <div class="account__my-orders-card-info-top-row">
-                                <h2 class="account__my-orders-card-title">
-                                    Заказ 12321
-                                </h2>
-                                <div class="account__my-orders-card-date">
-                                    12.10.2020
-                                </div>
+
+                        <div class="account__my-orders-card-info-top-row">
+                            <h4 class="account__my-orders-card-title">
+                                Заказ 12321
+                            </h4>
+                            <div class="account__my-orders-card-date">
+                                12.10.2020
                             </div>
-                            <div class="account__my-orders-card-info-bottom-row">
+                        </div>
+                        <div class="account__my-orders-card-info-bottom-row">
+
+                            <div class="account__my-orders-card-amount">
                                 <strong>
                                     1
                                 </strong>
@@ -64,13 +68,16 @@
                                 <strong>
                                     2 880 ₽
                                 </strong>
+                            </div>
 
+                            <div class="account__my-orders-card-status">
+                                Принят, ожидается оплата
                             </div>
 
                         </div>
-                        <div class="account__my-orders-card-status">
-                            Принят, ожидается оплата
-                        </div>
+
+
+
 
                     </div>
                 </div>
@@ -255,17 +262,10 @@
                                         Скидка
                                     </th>
                                     <td>
-                                        312 ₽
+                                        812 ₽ 
                                     </td>
                                 </tr>
-                                <tr>
-                                    <th>
-                                        Доставка
-                                    </th>
-                                    <td>
-                                        200 ₽
-                                    </td>
-                                </tr>
+                               
                                 <tr>
                                     <th>
                                         <span class="cart__summary-table-th-total">
@@ -274,7 +274,7 @@
                                     </th>
                                     <td>
                                         <span class="cart__summary-table-td-total">
-                                            4 948 ₽
+                                            10 948 ₽ 
                                         </span>
                                     </td>
                                 </tr>
@@ -284,7 +284,7 @@
                     <button class="cart__submit-btn" type="submit">
                         Повторить заказ
                     </button>
-                    <a href="#" class="blog-detail__back-link">
+                    <a href="#" class="blog-detail__back-link cart__all-orders-btn">
                         <svg width="12" height="16" aria-hidden="true" class="icon-arrow-left">
                             <use xlink:href="#arrow-left"></use>
                         </svg>
@@ -294,7 +294,7 @@
 
             </div>
             <div class="account__right-col">
-                <nav class="account__nav">
+                <nav class="account__nav account__nav--compact-on-mobile">
                     <ul class="account__nav-list">
                         <li class="account__nav-list-item">
                             <a href="#" class="account__nav-link">
@@ -318,7 +318,7 @@
                         </li>
                     </ul>
                 </nav>
-                <a href="#" class="account__exit-link">
+                <a href="#" class="account__exit-link account__exit-link--hide-on-mobile">
                     <svg width="16" height="16" aria-hidden="true" class="icon-exit">
                         <use xlink:href="#exit"></use>
                     </svg>

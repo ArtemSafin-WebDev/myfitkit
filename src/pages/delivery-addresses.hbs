@@ -1,0 +1,114 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__content">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Главная
+                    </a>
+                    <a href="#" class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Личный кабинет
+                    </a>
+
+
+                    <a class="breadcrumbs__link active">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Личные данные
+                    </a>
+                </li>
+            </ul>
+            <h1 class="main-heading main-heading--hide-on-mobile">
+                Личные данные
+            </h1>
+        </div>
+    </div>
+</div>
+
+<section class="account">
+    <div class="container">
+        <div class="account__row">
+            <div class="account__left-col">
+                <div class="account__delivery-addresses">
+                    <ul class="account__delivery-addresses-list">
+                        <li class="account__delivery-addresses-list-item">
+                            <div class="account__delivery-addresses-card">
+                                <h3 class="account__delivery-addresses-card-title">
+                                    103274, г. Москва, ул. Ленина, 3, кв. 125
+                                </h3>
+                                <a href="#" class="account__delivery-addresses-card-link">
+                                    Редактировать
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="account__delivery-addresses-list-item">
+                            <div class="account__delivery-addresses-card">
+                                <h3 class="account__delivery-addresses-card-title">
+                                    105043, г. Москва, ул. 1905 года, д.8, кв. 4
+                                </h3>
+                                <a href="#" class="account__delivery-addresses-card-link">
+                                    Редактировать
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn account__delivery-addresses-btn">
+                        Добавить новый адрес
+                    </a>
+                </div>
+            </div>
+            <div class="account__right-col">
+                <nav class="account__nav account__nav--compact-on-mobile">
+                    <ul class="account__nav-list">
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Кабинет
+                            </a>
+                        </li>
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Мои заказы
+                            </a>
+                        </li>
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Личные данные
+                            </a>
+                        </li>
+                        <li class="account__nav-list-item active">
+                            <a href="#" class="account__nav-link">
+                                Адреса доставки
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#" class="account__exit-link account__exit-link--hide-on-mobile">
+                    <svg width="16" height="16" aria-hidden="true" class="icon-exit">
+                        <use xlink:href="#exit"></use>
+                    </svg>
+                    Выйти из кабинета
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}

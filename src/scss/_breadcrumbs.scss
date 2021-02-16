@@ -1,9 +1,8 @@
 .breadcrumbs {
-    position: relative;
-    z-index: 300;
+ 
 
     @include breakpoint(mobile) {
-        z-index: 600;
+       
         pointer-events: none;
     }
 }
@@ -51,6 +50,8 @@
     flex-wrap: wrap;
     align-items: center;
     margin-bottom: 1.4rem;
+    position: relative;
+    z-index: 400;
 
     @include breakpoint(tablet) {
         margin-bottom: 1.1rem;
