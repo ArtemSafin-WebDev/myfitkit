@@ -25,6 +25,7 @@ import scrollToActiveMenuItem from './scrollToActiveMenuItem';
 import resetForm from './resetForm';
 import mobileMenu from './mobileMenu';
 import aboutProductMobileModals from './aboutProductMobileModals';
+import advantagesMobileModals from './advantagesMobileModals';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -52,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     resetForm();
     mobileMenu();
     aboutProductMobileModals();
+    advantagesMobileModals();
 });
 
 window.addEventListener('load', function() {
