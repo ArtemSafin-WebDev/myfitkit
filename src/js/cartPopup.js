@@ -2,8 +2,9 @@ import { lockScroll, unlockScroll } from "./scrollBlocker";
 
 export default function cartPopup() {
     const cartPopup = document.querySelector('.js-cart-popup');
-    const cartOpenBtn = document.querySelector('.js-cart-open');
-    const cartCloseBtn = document.querySelector('.js-cart-close');
+    const cartOpenBtns = Array.from(document.querySelectorAll('.js-cart-open'));
+    const cartCloseBtns = Array.from(document.querySelectorAll('.js-cart-close'));
+    
 
     let cartModalOpen = false;
     const openCartModal = () => {
@@ -22,16 +23,19 @@ export default function cartPopup() {
         }
     }
 
-
-    cartOpenBtn.addEventListener('click', event => {
-        event.preventDefault();
-        openCartModal();
+    cartOpenBtns.forEach(btn => {
+        btn.addEventListener('click', event => {
+            event.preventDefault();
+            openCartModal();
+        })
+    })
+    cartCloseBtns.forEach(btn => {
+        btn.addEventListener('click', event => {
+            event.preventDefault();
+            closeCartModal();
+        })
     })
 
-    cartCloseBtn.addEventListener('click', event => {
-        event.preventDefault();
-        closeCartModal();
-    });
 
     cartPopup.addEventListener('click', event => {
         if (event.target === cartPopup) {

@@ -22,6 +22,7 @@ import citySearch from './citySearch';
 import cartPopup from './cartPopup';
 import similarProductsSlider from './similarProductsSlider';
 import scrollToActiveMenuItem from './scrollToActiveMenuItem';
+import resetForm from './resetForm';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -46,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     cartPopup();
     similarProductsSlider();
     scrollToActiveMenuItem();
+    resetForm();
 });
 
 window.addEventListener('load', function() {

@@ -6,7 +6,7 @@
     height: 100%;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
-    z-index: 700;
+    z-index: 2500;
     background: rgba(black, 0.6);
    
     display: flex;
@@ -40,6 +40,12 @@
     transition: transform .3s ease .3s;
     transform: translateX(100%);
     flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        padding: 2rem var(--content-padding);
+        border-radius: 0;
+        width: 100%;
+    }
     &::before,
     &::after {
         content: '';

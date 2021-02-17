@@ -5269,7 +5269,8 @@ textarea.text-input {
   margin-bottom: 6rem; }
   @media only screen and (max-width: 640px) {
     .catalog {
-      margin-bottom: 4rem; } }
+      margin-bottom: 4rem;
+      padding-top: 0; } }
 
 .catalog__filter {
   display: -webkit-box;
@@ -5286,7 +5287,7 @@ textarea.text-input {
     .catalog__filter {
       position: relative;
       margin-bottom: 2rem;
-      z-index: 700; } }
+      z-index: 1200; } }
 
 .catalog__select-type {
   position: relative;
@@ -5579,7 +5580,8 @@ textarea.text-input {
       -webkit-overflow-scrolling: touch;
       -ms-scroll-chaining: none;
           overscroll-behavior: contain;
-      padding-top: 5rem; } }
+      padding-top: 5rem;
+      background-color: rgba(0, 0, 0, 0.6); } }
 
 .catalog__select-type-dropdown-inner {
   background-color: #fff;
@@ -5876,6 +5878,35 @@ textarea.text-input {
   .catalog__sorting-select .choices.is-open .choices__inner {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0; }
+
+.catalog__select-type-reset-filter {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: black;
+  font-family: var(--roboto);
+  margin-left: var(--content-padding);
+  margin-top: 2rem; }
+  .catalog__select-type-reset-filter:link, .catalog__select-type-reset-filter:visited {
+    color: black; }
+  .catalog__select-type-reset-filter svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    fill: #555555;
+    margin-right: 1.4rem; }
+  @media only screen and (max-width: 640px) {
+    .catalog__select-type-reset-filter {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex; } }
 
 .mobile-nav {
   position: fixed;
@@ -12192,7 +12223,7 @@ textarea.text-input {
   height: 100%;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  z-index: 700;
+  z-index: 2500;
   background: rgba(0, 0, 0, 0.6);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12232,6 +12263,11 @@ textarea.text-input {
           transform: translateX(100%);
   -ms-flex-negative: 0;
       flex-shrink: 0; }
+  @media only screen and (max-width: 640px) {
+    .cart-popup__inner {
+      padding: 2rem var(--content-padding);
+      border-radius: 0;
+      width: 100%; } }
   .cart-popup__inner::before, .cart-popup__inner::after {
     content: '';
     position: absolute;
