@@ -1460,7 +1460,7 @@
         </div>        <div class="mobile-menu">
             <div class="mobile-menu__inner">
                 <div class="mobile-menu__top-row">
-                    <a href="#" class="mobile-menu__city js-mobile-menu-city">
+                    <a href="#" class="mobile-menu__city js-mobile-menu-open-city-dropdown">
                         <svg width="12" height="16" aria-hidden="true" class="icon-location">
                             <use xlink:href="#location"></use>
                         </svg>
@@ -1670,10 +1670,370 @@
                                 <div class="mobile-menu__catalog-card-description">
                                     86 продуктов
                                 </div>
-                              
+        
                             </a>
                         </li>
                     </ul>
+                </div>
+            </div>
+        
+            <div class="mobile-menu__city-dropdown js-city-search">
+                <div class="modals__modal-city">
+                    <a href="#" class="mobile-menu__city-back-link js-mobile-menu-close-city-dropdown">
+                        <svg width="12" height="16" aria-hidden="true" class="icon-arrow-left">
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                        <svg width="12" height="16" aria-hidden="true" class="icon-location">
+                            <use xlink:href="#location"></use>
+                        </svg>
+                        Москва
+                    </a>
+                    <form action="/" method="POST" class="modals__modal-city-form">
+                        <label for="city-name" class="text-input-label modals__modal-city-form-label">
+                            Название города
+                        </label>
+                        <input type="search" class="text-input modals__modal-city-form-input" name="city-name" id="city-name"
+                            placeholder="Название города">
+                        <div class="modals__modal-city-form-submit">
+                            <svg width="16" height="16" aria-hidden="true" class="icon-search">
+                                <use xlink:href="#search"></use>
+                            </svg>
+                        </div>
+                    </form>
+                    <div class="modals__modal-city-results">
+                        <ul class="modals__modal-city-results-list">
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Абакан
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Армавир
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Архангельск
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Барнаул
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Белгород
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Владивосток
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Волгоград
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Вологда
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Воронеж
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Грозный
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Екатеринбург
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Ижевск
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Иркутск
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Йошкар-Ола
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Казань
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Калуга
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Кемерово
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Киров
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Кострома
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Краснодар
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Красноярск
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Курган
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Курск
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Магнитогорск
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Мончегорск
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Москва
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Набережные Челны
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Назрань
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Нальчик
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Нижний Новгород
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Нижний Тагил
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Новороссийск
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Норильск
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Ноябрьск
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Омск
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Орёл
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Оренбург
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Пенза
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Пермь
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Петрозаводск
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Пятигорск
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Ростов-на-Дону
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Рязань
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Салехард
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Самара
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Санкт-Петербург
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Саранск
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Саратов
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Северодвинск
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Смоленск
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Сочи
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Ставрополь
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Сызрань
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Сыктывкар
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Тамбов
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Тверь
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Тольятти
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Томск
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Тула
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Тюмень
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Ульяновск
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Уфа
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="" class="modals__modal-city-results-card">
+                                    Чебоксары
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Чита
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Якутск
+                                </a>
+                            </li>
+                            <li class="modals__modal-city-results-list-item">
+                                <a href="#" class="modals__modal-city-results-card">
+                                    Ярославль
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

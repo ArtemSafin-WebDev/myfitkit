@@ -70,4 +70,37 @@ export default function mobileMenu() {
             closeMobileCatalog();
         })
     }
+
+
+    const cityDropdownOpenBtn = document.querySelector('.js-mobile-menu-open-city-dropdown');
+    const cityDropdownCloseBtn = document.querySelector('.js-mobile-menu-close-city-dropdown');
+    const cityDropdown = mobileMenu.querySelector('.mobile-menu__city-dropdown');
+
+    if (cityDropdown) {
+        let cityDropdownOpen = false;
+
+        const openCityDropdown = () => {
+            if (cityDropdownOpen) return;
+            cityDropdown.classList.add('active');
+            unlockScroll();
+            lockScroll(cityDropdown);
+            cityDropdownOpen = true;
+        }
+        const closeCityDropdown = () => {
+            if (!cityDropdownOpen) return;
+            cityDropdown.classList.remove('active');
+            unlockScroll();
+            lockScroll(mobileMenu);
+            cityDropdownOpen = false;
+        }
+
+        cityDropdownOpenBtn.addEventListener('click', event => {
+            event.preventDefault();
+            openCityDropdown();
+        })
+        cityDropdownCloseBtn.addEventListener('click', event => {
+            event.preventDefault();
+            closeCityDropdown();
+        })
+    }
 }
