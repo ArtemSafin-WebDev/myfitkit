@@ -24,6 +24,7 @@ import similarProductsSlider from './similarProductsSlider';
 import scrollToActiveMenuItem from './scrollToActiveMenuItem';
 import resetForm from './resetForm';
 import mobileMenu from './mobileMenu';
+import aboutProductMobileModals from './aboutProductMobileModals';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
     scrollToActiveMenuItem();
     resetForm();
     mobileMenu();
+    aboutProductMobileModals();
 });
 
 window.addEventListener('load', function() {

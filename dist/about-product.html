@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>
-        MyFitkit - Список страниц
+        MyFitkit - О продукте
     </title>
 </head>
 
@@ -277,94 +277,265 @@
             </div>
         </header>        <main class="page-main">
 
-<div class="m">
+
+<div class="breadcrumbs">
     <div class="container">
-        <div
-            style="display: flex; flex-direction: column; align-items: flex-start; padding-top: 140px; padding-bottom: 80px;">
-            <style>
-                .m a {
-                    font-size: 2.2rem;
-                    margin-bottom: 2rem;
+        <div class="breadcrumbs__content breadcrumbs__content--no-dash">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Главная
+                    </a>
 
-                }
 
-                .m a:hover {
-                    color: #e62f48;
-                }
-            </style>
-            <a href="main.html">
-                Главная
-            </a>
-            <a href="catalog.html">
-                Каталог
-            </a>
-            <a href="about.html">
-                О компании
-            </a>
-            <a href="cart.html">
-                Корзина
-            </a>
-            <a href="blog.html">
-                Блог
-            </a>
-            <a href="blog-detail.html">
-                Страница статьи
-            </a>
-            <a href="recipe.html">
-                Рецепт
-            </a>
-            <a href="product.html">
-                Карточка товара
-            </a>
-            <a href="product-2.html">
-                Карточка товара 2
-            </a>
-            <a href="about-product.html">
-                О продукте
-            </a>
-            <a href="checkout.html">
-                Оформление заказа
-            </a>
-            <a href="checkout-2.html">
-                Оформление заказа 2
-            </a>
-            <a href="order-fulfilled.html">
-                Заказ оформлен
-            </a>
-            <a href="register.html">
-                Регистрация
-            </a>
-            <a href="login.html">
-                Вход
-            </a>
-            <a href="recover.html">
-                Восстановление пароля
-            </a>
-            <a href="payment-and-shipping.html">
-                Оплата и доставка
-            </a>
-            <a href="account.html">
-                Аккаунт
-            </a>
-            <a href="personal-data.html">
-                Личные данные
-            </a>
-            <a href="myorders.html">
-                Мои заказы
-            </a>
-            <a href="order.html">
-                Заказ
-            </a>
-            <a href="delivery-addresses.html">
-                Адреса доставки
-            </a>
-            <a href="delivery-edit-address.html">
-                Редактирование адреса доставки
-            </a>
+                    <a class="breadcrumbs__link active">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        О продукте
+                    </a>
+                </li>
+            </ul>
+
         </div>
-
     </div>
 </div>
+<article class="blog-detail blog-detail--about">
+    <div class="container">
+        <header class="blog-detail__header">
+            <h1 class="main-heading blog-detail__heading blog-detail__heading--about">
+                О продукте
+
+            </h1>
+        </header>
+
+        <div class="blog-detail__intro-image-container">
+
+
+            <picture>
+                <source data-srcset="img/about-product/mobile-intro-bg.jpg" media="(max-width: 640px)">
+                <img data-src="img/about/about-company-bg.jpg" alt="Изображение в блоге"
+                    class="blog-detail__intro-image lazyload" data-sizes="auto">
+            </picture>
+        </div>
+        <div class="blog-detail__content">
+            <p>
+                <strong>
+                    Давай будем честны друг с другом?
+                </strong>
+            </p>
+            <p>
+                Если диета приносит тебе дискомфорт, накладывает кучу ограничений и заставляет постоянно бороться с
+                собой, то она не принесет ничего, кроме испорченных нервов и желания заглянуть на обед в ближайший
+                фастфуд.
+                К черту такие диеты!
+            </p>
+
+            <div class="blog-detail__about-product-advantages">
+                <div class="blog-detail__about-product-advantages-intro">
+                    <p>
+                        Мы придумали FITKIT, чтобы у тебя появилась возможность, не опасаясь за свою фигуру, есть
+                        вкуснейшие сладости на планете и ни о чем не переживать!
+                    </p>
+                </div>
+                <div class="blog-detail__about-product-advantages-image-container">
+                    <img src="img/about-product/cake.png" alt="" class="blog-detail__about-product-advantages-image">
+                    <div class="blog-detail__about-product-advantages-modals">
+                        <div class="blog-detail__about-product-advantages-modal">
+                            <img src="img/about-product/modal-bg-1.svg" alt=""
+                                class="blog-detail__about-product-advantages-modal-background">
+                            <img src="img/about-product/modal-image-1.svg" alt=""
+                                class="blog-detail__about-product-advantages-modal-icon">
+
+                            <div class="blog-detail__about-product-advantages-modal-inner">
+                                <button class="blog-detail__about-product-advantages-modal-inner-close">
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-stylized-cross">
+                                        <use xlink:href="#stylized-cross"></use>
+                                    </svg>
+                                </button>
+                                <img src="img/about-product/modal-inner-bg-1.svg" alt=""
+                                    class="blog-detail__about-product-advantages-modal-inner-bg-image">
+                                <div class="blog-detail__about-product-advantages-modal-inner-content">
+                                    <h4 class="blog-detail__about-product-advantages-modal-inner-heading">
+                                        Без добавления сахара
+
+                                    </h4>
+                                    <div class="blog-detail__about-product-advantages-modal-inner-text">
+                                        Мы не добавляем сахарозу, фруктозу или мальтодекстрин в наши продукты
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-detail__about-product-advantages-modal">
+                            <img src="img/about-product/modal-bg-2.svg" alt=""
+                                class="blog-detail__about-product-advantages-modal-background">
+                            <img src="img/about-product/modal-image-2.svg" alt=""
+                                class="blog-detail__about-product-advantages-modal-icon">
+
+                            <div class="blog-detail__about-product-advantages-modal-inner">
+                                <button
+                                    class="blog-detail__about-product-advantages-modal-inner-close blog-detail__about-product-advantages-modal-inner-close--blue">
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-stylized-cross">
+                                        <use xlink:href="#stylized-cross"></use>
+                                    </svg>
+                                </button>
+                                <img src="img/about-product/modal-inner-bg-2.svg" alt=""
+                                    class="blog-detail__about-product-advantages-modal-inner-bg-image">
+                                <div
+                                    class="blog-detail__about-product-advantages-modal-inner-content blog-detail__about-product-advantages-modal-inner-content--white">
+                                    <h4 class="blog-detail__about-product-advantages-modal-inner-heading">
+                                        Сывороточный и молочный белок
+
+                                    </h4>
+                                    <div class="blog-detail__about-product-advantages-modal-inner-text">
+                                        Добавляем только самый нежный и качественный белок, полученный из молока
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-detail__about-product-advantages-modal">
+                            <img src="img/about-product/modal-bg-3.svg" alt=""
+                                class="blog-detail__about-product-advantages-modal-background">
+                            <img src="img/about-product/modal-image-3.svg" alt=""
+                                class="blog-detail__about-product-advantages-modal-icon">
+
+                            <div class="blog-detail__about-product-advantages-modal-inner">
+                                <button
+                                    class="blog-detail__about-product-advantages-modal-inner-close blog-detail__about-product-advantages-modal-inner-close--yellow">
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-stylized-cross">
+                                        <use xlink:href="#stylized-cross"></use>
+                                    </svg>
+                                </button>
+                                <img src="img/about-product/modal-inner-bg-3.svg" alt=""
+                                    class="blog-detail__about-product-advantages-modal-inner-bg-image">
+                                <div class="blog-detail__about-product-advantages-modal-inner-content ">
+                                    <h4 class="blog-detail__about-product-advantages-modal-inner-heading">
+                                        Пищевые волокна<br> и без глютена
+
+                                    </h4>
+                                    <div class="blog-detail__about-product-advantages-modal-inner-text">
+                                        Вместо муки в наших продуктахмы используем растворимую клетчатку
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-detail__about-product-advantages-modal">
+                            <img src="img/about-product/modal-bg-4.svg" alt=""
+                                class="blog-detail__about-product-advantages-modal-background">
+                            <img src="img/about-product/modal-image-4.svg" alt=""
+                                class="blog-detail__about-product-advantages-modal-icon">
+
+                            <div class="blog-detail__about-product-advantages-modal-inner">
+                                <button
+                                    class="blog-detail__about-product-advantages-modal-inner-close blog-detail__about-product-advantages-modal-inner-close--orange">
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-stylized-cross">
+                                        <use xlink:href="#stylized-cross"></use>
+                                    </svg>
+                                </button>
+                                <img src="img/about-product/modal-inner-bg-4.svg" alt=""
+                                    class="blog-detail__about-product-advantages-modal-inner-bg-image">
+                                <div
+                                    class="blog-detail__about-product-advantages-modal-inner-content blog-detail__about-product-advantages-modal-inner-content--white">
+                                    <h4 class="blog-detail__about-product-advantages-modal-inner-heading">
+                                        Без трансжиров
+
+                                    </h4>
+                                    <div class="blog-detail__about-product-advantages-modal-inner-text">
+                                        Наши продукты не содержат гидрогенизированных жиров
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="blog-detail__benefits">
+                <h2 class="blog-detail__benefits-heading">
+                    Выбирая FIT KIT, ты выбираешь определённый образ жизни и мыслей
+                </h2>
+                <div class="blog-detail__benefits-content">
+                    <ul class="blog-detail__benefits-list">
+                        <li class="blog-detail__benefits-list-item">
+                            <div class="blog-detail__benefits-card">
+                                <div class="blog-detail__benefits-card-text">
+
+
+                                    Без загонов
+                                </div>
+                            </div>
+                        </li>
+                        <li class="blog-detail__benefits-list-item">
+                            <div class="blog-detail__benefits-card">
+                                <div class="blog-detail__benefits-card-text">
+                                    Без голодовок
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="blog-detail__benefits-list-item">
+                            <div class="blog-detail__benefits-card">
+                                <div class="blog-detail__benefits-card-text">
+                                    С заботой о своём ментальном<br> и физическом здоровье
+                                </div>
+
+
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="blog-detail__our-products">
+                <div class="blog-detail__our-products-row">
+                    <div class="blog-detail__our-products-col">
+                        <div class="blog-detail__our-products-next-section">
+
+                            <div class="blog-detail__our-products-next-section-text">
+                                Скорее переходи в следующий раздел, чтобы выбрать десерт по своему вкусу и целям:
+                            </div>
+                            <svg width="12" height="16" aria-hidden="true" class="icon-stylized-arrow-right">
+                                <use xlink:href="#stylized-arrow-right"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="blog-detail__our-products-col">
+                        <a href="#" class="blog-detail__our-products-card">
+                            <img src="img/about-product/next-section-image.png" alt=""
+                                class="blog-detail__our-products-card-image">
+                            <h3 class="blog-detail__our-products-card-heading">
+                                Наша продукция
+                            </h3>
+                            <div class="blog-detail__our-products-card-text">
+                                Весь ассортимент наших изделий
+                            </div>
+                            <span class="btn blog-detail__our-products-card-btn">
+                                Посмотреть
+                            </span>
+                            <span class="blog-detail__our-products-card-side-dash">
+
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</article>
+
+
 
 
         </main>

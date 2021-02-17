@@ -1,8 +1,6 @@
 .blog-detail {
     margin-bottom: 6rem;
 
-   
-
     @include breakpoint(tablet) {
         margin-top: -2rem;
     }
@@ -538,6 +536,10 @@
     @include breakpoint(mobile) {
         font-size: 1.6rem;
         line-height: 2.4rem;
+
+        br {
+            display: none;
+        }
     }
 }
 
@@ -948,9 +950,6 @@
         padding: 1rem;
     }
 
-   
-
-   
     &::before {
         content: counter(ordered-list);
         font-weight: 900;
@@ -985,7 +984,7 @@
             font-size: 1.6rem;
             line-height: 2.4rem;
             padding: 0;
-            padding-top: .95rem;
+            padding-top: 0.95rem;
         }
     }
 }
@@ -1073,6 +1072,804 @@
         padding: 1.4rem 3.2rem;
         display: block;
         width: 100%;
-     
+    }
+}
+
+.blog-detail__about-product-advantages {
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+        margin-bottom: 6rem;
+    }
+}
+
+.blog-detail__about-product-advantages-intro {
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: #df633c;
+    max-width: 55rem;
+    font-family: var(--roboto);
+    text-align: center;
+    margin: 0 auto;
+
+    margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        text-align: left;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        color: var(--brown);
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        font-weight: 400;
+        max-width: none;
+        margin-bottom: 5rem;
+    }
+    &::before {
+        content: '';
+        display: block;
+        width: 10rem;
+        height: 0.9rem;
+        background-image: url('../img/splashes/about-product-advantages-dash.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        margin: 0 auto;
+        margin-bottom: 3.5rem;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+}
+
+.blog-detail__about-product-advantages-image-container {
+    position: relative;
+    width: 100%;
+    max-width: 53rem;
+    margin: 0 auto;
+    &::before {
+        content: '';
+        position: absolute;
+        left: -5rem;
+        top: -5rem;
+        bottom: -5rem;
+        right: -5rem;
+        z-index: -1;
+        pointer-events: none;
+        background-size: contain;
+        background-image: url('../img/about-product/pie-bg.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left: 2rem;
+
+        @include breakpoint(mobile) {
+            left: -3rem;
+            top: -3rem;
+            right: -3rem;
+            bottom: -3rem;
+            margin-left: 1rem;
+        }
+    }
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-bottom: 100%;
+    }
+}
+
+.blog-detail__about-product-advantages-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    @include objectFitContain();
+}
+
+.blog-detail__about-product-advantages-modal {
+    position: absolute;
+    // transform: translate(-50%, -50%);
+    z-index: 5;
+    &:nth-child(1) {
+        left: -2rem;
+        top: -2rem;
+
+        @include breakpoint(mobile) {
+            left: -1rem;
+            top: -1rem;
+        }
+    }
+    &:nth-child(2) {
+        right: -3rem;
+        top: -2rem;
+
+        @include breakpoint(mobile) {
+            right: -1rem;
+            top: -1rem;
+        }
+    }
+    &:nth-child(3) {
+        left: -2rem;
+        bottom: -2rem;
+
+        @include breakpoint(mobile) {
+            left: -1rem;
+            bottom: -1rem;
+        }
+    }
+    &:nth-child(4) {
+        right: -3rem;
+        bottom: -2rem;
+
+        @include breakpoint(mobile) {
+            right: -1rem;
+            bottom: -1rem;
+        }
+    }
+
+    @include breakpointMF(small-tablet) {
+        &:hover {
+            .blog-detail__about-product-advantages-modal-inner {
+                opacity: 1;
+                visibility: inherit;
+                transition: opacity 0.3s, visibility 0.3s;
+            }
+        }
+    }
+
+    &.active {
+        z-index: 40;
+        .blog-detail__about-product-advantages-modal-inner {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+    }
+}
+
+.blog-detail__about-product-advantages-modal-background,
+.blog-detail__about-product-advantages-modal-icon {
+    max-width: none;
+}
+
+.blog-detail__about-product-advantages-modal-background {
+    width: 18.5rem;
+    height: auto;
+    position: static;
+
+    @include breakpoint(mobile) {
+        width: 10rem;
+    }
+}
+
+.blog-detail__about-product-advantages-modal-icon {
+    width: 8.2rem;
+    left: 50%;
+    top: 50%;
+    height: auto;
+
+    transform: translate(-50%, -50%);
+    position: absolute;
+
+    @include breakpoint(mobile) {
+        width: 4.8rem;
+    }
+}
+
+.blog-detail__about-product-advantages-modal-inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0s linear 0.3s;
+
+    @include breakpoint(mobile) {
+        position: fixed;
+        z-index: 300;
+    }
+}
+
+.blog-detail__about-product-advantages-modal-inner-bg-image {
+    display: block;
+    width: 42rem;
+    height: auto;
+    max-width: none;
+
+    @include breakpoint(mobile) {
+        width: 37.6rem;
+    }
+}
+
+.blog-detail__about-product-advantages-modal-inner-content {
+    text-align: center;
+    max-width: 28rem;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--roboto);
+    position: absolute;
+
+    @include breakpoint(mobile) {
+        max-width: 24rem;
+    }
+
+    &--white {
+        color: white;
+    }
+}
+
+.blog-detail__about-product-advantages-modal-inner-heading {
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.8rem;
+    margin-bottom: 2rem;
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.blog-detail__about-product-advantages-modal-inner-text {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+}
+
+.blog-detail__benefits {
+    margin: 4rem 0;
+
+    @include breakpoint(tablet) {
+        margin-left: calc(-1 * (100vw - 100%) / 2 + var(--content-padding));
+        margin-right: calc(-1 * (100vw - 100%) / 2 + var(--content-padding));
+    }
+
+    @include breakpoint(small-tablet) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2.5rem;
+    }
+
+    .blog-detail__benefits-heading {
+        text-align: center;
+        margin-bottom: 4rem;
+        font-weight: bold;
+        font-size: 2.4rem;
+        line-height: 2.8rem;
+
+        @include breakpoint(mobile) {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.blog-detail__about-product-advantages-modal-inner-close {
+    display: none;
+
+    @include breakpoint(mobile) {
+        display: block;
+        position: absolute;
+        right: var(--content-padding);
+        top: 0;
+        z-index: 20;
+        width: 4.2rem;
+        height: 4.2rem;
+        border-radius: 50%;
+        background: #f4decc;
+
+        svg {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 2rem;
+            height: 2rem;
+            fill: #555555;
+        }
+
+        &--blue {
+            background: #2d9cdb;
+            svg {
+                fill: white;
+            }
+        }
+
+        &--yellow {
+            background: #f2cd30;
+
+            svg {
+                fill: #555555;
+            }
+        }
+
+        &--orange {
+            background: #F2994A;
+
+            svg {
+                fill: white;
+            }
+        }
+    }
+}
+
+.blog-detail__benefits-content {
+    background: #faefe6;
+    border-radius: 4rem;
+    position: relative;
+    padding: 5rem 6rem;
+
+    @include breakpoint(small-tablet) {
+        padding: 4rem 3rem;
+    }
+
+    @include breakpoint(mobile) {
+        background: transparent;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        z-index: -1;
+        width: 15.3rem;
+        height: 0.5rem;
+        background-image: url('../img/splashes/cart-summary-top-dash.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        left: 11rem;
+        top: -0.7rem;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        pointer-events: none;
+        z-index: -1;
+        width: 15rem;
+        height: 0.6rem;
+        bottom: -0.6rem;
+        right: 11rem;
+        background-image: url('../img/splashes/cart-summary-bottom-dash.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+}
+
+.blog-detail__benefits-list {
+    display: flex;
+
+    @include breakpoint(small-tablet) {
+        flex-wrap: wrap;
+        margin: -0.5rem;
+    }
+
+    @include breakpoint(mobile) {
+        display: block;
+        margin: 0;
+    }
+}
+
+.blog-detail__benefits-list-item {
+    flex-basis: 33.33%;
+
+    @include breakpoint(small-tablet) {
+        flex-basis: 50%;
+        padding: 0.5rem;
+    }
+
+    @include breakpoint(mobile) {
+        flex-basis: initial;
+        padding: 0;
+        margin-bottom: 1rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.blog-detail__benefits-card {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: #df633c;
+    white-space: nowrap;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 1.2;
+        align-items: center;
+    }
+    &::before {
+        content: '';
+        width: 5.5rem;
+        height: 7.3rem;
+        flex-shrink: 0;
+        margin-right: 1.6rem;
+        background-image: url('../img/benefits-marker.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        bottom: -0.8rem;
+
+        @include breakpoint(mobile) {
+            width: 4rem;
+            height: 5.3rem;
+            position: relative;
+            margin-right: 1rem;
+            bottom: -0.5rem;
+        }
+    }
+}
+
+.blog-detail__our-products {
+    margin: 6rem 0;
+    margin-bottom: 0;
+
+    @include breakpoint(tablet) {
+        margin-left: calc(-1 * (100vw - 100%) / 2 + var(--content-padding));
+        margin-right: calc(-1 * (100vw - 100%) / 2 + var(--content-padding));
+    }
+
+    @include breakpoint(small-tablet) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 46rem;
+        width: 100%;
+        margin-top: 8rem;
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+        margin-top: 2rem;
+    }
+}
+
+.blog-detail__our-products-row {
+    display: flex;
+    margin: -1.5rem;
+    align-items: center;
+
+    @include breakpoint(small-tablet) {
+        flex-direction: column;
+        margin: 0;
+    }
+}
+
+.blog-detail__our-products-col {
+    width: 50%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(small-tablet) {
+        padding: 0;
+        width: 100%;
+    }
+}
+
+.blog-detail__our-products-next-section {
+    padding-left: 6rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+
+    &::before {
+        content: '';
+        z-index: -1;
+        pointer-events: none;
+        width: 16.2rem;
+        height: 23.4rem;
+        background-image: url('../img/splashes/next-section-splash.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        position: absolute;
+        margin-top: 1rem;
+
+        @include breakpoint(small-tablet) {
+            display: none;
+            left: 50%;
+            top: 50%;
+            margin: 0;
+            transform: translate(-50%, -50%);
+            width: 12.5rem;
+            height: 18rem;
+        }
+    }
+
+    svg {
+        width: 4.8rem;
+        height: 4.8rem;
+        flex-shrink: 0;
+        margin-left: 4.2rem;
+        margin-right: 2rem;
+        fill: #f2994a;
+
+        @include breakpoint(small-tablet) {
+            width: 4.2rem;
+            height: 4.2rem;
+            transform: rotate(90deg);
+            margin: 0;
+            margin-bottom: 3.8rem;
+        }
+
+        @include breakpoint(mobile) {
+            width: 2.6rem;
+            height: 2.6rem;
+            margin-bottom: 1.4rem;
+        }
+    }
+
+    @include breakpoint(small-tablet) {
+        padding-left: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.blog-detail__our-products-next-section-text {
+    font-family: var(--roboto);
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 2.5rem;
+        text-align: center;
+        position: relative;
+        &::before {
+            content: '';
+            z-index: -1;
+            pointer-events: none;
+            width: 16.2rem;
+            height: 23.4rem;
+            background-image: url('../img/splashes/next-section-splash.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+            margin-top: 1rem;
+            transform: translate(-50%, -50%);
+            width: 12.5rem;
+            height: 18rem;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        margin-bottom: 0;
+        width: 100%;
+        text-align: left;
+
+        &::before {
+            display: none;
+        }
+    }
+}
+
+.blog-detail__our-products-card {
+    min-height: 29rem;
+    padding: 5rem;
+    position: relative;
+    z-index: 1;
+    background: #f2994a;
+    border-radius: 4rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+
+    &:link,
+    &:visited {
+        color: white;
+    }
+    @include breakpoint(tablet) {
+        min-height: 26rem;
+        padding: 4rem;
+    }
+
+    @include breakpoint(small-tablet) {
+    }
+
+    @include breakpoint(mobile) {
+        border-radius: 3rem;
+        min-height: 32.7rem;
+        padding: 3.2rem 2.4rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 12.2rem;
+        height: 0.5rem;
+        background-image: url('../img/splashes/orange-top-dash.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -1;
+        pointer-events: none;
+        left: 6.7rem;
+        top: -0.75rem;
+
+        @include breakpoint(mobile) {
+            width: 8rem;
+            height: 0.2rem;
+            left: 3.5rem;
+            top: -0.45rem;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 14.2rem;
+        height: 0.8rem;
+        background-image: url('../img/splashes/orange-top-dash.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: -1;
+        pointer-events: none;
+        left: 19.4rem;
+        bottom: -0.85rem;
+
+        @include breakpoint(mobile) {
+            width: 7.6rem;
+            height: 0.4rem;
+            left: 10rem;
+            bottom: -0.6rem;
+        }
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    .blog-detail__our-products-card-heading {
+        margin: 0;
+        font-weight: 900;
+        font-size: 3.2rem;
+        line-height: 4.4rem;
+        letter-spacing: -0.05rem;
+        margin-bottom: 0.8rem;
+        font-family: var(--ruda);
+
+        @include breakpoint(tablet) {
+            font-weight: 900;
+            font-size: 3rem;
+            line-height: 4rem;
+        }
+
+        @include breakpoint(mobile) {
+            font-weight: 900;
+            font-size: 2.4rem;
+            line-height: 3.2rem;
+        }
+    }
+}
+
+.blog-detail__our-products-card-text {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin-bottom: 3rem;
+    max-width: 28rem;
+    @include breakpoint(tablet) {
+        max-width: 20rem;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+}
+
+.blog-detail__our-products-card-btn {
+    flex-shrink: 0;
+    padding-left: 4.2rem;
+    padding-right: 4.2rem;
+    flex-shrink: 0;
+    text-align: center;
+    align-self: flex-start;
+    margin-top: auto;
+
+    @include breakpoint(tablet) {
+        padding-left: 3.4rem;
+        padding-right: 3.4rem;
+    }
+
+    @include breakpoint(mobile) {
+        padding-left: 2.4rem;
+        padding-right: 2.4rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        display: none;
+    }
+}
+
+.blog-detail__our-products-card-image {
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    right: 0;
+    bottom: 0;
+    width: 30rem;
+    height: auto;
+
+    @include breakpoint(tablet) {
+        width: 26rem;
+    }
+
+    @include breakpoint(mobile) {
+        width: 88%;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 0.8rem;
+    }
+}
+
+.blog-detail__our-products-card-side-dash {
+    width: 0.6rem;
+    height: 14.3rem;
+    position: absolute;
+    right: -0.8rem;
+    bottom: 4rem;
+    background-image: url('../img/splashes/orange-side-dash.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include breakpoint(mobile) {
+        height: 7.8rem;
+        width: 0.3rem;
+        bottom: 7.4rem;
+        right: -0.5rem;
     }
 }
