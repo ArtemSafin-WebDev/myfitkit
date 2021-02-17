@@ -579,38 +579,7 @@
         top: 0;
     }
 
-    &--yellow-backplate {
-        &::before {
-            background-image: url('../img/splashes/card-yellow-backplate.svg');
-        }
-    }
-
-    &--pink-backplate {
-        &::before {
-            background-image: url('../img/splashes/card-pink-backplate.svg');
-        }
-    }
-
-    &--orange-backplate {
-        &::before {
-            background-image: url('../img/splashes/card-orange-backplate.svg');
-        }
-    }
-    &--red-backplate {
-        &::before {
-            background-image: url('../img/splashes/card-red-backplate.svg');
-        }
-    }
-
-    &--brown-backplate {
-        &::before {
-            background-image: url('../img/splashes/card-brown-backplate.svg');
-        }
-    }
-
-    &--all-backplate {
-        background-image: url('../img/splashes/card-splash-all.svg');
-    }
+    
    
     &::after {
         content: '';

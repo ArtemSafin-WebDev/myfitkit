@@ -23,6 +23,7 @@ import cartPopup from './cartPopup';
 import similarProductsSlider from './similarProductsSlider';
 import scrollToActiveMenuItem from './scrollToActiveMenuItem';
 import resetForm from './resetForm';
+import mobileMenu from './mobileMenu';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -48,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     similarProductsSlider();
     scrollToActiveMenuItem();
     resetForm();
+    mobileMenu();
 });
 
 window.addEventListener('load', function() {

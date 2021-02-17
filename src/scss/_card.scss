@@ -121,30 +121,30 @@
     @include noDrag();
 }
 
-.card__gallery-slider-card--yellow-backplate {
-    &::before {
-        background-image: url('../img/splashes/card-yellow-backplate.svg');
-    }
+// .card__gallery-slider-card--yellow-backplate {
+//     &::before {
+//         background-image: url('../img/splashes/card-yellow-backplate.svg');
+//     }
    
-}
-.card__gallery-slider-card--brown-backplate {
-    &::before {
-        background-image: url('../img/splashes/card-brown-backplate.svg');
-    }
-}
+// }
+// .card__gallery-slider-card--brown-backplate {
+//     &::before {
+//         background-image: url('../img/splashes/card-brown-backplate.svg');
+//     }
+// }
 
 
-.card__gallery-slider-card--orange-backplate {
-    &::before {
-        background-image: url('../img/splashes/card-orange-backplate.svg');
-    }
-}
+// .card__gallery-slider-card--orange-backplate {
+//     &::before {
+//         background-image: url('../img/splashes/card-orange-backplate.svg');
+//     }
+// }
 
-.card__gallery-slider-card--pink-backplate {
-    &::before {
-        background-image: url('../img/splashes/card-pink-backplate.svg');
-    }
-}
+// .card__gallery-slider-card--pink-backplate {
+//     &::before {
+//         background-image: url('../img/splashes/card-pink-backplate.svg');
+//     }
+// }
 
 .card__title {
     font-weight: bold;

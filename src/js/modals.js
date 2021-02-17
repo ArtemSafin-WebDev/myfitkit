@@ -9,7 +9,7 @@ export default function modals() {
         }
         const modal = document.querySelector(id);
         if (modal) {
-            lockScroll();
+            lockScroll(modal);
             modal.classList.add('active');
             activeModal = modal;
         } else {
