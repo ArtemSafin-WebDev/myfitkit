@@ -5926,7 +5926,8 @@ textarea.text-input {
       height: auto;
       font-size: 1.8rem;
       line-height: 2.1rem;
-      letter-spacing: 0.02em; } }
+      letter-spacing: 0.02em;
+      margin-right: 1rem; } }
   .catalog__pagination-link svg {
     width: 1.9rem;
     height: 2.4rem;
@@ -5983,7 +5984,11 @@ textarea.text-input {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column;
-      background-color: rgba(0, 0, 0, 0.6); } }
+      background-color: rgba(0, 0, 0, 0.4);
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0); } }
 
 .catalog__select-type-dropdown-inner {
   background-color: #fff;
@@ -6005,17 +6010,42 @@ textarea.text-input {
       min-height: auto;
       width: 100%;
       margin-top: auto;
+      -webkit-transform: translateZ(0) translateY(100%);
+              transform: translateZ(0) translateY(100%);
       -webkit-transition: -webkit-transform 0.5s;
       transition: -webkit-transform 0.5s;
       transition: transform 0.5s;
       transition: transform 0.5s, -webkit-transform 0.5s;
       -ms-flex-negative: 0;
-          flex-shrink: 0; }
+          flex-shrink: 0;
+      -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+      pointer-events: initial; }
       .catalog__select-type.active .catalog__select-type-dropdown-inner {
+        -webkit-transform: translateZ(0) translateY(0%);
+                transform: translateZ(0) translateY(0%);
         -webkit-transition: -webkit-transform 0.5s;
         transition: -webkit-transform 0.5s;
         transition: transform 0.5s;
         transition: transform 0.5s, -webkit-transform 0.5s; } }
+
+@media only screen and (max-width: 640px) {
+  .catalog__select-type-dropdown-wrapper {
+    min-height: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    overflow: hidden;
+    pointer-events: none; } }
 
 .catalog__select-type-dropdown-mobile-header {
   display: none; }
