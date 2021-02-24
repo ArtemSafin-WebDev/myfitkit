@@ -36,3 +36,9 @@
     }
 }
 
+
+.grey-backplate {
+    &::before {
+        background-image: url('../img/splashes/card-grey-backplate.svg');
+    }
+}

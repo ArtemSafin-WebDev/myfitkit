@@ -961,6 +961,10 @@
             margin-top: auto;
             padding-left: 3.8rem;
             padding-right: 3.8rem;
+
+            .no-touch &:hover {
+                background-color: var(--brown);
+            }
         }
 
         .promo__card-image {
@@ -1096,6 +1100,11 @@
             margin-top: auto;
             padding-left: 4.4rem;
             padding-right: 4.4rem;
+
+            .no-touch &:hover {
+                background-color: #f2994a;
+                color: white;
+            }
         }
 
         .promo__card-image {

@@ -153,7 +153,7 @@
 
             <div class="catalog__sorting">
                 <div class="catalog__sorting-select">
-                    <select name="sort" class="js-custom-select">
+                    <select name="sort" class="js-custom-select js-open-on-hover">
                         <option value="recommended">
                             Мы рекомендуем
                         </option>
@@ -320,41 +320,8 @@
                 <li class="catalog__list-item">
                     <div class="card">
                         <div class="card__main-card-content">
-                            <div class="card__outer-wrapper">
-                                <div class="card__price-variants">
-                                    <ul class="card__price-variants-list">
-                                        <li class="card__price-variants-list-item">
-                                            <div class="card__price-variants-card">
-                                                <div class="card__price-variants-card-quantity">
-                                                    10 шт.
-                                                </div>
-                                                <div class="card__price-variants-card-price">
-                                                    1 200 ₽
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="card__price-variants-list-item">
-                                            <div class="card__price-variants-card">
-                                                <div class="card__price-variants-card-quantity">
-                                                    16 шт.
-                                                </div>
-                                                <div class="card__price-variants-card-price">
-                                                    1 800 ₽
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="card__price-variants-list-item">
-                                            <div class="card__price-variants-card">
-                                                <div class="card__price-variants-card-quantity">
-                                                    24 шт.
-                                                </div>
-                                                <div class="card__price-variants-card-price">
-                                                    2 800 ₽
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
+                            <div class="card__outer-wrapper card__outer-wrapper--no-price-variants">
+
                             </div>
                             <div class="card__gallery">
 
@@ -362,45 +329,42 @@
                                     <div class="swiper-container">
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide">
-                                                <a href="#" class="card__gallery-slider-card orange-backplate">
-                                                    <img src="img/cards/3-1.png" alt=""
-                                                        class="card__gallery-slider-card-image">
+                                                <a href="#" class="card__gallery-slider-card grey-backplate">
+                                                    <svg aria-hidden="true" class="icon-no-photo">
+                                                        <use xlink:href="#no-photo"></use>
+                                                    </svg>
                                                 </a>
                                             </div>
 
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card__variants-count">
-                                    <span class="card__variants-count-number">
-                                        13
-                                    </span>
-                                    вкусов
-                                </div>
+
                                 <div class="card__gallery-pagination">
 
                                 </div>
                             </div>
                             <h4 class="card__title">
                                 <a href="#">
-                                    Choco Protein Cookie
+                                    Protein Cookie
                                 </a>
 
                             </h4>
                             <div class="card__description">
                                 <a href="#">
-                                    Печенье высокобелковое глазированное
+                                    Печенье высокобелковое
                                 </a>
 
                             </div>
+                            <div class="card__price-from card__price-from--no-price-variants">
+                                2 880 ₽
+                            </div>
                         </div>
-                        <div class="card__price-from">
-                            от 1 200 ₽
-                        </div>
+
                     </div>
                 </li>
                 <li class="catalog__list-item">
-                    <div class="card">
+                    <div class="card card--not-available">
                         <div class="card__main-card-content">
                             <div class="card__outer-wrapper">
                                 <div class="card__price-variants">

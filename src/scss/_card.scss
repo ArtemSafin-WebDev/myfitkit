@@ -66,13 +66,20 @@
     font-family: var(--open-sans);
     position: absolute;
     left: 0;
-    bottom: .5rem;
+    bottom: 0.5rem;
     z-index: 1;
+
+    .card--not-available & {
+        opacity: 0.4;
+    }
 
     @include breakpoint(mobile) {
         width: 4.7rem;
         height: 5.8rem;
-        padding-top: 0.35rem;
+        padding-top: 0.8rem;
+        bottom: 0;
+        font-size: 1.1rem;
+        line-height: 1.2;
     }
 }
 
@@ -81,6 +88,11 @@
     font-size: 1.4rem;
     line-height: 1.8rem;
     margin-bottom: -0.3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
 }
 
 .card__gallery {
@@ -93,7 +105,7 @@
     }
 
     @include breakpoint(mobile) {
-        margin-bottom: 0.5rem;
+        padding-bottom: 1.3rem;
     }
 }
 
@@ -103,6 +115,10 @@
 .card__gallery-slider-card {
     position: relative;
     z-index: 1;
+
+    .card--not-available & {
+        opacity: 0.4;
+    }
 
     @include noDrag();
     &::before {
@@ -117,14 +133,22 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
-
-        
     }
     &::after {
         content: '';
         padding-bottom: 100%;
         display: block;
         width: 100%;
+    }
+
+    .icon-no-photo {
+        fill: white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 7.2rem;
+        height: 5.4rem;
     }
 }
 
@@ -193,8 +217,9 @@
     }
 
     @include breakpoint(mobile) {
-        font-size: 1.8rem;
         line-height: 2.2rem;
+
+        font-size: 1.6rem;
     }
 }
 
@@ -221,7 +246,7 @@
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         line-height: 1.8rem;
-        margin-bottom: .6rem;
+        margin-bottom: 0.6rem;
     }
 }
 

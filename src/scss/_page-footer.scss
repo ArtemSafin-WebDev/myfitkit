@@ -211,6 +211,13 @@
     }
 }
 
+.page-footer__nav-list-item--only-mobile {
+    display: none;
+    @include breakpoint(mobile) {
+        display: block;
+    }
+}
+
 .page-footer__nav-link {
     font-size: 1.6rem;
     line-height: 2.4rem;
