@@ -1,4 +1,5 @@
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+import gsap from 'gsap';
 
 export default function selectType() {
     const elements = Array.from(document.querySelectorAll('.js-select-type'));
@@ -7,6 +8,7 @@ export default function selectType() {
         const btn = element.querySelector('.catalog__select-type-btn');
         const closeSelectType = element.querySelector('.js-close-select-type');
         const dropdown = element.querySelector('.catalog__select-type-dropdown')
+        const dropdownInner = element.querySelector('.catalog__select-type-dropdown-inner')
         let dropdownOpen = false;
 
         const open = () => {
@@ -15,6 +17,16 @@ export default function selectType() {
 
             if (window.matchMedia("(max-width: 640px)").matches) {
                 disableBodyScroll(dropdown);
+            } else {
+                const tl = gsap.timeline();
+                tl.fromTo(dropdown, {
+                    height: 0,
+                    autoAlpha: 0,
+                }, {
+                    height: 'auto', duration: 0.4, autoAlpha: 1, ease: "power3.out"
+                })
+                
+                
             }
             dropdownOpen = true;
         }
@@ -24,6 +36,11 @@ export default function selectType() {
             element.classList.remove('active');
             if (window.matchMedia("(max-width: 640px)").matches) {
                 enableBodyScroll(dropdown);
+            } else {
+                const tl = gsap.timeline();
+                tl.to(dropdown, {
+                    height: 0, duration: 0.4, autoAlpha: 0
+                })
             }
             dropdownOpen = false;
         }

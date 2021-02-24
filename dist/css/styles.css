@@ -5422,6 +5422,9 @@ textarea.text-input {
   visibility: hidden;
   -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
   transition: opacity 0.3s, visibility 0s linear 0.3s; }
+  @media only screen and (max-width: 640px) {
+    .card__outer-wrapper {
+      display: none; } }
   .card__outer-wrapper--no-price-variants {
     bottom: -3.2rem; }
 
@@ -5493,6 +5496,9 @@ textarea.text-input {
   visibility: hidden;
   -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
   transition: opacity 0.3s, visibility 0s linear 0.3s; }
+  @media only screen and (max-width: 640px) {
+    .card__gallery-pagination {
+      display: none; } }
   .card__gallery-pagination.swiper-pagination-lock {
     display: none; }
   .card__gallery-pagination .swiper-pagination-bullet {
@@ -5961,11 +5967,12 @@ textarea.text-input {
   visibility: hidden;
   -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s, background-color 0.3s;
   transition: opacity 0.3s, visibility 0s linear 0.3s, background-color 0.3s; }
-  .catalog__select-type.active .catalog__select-type-dropdown {
-    opacity: 1;
-    visibility: inherit;
-    -webkit-transition: opacity 0.3s, visibility 0.3s;
-    transition: opacity 0.3s, visibility 0.3s; }
+  @media only screen and (min-width: 641px) {
+    .catalog__select-type-dropdown {
+      -webkit-transition: none;
+      transition: none;
+      height: 0;
+      overflow: hidden; } }
   @media only screen and (max-width: 640px) {
     .catalog__select-type-dropdown {
       position: fixed;
@@ -5993,10 +6000,10 @@ textarea.text-input {
 .catalog__select-type-dropdown-inner {
   background-color: #fff;
   border-radius: 2.6rem;
-  padding-top: 4.5rem;
+  padding-top: 5.4rem;
   padding-left: 0;
   padding-right: 0;
-  padding-bottom: 1.8rem;
+  padding-bottom: 2.2rem;
   -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.05);
           box-shadow: 0 0 1rem rgba(0, 0, 0, 0.05);
   -webkit-box-shadow: none;
@@ -13235,6 +13242,9 @@ textarea.text-input {
 
 .modals__modal-city-results {
   padding-left: 1.3rem; }
+  @media only screen and (max-width: 640px) {
+    .modals__modal-city-results {
+      padding-left: 0; } }
 
 .modals__modal-city-results-list {
   -webkit-column-count: 4;
@@ -13583,7 +13593,7 @@ textarea.text-input {
   height: 100%;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  z-index: 1000;
+  z-index: 1700;
   background: white;
   padding: var(--content-padding);
   padding-top: 2rem;

@@ -357,12 +357,18 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0s linear 0.3s, background-color 0.3s;
-  
-    .catalog__select-type.active & {
-        opacity: 1;
-        visibility: inherit;
-        transition: opacity 0.3s, visibility 0.3s;
+
+    @include breakpointMF(small-tablet) {
+        transition: none;
+        height: 0;
+        overflow: hidden;
     }
+  
+    // .catalog__select-type.active & {
+    //     opacity: 1;
+    //     visibility: inherit;
+    //     transition: opacity 0.3s, visibility 0.3s;
+    // }
 
     @include breakpoint(mobile) {
         position: fixed;
@@ -387,10 +393,10 @@
 .catalog__select-type-dropdown-inner {
     background-color: #fff;
     border-radius: 2.6rem;
-    padding-top: 4.5rem;
+    padding-top: 5.4rem;
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 1.8rem;
+    padding-bottom: 2.2rem;
     box-shadow: 0 0 1rem rgba(black, 0.05);
 
     box-shadow: none;

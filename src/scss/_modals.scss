@@ -538,6 +538,10 @@
 
 .modals__modal-city-results {
     padding-left: 1.3rem;
+
+    @include breakpoint(mobile) {
+        padding-left: 0;
+    }
 }
 
 .modals__modal-city-results-list {
