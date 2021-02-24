@@ -1,16 +1,16 @@
 .new-products {
-    margin-bottom: 10rem;
+    margin-bottom: 9rem;
 
     @include breakpoint(tablet) {
-        margin-bottom: 9rem;
-    }
-
-    @include breakpoint(small-tablet) {
         margin-bottom: 8rem;
     }
 
+    @include breakpoint(small-tablet) {
+        margin-bottom: 7.2rem;
+    }
+
     @include breakpoint(mobile) {
-        margin-bottom: 5.6rem;
+        margin-bottom: 4.2rem;
     }
 }
 
@@ -18,7 +18,11 @@
     margin-bottom: 4.5rem;
 
     @include breakpoint(tablet) {
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2.3rem;
     }
 
     &::before {
@@ -51,16 +55,18 @@
 }
 
 .new-products__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -1.5rem;
+  
 
+    @include breakpointMF(small-tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -1.5rem;
+        width: auto;
+        box-sizing: border-box;
+    }
     
 
-    @include breakpoint(mobile) {
-        flex-wrap: nowrap;
-        margin: 0;
-    }
+  
 }
 
 .new-products__list-item {

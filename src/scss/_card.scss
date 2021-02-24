@@ -66,8 +66,14 @@
     font-family: var(--open-sans);
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: .5rem;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        width: 4.7rem;
+        height: 5.8rem;
+        padding-top: 0.35rem;
+    }
 }
 
 .card__variants-count-number {
@@ -78,9 +84,20 @@
 }
 
 .card__gallery {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 0;
     position: relative;
+    padding-bottom: 2rem;
+
+    @include breakpoint(tablet) {
+        padding-bottom: 1rem;
+    }
+
+    @include breakpoint(mobile) {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.card__gallery-slider {
 }
 
 .card__gallery-slider-card {
@@ -91,14 +108,17 @@
     &::before {
         content: '';
         position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 88%;
+        height: 88%;
         z-index: -1;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+
+        
     }
     &::after {
         content: '';
@@ -119,20 +139,24 @@
     max-height: 90%;
     @include objectFitContain();
     @include noDrag();
+
+    @include breakpoint(tablet) {
+        max-width: 85%;
+        max-height: 85%;
+    }
 }
 
 // .card__gallery-slider-card--yellow-backplate {
 //     &::before {
 //         background-image: url('../img/splashes/card-yellow-backplate.svg');
 //     }
-   
+
 // }
 // .card__gallery-slider-card--brown-backplate {
 //     &::before {
 //         background-image: url('../img/splashes/card-brown-backplate.svg');
 //     }
 // }
-
 
 // .card__gallery-slider-card--orange-backplate {
 //     &::before {
@@ -190,10 +214,14 @@
         }
     }
 
+    @include breakpoint(tablet) {
+        margin-bottom: 0.3rem;
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         line-height: 1.8rem;
-        margin-bottom: 0.3rem;
+        margin-bottom: .6rem;
     }
 }
 

@@ -1,5 +1,3 @@
-
-
 .text-input-label {
     font-size: 1.4rem;
     line-height: 1.8rem;
@@ -12,20 +10,28 @@
 
 .text-input {
     height: 5.4rem;
-    border: 1px solid #BEBEBE;
+    border: 1px solid #bebebe;
     border-radius: 1.4rem;
     font-size: 1.6rem;
     padding: 0 1.4rem;
     color: var(--brown);
     font-family: var(--roboto);
-    transition: border-color .2s;
+    transition: border-color 0.2s;
+
+    .no-touch &:hover {
+        border-color: #8b8b8b;
+    }
+
+    &:focus-visible {
+        border-color: #BEBEBE;
+    }
 
     &.parsley-error {
         border-color: var(--primary-color);
     }
     @include noAutofillBg();
     @include placeholder {
-        color: #8B8B8B;
+        color: #8b8b8b;
     }
 
     @include breakpoint(mobile) {
@@ -33,17 +39,16 @@
     }
 }
 
-
 .text-input ~ .parsley-errors-list {
-    font-size: 1.4rem;
-    line-height: 1.2;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.02em;
     color: var(--primary-color);
     font-family: var(--roboto);
     &.filled {
-        margin-top: 0.5rem;
+        margin-top: 1rem;
     }
 }
-
 
 textarea.text-input {
     resize: none;

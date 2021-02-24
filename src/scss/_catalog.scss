@@ -1,5 +1,5 @@
 .catalog {
-    padding-top: 3rem;
+    padding-top: 3.5rem;
     margin-bottom: 6rem;
 
     @include breakpoint(mobile) {
@@ -43,6 +43,14 @@
     text-align: left;
     position: relative;
     z-index: 10;
+
+    .no-touch .catalog__select-type:not(.active) &:hover {
+        .catalog__select-type-btn-content {
+            background: #ECECEC;
+        }
+    }
+
+    
 }
 
 .catalog__select-type-btn-content {
@@ -53,6 +61,7 @@
     border-radius: 2.6rem;
     color: var(--brown);
     width: 100%;
+    transition: background-color .2s;
 
     @include breakpoint(mobile) {
         padding: 1.2rem 1.5rem;
@@ -115,13 +124,13 @@
 .catalog__results {
     display: flex;
     flex-direction: column;
-    margin-bottom: 4rem;
+    margin-bottom: 3.7rem;
 }
 
 .catalog__list {
     display: flex;
     flex-wrap: wrap;
-    margin: -3rem -1.5rem;
+    margin: -1.8rem -1.5rem;
     @include breakpoint(small-tablet) {
         margin: -2.4rem -1.5rem;
     }
@@ -133,7 +142,7 @@
 
 .catalog__list-item {
     width: 25%;
-    padding: 3rem 1.5rem;
+    padding: 1.8rem 1.5rem;
 
     @include breakpoint(small-tablet) {
         width: 33.33%;
@@ -151,8 +160,8 @@
     font-weight: bold;
     font-size: 1.8rem;
     line-height: 1.2;
-    padding: 1.6rem 2.4rem;
-    width: 40rem;
+    padding: 1.5rem 2.6rem;
+    width: 40.5rem;
     border: 2px solid var(--primary-color);
     border-radius: 4.2rem;
     text-align: center;
@@ -214,7 +223,7 @@
     line-height: 3rem;
     color: var(--primary-color);
     letter-spacing: 0.02em;
-    margin-right: 5rem;
+    margin-right: 6.1rem;
     position: relative;
 
     width: 5.2rem;
@@ -261,7 +270,7 @@
     &.active {
         color: white;
         background: #f4decc;
-
+        font-weight: 700;
         @include breakpoint(mobile) {
             background: transparent;
             color: #d9d9d9;
@@ -270,6 +279,7 @@
     }
 
     .no-touch &:not(.active):hover {
+        background-color: #F6F6F6;
         color: var(--brown);
     }
 }
@@ -309,10 +319,10 @@
 .catalog__select-type-dropdown-inner {
     background-color: #fff;
     border-radius: 2.6rem;
-    padding-top: 6.4rem;
-    padding-left: 2.2rem;
-    padding-right: 2.2rem;
-    padding-bottom: 2.8rem;
+    padding-top: 4.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 1.8rem;
     box-shadow: 0 0 1rem rgba(black, 0.05);
 
     @include breakpoint(mobile) {
@@ -357,11 +367,18 @@
     display: flex;
     align-items: center;
     font-family: var(--roboto);
-    margin-bottom: 2rem;
+  
     cursor: pointer;
     user-select: none;
+    padding: 1rem 2rem;
+    transition: background-color .2s;
+    border-radius: 2rem;
     &:last-child {
         margin-bottom: 0;
+    }
+
+    .no-touch &:hover {
+        background: #F7F7F7;
     }
 }
 
@@ -499,13 +516,13 @@
 
     .choices__list--single {
         padding: 0;
-        padding-right: 2rem;
+        padding-right: 2.4rem;
     }
 
     .choices[data-type*='select-one']:after {
         border: none;
         margin: 0;
-        right: 0;
+        right: .7rem;
         top: 50%;
         transform: translateY(-50%);
         background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M5 6a1 1 0 01-.71-.29l-4-4A1 1 0 011.71.29L5 3.59 8.29.29a1 1 0 111.42 1.42l-4 4A1 1 0 015 6z' fill='%23555'/%3E%3C/svg%3E");
@@ -514,6 +531,11 @@
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
+        transition: transform .3s;
+    }
+
+    .choices[data-type*='select-one'].is-open::after {
+        transform: translateY(-50%) rotate(180deg);
     }
 
     .choices__list--dropdown {
@@ -567,6 +589,14 @@
             opacity: 1;
         }
     }
+    // .choices__list--dropdown .choices__item--selectable.is-selected {
+    //     color: var(--brown);
+    //     background: transparent;
+    //     &::before {
+    //         opacity: 1;
+    //     }
+    // }
+   
 
     .choices__list--dropdown .choices__list {
         max-height: 28rem;

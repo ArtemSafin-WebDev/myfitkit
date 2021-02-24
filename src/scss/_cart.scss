@@ -527,10 +527,10 @@
     }
 
     &:not([disabled]):hover {
-        background-color: var(--brown);
+        background: #FEEFD3;
 
         svg {
-            fill: white;
+            fill: var(--brown);
         }
     }
 }
@@ -1184,9 +1184,14 @@
     color: white;
     width: 100%;
     font-family: var(--roboto);
+    transition: color .2s, background-color .2s;
     &:link,
     &:visited {
         color: white;
+    }
+
+    .no-touch &:hover {
+        background-color: var(--brown);
     }
 }
 

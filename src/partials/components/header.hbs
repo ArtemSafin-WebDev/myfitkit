@@ -54,7 +54,8 @@
                                 <ul class="page-header__navigation-dropdown-list">
                                     <li class="page-header__navigation-dropdown-list-item">
                                         <a href="#" class="page-header__navigation-dropdown-card">
-                                            <div class="page-header__navigation-dropdown-card-image-container yellow-backplate">
+                                            <div
+                                                class="page-header__navigation-dropdown-card-image-container yellow-backplate">
                                                 <img src="img/catalog/1.png" alt=""
                                                     class="page-header__navigation-dropdown-card-image">
                                             </div>
@@ -71,7 +72,8 @@
                                     </li>
                                     <li class="page-header__navigation-dropdown-list-item">
                                         <a href="#" class="page-header__navigation-dropdown-card">
-                                            <div class="page-header__navigation-dropdown-card-image-container pink-backplate">
+                                            <div
+                                                class="page-header__navigation-dropdown-card-image-container pink-backplate">
                                                 <img src="img/catalog/2.png" alt=""
                                                     class="page-header__navigation-dropdown-card-image">
                                             </div>
@@ -88,7 +90,8 @@
                                     </li>
                                     <li class="page-header__navigation-dropdown-list-item">
                                         <a href="#" class="page-header__navigation-dropdown-card">
-                                            <div class="page-header__navigation-dropdown-card-image-container red-backplate">
+                                            <div
+                                                class="page-header__navigation-dropdown-card-image-container red-backplate">
                                                 <img src="img/catalog/3.png" alt=""
                                                     class="page-header__navigation-dropdown-card-image">
                                             </div>
@@ -106,7 +109,8 @@
                                     </li>
                                     <li class="page-header__navigation-dropdown-list-item">
                                         <a href="#" class="page-header__navigation-dropdown-card">
-                                            <div class="page-header__navigation-dropdown-card-image-container brown-backplate">
+                                            <div
+                                                class="page-header__navigation-dropdown-card-image-container brown-backplate">
                                                 <img src="img/catalog/4.png" alt=""
                                                     class="page-header__navigation-dropdown-card-image">
                                             </div>
@@ -123,7 +127,8 @@
                                     </li>
                                     <li class="page-header__navigation-dropdown-list-item">
                                         <a href="#" class="page-header__navigation-dropdown-card">
-                                            <div class="page-header__navigation-dropdown-card-image-container yellow-backplate">
+                                            <div
+                                                class="page-header__navigation-dropdown-card-image-container yellow-backplate">
                                                 <img src="img/catalog/1.png" alt=""
                                                     class="page-header__navigation-dropdown-card-image">
                                             </div>
@@ -140,7 +145,8 @@
                                     </li>
                                     <li class="page-header__navigation-dropdown-list-item">
                                         <a href="#" class="page-header__navigation-dropdown-card">
-                                            <div class="page-header__navigation-dropdown-card-image-container pink-backplate">
+                                            <div
+                                                class="page-header__navigation-dropdown-card-image-container pink-backplate">
                                                 <img src="img/catalog/2.png" alt=""
                                                     class="page-header__navigation-dropdown-card-image">
                                             </div>
@@ -157,7 +163,8 @@
                                     </li>
                                     <li class="page-header__navigation-dropdown-list-item">
                                         <a href="#" class="page-header__navigation-dropdown-card">
-                                            <div class="page-header__navigation-dropdown-card-image-container red-backplate">
+                                            <div
+                                                class="page-header__navigation-dropdown-card-image-container red-backplate">
                                                 <img src="img/catalog/3.png" alt=""
                                                     class="page-header__navigation-dropdown-card-image">
                                             </div>
@@ -173,11 +180,12 @@
                                             </div>
                                         </a>
                                     </li>
-                                   
-                                   
+
+
                                     <li class="page-header__navigation-dropdown-list-item">
                                         <a href="#" class="page-header__navigation-dropdown-card">
-                                            <div class="page-header__navigation-dropdown-card-image-container all-backplate">
+                                            <div
+                                                class="page-header__navigation-dropdown-card-image-container all-backplate">
                                                 <img src="img/catalog/5.png" alt=""
                                                     class="page-header__navigation-dropdown-card-image">
                                             </div>
@@ -201,15 +209,16 @@
                         </span>
                     </a>
                 </div>
-                <div class="page-header__navigation-logo-wrapper">
-                    <a href="index.html" class="page-header__navigation-logo">
-                        <picture>
-                            <source srcset="img/logos/mobile-red-logo.png" media="(max-width: 640px)">
-                            <img src="img/logos/logo-red.png" alt="Лого" class="page-header__navigation-logo-image"
-                                width="68">
-                        </picture>
-                    </a>
-                </div>
+                <a {{#unless noLogoLink}} href="index.html" {{/unless}} class="page-header__navigation-logo">
+
+                    <svg aria-hidden="true" class="icon-logo-desktop">
+                        <use xlink:href="#logo-desktop"></use>
+                    </svg>
+                    <svg aria-hidden="true" class="icon-logo-mobile">
+                        <use xlink:href="#logo-mobile"></use>
+                    </svg>
+
+                </a>
 
 
 

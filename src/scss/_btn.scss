@@ -21,12 +21,17 @@
         color: white;
     }
 
-
+  
   
 
 
     &--yellow {
         background-color: var(--saturated-yellow);
         color: var(--primary-color);
+
+        &:link,
+        &:visited {
+            color: var(--primary-color);
+        }
     }
 }

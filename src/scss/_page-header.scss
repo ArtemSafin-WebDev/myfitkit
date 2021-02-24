@@ -136,36 +136,46 @@
     &:visited {
         color: var(--primary-color);
     }
+
+    .no-touch &:hover {
+        color: var(--brown);
+    }
 }
 
 .page-header__navigation {
     width: 40%;
     flex-grow: 1;
     display: flex;
-
+   
     align-self: stretch;
+
+    @include breakpoint(small-tablet) {
+        position: static;
+        
+        padding-left: 4rem;
+    }
 }
 
 .page-header__navigation-links {
     display: flex;
     align-items: stretch;
-    flex-basis: 28.8rem;
-
-    @include breakpoint(tablet) {
-        flex-basis: 30.5rem;
-    }
-
-    @include breakpoint(small-tablet) {
-        flex-basis: 20rem;
-        flex-grow: 1;
-        justify-content: center;
-    }
-
-    @include breakpoint(mobile) {
-        display: none;
-    }
+    flex-basis: 32rem;
+    justify-content: center;
+  
     &:first-child {
-        margin-left: auto;
+       
+        margin-right: 12rem;
+
+        @include breakpoint(tablet) {
+            flex-basis: 24rem;
+            margin-right: 7.5rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            flex-basis: auto;
+            margin-right: 2rem;
+            justify-content: flex-start;
+        }
         .page-header__navigation-link {
             margin-left: auto;
             margin-right: 2rem;
@@ -179,7 +189,17 @@
         }
     }
     &:last-child {
-        margin-right: auto;
+       
+        margin-left: 12rem;
+        flex-basis: 30rem;
+        @include breakpoint(tablet) {
+            flex-basis: 23rem;
+            margin-left: 7.5rem;
+        }
+
+        @include breakpoint(small-tablet) {
+            display: none;
+        }
         .page-header__navigation-link {
             margin-left: 2rem;
             margin-right: auto;
@@ -193,6 +213,19 @@
             }
         }
     }
+
+   
+
+    @include breakpoint(small-tablet) {
+        flex-basis: 20rem;
+        flex-grow: 1;
+        justify-content: center;
+    }
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+    
 }
 
 .page-header__navigation-link {
@@ -262,76 +295,130 @@
     }
 }
 
-.page-header__navigation-logo-wrapper {
-    margin: 0 2.8rem;
-    flex-shrink: 0;
-    width: 19.2rem;
-    // position: relative;
-    align-self: flex-start;
+// .page-header__navigation-logo-wrapper {
+   
+//     width: 19.2rem;
+    
+    
 
-    @include breakpoint(tablet) {
-        width: 15rem;
-        margin: 0;
-    }
 
-    @include breakpoint(small-tablet) {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        transform: translateX(-50%);
-        width: 12rem;
-    }
-}
+//     display: none;
+
+//     @include breakpoint(tablet) {
+//         width: 15rem;
+//         margin: 0;
+//     }
+
+//     @include breakpoint(small-tablet) {
+//         position: absolute;
+//         left: 50%;
+//         top: 0;
+//         transform: translateX(-50%);
+//         width: 12rem;
+//     }
+// }
 
 .page-header__navigation-logo {
-    // background-color: black;
-    height: 21.6rem;
-    position: absolute;
-    top: 0;
-    // left: 0;
-    // top: 0;
-    width: 19.2rem;
+    
+
+
     display: block;
-
+    width: 6.8rem;
+   
+   
+    
+    max-height: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1rem;
     z-index: 10;
+    display: flex;
+    flex-direction: column;
 
+    .icon-logo-desktop {
+        width: 100%;
+        height: 12rem;
+        position: relative;
+        z-index: 3;
+        fill: var(--primary-color);
+        display: block;
+        transition: fill .2s;
+
+        @include breakpoint(mobile) {
+            display: none;
+        }
+    }
+
+    .icon-logo-mobile {
+        width: 100%;
+        height: 6.2rem;
+        display: none;
+        position: relative;
+        z-index: 3;
+        fill: var(--primary-color);
+        @include breakpoint(mobile) {
+            display: block;
+        }
+    }
+
+    .no-touch &[href]:hover {
+        .icon-logo-desktop {
+            fill: var(--brown);
+        }
+    }
     @include breakpoint(tablet) {
-        width: 15rem;
-        height: 20rem;
+        width: 6rem;
     }
 
     @include breakpoint(small-tablet) {
-        width: 14rem;
-        height: 18rem;
+        width: 5.5rem;
+        top: 1.4rem;
     }
 
     @include breakpoint(mobile) {
-        width: 10.1rem;
-        height: 13.6rem;
-        top: 0rem;
-        left: 50%;
-        transform: translateX(-50%);
+        width: 4.2rem;
+        top: 3rem;
+        margin-left: -0.2rem;
     }
 
     &::before {
         content: '';
         position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -2.2rem;
+        width: 17.2rem;
+        height: 22.8rem;
         background-image: url('../img/splashes/logo-splash.svg');
         background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: center bottom;
-
+        margin-left: .5rem;
+        z-index: 1;
         @include breakpoint(tablet) {
-            top: -1rem;
+            width: 15.3rem;
+            height: 20.4rem;
+            top: -2.2rem;
         }
+
 
         @include breakpoint(small-tablet) {
-            top: 0;
+            width: 14rem;
+            height: 18.6rem;
+            top: -2rem;
+            margin-left: 0.2rem;
         }
+
+
+        @include breakpoint(mobile) {
+            width: 10rem;
+            height: 13.6rem;
+            top: -2rem;
+            margin-left: 0;
+        }
+
+      
     }
 
     .page-header--biege & {
@@ -342,33 +429,23 @@
 }
 
 .page-header__navigation-logo-image {
-    width: 6.8rem;
+
+    width: 100%;
     height: auto;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 1.2rem;
+    position: relative;
+    z-index: 3;
 
-    @include breakpoint(tablet) {
-        width: 6rem;
-    }
 
-    @include breakpoint(small-tablet) {
-        width: 5.5rem;
-    }
 
-    @include breakpoint(mobile) {
-        width: 4.2rem;
-        top: 2.5rem;
-        margin-left: -0.2rem;
-    }
+
+   
 }
 
 .page-header__city,
 .page-header__btns {
     flex-basis: 18rem;
     flex-shrink: 0;
-
+    padding-right: 1.2rem;
     @include breakpoint(tablet) {
         flex-basis: 15rem;
     }
@@ -387,6 +464,10 @@
     position: relative;
     bottom: -0.25rem;
 
+    @include breakpoint(tablet) {
+        margin-right: 0;
+    }
+
     @include breakpoint(small-tablet) {
         bottom: auto;
     }
@@ -397,6 +478,11 @@
     align-items: center;
     margin-left: 2rem;
     justify-content: flex-end;
+
+    @include breakpoint(tablet) {
+        margin-left: 0;
+        padding-right: 1rem;
+    }
 
     @include breakpoint(small-tablet) {
         width: 21.5rem;
@@ -430,6 +516,11 @@
         width: 2.4rem;
         height: 2.4rem;
         flex-shrink: 0;
+
+        &.icon-instagram {
+            width: 2.7rem;
+            height: 2.6rem;
+        }
     }
 }
 
@@ -446,11 +537,17 @@
     text-align: center;
     background-color: var(--brown);
     transition: background-color 0.2s;
-    right: -1rem;
-    top: -1rem;
+    right: -1.2rem;
+    top: -.4rem;
     font-size: 1.2rem;
     line-height: 1.2;
     font-family: var(--roboto);
+
+    @include breakpoint(tablet) {
+        top: -.5rem;
+        width: 1.9rem;
+        height: 1.9rem;
+    }
 }
 
 .page-header__navigation-link-wrapper {
@@ -533,14 +630,14 @@
 .page-header__navigation-dropdown-list {
     display: flex;
     flex-wrap: wrap;
-    margin: -2rem -1.2rem;
+    margin: -0rem -1.2rem;
 }
 
 .page-header__navigation-dropdown-list-item {
     display: flex;
     flex-direction: column;
     width: 16.66%;
-    padding: 2rem 1.2rem;
+    padding: 0rem 1.2rem;
 
     @include breakpoint(tablet) {
         width: 25%;
@@ -577,6 +674,7 @@
         position: absolute;
         left: 0;
         top: 0;
+        transform: scale(1.1);
     }
 
     
@@ -595,8 +693,8 @@
     width: auto;
     height: auto;
     transform: translate(-50%, -50%);
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 100%;
+    max-height: 75%;
     @include objectFitContain();
     z-index: 1;
 }
