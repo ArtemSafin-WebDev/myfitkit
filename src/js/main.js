@@ -26,6 +26,7 @@ import resetForm from './resetForm';
 import mobileMenu from './mobileMenu';
 import aboutProductMobileModals from './aboutProductMobileModals';
 import advantagesMobileModals from './advantagesMobileModals';
+import checkIfFiltersChanged from './checkIfFiltersChanged';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -54,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     mobileMenu();
     aboutProductMobileModals();
     advantagesMobileModals();
+    checkIfFiltersChanged();
 });
 
 window.addEventListener('load', function() {

@@ -8,7 +8,8 @@ export default function selectType() {
         const btn = element.querySelector('.catalog__select-type-btn');
         const closeSelectType = element.querySelector('.js-close-select-type');
         const dropdown = element.querySelector('.catalog__select-type-dropdown')
-        const dropdownInner = element.querySelector('.catalog__select-type-dropdown-inner')
+        const dropdownInner = element.querySelector('.catalog__select-type-dropdown-inner');
+        const fadeWrapper = element.querySelector('.catalog__select-type-dropdown-fade-wrapper')
         let dropdownOpen = false;
 
         const open = () => {
@@ -19,12 +20,17 @@ export default function selectType() {
                 disableBodyScroll(dropdown);
             } else {
                 const tl = gsap.timeline();
-                tl.fromTo(dropdown, {
-                    height: 0,
-                    autoAlpha: 0,
-                }, {
+                tl.to(dropdown, {
                     height: 'auto', duration: 0.4, autoAlpha: 1, ease: "power3.out"
-                })
+                }).to(fadeWrapper, {
+                    autoAlpha: 1,
+                    duration: 0.2
+                }, '<0.3')
+                
+                // tl.to(dropdownInner, {
+                //     autoAlpha: 1,
+                //     duration: 0.2
+                // })
                 
                 
             }
@@ -38,8 +44,12 @@ export default function selectType() {
                 enableBodyScroll(dropdown);
             } else {
                 const tl = gsap.timeline();
+                tl.to(fadeWrapper, {
+                    autoAlpha: 0,
+                    duration: 0.3,
+                })
                 tl.to(dropdown, {
-                    height: 0, duration: 0.4, autoAlpha: 0
+                    height: 0, duration: 0.4
                 })
             }
             dropdownOpen = false;

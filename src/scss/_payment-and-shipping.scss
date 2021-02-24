@@ -213,6 +213,10 @@
 .payment-and-shipping__shipping {
     margin-bottom: 8rem;
 
+    @include breakpoint(small-tablet) {
+        margin-bottom: 6rem;
+    }
+
     @include breakpoint(mobile) {
         display: flex;
         flex-wrap: wrap;

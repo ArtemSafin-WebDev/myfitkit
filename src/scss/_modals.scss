@@ -14,6 +14,8 @@
     transition: opacity 0.3s, visibility 0s linear 0.3s;
     opacity: 0;
     visibility: hidden;
+
+    @include noScrollbar();
    
   
     &.active {

@@ -3,6 +3,10 @@
     position: relative;
     z-index: 60;
     margin-top: -0.4rem;
+
+    @include breakpoint(small-tablet) {
+        margin-top: 0;
+    }
     .payment-and-shipping__shipping {
         @include breakpoint(mobile) {
             margin-bottom: 4rem;
@@ -51,6 +55,10 @@
 .product__gallery {
     display: flex;
     margin-bottom: 3.5rem;
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 3.9rem;
+    }
 
     &:not(.product__gallery--inside-modal) {
         @include breakpoint(tablet) {
@@ -231,6 +239,10 @@
     max-width: 95%;
     max-height: 100%;
     @include objectFitContain();
+
+    @include breakpoint(mobile) {
+        max-width: 100%;
+    }
 }
 
 .product__gallery-thumbs-slider-card-image {
@@ -407,11 +419,16 @@
     margin-bottom: 1.1rem;
     color: #555555;
 
+    @include breakpoint(small-tablet) {
+        margin-bottom: 0.9rem;
+    }
+
     @include breakpoint(mobile) {
         font-size: 1.6rem;
         line-height: 2.4rem;
         margin: 0;
         order: 2;
+        margin-bottom: 1.2rem;
     }
 }
 
@@ -430,6 +447,7 @@
     @include breakpoint(small-tablet) {
         font-size: 3.6rem;
         line-height: 4.8rem;
+        padding-bottom: 2rem;
     }
 
     @include breakpoint(mobile) {
@@ -437,7 +455,7 @@
         line-height: 3.4rem;
         padding: 0;
         margin: 0;
-        margin-bottom: 0.3rem;
+        margin-bottom: 0.8rem;
     }
     &::before {
         content: '';
@@ -464,11 +482,17 @@
         margin-bottom: 3rem;
     }
 
+    
+
     @include breakpoint(tablet) {
         order: -8;
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+    }
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 5.5rem;
     }
 }
 
@@ -479,6 +503,10 @@
     margin-bottom: 1rem;
     font-weight: 400;
     color: #555555;
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 1.3rem;
+    }
 
     @include breakpoint(mobile) {
         margin-bottom: 1rem;
@@ -649,9 +677,9 @@
 
 .product__choose-taste-checkbox-discount-amount {
     position: absolute;
-    right: 0;
-    top: 0;
-    padding: 0 0.5rem;
+    right: -2px;
+    top: -2px;
+    padding: .1rem 0.6rem;
     background: #f2994a;
     border-radius: 1rem;
     font-weight: bold;
@@ -734,7 +762,7 @@
 
     @include breakpoint(small-tablet) {
         width: 100%;
-        margin-top: 3rem;
+        margin-top: 2rem;
     }
 
     @include breakpoint(mobile) {
@@ -810,7 +838,7 @@
     @include breakpoint(small-tablet) {
         margin-left: 0;
         width: 100%;
-        max-width: 46rem;
+        max-width: 51rem;
     }
 
     @include breakpoint(mobile) {
@@ -933,6 +961,10 @@
         display: flex;
         margin-bottom: 8rem;
     }
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 9rem;
+    }
 }
 
 .product__videos {
@@ -948,6 +980,10 @@
 
     @include breakpoint(tablet) {
         margin-bottom: 4.2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        margin-bottom: 3.2rem;
     }
 
     @include breakpoint(mobile) {
@@ -1099,7 +1135,7 @@
     height: 5.8rem;
     z-index: 20;
     transition: opacity 0.3s, visibility 0.3s;
-    top: 38.5%;
+    top: 40%;
     transform: translateY(-50%);
     background-image: url('../img/arrow-white-bg.svg');
     background-size: contain;
@@ -1108,6 +1144,10 @@
 
     @include breakpoint(tablet) {
         top: 38%;
+    }
+
+    @include breakpoint(small-tablet) {
+        top: 32%;
     }
 
     @include breakpoint(mobile) {
@@ -1204,6 +1244,10 @@
 
     @include breakpoint(tablet) {
         width: 16.2rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        width: 14rem;
     }
 
     @include breakpoint(mobile) {
