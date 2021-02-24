@@ -123,7 +123,6 @@
     z-index: 1;
     cursor: pointer;
 
-
     .icon-play {
         position: absolute;
         left: 50%;
@@ -141,9 +140,8 @@
         border-color: #baa3a3;
     }
 
-
     .no-touch .swiper-slide:not(.swiper-slide-thumb-active) &:hover {
-        border-color: #F2EDED;
+        border-color: #f2eded;
     }
     &::after {
         content: '';
@@ -260,7 +258,8 @@
     border-radius: 4rem;
 
     @include breakpoint(tablet) {
-        padding: 4rem;
+        padding: 3.6rem 4rem;
+
         font-size: 1.6rem;
         line-height: 2.6rem;
         width: calc(50% - 1.5rem);
@@ -425,7 +424,7 @@
     @include breakpoint(tablet) {
         font-size: 4rem;
         line-height: 4.8rem;
-        padding-bottom: 2rem;
+        padding-bottom: 2.4rem;
     }
 
     @include breakpoint(small-tablet) {
@@ -491,6 +490,7 @@
 
     @include breakpoint(tablet) {
         width: 100%;
+        margin-bottom: 2.4rem;
     }
 }
 
@@ -594,7 +594,7 @@
 
     .no-touch &:hover {
         .product__choose-taste-checkbox-input:not(:checked) ~ .product__choose-taste-checkbox-image-container {
-            border-color: #F2EDED;
+            border-color: #f2eded;
         }
     }
 }
@@ -835,6 +835,7 @@
 
     @include breakpoint(tablet) {
         margin-bottom: 2rem;
+        margin-top: -0.5rem;
     }
 }
 
@@ -844,6 +845,10 @@
     font-family: var(--roboto);
     font-weight: 400;
     margin-bottom: 0.8rem;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 0.6rem;
+    }
 }
 
 .product__specs-table {
@@ -875,6 +880,11 @@
         display: flex;
         font-weight: 400;
         flex-direction: row;
+
+        @include breakpoint(tablet) {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+        }
         &::after {
             content: '';
             width: 1rem;
@@ -894,6 +904,11 @@
     td {
         font-size: 1.8rem;
         line-height: 2.6rem;
+
+        @include breakpoint(tablet) {
+            font-size: 1.6rem;
+            line-height: 2.6rem;
+        }
 
         strong {
             font-weight: 700;
@@ -922,10 +937,18 @@
 
 .product__videos {
     margin-bottom: 6rem;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 6.4rem;
+    }
 }
 
 .product__videos-heading {
     margin-bottom: 5.8rem;
+
+    @include breakpoint(tablet) {
+        margin-bottom: 4.2rem;
+    }
 
     @include breakpoint(mobile) {
         margin-bottom: 2rem;
@@ -1040,7 +1063,7 @@
         width: 5.8rem;
         height: 5.8rem;
         z-index: 10;
-        transition: fill .2s;
+        transition: fill 0.2s;
     }
     &::after {
         content: '';
@@ -1120,7 +1143,7 @@
 
 .product__similar-products {
     margin-top: 8rem;
-    margin-bottom: .7rem;
+    margin-bottom: 0.7rem;
     .swiper-container {
         @include breakpoint(mobile) {
             overflow: visible;

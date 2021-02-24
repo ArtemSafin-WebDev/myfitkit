@@ -962,6 +962,11 @@
             padding-left: 3.8rem;
             padding-right: 3.8rem;
 
+            @include breakpoint(tablet) {
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+
             .no-touch &:hover {
                 background-color: var(--brown);
             }
@@ -1100,6 +1105,11 @@
             margin-top: auto;
             padding-left: 4.4rem;
             padding-right: 4.4rem;
+
+            @include breakpoint(tablet) {
+                padding-right: 3.2rem;
+                padding-right: 3.2rem;
+            }
 
             .no-touch &:hover {
                 background-color: #f2994a;
