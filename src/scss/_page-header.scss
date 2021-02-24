@@ -1,6 +1,5 @@
 .page-header {
-    position: relative;
-    z-index: 600;
+  
 
     @include breakpoint(mobile) {
         background-color: #fff;
@@ -51,7 +50,8 @@
     align-items: center;
     justify-content: space-between;
     min-height: 8rem;
-
+    position: relative;
+   
     color: var(--brown);
     position: relative;
    

@@ -29,7 +29,7 @@ export default function productGallery() {
 
         mainSliderOptions.thumbs.swiper = new Swiper(thumbsContainer, {
             watchOverflow: true,
-            spaceBetween: 10,
+            spaceBetween: 5,
             slidesPerView: 4,
             threshold: 10,
             watchSlidesVisibility: true,

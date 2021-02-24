@@ -19,7 +19,7 @@
 }
 
 .payment-and-shipping__heading {
-    margin-bottom: 4rem;
+    margin-bottom: 3.7rem;
 
     @include breakpoint(small-tablet) {
         margin-bottom: 3rem;
@@ -211,7 +211,7 @@
 }
 
 .payment-and-shipping__shipping {
-    margin-bottom: 10rem;
+    margin-bottom: 8rem;
 
     @include breakpoint(mobile) {
         display: flex;
@@ -238,6 +238,10 @@
     display: inline-flex;
     align-items: center;
     margin-right: 2.6rem;
+
+    .no-touch &:hover {
+        color: var(--brown);
+    }
 
     @include breakpoint(tablet) {
         font-size: 1.6rem;
@@ -318,6 +322,8 @@
     border-radius: 1.6rem;
     font-family: var(--roboto);
     padding: 4rem 3rem;
+    padding-top: 3rem;
+    padding-left: 4.2rem;
     padding-left: 10rem;
     position: relative;
     z-index: 1;

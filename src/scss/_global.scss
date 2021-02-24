@@ -258,6 +258,12 @@ th {
     }
 }
 
+.icon-play {
+    fill: var(--primary-color);
+    transition: fill .2s;
+   
+}
+
 ::selection {
     color: white;
     background-color: var(--primary-color);
