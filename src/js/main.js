@@ -27,6 +27,8 @@ import mobileMenu from './mobileMenu';
 import aboutProductMobileModals from './aboutProductMobileModals';
 import advantagesMobileModals from './advantagesMobileModals';
 import checkIfFiltersChanged from './checkIfFiltersChanged';
+import stickyGallery from './stickyGallery'
+import constructor from './constructor';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -56,6 +58,8 @@ document.addEventListener('DOMContentLoaded', function() {
     aboutProductMobileModals();
     advantagesMobileModals();
     checkIfFiltersChanged();
+    stickyGallery();
+    constructor();
 });
 
 window.addEventListener('load', function() {

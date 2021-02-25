@@ -1,0 +1,220 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__content">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Главная
+                    </a>
+
+                    <a class="breadcrumbs__link active">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Конструктор
+                    </a>
+                </li>
+            </ul>
+            <h1 class="main-heading">
+                Конструктор боксов
+            </h1>
+        </div>
+    </div>
+</div>
+<section class="constructor">
+    <div class="container">
+        <form action="/" method="POST" class="constructor__form js-constructor">
+            <div class="constructor__row">
+                <div class="constructor__left-col">
+                    <h3 class="constructor__step">
+                        <div class="constructor__step-number">
+                            1
+                        </div>
+                        Выберите продукт:
+                    </h3>
+                    <div class="constructor__checkboxes">
+                        <ul class="constructor__checkboxes-list">
+                            <li class="constructor__checkboxes-list-item">
+                                <label class="constructor__checkbox">
+                                    <input type="radio" name="product" value="1" class="constructor__checkbox-input"
+                                        checked>
+                                    <span class="constructor__checkbox-content">
+                                        <span class="constructor__checkbox-image-container">
+                                            <img src="img/constructor/1.png" alt="" class="constructor__checkbox-image">
+                                        </span>
+                                        <span class="constructor__checkbox-title">
+                                            Protein Cake
+                                        </span>
+                                        <span class="constructor__checkbox-count">
+                                            6 вкусов
+                                        </span>
+                                    </span>
+                                </label>
+                            </li>
+                            <li class="constructor__checkboxes-list-item">
+                                <label class="constructor__checkbox">
+                                    <input type="radio" name="product" value="2" class="constructor__checkbox-input">
+                                    <span class="constructor__checkbox-content">
+                                        <span class="constructor__checkbox-image-container">
+                                            <img src="img/constructor/2.png" alt="" class="constructor__checkbox-image">
+                                        </span>
+                                        <span class="constructor__checkbox-title">
+                                            Protein Cookie
+                                        </span>
+                                        <span class="constructor__checkbox-count">
+                                            11 вкусов
+                                        </span>
+                                    </span>
+                                </label>
+                            </li>
+                            <li class="constructor__checkboxes-list-item">
+                                <label class="constructor__checkbox">
+                                    <input type="radio" name="product" value="2" class="constructor__checkbox-input">
+                                    <span class="constructor__checkbox-content">
+                                        <span class="constructor__checkbox-image-container">
+                                            <img src="img/constructor/3.png" alt="" class="constructor__checkbox-image">
+                                        </span>
+                                        <span class="constructor__checkbox-title">
+                                            Choco Protein Cookie
+                                        </span>
+                                        <span class="constructor__checkbox-count">
+                                            13 вкусов
+                                        </span>
+                                    </span>
+                                </label>
+                            </li>
+                            <li class="constructor__checkboxes-list-item">
+                                <label class="constructor__checkbox">
+                                    <input type="radio" name="product" value="2" class="constructor__checkbox-input">
+                                    <span class="constructor__checkbox-content">
+                                        <span class="constructor__checkbox-image-container">
+                                            <img src="img/constructor/4.png" alt="" class="constructor__checkbox-image">
+                                        </span>
+                                        <span class="constructor__checkbox-title">
+                                            Extra Protein Cake
+                                        </span>
+                                        <span class="constructor__checkbox-count">
+                                            13 вкусов
+                                        </span>
+                                    </span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="constructor__right-col">
+                    <h3 class="constructor__step">
+                        <div class="constructor__step-number">
+                            2
+                        </div>
+                        Cоберите бокс на свой вкус:
+                    </h3>
+                    <div class="constructor__tabs">
+                        <div class="constructor__tabs-item">
+                            <div class="constructor__main-card">
+                                <span class="constructor__main-card-left-splash"></span>
+                                <span class="constructor__main-card-right-splash"></span>
+                                <span class="constructor__main-card-top-splash"></span>
+                                <span class="constructor__main-card-bottom-splash"></span>
+                                <h4 class="constructor__main-card-title">
+                                    Ваш бокс Protein Cake
+                                </h4>
+                                <div class="constructor__main-card-box">
+                                    <img src="img/constructor/box-bg.png" alt="" class="constructor__main-card-box-bg">
+                                    <img src="img/constructor/box.png" alt="" class="constructor__main-card-box-image">
+                                </div>
+                                <div class="constructor__main-card-bottom-row">
+                                    <div class="constructor__main-card-price">
+                                        <h5 class="constructor__main-card-price-heading">
+                                            Цена бокса (24 шт.)
+                                        </h5>
+                                        <div class="constructor__main-card-price-amount">
+                                            2 880 ₽
+                                        </div>
+                                    </div>
+                                    <button type="button" class="constructor__main-card-submit">
+                                        Добавьте 24 шт.
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="constructor__popups">
+                <div class="constructor__popup">
+                    <div class="constructor__popup-inner">
+                        <div class="constructor__popup-top-row">
+                            <h3 class="constructor__popup-heading">
+                                Выберите печенья
+
+                            </h3>
+                            <button class="constructor__popup-close js-constructor-popup-close">
+                                <svg width="16" height="16" aria-hidden="true" class="icon-stylized-cross">
+                                    <use xlink:href="#stylized-cross"></use>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="constructor__popup-selected-count">
+                            Добавьте <strong>24</strong> печенья
+                        </div>
+                        <ul class="constructor__popup-cookies-list">
+                            <li class="constructor__popup-cookies-list-item">
+                                <div class="constructor__popup-cookies-card">
+                                    <div class="constructor__popup-cookies-card-image-container">
+                                        <img src="img/constructor/cookies/1.png" alt=""
+                                            class="constructor__popup-cookies-card-image">
+                                    </div>
+                                    <div class="constructor__popup-cookies-card-content">
+                                        <div class="constructor__popup-cookies-card-top-row">
+                                            <h4 class="constructor__popup-cookies-card-title">
+                                                Banana Pudding
+                                            </h4>
+                                            <a href="#" class="constructor__popup-cookies-card-details-link">
+                                                КБЖУ ?
+                                            </a>
+                                        </div>
+                                        <div class="constructor__popup-cookies-card-bottom-row">
+                                            <div class="cart__item-quantity-block">
+                                                <button
+                                                    class="cart__item-quantity-block-btn cart__item-quantity-block-btn--minus"
+                                                    type="button" disabled>
+                                                    <svg width="16" height="16" aria-hidden="true" class="icon-minus">
+                                                        <use xlink:href="#minus"></use>
+                                                    </svg>
+                                                </button>
+                                                <div class="cart__item-quantity-input-wrapper">
+                                                    <input type="text" name="quantity" class="cart__item-quantity-input"
+                                                        readonly value="1">
+                                                </div>
+                                                <button
+                                                    class="cart__item-quantity-block-btn cart__item-quantity-block-btn--plus"
+                                                    type="button">
+                                                    <svg width="16" height="16" aria-hidden="true" class="icon-plus">
+                                                        <use xlink:href="#plus"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}

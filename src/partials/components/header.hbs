@@ -1,4 +1,4 @@
-<header class="page-header {{#if biegeHeader}} page-header--biege {{/if}}">
+<header class="page-header {{#if biegeHeader}} page-header--biege {{/if}} {{#if headerOnTop}} page-header--on-top {{/if}}">
     <div class="container">
         <div class="page-header__row">
             <div class="page-header__tablet-burger">
@@ -43,7 +43,7 @@
 
             <div class="page-header__navigation">
                 <div class="page-header__navigation-links">
-                    <div class="page-header__navigation-link-wrapper">
+                    <div class="page-header__navigation-link-wrapper page-header__navigation-link-wrapper--catalog">
                         <a href="#" class="page-header__navigation-link">
                             <span class="page-header__navigation-link-text">
                                 Каталог
@@ -202,12 +202,14 @@
                         </div>
 
                     </div>
+                    <div class="page-header__navigation-link-wrapper">
+                        <a href="#" class="page-header__navigation-link">
+                            <span class="page-header__navigation-link-text">
+                                Конструктор
+                            </span>
+                        </a>
+                    </div>
 
-                    <a href="#" class="page-header__navigation-link">
-                        <span class="page-header__navigation-link-text">
-                            Конструктор
-                        </span>
-                    </a>
                 </div>
                 <a {{#unless noLogoLink}} href="index.html" {{/unless}} class="page-header__navigation-logo">
 
@@ -220,19 +222,22 @@
 
                 </a>
 
-
-
                 <div class="page-header__navigation-links">
-                    <a href="#" class="page-header__navigation-link">
-                        <span class="page-header__navigation-link-text">
-                            Оплата и доставка
-                        </span>
-                    </a>
-                    <a href="#" class="page-header__navigation-link">
-                        <span class="page-header__navigation-link-text">
-                            Блог
-                        </span>
-                    </a>
+                    <div class="page-header__navigation-link-wrapper">
+                        <a href="#" class="page-header__navigation-link">
+                            <span class="page-header__navigation-link-text">
+                                Оплата и доставка
+                            </span>
+                        </a>
+                    </div>
+                    <div class="page-header__navigation-link-wrapper">
+                        <a href="#" class="page-header__navigation-link">
+                            <span class="page-header__navigation-link-text">
+                                Блог
+                            </span>
+                        </a>
+                    </div>
+
                 </div>
 
             </div>
