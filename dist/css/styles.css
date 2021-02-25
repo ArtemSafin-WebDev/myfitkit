@@ -6613,7 +6613,11 @@ textarea.text-input {
   border-radius: 6rem;
   position: relative;
   overflow: hidden;
-  z-index: 1; }
+  z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
   .mobile-nav__add-to-cart-btn::before {
     content: '';
     position: absolute;
