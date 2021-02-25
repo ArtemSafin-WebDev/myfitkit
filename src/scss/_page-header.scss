@@ -250,6 +250,7 @@
         color: var(--primary-color);
         .page-header__navigation-link-text::after {
             opacity: 1;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         }
     }
 }
@@ -271,7 +272,8 @@
         background-position: center;
         opacity: 0;
         // pointer-events: none;
-        transition: opacity 0.2s;
+        transition: opacity 0.2s, clip-path .2s;
+        clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
     }
 }
 
@@ -521,6 +523,7 @@
 
         .page-header__navigation-link-text::after {
             opacity: 1;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         }
         .page-header__navigation-dropdown {
             opacity: 1;
