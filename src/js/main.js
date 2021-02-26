@@ -29,6 +29,7 @@ import advantagesMobileModals from './advantagesMobileModals';
 import checkIfFiltersChanged from './checkIfFiltersChanged';
 import stickyGallery from './stickyGallery'
 import constructor from './constructor';
+import addedToCart from './addedToCart';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -60,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
     checkIfFiltersChanged();
     stickyGallery();
     constructor();
+    addedToCart();
 });
 
 window.addEventListener('load', function() {

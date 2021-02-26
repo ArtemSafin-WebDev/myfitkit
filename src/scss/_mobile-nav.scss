@@ -102,7 +102,7 @@
     &:visited {
         color: white;
     }
-    .touch &:active {
+    &:hover {
         &::before {
             transform: translate(-50%, -50%) scale(1);
         }
