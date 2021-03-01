@@ -264,8 +264,7 @@
     align-self: flex-start;
 
     &:hover {
-        // background-color: var(--brown);
-        transform: scale(0.98);
+        background-color: var(--brown);
     }
 
     @include breakpoint(tablet) {
@@ -1225,5 +1224,83 @@
 .cart__all-orders-btn {
     @include breakpoint(tablet) {
         margin-top: 3rem;
+    }
+}
+
+.cart__item-constructor {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-family: var(--roboto);
+}
+
+.cart__item-edit-box {
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: var(--primary-color);
+    font-family: var(--roboto);
+    margin-top: 0.3rem;
+    display: inline-flex;
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+}
+
+.cart__item-components {
+    font-family: var(--roboto);
+    width: 100%;
+    margin-bottom: 2rem;
+    display: none;
+    @include breakpoint(mobile) {
+        display: block;
+    }
+    table,
+    thead,
+    tbody,
+    tr,
+    th,
+    td {
+        display: block;
+    }
+
+    tr {
+        display: flex;
+        margin-bottom: 0.8rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    th,
+    td {
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+    }
+
+    td {
+        width: 7rem;
+        flex-shrink: 0;
+        color: #555555;
+    }
+
+    th {
+        flex-grow: 1;
+        flex-grow: 1;
+        display: flex;
+        &::after {
+            content: '';
+            width: 1rem;
+            flex-grow: 1;
+            height: 2px;
+            background-image: url('../img/cart/dashed-line-pattern.svg');
+            background-repeat: repeat-x;
+            background-size: auto 2px;
+            background-position: left center;
+            align-self: flex-end;
+            margin: 0 0.8rem;
+            position: relative;
+            top: -0.4rem;
+        }
     }
 }

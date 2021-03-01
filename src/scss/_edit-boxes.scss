@@ -1,0 +1,7 @@
+.edit-boxes {
+    .constructor__popup-cookies-list {
+        @include breakpoint(mobile) {
+            margin-bottom: 7rem;
+        }
+    }
+}

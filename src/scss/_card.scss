@@ -5,6 +5,7 @@
     position: relative;
 
     .no-touch &:hover {
+        z-index: 5;
         .card__outer-wrapper {
             opacity: 1;
             visibility: inherit;

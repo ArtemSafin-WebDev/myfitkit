@@ -31,6 +31,7 @@
     "object-fit-images": "^3.2.4",
     "parsleyjs": "^2.9.2",
     "picturefill": "^3.0.3",
+    "plyr": "^3.6.4",
     "smoothscroll-polyfill": "^0.4.4",
     "swiper": "^6.3.2"
   },

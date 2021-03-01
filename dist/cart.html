@@ -22,7 +22,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-config" content="assets/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css" />
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>
         MyFitkit - Корзина
@@ -567,6 +567,159 @@
                             </button>
                         </div>
                     </li>
+                    <li class="cart__items-list-item">
+                        <div class="cart__item js-cart-item">
+                            <div class="cart__item-image-block">
+                                <div class="cart__item-image-container red-backplate">
+                                    <img src="img/cards/constructor.png" alt="" class="cart__item-image">
+                                </div>
+                                <div class="cart__item-content">
+                                    <div class="cart__item-constructor">
+                                        Конструктор боксов
+                                    </div>
+                                    <h4 class="cart__item-title">
+                                        Protein Cake
+                                    </h4>
+                                    <div class="cart__item-description">
+                                        <p>
+                                            Печенье глазированное - 24 шт.
+                                        </p>
+
+                                    </div>
+                                    <a href="#" class="cart__item-edit-box js-edit-box">
+                                        Редактировать бокс
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cart__item-components">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                Banana Pudding
+                                            </th>
+                                            <td>
+                                                2 шт.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Lemon-Lime
+                                            </th>
+                                            <td>
+                                                2 шт.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Strawberry Cream
+                                            </th>
+                                            <td>
+                                                2 шт.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Honey Cream
+                                            </th>
+                                            <td>
+                                                2 шт.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Peanut Paste
+                                            </th>
+                                            <td>
+                                                2 шт.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Double Chocolate
+                                            </th>
+                                            <td>
+                                                2 шт.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Pistachio Cream
+                                            </th>
+                                            <td>
+                                                2 шт.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Tropical Coconut
+                                            </th>
+                                            <td>
+                                                2 шт.
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                Chokolate-Mint
+                                            </th>
+                                            <td>
+                                                2 шт.
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="cart__item-quantity-block">
+                                <div class="cart__item-column-name">
+                                    Количество
+                                </div>
+                                <button class="cart__item-quantity-block-btn cart__item-quantity-block-btn--minus"
+                                    type="button" disabled>
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-minus">
+                                        <use xlink:href="#minus"></use>
+                                    </svg>
+                                </button>
+                                <div class="cart__item-quantity-input-wrapper">
+                                    <input type="text" name="quantity" class="cart__item-quantity-input" readonly
+                                        value="1">
+                                </div>
+                                <button class="cart__item-quantity-block-btn cart__item-quantity-block-btn--plus"
+                                    type="button">
+                                    <svg width="16" height="16" aria-hidden="true" class="icon-plus">
+                                        <use xlink:href="#plus"></use>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="cart__item-price-block">
+                                <div class="cart__item-column-name">
+                                    Цена
+                                </div>
+                                <div class="cart__item-price-block-inner">
+                                    <div class="cart__item-price-regular">
+                                        2 880 ₽
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart__item-price-block">
+                                <div class="cart__item-column-name">
+                                    Сумма
+                                </div>
+                                <div class="cart__item-price-block-inner">
+                                    <div class="cart__item-price-total">
+                                        2 880 ₽
+                                    </div>
+                                </div>
+
+                            </div>
+                            <button class="cart__item-remove-btn" type="button">
+
+                                <svg width="16" height="16" aria-hidden="true" class="icon-cross">
+                                    <use xlink:href="#cross"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
                 </ul>
             </div>
             <div class="cart__right-col">
@@ -634,6 +787,1325 @@
     </div>
 </section>
 
+
+<div class="edit-boxes">
+    <form action="/" method="POST" class="constructor__popup">
+        <div class="constructor__popup-wrapper">
+
+
+            <div class="constructor__popup-inner">
+                <a href="#" class="constructor__popup-mobile-close-btn">
+                    <span class="constructor__popup-mobile-close-btn-text">
+                        Редактировать бокс
+                    </span>
+
+                    <svg width="16" height="16" aria-hidden="true" class="icon-close-mobile-popup">
+                        <use xlink:href="#close-mobile-popup"></use>
+                    </svg>
+                </a>
+                <div class="constructor__popup-top-row">
+                    <h3 class="constructor__popup-heading">
+                        Редактировать бокс
+
+                    </h3>
+                    <button class="constructor__popup-close js-constructor-popup-close">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-stylized-cross">
+                            <use xlink:href="#stylized-cross"></use>
+                        </svg>
+                    </button>
+                </div>
+                <div class="constructor__popup-selected-count">
+                    Добавьте <strong>24</strong> печенья
+                </div>
+                <ul class="constructor__popup-cookies-list">
+                    <li class="constructor__popup-cookies-list-item">
+                        <div class="constructor__popup-cookies-card">
+                            <div class="constructor__popup-cookies-card-image-container">
+                                <img src="img/constructor/cookies/1.png" alt=""
+                                    class="constructor__popup-cookies-card-image">
+                            </div>
+                            <div class="constructor__popup-cookies-card-content">
+                                <div class="constructor__popup-cookies-card-top-row">
+                                    <h4 class="constructor__popup-cookies-card-title">
+                                        Banana Pudding
+                                    </h4>
+                                    <div class="constructor__popup-cookies-card-details">
+                                        <span class="constructor__popup-cookies-card-details-link">
+                                            КБЖУ ?
+                                        </span>
+                                        <div class="constructor__popup-cookies-card-details-dropdown">
+                                            <div class="constructor__popup-cookies-card-details-dropdown-inner">
+                                                <button class="constructor__popup-cookies-card-details-close">
+                                                    <svg width="12" height="16" aria-hidden="true"
+                                                        class="icon-stylized-cross">
+                                                        <use xlink:href="#stylized-cross"></use>
+                                                    </svg>
+                                                </button>
+                                                <h4 class="modals__components-modal-small-heading">
+                                                    Пищевая ценность
+                                                </h4>
+                                                <div class="modals__components-modal-table">
+                                                    <div class="modals__components-modal-per-portion">
+                                                        На 70 г продукта:
+                                                    </div>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>
+                                                                    Калорийность
+                                                                </th>
+                                                                <td>
+                                                                    196,1 ккал
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Белки
+                                                                </th>
+                                                                <td>
+                                                                    18 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Жиры
+                                                                </th>
+                                                                <td>
+                                                                    4,5 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Углеводы
+                                                                </th>
+                                                                <td>
+                                                                    16,15 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Клетчатка
+                                                                </th>
+                                                                <td>
+                                                                    9,5 г
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                                <div class="constructor__popup-cookies-card-bottom-row">
+                                    <div class="cart__item-quantity-block js-cart-item">
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--minus"
+                                            type="button" disabled>
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-minus">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="cart__item-quantity-input-wrapper">
+                                            <input type="text" name="quantity" class="cart__item-quantity-input"
+                                                readonly value="5" data-zero-allowed>
+                                        </div>
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--plus"
+                                            type="button">
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-plus">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="constructor__popup-cookies-list-item">
+                        <div class="constructor__popup-cookies-card">
+                            <div class="constructor__popup-cookies-card-image-container">
+                                <img src="img/constructor/cookies/2.png" alt=""
+                                    class="constructor__popup-cookies-card-image">
+                            </div>
+                            <div class="constructor__popup-cookies-card-content">
+                                <div class="constructor__popup-cookies-card-top-row">
+                                    <h4 class="constructor__popup-cookies-card-title">
+                                        Pistachio Cream
+                                    </h4>
+                                    <div class="constructor__popup-cookies-card-details">
+                                        <span class="constructor__popup-cookies-card-details-link">
+                                            КБЖУ ?
+                                        </span>
+                                        <div class="constructor__popup-cookies-card-details-dropdown">
+                                            <div class="constructor__popup-cookies-card-details-dropdown-inner">
+                                                <button class="constructor__popup-cookies-card-details-close">
+                                                    <svg width="12" height="16" aria-hidden="true"
+                                                        class="icon-stylized-cross">
+                                                        <use xlink:href="#stylized-cross"></use>
+                                                    </svg>
+                                                </button>
+                                                <h4 class="modals__components-modal-small-heading">
+                                                    Пищевая ценность
+                                                </h4>
+                                                <div class="modals__components-modal-table">
+                                                    <div class="modals__components-modal-per-portion">
+                                                        На 70 г продукта:
+                                                    </div>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>
+                                                                    Калорийность
+                                                                </th>
+                                                                <td>
+                                                                    196,1 ккал
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Белки
+                                                                </th>
+                                                                <td>
+                                                                    18 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Жиры
+                                                                </th>
+                                                                <td>
+                                                                    4,5 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Углеводы
+                                                                </th>
+                                                                <td>
+                                                                    16,15 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Клетчатка
+                                                                </th>
+                                                                <td>
+                                                                    9,5 г
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="constructor__popup-cookies-card-bottom-row">
+                                    <div class="cart__item-quantity-block js-cart-item">
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--minus"
+                                            type="button" disabled>
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-minus">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="cart__item-quantity-input-wrapper">
+                                            <input type="text" name="quantity" class="cart__item-quantity-input"
+                                                readonly value="19" data-zero-allowed>
+                                        </div>
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--plus"
+                                            type="button">
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-plus">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="constructor__popup-cookies-list-item">
+                        <div class="constructor__popup-cookies-card">
+                            <div class="constructor__popup-cookies-card-image-container">
+                                <img src="img/constructor/cookies/3.png" alt=""
+                                    class="constructor__popup-cookies-card-image">
+                            </div>
+                            <div class="constructor__popup-cookies-card-content">
+                                <div class="constructor__popup-cookies-card-top-row">
+                                    <h4 class="constructor__popup-cookies-card-title">
+                                        Tropical Coconut
+                                    </h4>
+                                    <div class="constructor__popup-cookies-card-details">
+                                        <span class="constructor__popup-cookies-card-details-link">
+                                            КБЖУ ?
+                                        </span>
+                                        <div class="constructor__popup-cookies-card-details-dropdown">
+                                            <div class="constructor__popup-cookies-card-details-dropdown-inner">
+                                                <button class="constructor__popup-cookies-card-details-close">
+                                                    <svg width="12" height="16" aria-hidden="true"
+                                                        class="icon-stylized-cross">
+                                                        <use xlink:href="#stylized-cross"></use>
+                                                    </svg>
+                                                </button>
+                                                <h4 class="modals__components-modal-small-heading">
+                                                    Пищевая ценность
+                                                </h4>
+                                                <div class="modals__components-modal-table">
+                                                    <div class="modals__components-modal-per-portion">
+                                                        На 70 г продукта:
+                                                    </div>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>
+                                                                    Калорийность
+                                                                </th>
+                                                                <td>
+                                                                    196,1 ккал
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Белки
+                                                                </th>
+                                                                <td>
+                                                                    18 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Жиры
+                                                                </th>
+                                                                <td>
+                                                                    4,5 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Углеводы
+                                                                </th>
+                                                                <td>
+                                                                    16,15 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Клетчатка
+                                                                </th>
+                                                                <td>
+                                                                    9,5 г
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="constructor__popup-cookies-card-bottom-row">
+                                    <div class="cart__item-quantity-block js-cart-item">
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--minus"
+                                            type="button" disabled>
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-minus">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="cart__item-quantity-input-wrapper">
+                                            <input type="text" name="quantity" class="cart__item-quantity-input"
+                                                readonly value="0" data-zero-allowed>
+                                        </div>
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--plus"
+                                            type="button">
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-plus">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="constructor__popup-cookies-list-item">
+                        <div class="constructor__popup-cookies-card">
+                            <div class="constructor__popup-cookies-card-image-container">
+                                <img src="img/constructor/cookies/4.png" alt=""
+                                    class="constructor__popup-cookies-card-image">
+                            </div>
+                            <div class="constructor__popup-cookies-card-content">
+                                <div class="constructor__popup-cookies-card-top-row">
+                                    <h4 class="constructor__popup-cookies-card-title">
+                                        Romovaya Baba
+                                    </h4>
+                                    <div class="constructor__popup-cookies-card-details">
+                                        <span class="constructor__popup-cookies-card-details-link">
+                                            КБЖУ ?
+                                        </span>
+                                        <div class="constructor__popup-cookies-card-details-dropdown">
+                                            <div class="constructor__popup-cookies-card-details-dropdown-inner">
+                                                <button class="constructor__popup-cookies-card-details-close">
+                                                    <svg width="12" height="16" aria-hidden="true"
+                                                        class="icon-stylized-cross">
+                                                        <use xlink:href="#stylized-cross"></use>
+                                                    </svg>
+                                                </button>
+                                                <h4 class="modals__components-modal-small-heading">
+                                                    Пищевая ценность
+                                                </h4>
+                                                <div class="modals__components-modal-table">
+                                                    <div class="modals__components-modal-per-portion">
+                                                        На 70 г продукта:
+                                                    </div>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>
+                                                                    Калорийность
+                                                                </th>
+                                                                <td>
+                                                                    196,1 ккал
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Белки
+                                                                </th>
+                                                                <td>
+                                                                    18 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Жиры
+                                                                </th>
+                                                                <td>
+                                                                    4,5 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Углеводы
+                                                                </th>
+                                                                <td>
+                                                                    16,15 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Клетчатка
+                                                                </th>
+                                                                <td>
+                                                                    9,5 г
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="constructor__popup-cookies-card-bottom-row">
+                                    <div class="cart__item-quantity-block js-cart-item">
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--minus"
+                                            type="button" disabled>
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-minus">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="cart__item-quantity-input-wrapper">
+                                            <input type="text" name="quantity" class="cart__item-quantity-input"
+                                                readonly value="0" data-zero-allowed>
+                                        </div>
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--plus"
+                                            type="button">
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-plus">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="constructor__popup-cookies-list-item">
+                        <div class="constructor__popup-cookies-card">
+                            <div class="constructor__popup-cookies-card-image-container">
+                                <img src="img/constructor/cookies/5.png" alt=""
+                                    class="constructor__popup-cookies-card-image">
+                            </div>
+                            <div class="constructor__popup-cookies-card-content">
+                                <div class="constructor__popup-cookies-card-top-row">
+                                    <h4 class="constructor__popup-cookies-card-title">
+                                        Honey Cream
+                                    </h4>
+                                    <div class="constructor__popup-cookies-card-details">
+                                        <span class="constructor__popup-cookies-card-details-link">
+                                            КБЖУ ?
+                                        </span>
+                                        <div class="constructor__popup-cookies-card-details-dropdown">
+                                            <div class="constructor__popup-cookies-card-details-dropdown-inner">
+                                                <button class="constructor__popup-cookies-card-details-close">
+                                                    <svg width="12" height="16" aria-hidden="true"
+                                                        class="icon-stylized-cross">
+                                                        <use xlink:href="#stylized-cross"></use>
+                                                    </svg>
+                                                </button>
+                                                <h4 class="modals__components-modal-small-heading">
+                                                    Пищевая ценность
+                                                </h4>
+                                                <div class="modals__components-modal-table">
+                                                    <div class="modals__components-modal-per-portion">
+                                                        На 70 г продукта:
+                                                    </div>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>
+                                                                    Калорийность
+                                                                </th>
+                                                                <td>
+                                                                    196,1 ккал
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Белки
+                                                                </th>
+                                                                <td>
+                                                                    18 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Жиры
+                                                                </th>
+                                                                <td>
+                                                                    4,5 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Углеводы
+                                                                </th>
+                                                                <td>
+                                                                    16,15 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Клетчатка
+                                                                </th>
+                                                                <td>
+                                                                    9,5 г
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="constructor__popup-cookies-card-bottom-row">
+                                    <div class="cart__item-quantity-block js-cart-item">
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--minus"
+                                            type="button" disabled>
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-minus">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="cart__item-quantity-input-wrapper">
+                                            <input type="text" name="quantity" class="cart__item-quantity-input"
+                                                readonly value="0" data-zero-allowed>
+                                        </div>
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--plus"
+                                            type="button">
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-plus">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="constructor__popup-cookies-list-item">
+                        <div class="constructor__popup-cookies-card">
+                            <div class="constructor__popup-cookies-card-image-container">
+                                <img src="img/constructor/cookies/6.png" alt=""
+                                    class="constructor__popup-cookies-card-image">
+                            </div>
+                            <div class="constructor__popup-cookies-card-content">
+                                <div class="constructor__popup-cookies-card-top-row">
+                                    <h4 class="constructor__popup-cookies-card-title">
+                                        Lemon-Lime
+                                    </h4>
+                                    <div class="constructor__popup-cookies-card-details">
+                                        <span class="constructor__popup-cookies-card-details-link">
+                                            КБЖУ ?
+                                        </span>
+                                        <div class="constructor__popup-cookies-card-details-dropdown">
+                                            <div class="constructor__popup-cookies-card-details-dropdown-inner">
+                                                <button class="constructor__popup-cookies-card-details-close">
+                                                    <svg width="12" height="16" aria-hidden="true"
+                                                        class="icon-stylized-cross">
+                                                        <use xlink:href="#stylized-cross"></use>
+                                                    </svg>
+                                                </button>
+                                                <h4 class="modals__components-modal-small-heading">
+                                                    Пищевая ценность
+                                                </h4>
+                                                <div class="modals__components-modal-table">
+                                                    <div class="modals__components-modal-per-portion">
+                                                        На 70 г продукта:
+                                                    </div>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>
+                                                                    Калорийность
+                                                                </th>
+                                                                <td>
+                                                                    196,1 ккал
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Белки
+                                                                </th>
+                                                                <td>
+                                                                    18 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Жиры
+                                                                </th>
+                                                                <td>
+                                                                    4,5 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Углеводы
+                                                                </th>
+                                                                <td>
+                                                                    16,15 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Клетчатка
+                                                                </th>
+                                                                <td>
+                                                                    9,5 г
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="constructor__popup-cookies-card-bottom-row">
+                                    <div class="cart__item-quantity-block js-cart-item">
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--minus"
+                                            type="button" disabled>
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-minus">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="cart__item-quantity-input-wrapper">
+                                            <input type="text" name="quantity" class="cart__item-quantity-input"
+                                                readonly value="0" data-zero-allowed>
+                                        </div>
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--plus"
+                                            type="button">
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-plus">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="constructor__popup-cookies-list-item">
+                        <div class="constructor__popup-cookies-card">
+                            <div class="constructor__popup-cookies-card-image-container">
+                                <img src="img/constructor/cookies/1.png" alt=""
+                                    class="constructor__popup-cookies-card-image">
+                            </div>
+                            <div class="constructor__popup-cookies-card-content">
+                                <div class="constructor__popup-cookies-card-top-row">
+                                    <h4 class="constructor__popup-cookies-card-title">
+                                        Banana Pudding
+                                    </h4>
+                                    <div class="constructor__popup-cookies-card-details">
+                                        <span class="constructor__popup-cookies-card-details-link">
+                                            КБЖУ ?
+                                        </span>
+                                        <div class="constructor__popup-cookies-card-details-dropdown">
+                                            <div class="constructor__popup-cookies-card-details-dropdown-inner">
+                                                <button class="constructor__popup-cookies-card-details-close">
+                                                    <svg width="12" height="16" aria-hidden="true"
+                                                        class="icon-stylized-cross">
+                                                        <use xlink:href="#stylized-cross"></use>
+                                                    </svg>
+                                                </button>
+                                                <h4 class="modals__components-modal-small-heading">
+                                                    Пищевая ценность
+                                                </h4>
+                                                <div class="modals__components-modal-table">
+                                                    <div class="modals__components-modal-per-portion">
+                                                        На 70 г продукта:
+                                                    </div>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>
+                                                                    Калорийность
+                                                                </th>
+                                                                <td>
+                                                                    196,1 ккал
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Белки
+                                                                </th>
+                                                                <td>
+                                                                    18 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Жиры
+                                                                </th>
+                                                                <td>
+                                                                    4,5 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Углеводы
+                                                                </th>
+                                                                <td>
+                                                                    16,15 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Клетчатка
+                                                                </th>
+                                                                <td>
+                                                                    9,5 г
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                                <div class="constructor__popup-cookies-card-bottom-row">
+                                    <div class="cart__item-quantity-block js-cart-item">
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--minus"
+                                            type="button" disabled>
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-minus">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="cart__item-quantity-input-wrapper">
+                                            <input type="text" name="quantity" class="cart__item-quantity-input"
+                                                readonly value="0" data-zero-allowed>
+                                        </div>
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--plus"
+                                            type="button">
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-plus">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="constructor__popup-cookies-list-item">
+                        <div class="constructor__popup-cookies-card">
+                            <div class="constructor__popup-cookies-card-image-container">
+                                <img src="img/constructor/cookies/2.png" alt=""
+                                    class="constructor__popup-cookies-card-image">
+                            </div>
+                            <div class="constructor__popup-cookies-card-content">
+                                <div class="constructor__popup-cookies-card-top-row">
+                                    <h4 class="constructor__popup-cookies-card-title">
+                                        Pistachio Cream
+                                    </h4>
+                                    <div class="constructor__popup-cookies-card-details">
+                                        <span class="constructor__popup-cookies-card-details-link">
+                                            КБЖУ ?
+                                        </span>
+                                        <div class="constructor__popup-cookies-card-details-dropdown">
+                                            <div class="constructor__popup-cookies-card-details-dropdown-inner">
+                                                <button class="constructor__popup-cookies-card-details-close">
+                                                    <svg width="12" height="16" aria-hidden="true"
+                                                        class="icon-stylized-cross">
+                                                        <use xlink:href="#stylized-cross"></use>
+                                                    </svg>
+                                                </button>
+                                                <h4 class="modals__components-modal-small-heading">
+                                                    Пищевая ценность
+                                                </h4>
+                                                <div class="modals__components-modal-table">
+                                                    <div class="modals__components-modal-per-portion">
+                                                        На 70 г продукта:
+                                                    </div>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>
+                                                                    Калорийность
+                                                                </th>
+                                                                <td>
+                                                                    196,1 ккал
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Белки
+                                                                </th>
+                                                                <td>
+                                                                    18 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Жиры
+                                                                </th>
+                                                                <td>
+                                                                    4,5 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Углеводы
+                                                                </th>
+                                                                <td>
+                                                                    16,15 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Клетчатка
+                                                                </th>
+                                                                <td>
+                                                                    9,5 г
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="constructor__popup-cookies-card-bottom-row">
+                                    <div class="cart__item-quantity-block js-cart-item">
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--minus"
+                                            type="button" disabled>
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-minus">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="cart__item-quantity-input-wrapper">
+                                            <input type="text" name="quantity" class="cart__item-quantity-input"
+                                                readonly value="0" data-zero-allowed>
+                                        </div>
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--plus"
+                                            type="button">
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-plus">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="constructor__popup-cookies-list-item">
+                        <div class="constructor__popup-cookies-card">
+                            <div class="constructor__popup-cookies-card-image-container">
+                                <img src="img/constructor/cookies/3.png" alt=""
+                                    class="constructor__popup-cookies-card-image">
+                            </div>
+                            <div class="constructor__popup-cookies-card-content">
+                                <div class="constructor__popup-cookies-card-top-row">
+                                    <h4 class="constructor__popup-cookies-card-title">
+                                        Tropical Coconut
+                                    </h4>
+                                    <div class="constructor__popup-cookies-card-details">
+                                        <span class="constructor__popup-cookies-card-details-link">
+                                            КБЖУ ?
+                                        </span>
+                                        <div class="constructor__popup-cookies-card-details-dropdown">
+                                            <div class="constructor__popup-cookies-card-details-dropdown-inner">
+                                                <button class="constructor__popup-cookies-card-details-close">
+                                                    <svg width="12" height="16" aria-hidden="true"
+                                                        class="icon-stylized-cross">
+                                                        <use xlink:href="#stylized-cross"></use>
+                                                    </svg>
+                                                </button>
+                                                <h4 class="modals__components-modal-small-heading">
+                                                    Пищевая ценность
+                                                </h4>
+                                                <div class="modals__components-modal-table">
+                                                    <div class="modals__components-modal-per-portion">
+                                                        На 70 г продукта:
+                                                    </div>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>
+                                                                    Калорийность
+                                                                </th>
+                                                                <td>
+                                                                    196,1 ккал
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Белки
+                                                                </th>
+                                                                <td>
+                                                                    18 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Жиры
+                                                                </th>
+                                                                <td>
+                                                                    4,5 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Углеводы
+                                                                </th>
+                                                                <td>
+                                                                    16,15 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Клетчатка
+                                                                </th>
+                                                                <td>
+                                                                    9,5 г
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="constructor__popup-cookies-card-bottom-row">
+                                    <div class="cart__item-quantity-block js-cart-item">
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--minus"
+                                            type="button" disabled>
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-minus">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="cart__item-quantity-input-wrapper">
+                                            <input type="text" name="quantity" class="cart__item-quantity-input"
+                                                readonly value="0" data-zero-allowed>
+                                        </div>
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--plus"
+                                            type="button">
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-plus">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="constructor__popup-cookies-list-item">
+                        <div class="constructor__popup-cookies-card">
+                            <div class="constructor__popup-cookies-card-image-container">
+                                <img src="img/constructor/cookies/4.png" alt=""
+                                    class="constructor__popup-cookies-card-image">
+                            </div>
+                            <div class="constructor__popup-cookies-card-content">
+                                <div class="constructor__popup-cookies-card-top-row">
+                                    <h4 class="constructor__popup-cookies-card-title">
+                                        Romovaya Baba
+                                    </h4>
+                                    <div class="constructor__popup-cookies-card-details">
+                                        <span class="constructor__popup-cookies-card-details-link">
+                                            КБЖУ ?
+                                        </span>
+                                        <div class="constructor__popup-cookies-card-details-dropdown">
+                                            <div class="constructor__popup-cookies-card-details-dropdown-inner">
+                                                <button class="constructor__popup-cookies-card-details-close">
+                                                    <svg width="12" height="16" aria-hidden="true"
+                                                        class="icon-stylized-cross">
+                                                        <use xlink:href="#stylized-cross"></use>
+                                                    </svg>
+                                                </button>
+                                                <h4 class="modals__components-modal-small-heading">
+                                                    Пищевая ценность
+                                                </h4>
+                                                <div class="modals__components-modal-table">
+                                                    <div class="modals__components-modal-per-portion">
+                                                        На 70 г продукта:
+                                                    </div>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>
+                                                                    Калорийность
+                                                                </th>
+                                                                <td>
+                                                                    196,1 ккал
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Белки
+                                                                </th>
+                                                                <td>
+                                                                    18 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Жиры
+                                                                </th>
+                                                                <td>
+                                                                    4,5 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Углеводы
+                                                                </th>
+                                                                <td>
+                                                                    16,15 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Клетчатка
+                                                                </th>
+                                                                <td>
+                                                                    9,5 г
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="constructor__popup-cookies-card-bottom-row">
+                                    <div class="cart__item-quantity-block js-cart-item">
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--minus"
+                                            type="button" disabled>
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-minus">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="cart__item-quantity-input-wrapper">
+                                            <input type="text" name="quantity" class="cart__item-quantity-input"
+                                                readonly value="0" data-zero-allowed>
+                                        </div>
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--plus"
+                                            type="button">
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-plus">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="constructor__popup-cookies-list-item">
+                        <div class="constructor__popup-cookies-card">
+                            <div class="constructor__popup-cookies-card-image-container">
+                                <img src="img/constructor/cookies/5.png" alt=""
+                                    class="constructor__popup-cookies-card-image">
+                            </div>
+                            <div class="constructor__popup-cookies-card-content">
+                                <div class="constructor__popup-cookies-card-top-row">
+                                    <h4 class="constructor__popup-cookies-card-title">
+                                        Honey Cream
+                                    </h4>
+                                    <div class="constructor__popup-cookies-card-details">
+                                        <span class="constructor__popup-cookies-card-details-link">
+                                            КБЖУ ?
+                                        </span>
+                                        <div class="constructor__popup-cookies-card-details-dropdown">
+                                            <div class="constructor__popup-cookies-card-details-dropdown-inner">
+                                                <button class="constructor__popup-cookies-card-details-close">
+                                                    <svg width="12" height="16" aria-hidden="true"
+                                                        class="icon-stylized-cross">
+                                                        <use xlink:href="#stylized-cross"></use>
+                                                    </svg>
+                                                </button>
+                                                <h4 class="modals__components-modal-small-heading">
+                                                    Пищевая ценность
+                                                </h4>
+                                                <div class="modals__components-modal-table">
+                                                    <div class="modals__components-modal-per-portion">
+                                                        На 70 г продукта:
+                                                    </div>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>
+                                                                    Калорийность
+                                                                </th>
+                                                                <td>
+                                                                    196,1 ккал
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Белки
+                                                                </th>
+                                                                <td>
+                                                                    18 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Жиры
+                                                                </th>
+                                                                <td>
+                                                                    4,5 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Углеводы
+                                                                </th>
+                                                                <td>
+                                                                    16,15 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Клетчатка
+                                                                </th>
+                                                                <td>
+                                                                    9,5 г
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="constructor__popup-cookies-card-bottom-row">
+                                    <div class="cart__item-quantity-block js-cart-item">
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--minus"
+                                            type="button" disabled>
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-minus">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="cart__item-quantity-input-wrapper">
+                                            <input type="text" name="quantity" class="cart__item-quantity-input"
+                                                readonly value="0" data-zero-allowed>
+                                        </div>
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--plus"
+                                            type="button">
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-plus">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li class="constructor__popup-cookies-list-item">
+                        <div class="constructor__popup-cookies-card">
+                            <div class="constructor__popup-cookies-card-image-container">
+                                <img src="img/constructor/cookies/6.png" alt=""
+                                    class="constructor__popup-cookies-card-image">
+                            </div>
+                            <div class="constructor__popup-cookies-card-content">
+                                <div class="constructor__popup-cookies-card-top-row">
+                                    <h4 class="constructor__popup-cookies-card-title">
+                                        Lemon-Lime
+                                    </h4>
+                                    <div class="constructor__popup-cookies-card-details">
+                                        <span class="constructor__popup-cookies-card-details-link">
+                                            КБЖУ ?
+                                        </span>
+                                        <div class="constructor__popup-cookies-card-details-dropdown">
+                                            <div class="constructor__popup-cookies-card-details-dropdown-inner">
+                                                <button class="constructor__popup-cookies-card-details-close">
+                                                    <svg width="12" height="16" aria-hidden="true"
+                                                        class="icon-stylized-cross">
+                                                        <use xlink:href="#stylized-cross"></use>
+                                                    </svg>
+                                                </button>
+                                                <h4 class="modals__components-modal-small-heading">
+                                                    Пищевая ценность
+                                                </h4>
+                                                <div class="modals__components-modal-table">
+                                                    <div class="modals__components-modal-per-portion">
+                                                        На 70 г продукта:
+                                                    </div>
+                                                    <table>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>
+                                                                    Калорийность
+                                                                </th>
+                                                                <td>
+                                                                    196,1 ккал
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Белки
+                                                                </th>
+                                                                <td>
+                                                                    18 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Жиры
+                                                                </th>
+                                                                <td>
+                                                                    4,5 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Углеводы
+                                                                </th>
+                                                                <td>
+                                                                    16,15 г
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Клетчатка
+                                                                </th>
+                                                                <td>
+                                                                    9,5 г
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="constructor__popup-cookies-card-bottom-row">
+                                    <div class="cart__item-quantity-block js-cart-item">
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--minus"
+                                            type="button" disabled>
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-minus">
+                                                <use xlink:href="#minus"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="cart__item-quantity-input-wrapper">
+                                            <input type="text" name="quantity" class="cart__item-quantity-input"
+                                                readonly value="0" data-zero-allowed>
+                                        </div>
+                                        <button
+                                            class="cart__item-quantity-block-btn cart__item-quantity-block-btn--plus"
+                                            type="button">
+                                            <svg width="16" height="16" aria-hidden="true" class="icon-plus">
+                                                <use xlink:href="#plus"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="constructor__edit-btns">
+                    <a href="#" class="constructor__cancel-btn">
+                        Отмена
+                    </a>
+                    <button class="constructor__submit-btn" type="submit">
+                        Сохранить
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="constructor__edit-btns constructor__edit-btns--mobile">
+            <a href="#" class="constructor__cancel-btn">
+                Отмена
+            </a>
+            <button class="constructor__submit-btn" type="submit">
+                Сохранить
+            </button>
+        </div>
+    </form>
+</div>
         </main>
         <footer class="page-footer">
             <div class="container">
@@ -861,12 +2333,10 @@
                         </svg>
                     </button>
                     <div class="modals__modal-video-player">
-                        <a href="#" class="modals__modal-video-player-container">
-                            <img src="img/modals/modal-preview.jpg" alt="" class="modals__modal-video-player-image">
-                            <svg width="16" height="16" aria-hidden="true" class="icon-play">
-                                <use xlink:href="#play"></use>
-                            </svg>
-                        </a>
+        
+                        <div class="modals__player js-video-player" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY">
+        
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2339,10 +3809,10 @@
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+      
         <script src="js/app.js"></script>
         <script src="https://api-maps.yandex.ru/2.1/?apikey=034d7319-01e8-4a8d-975e-f05835bae87c
 &lang=ru_RU" type="text/javascript">

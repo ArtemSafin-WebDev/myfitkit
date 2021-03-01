@@ -225,7 +225,7 @@
     font-size: 2rem;
     line-height: 2.4rem;
     position: relative;
-
+    transition: background-color .2s, color .2s;
     @include breakpoint(tablet) {
         font-weight: 900;
         font-size: 1.8rem;
@@ -234,7 +234,7 @@
     }
 
     .no-touch &:hover {
-        color: var(--primary-color);
+        background: #FEEFD3;
     }
 
     &::before {

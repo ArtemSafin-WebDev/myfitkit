@@ -31,6 +31,8 @@ import stickyGallery from './stickyGallery'
 import constructor from './constructor';
 import addedToCart from './addedToCart';
 import whereToBuy from './whereToBuy';
+import editBoxes from './edit-boxes';
+import media from './media';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -65,6 +67,8 @@ document.addEventListener('DOMContentLoaded', function() {
     addedToCart();
     modals();
     whereToBuy();
+    editBoxes();
+    media();
 });
 
 window.addEventListener('load', function() {

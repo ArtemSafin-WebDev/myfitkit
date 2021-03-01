@@ -22,7 +22,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-config" content="assets/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.6.4/plyr.css" />
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>
         MyFitkit - Восстановление пароля
@@ -576,12 +576,10 @@
                         </svg>
                     </button>
                     <div class="modals__modal-video-player">
-                        <a href="#" class="modals__modal-video-player-container">
-                            <img src="img/modals/modal-preview.jpg" alt="" class="modals__modal-video-player-image">
-                            <svg width="16" height="16" aria-hidden="true" class="icon-play">
-                                <use xlink:href="#play"></use>
-                            </svg>
-                        </a>
+        
+                        <div class="modals__player js-video-player" data-plyr-provider="youtube" data-plyr-embed-id="bTqVqk7FSmY">
+        
+                        </div>
                     </div>
                 </div>
             </div>
@@ -2054,10 +2052,10 @@
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+      
         <script src="js/app.js"></script>
         <script src="https://api-maps.yandex.ru/2.1/?apikey=034d7319-01e8-4a8d-975e-f05835bae87c
 &lang=ru_RU" type="text/javascript">
