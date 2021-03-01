@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     productGallery();
     tabs();
     productsVideoSlider();
-    modals();
+   
     phoneMask();
     citySearch();
     cartPopup();
@@ -62,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     stickyGallery();
     constructor();
     addedToCart();
+    modals();
 });
 
 window.addEventListener('load', function() {

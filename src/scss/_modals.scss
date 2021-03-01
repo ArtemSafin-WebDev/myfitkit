@@ -44,6 +44,7 @@
 
 .modals__modal-inner {
     margin: auto;
+    width: 100%;
     flex-shrink: 0;
 }
 
@@ -194,6 +195,13 @@
     background-size: 49rem auto;
     background-repeat: no-repeat;
     background-position: left -4rem top;
+
+    &-short {
+        max-width: 33.3rem;
+        padding: 3rem;
+        background-size: 49rem auto;
+        background-position: left -6rem top;
+    }
 
     @include breakpoint(mobile) {
         padding: 3rem;

@@ -66,6 +66,10 @@
     padding-left: calc(var(--content-padding) - 1rem);
     padding-right: calc(var(--content-padding) - 1rem);
     padding-top: 2rem;
+
+    &.hidden {
+        display: none;
+    }
 }
 
 .mobile-nav__add-to-cart-btn {

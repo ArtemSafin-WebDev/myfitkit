@@ -1,7 +1,7 @@
 <div class="mobile-nav">
 
     {{#if mobileAddToCartButton}}
-    <div class="mobile-nav__add-to-cart-btn-wrapper">
+    <div class="mobile-nav__add-to-cart-btn-wrapper {{#if mobileAddButtonHiddenByDefault}} hidden {{/if}}"> 
         <a class="mobile-nav__add-to-cart-btn js-added-to-cart-open">
             В корзину 
             <div class="mobile-nav__add-to-cart-btn-total">

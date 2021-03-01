@@ -1,4 +1,7 @@
 {
     "title": "MyFitkit - Конструктор",
-    "biegeHeader": true
+    "biegeHeader": true,
+    "mobileAddToCartButton": true,
+    "mobileAddButtonHiddenByDefault": false
+   
 }
