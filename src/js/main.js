@@ -30,6 +30,7 @@ import checkIfFiltersChanged from './checkIfFiltersChanged';
 import stickyGallery from './stickyGallery'
 import constructor from './constructor';
 import addedToCart from './addedToCart';
+import whereToBuy from './whereToBuy';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -63,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     constructor();
     addedToCart();
     modals();
+    whereToBuy();
 });
 
 window.addEventListener('load', function() {

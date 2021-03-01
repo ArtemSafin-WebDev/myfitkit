@@ -1,0 +1,227 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__content">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Главная
+                    </a>
+
+                    <a class="breadcrumbs__link active">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Где купить
+                    </a>
+                </li>
+            </ul>
+            <h1 class="main-heading where-to-buy__main-heading">
+                Где купить
+
+                <a href="#city-modal" class="where-to-buy__current-city js-open-modal">
+                    <svg width="12" height="16" aria-hidden="true" class="icon-location">
+                        <use xlink:href="#location"></use>
+                    </svg>
+                    Москва
+                </a>
+            </h1>
+        </div>
+    </div>
+</div>
+
+<section class="where-to-buy js-where-to-buy">
+    <div class="container">
+        <div class="where-to-buy__toggle">
+            <a href="#" class="where-to-buy__toggle-btn">
+                Список
+            </a>
+            <a href="#" class="where-to-buy__toggle-btn">
+                На карте
+            </a>
+        </div>
+        <div class="where-to-buy__row">
+            <div class="where-to-buy__left-col">
+                <div class="where-to-buy__current-city">
+                    <svg width="12" height="16" aria-hidden="true" class="icon-location">
+                        <use xlink:href="#location"></use>
+                    </svg>
+                    Москва
+                </div>
+                <div class="where-to-buy__form-wrapper">
+
+
+                    <form action="/" method="POST" class="modals__modal-city-form">
+
+                        <input type="search" class="text-input modals__modal-city-form-input" name="city-search"
+                            id="city-search" placeholder="Введите название города">
+                        <div class="modals__modal-city-form-submit">
+                            <svg width="16" height="16" aria-hidden="true" class="icon-search">
+                                <use xlink:href="#search"></use>
+                            </svg>
+                        </div>
+                    </form>
+                </div>
+                <div class="where-to-buy__results">
+                    <ul class="where-to-buy__results-list">
+                        <li class="where-to-buy__results-list-item">
+                            <a href="#" class="where-to-buy__results-card">
+                                <svg width="12" height="16" aria-hidden="true" class="icon-location">
+                                    <use xlink:href="#location"></use>
+                                </svg>
+                                <div class="where-to-buy__results-card-content">
+                                    <h4 class="where-to-buy__results-card-title">
+                                        ЗелСпортПит
+                                    </h4>
+                                    <div class="where-to-buy__results-card-right-content">
+
+
+                                        <div class="where-to-buy__results-card-text">
+                                            г. Москва, ул. Золоторожский вал, 40
+                                        </div>
+                                        <div class="where-to-buy__results-card-link">
+                                            zel-sport-pit.ru
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="where-to-buy__results-list-item">
+                            <a href="#" class="where-to-buy__results-card">
+                                <svg width="12" height="16" aria-hidden="true" class="icon-location">
+                                    <use xlink:href="#location"></use>
+                                </svg>
+                                <div class="where-to-buy__results-card-content">
+                                    <h4 class="where-to-buy__results-card-title">
+                                        Славянка
+                                    </h4>
+                                    <div class="where-to-buy__results-card-right-content">
+
+
+                                        <div class="where-to-buy__results-card-text">
+                                            г. Москва, Волоколамское шоссе, д. 71
+                                        </div>
+
+
+                                        <div class="where-to-buy__results-card-link">
+                                            www.instagram.com/chudolavka.food/
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="where-to-buy__results-list-item">
+                            <a href="#" class="where-to-buy__results-card">
+                                <svg width="12" height="16" aria-hidden="true" class="icon-location">
+                                    <use xlink:href="#location"></use>
+                                </svg>
+                                <div class="where-to-buy__results-card-content">
+                                    <h4 class="where-to-buy__results-card-title">
+                                        Славянка
+                                    </h4>
+                                    <div class="where-to-buy__results-card-right-content">
+
+
+                                        <div class="where-to-buy__results-card-text">
+                                            г. Москва, ул. Маршала-Тухачевского д.16/1
+                                        </div>
+
+
+                                        <div class="where-to-buy__results-card-link">
+                                            www.instagram.com/chudolavka.food/
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="where-to-buy__results-list-item">
+                            <a href="#" class="where-to-buy__results-card">
+                                <svg width="12" height="16" aria-hidden="true" class="icon-location">
+                                    <use xlink:href="#location"></use>
+                                </svg>
+                                <div class="where-to-buy__results-card-content">
+                                    <h4 class="where-to-buy__results-card-title">
+                                        Чудолавка
+                                    </h4>
+                                    <div class="where-to-buy__results-card-right-content">
+
+
+                                        <div class="where-to-buy__results-card-text">
+                                            г. Москва, ул. Народного Ополчения 3
+                                        </div>
+
+
+
+                                        <div class="where-to-buy__results-card-link">
+                                            www.instagram.com/chudolavka.food/
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="where-to-buy__results-list-item">
+                            <a href="#" class="where-to-buy__results-card">
+                                <svg width="12" height="16" aria-hidden="true" class="icon-location">
+                                    <use xlink:href="#location"></use>
+                                </svg>
+                                <div class="where-to-buy__results-card-content">
+                                    <h4 class="where-to-buy__results-card-title">
+                                        Чемпион
+                                    </h4>
+                                    <div class="where-to-buy__results-card-right-content">
+
+
+                                        <div class="where-to-buy__results-card-text">
+                                            г. Москва, пр. Рязанский, 79
+                                        </div>
+
+
+                                        <div class="where-to-buy__results-card-link">
+                                            champion-sport.ru
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="where-to-buy__results-list-item">
+                            <a href="#" class="where-to-buy__results-card">
+                                <svg width="12" height="16" aria-hidden="true" class="icon-location">
+                                    <use xlink:href="#location"></use>
+                                </svg>
+                                <div class="where-to-buy__results-card-content">
+                                    <h4 class="where-to-buy__results-card-title">
+                                        Proteon
+                                    </h4>
+                                    <div class="where-to-buy__results-card-right-content">
+                                        <div class="where-to-buy__results-card-text">
+                                            г. Москва, пр. Свободный, 33
+                                        </div>
+                                        <div class="where-to-buy__results-card-link">
+                                            www.instagram.com/proteonsn/
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="where-to-buy__right-col">
+                <div class="where-to-buy__map-container">
+                    <div class="where-to-buy__map" id="where-to-buy">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{/content}}
+{{/extend}}
