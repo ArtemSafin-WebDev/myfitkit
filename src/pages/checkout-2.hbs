@@ -187,9 +187,6 @@
                                                         </label>
                                                     </li>
                                                 </ul>
-                                                <a href="#" class="cart__checkout-edit-btn">
-                                                    Добавить новый адрес
-                                                </a>
                                             </div>
                                         </div>
                                         <div class="cart__checkout-point-delivery-right-col">
@@ -203,34 +200,59 @@
                                 </div>
                             </div>
                             <div class="tabs-items__item">
-                                <div class="cart__checkout-address">
-                                    <div class="cart__checkout-address-wrapper">
-                                        <label for="street" class="text-input-label register__form-label">
-                                            Улица *
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="street"
-                                            id="street" required>
+                                <div class="cart__checkout-address-row">
+
+
+                                    <div class="cart__checkout-address">
+                                        <div class="cart__checkout-address-wrapper">
+                                            <label for="street" class="text-input-label register__form-label">
+                                                Улица *
+                                            </label>
+                                            <input type="text" class="text-input register__form-input" name="street"
+                                                id="street" required>
+                                        </div>
+                                        <div
+                                            class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
+                                            <label for="home" class="text-input-label register__form-label">
+                                                Дом *
+                                            </label>
+                                            <input type="text" class="text-input register__form-input" name="home"
+                                                id="home" required>
+                                        </div>
+                                        <div
+                                            class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
+                                            <label for="section" class="text-input-label register__form-label">
+                                                Строение
+                                            </label>
+                                            <input type="text" class="text-input register__form-input" name="section"
+                                                id="section">
+                                        </div>
+                                        <div
+                                            class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
+                                            <label for="flat" class="text-input-label register__form-label">
+                                                Кв. / офис *
+                                            </label>
+                                            <input type="text" class="text-input register__form-input" name="flat"
+                                                id="flat" required>
+                                        </div>
                                     </div>
-                                    <div class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
-                                        <label for="home" class="text-input-label register__form-label">
-                                            Дом *
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="home" id="home"
-                                            required>
-                                    </div>
-                                    <div class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
-                                        <label for="section" class="text-input-label register__form-label">
-                                            Строение
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="section"
-                                            id="section">
-                                    </div>
-                                    <div class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
-                                        <label for="flat" class="text-input-label register__form-label">
-                                            Кв. / офис *
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="flat" id="flat"
-                                            required>
+                                </div>
+                                <div class="cart__checkout-address-row">
+
+
+                                    <div class="cart__checkout-address">
+                                        <div class="cart__checkout-address-wrapper">
+                                            <label for="surname" class="text-input-label register__form-label">
+                                                Отчество *
+                                            </label>
+                                            <input type="text" class="text-input register__form-input" name="street"
+                                                id="surname" required>
+                                        </div>
+                                        <div class="cart__checkout-address-message">
+                                            Для оформления заказа через Почту России обязательно заполнить полностью
+                                            ваше
+                                            ФИО
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -455,7 +477,7 @@
                 </div>
 
                 <button class="cart__submit-btn" type="submit">
-                    Подтвердить заказ
+                    Перейти к оплате
                 </button>
 
                 <label class="standard-checkbox">

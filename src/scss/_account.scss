@@ -1,6 +1,10 @@
 .account {
-    padding-top: 4rem;
+    padding-top: 4.5rem;
     margin-bottom: 10rem;
+
+    @include breakpoint(tablet) {
+        padding-top: 3.2rem;
+    }
 
     @include breakpoint(mobile) {
         padding-top: 0;
@@ -225,7 +229,7 @@
     font-size: 2rem;
     line-height: 2.4rem;
     position: relative;
-    transition: background-color .2s, color .2s;
+    transition: background-color 0.2s, color 0.2s;
     @include breakpoint(tablet) {
         font-weight: 900;
         font-size: 1.8rem;
@@ -234,7 +238,7 @@
     }
 
     .no-touch &:hover {
-        background: #FEEFD3;
+        background: #feefd3;
     }
 
     &::before {
@@ -419,7 +423,7 @@
         font-size: 3.2rem;
         line-height: 4.4rem;
         letter-spacing: -0.05rem;
-
+        margin-bottom: 0.3rem;
         @include breakpoint(tablet) {
             font-size: 3rem;
             line-height: 4.4rem;
@@ -500,6 +504,10 @@
     font-family: var(--roboto);
     flex-grow: 1;
 
+    strong {
+        font-weight: 700;
+    }
+
     @include breakpoint(mobile) {
         flex-grow: 1;
         margin-bottom: 1rem;
@@ -538,7 +546,7 @@
 }
 
 .account__my-order-info {
-    margin-bottom: 4rem;
+    margin-bottom: 4.5rem;
 
     @include breakpoint(tablet) {
         margin-bottom: 3rem;
@@ -546,7 +554,7 @@
 }
 
 .account__my-order-included {
-    margin-bottom: 4rem;
+    margin-bottom: 2.6rem;
     max-width: 62rem;
     @include breakpoint(tablet) {
         margin-bottom: 1rem;
@@ -558,7 +566,7 @@
     font-size: 3.2rem;
     line-height: 4.4rem;
     letter-spacing: -0.05rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.8rem;
 
     @include breakpoint(tablet) {
         margin-bottom: 1rem;
@@ -606,6 +614,18 @@
     max-width: 40rem;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(tablet) {
+        max-width: 45.7rem;
+    }
+
+    @include breakpoint(small-tablet) {
+        max-width: 34rem;
+    }
+
+    @include breakpoint(mobile) {
+        max-width: none;
+    }
 }
 
 .account__actions-link-text-content {
@@ -971,5 +991,56 @@
 .account__delivery-address {
     display: flex;
     flex-direction: column;
-  
+}
+
+.account__my-orders-card-info-data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: var(--roboto);
+}
+
+.account__my-orders-card-info-data-items {
+    margin-bottom: 1.3rem;
+}
+
+.account__my-orders-card-info-data-item {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    margin-bottom: 0.8rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+        strong {
+            display: block;
+        }
+    }
+}
+
+.account__my-orders-card-info-data-link {
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: var(--primary-color);
+
+    &:link,
+    &:visited {
+        color: var(--primary-color);
+    }
+}
+
+.account__my-order-summary {
+    .cart__summary-heading {
+        font-size: 3.2rem;
+        line-height: 4.4rem;
+
+        @include breakpoint(tablet) {
+            font-size: 2.2rem;
+            line-height: 2.4rem;
+        }
+    }
 }

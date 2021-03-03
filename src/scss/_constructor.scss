@@ -475,6 +475,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
+    position: relative;
     @include breakpoint(mobile) {
         flex-direction: column;
         align-items: initial;
@@ -561,6 +562,10 @@
         width: 100%;
         display: flex;
         margin: 0;
+
+        &.filled {
+            display: none;
+        }
     }
 }
 
@@ -930,12 +935,12 @@
 }
 
 .constructor__main-card-edit-btn {
-    padding: 1.2rem 2.6rem;
+    padding: 1.6rem 2.4rem;
     font-size: 1.6rem;
     line-height: 2.2rem;
     text-align: center;
     font-family: var(--roboto);
-    margin: 0 auto;
+    margin-left: 1rem;
     background: #df633c;
     border-radius: 6rem;
     flex-shrink: 0;
@@ -946,6 +951,28 @@
     color: white;
     opacity: 0;
     visibility: hidden;
+    display: none;
+    white-space: nowrap;
+    @include breakpoint(tablet) {
+        position: absolute;
+        bottom: 100%;
+        margin-bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @include breakpoint(small-tablet) {
+        position: static;
+        bottom: auto;
+        margin-bottom: 0;
+        left: auto;
+        transform: none;
+    }
+
+    @include breakpoint(mobile) {
+        padding: 1rem 2.4rem;
+        align-self: center;
+    }
     
     &:link,
     &:visited {
@@ -956,6 +983,7 @@
         opacity: 1;
         visibility: visible;
         transition: opacity 0.2s, visibility 0.2s, color 0.2s, background-color 0.2s;
+        display: block;
     }
 
     .no-touch &:hover {

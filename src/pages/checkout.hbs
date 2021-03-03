@@ -233,34 +233,59 @@
                                 </div>
                             </div>
                             <div class="tabs-items__item">
-                                <div class="cart__checkout-address">
-                                    <div class="cart__checkout-address-wrapper">
-                                        <label for="street" class="text-input-label register__form-label">
-                                            Улица *
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="street"
-                                            id="street" required>
+                                <div class="cart__checkout-address-row">
+
+
+                                    <div class="cart__checkout-address">
+                                        <div class="cart__checkout-address-wrapper">
+                                            <label for="street" class="text-input-label register__form-label">
+                                                Улица *
+                                            </label>
+                                            <input type="text" class="text-input register__form-input" name="street"
+                                                id="street" required>
+                                        </div>
+                                        <div
+                                            class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
+                                            <label for="home" class="text-input-label register__form-label">
+                                                Дом *
+                                            </label>
+                                            <input type="text" class="text-input register__form-input" name="home"
+                                                id="home" required>
+                                        </div>
+                                        <div
+                                            class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
+                                            <label for="section" class="text-input-label register__form-label">
+                                                Строение
+                                            </label>
+                                            <input type="text" class="text-input register__form-input" name="section"
+                                                id="section">
+                                        </div>
+                                        <div
+                                            class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
+                                            <label for="flat" class="text-input-label register__form-label">
+                                                Кв. / офис *
+                                            </label>
+                                            <input type="text" class="text-input register__form-input" name="flat"
+                                                id="flat" required>
+                                        </div>
                                     </div>
-                                    <div class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
-                                        <label for="home" class="text-input-label register__form-label">
-                                            Дом *
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="home" id="home"
-                                            required>
-                                    </div>
-                                    <div class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
-                                        <label for="section" class="text-input-label register__form-label">
-                                            Строение
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="section"
-                                            id="section">
-                                    </div>
-                                    <div class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
-                                        <label for="flat" class="text-input-label register__form-label">
-                                            Кв. / офис *
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="flat" id="flat"
-                                            required>
+                                </div>
+                                <div class="cart__checkout-address-row">
+
+
+                                    <div class="cart__checkout-address">
+                                        <div class="cart__checkout-address-wrapper">
+                                            <label for="surname" class="text-input-label register__form-label">
+                                                Отчество *
+                                            </label>
+                                            <input type="text" class="text-input register__form-input" name="street"
+                                                id="surname" required>
+                                        </div>
+                                        <div class="cart__checkout-address-message">
+                                            Для оформления заказа через Почту России обязательно заполнить полностью
+                                            ваше
+                                            ФИО
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -270,11 +295,16 @@
                         <h2 class="cart__checkout-heading">
                             Оплата
                         </h2>
-                        <h3 class="cart__checkout-payment-heading">
-                            Картой онлайн
-                        </h3>
+                       
                         <div class="cart__checkout-payment-text">
-                            Visa, MasterCard, МИР, Яндекс деньги, Qiwi Кошелек, WebMoney, Элекснет.
+                            <p>
+                                Visa, MasterCard, МИР, Яндекс деньги, Qiwi Кошелек, WebMoney, Элекснет.
+                            </p>
+                            <p>
+                                Для оплаты заказа вы будете перенаправлены на сайт Robokassa, где вам предложено
+                                оплатить заказ одним из следующих способов
+                            </p>
+
                         </div>
                     </div>
                     <div class="cart__checkout-order">
@@ -485,7 +515,7 @@
                 </div>
 
                 <button class="cart__submit-btn" type="submit">
-                    Подтвердить заказ
+                    Перейти к оплате
                 </button>
 
                 <label class="standard-checkbox">

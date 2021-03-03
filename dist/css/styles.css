@@ -7417,9 +7417,31 @@ textarea.text-input {
       width: auto;
       margin: -0.6rem -1rem; } }
 
+.cart__checkout-address-row {
+  margin-bottom: 2rem; }
+  .cart__checkout-address-row:last-child {
+    margin-bottom: 0; }
+  @media only screen and (max-width: 640px) {
+    .cart__checkout-address-row {
+      margin-bottom: 1.2rem; } }
+
+.cart__checkout-address-message {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  font-family: var(--roboto);
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-bottom: .8rem;
+  max-width: 28rem; }
+  @media only screen and (max-width: 640px) {
+    .cart__checkout-address-message {
+      padding: .6rem 1rem; } }
+
 .cart__checkout-address-wrapper {
   width: 27.8rem;
-  margin-right: 2rem; }
+  margin-right: 2rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0; }
   @media only screen and (max-width: 640px) {
     .cart__checkout-address-wrapper {
       width: 100%;
@@ -7508,6 +7530,10 @@ textarea.text-input {
   font-family: var(--roboto);
   font-size: 1.8rem;
   line-height: 2.6rem; }
+  .cart__checkout-payment-text p {
+    margin-bottom: .6rem; }
+    .cart__checkout-payment-text p:last-child {
+      margin-bottom: 0; }
   @media only screen and (max-width: 640px) {
     .cart__checkout-payment-text {
       font-size: 1.6rem;
@@ -7884,6 +7910,14 @@ textarea.text-input {
 
 .blog__categories {
   margin-bottom: 3rem; }
+  @media only screen and (max-width: 768px) {
+    .blog__categories {
+      margin-top: -1.6rem;
+      margin-bottom: 2.5rem; } }
+  @media only screen and (max-width: 640px) {
+    .blog__categories {
+      margin-top: 0;
+      margin-top: -0.5rem; } }
 
 .blog__categories-list {
   display: -webkit-box;
@@ -7972,10 +8006,16 @@ textarea.text-input {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: -2rem -1.5rem; }
+  margin: -3rem -1.5rem; }
+  @media only screen and (max-width: 1024px) {
+    .blog__catalog-list {
+      margin: -2.5rem -1.5rem; } }
+  @media only screen and (max-width: 768px) {
+    .blog__catalog-list {
+      margin: -2rem -1.5rem; } }
   @media only screen and (max-width: 640px) {
     .blog__catalog-list {
-      margin: -1rem; } }
+      margin: -1.5rem; } }
 
 .blog__catalog-list-item {
   width: 33.33%;
@@ -7986,11 +8026,17 @@ textarea.text-input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 2rem 1.5rem; }
+  padding: 3rem 1.5rem; }
+  @media only screen and (max-width: 1024px) {
+    .blog__catalog-list-item {
+      padding: 2.5rem 1.5rem; } }
+  @media only screen and (max-width: 768px) {
+    .blog__catalog-list-item {
+      padding: 2rem 1.5rem; } }
   @media only screen and (max-width: 640px) {
     .blog__catalog-list-item {
       width: 100%;
-      padding: 1rem; } }
+      padding: 1.5rem; } }
 
 .blog__catalog-card {
   display: -webkit-box;
@@ -8017,6 +8063,9 @@ textarea.text-input {
   @media only screen and (max-width: 768px) {
     .blog__catalog-card-image-container {
       margin-bottom: 1.5rem; } }
+  @media only screen and (max-width: 640px) {
+    .blog__catalog-card-image-container {
+      margin-bottom: 1.8rem; } }
   .blog__catalog-card-image-container::after {
     content: '';
     position: absolute;
@@ -8275,7 +8324,8 @@ textarea.text-input {
       fill: var(--primary-color); }
 
 .blog-detail {
-  margin-bottom: 6rem; }
+  margin-bottom: 6rem;
+  padding-top: 1.3rem; }
   @media only screen and (max-width: 1024px) {
     .blog-detail {
       margin-top: -2rem; } }
@@ -8288,7 +8338,7 @@ textarea.text-input {
     margin-bottom: 10rem; }
 
 .blog-detail__header {
-  margin-bottom: 0.5rem; }
+  margin-bottom: 1rem; }
 
 .blog-detail__heading--about {
   margin-bottom: 3rem; }
@@ -8684,12 +8734,6 @@ textarea.text-input {
       height: 2rem; }
 
 .blog-detail__recipe {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   margin-top: 4rem; }
   @media only screen and (max-width: 640px) {
     .blog-detail__recipe {
@@ -8702,39 +8746,52 @@ textarea.text-input {
               align-items: initial;
       margin-top: 2rem; } }
 
-.blog-detail__recipe-col .blog-detail__recipe-col-heading {
-  margin-bottom: 2rem;
-  margin-top: 0; }
-  @media only screen and (max-width: 640px) {
-    .blog-detail__recipe-col .blog-detail__recipe-col-heading {
-      margin-bottom: 1rem; } }
-
-.blog-detail__recipe-col:nth-child(1) {
-  width: 28rem;
-  margin-right: 5rem; }
-  @media only screen and (max-width: 640px) {
-    .blog-detail__recipe-col:nth-child(1) {
-      width: 100%;
-      margin: 0; } }
-
-.blog-detail__recipe-col:nth-child(2) {
-  width: 38rem; }
-  @media only screen and (max-width: 640px) {
-    .blog-detail__recipe-col:nth-child(2) {
-      width: 100%;
-      margin-bottom: 2rem; } }
+.blog-detail__recipe-col {
+  margin-bottom: 3rem; }
+  .blog-detail__recipe-col:last-child {
+    margin-bottom: 0; }
+  .blog-detail__recipe-col .blog-detail__recipe-col-heading {
+    margin-bottom: 2rem;
+    margin-top: 0; }
+    @media only screen and (max-width: 640px) {
+      .blog-detail__recipe-col .blog-detail__recipe-col-heading {
+        margin-bottom: 1rem; } }
 
 .blog-detail__recipe-card-heading {
   margin-bottom: 2rem; }
 
+.blog-detail__recipe-list {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: 4rem;
+     -moz-column-gap: 4rem;
+          column-gap: 4rem; }
+  @media only screen and (max-width: 768px) {
+    .blog-detail__recipe-list {
+      -webkit-column-count: 1;
+         -moz-column-count: 1;
+              column-count: 1; } }
+  @media only screen and (max-width: 640px) {
+    .blog-detail__recipe-list {
+      margin-top: 1.3rem; } }
+
 .blog-detail__recipe-list-item {
-  position: relative;
-  padding-left: 4.2rem;
-  margin-bottom: 1.5rem; }
+  margin-bottom: .5rem;
+  -webkit-column-break-inside: avoid;
+     -moz-column-break-inside: avoid;
+          break-inside: avoid; }
   @media only screen and (max-width: 640px) {
     .blog-detail__recipe-list-item {
-      padding-left: 3.7rem; } }
+      margin-bottom: 1rem; } }
   .blog-detail__recipe-list-item::before {
+    display: none; }
+
+.blog-detail__recipe-card {
+  padding-top: 0.5rem;
+  padding-left: 4.2rem;
+  position: relative; }
+  .blog-detail__recipe-card::before {
     content: counter(ordered-list);
     font-size: 1.6rem;
     line-height: 2.2rem;
@@ -8763,19 +8820,15 @@ textarea.text-input {
     text-align: center;
     color: white; }
     @media only screen and (max-width: 640px) {
-      .blog-detail__recipe-list-item::before {
+      .blog-detail__recipe-card::before {
         width: 2.6rem;
         height: 2.7rem;
         font-size: 1.4rem;
         line-height: 1.8rem; } }
-  .blog-detail__recipe-list-item:last-child {
-    margin-bottom: 0; }
-
-.blog-detail__recipe-card {
-  padding-top: 0.5rem; }
   @media only screen and (max-width: 640px) {
     .blog-detail__recipe-card {
-      padding-top: 0.2rem; } }
+      padding-top: 0.2rem;
+      padding-left: 3.7rem; } }
   .blog-detail__recipe-card .blog-detail__recipe-card-heading {
     font-weight: bold;
     font-size: 1.8rem;
@@ -8798,66 +8851,67 @@ textarea.text-input {
       .blog-detail__recipe-card-text br {
         display: none; } }
 
-.blog-detail__recipe-table table,
-.blog-detail__recipe-table thead,
-.blog-detail__recipe-table tbody,
-.blog-detail__recipe-table th,
-.blog-detail__recipe-table tr,
-.blog-detail__recipe-table td {
-  display: block; }
-
-.blog-detail__recipe-table tr {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  margin-bottom: 0.6rem; }
-  @media only screen and (max-width: 640px) {
-    .blog-detail__recipe-table tr {
-      margin-bottom: 1rem; } }
-  .blog-detail__recipe-table tr:last-child {
-    margin-bottom: 0; }
-
-.blog-detail__recipe-table th,
-.blog-detail__recipe-table td {
-  font-size: 1.8rem;
-  line-height: 2.6rem;
-  text-align: left;
-  font-weight: 400; }
-  @media only screen and (max-width: 640px) {
-    .blog-detail__recipe-table th,
-    .blog-detail__recipe-table td {
-      font-size: 1.6rem;
-      line-height: 1.9rem; } }
-
-.blog-detail__recipe-table th {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1; }
-  .blog-detail__recipe-table th::after {
-    content: '';
+.blog-detail__recipe-table {
+  max-width: 37.3rem; }
+  .blog-detail__recipe-table table,
+  .blog-detail__recipe-table thead,
+  .blog-detail__recipe-table tbody,
+  .blog-detail__recipe-table th,
+  .blog-detail__recipe-table tr,
+  .blog-detail__recipe-table td {
+    display: block; }
+  .blog-detail__recipe-table tr {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 1rem;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    margin-bottom: 0.6rem; }
+    @media only screen and (max-width: 640px) {
+      .blog-detail__recipe-table tr {
+        margin-bottom: 1rem; } }
+    .blog-detail__recipe-table tr:last-child {
+      margin-bottom: 0; }
+  .blog-detail__recipe-table th,
+  .blog-detail__recipe-table td {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    text-align: left;
+    font-weight: 400; }
+    @media only screen and (max-width: 640px) {
+      .blog-detail__recipe-table th,
+      .blog-detail__recipe-table td {
+        font-size: 1.6rem;
+        line-height: 1.9rem; } }
+  .blog-detail__recipe-table th {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
-            flex-grow: 1;
-    height: 2px;
-    background-image: url(../img/cart/dashed-line-pattern.svg);
-    background-repeat: repeat-x;
-    background-size: auto 2px;
-    background-position: left center;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    margin: 0 0.8rem;
-    position: relative;
-    top: -0.4rem; }
+            flex-grow: 1; }
+    .blog-detail__recipe-table th::after {
+      content: '';
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 1rem;
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1;
+      height: 2px;
+      background-image: url(../img/cart/dashed-line-pattern.svg);
+      background-repeat: repeat-x;
+      background-size: auto 2px;
+      background-position: left center;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+      margin: 0 0.8rem;
+      position: relative;
+      top: -0.4rem; }
+  .blog-detail__recipe-table td {
+    width: 4.6rem; }
 
 .blog-detail__gallery-slider {
   position: relative; }
@@ -9566,7 +9620,7 @@ textarea.text-input {
         .blog-detail__about-product-advantages-modal-inner-close--yellow svg {
           fill: #555555; }
       .blog-detail__about-product-advantages-modal-inner-close--orange {
-        background: #F2994A; }
+        background: #f2994a; }
         .blog-detail__about-product-advantages-modal-inner-close--orange svg {
           fill: white; } }
 
@@ -12168,8 +12222,11 @@ textarea.text-input {
           background: #6d3926; } }
 
 .account {
-  padding-top: 4rem;
+  padding-top: 4.5rem;
   margin-bottom: 10rem; }
+  @media only screen and (max-width: 1024px) {
+    .account {
+      padding-top: 3.2rem; } }
   @media only screen and (max-width: 640px) {
     .account {
       padding-top: 0; } }
@@ -12401,8 +12458,8 @@ textarea.text-input {
   font-size: 2rem;
   line-height: 2.4rem;
   position: relative;
-  -webkit-transition: background-color .2s, color .2s;
-  transition: background-color .2s, color .2s; }
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s; }
   @media only screen and (max-width: 1024px) {
     .account__actions-link {
       font-weight: 900;
@@ -12410,7 +12467,7 @@ textarea.text-input {
       line-height: 2.4rem;
       padding: 0; } }
   .no-touch .account__actions-link:hover {
-    background: #FEEFD3; }
+    background: #feefd3; }
   .account__actions-link::before {
     content: '';
     width: 8.5rem;
@@ -12582,7 +12639,8 @@ textarea.text-input {
   .account__my-orders-card--standalone .account__my-orders-card-title {
     font-size: 3.2rem;
     line-height: 4.4rem;
-    letter-spacing: -0.05rem; }
+    letter-spacing: -0.05rem;
+    margin-bottom: 0.3rem; }
     @media only screen and (max-width: 1024px) {
       .account__my-orders-card--standalone .account__my-orders-card-title {
         font-size: 3rem;
@@ -12653,6 +12711,8 @@ textarea.text-input {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1; }
+  .account__my-orders-card-status strong {
+    font-weight: 700; }
   @media only screen and (max-width: 640px) {
     .account__my-orders-card-status {
       -webkit-box-flex: 1;
@@ -12690,13 +12750,13 @@ textarea.text-input {
       fill: var(--primary-color); }
 
 .account__my-order-info {
-  margin-bottom: 4rem; }
+  margin-bottom: 4.5rem; }
   @media only screen and (max-width: 1024px) {
     .account__my-order-info {
       margin-bottom: 3rem; } }
 
 .account__my-order-included {
-  margin-bottom: 4rem;
+  margin-bottom: 2.6rem;
   max-width: 62rem; }
   @media only screen and (max-width: 1024px) {
     .account__my-order-included {
@@ -12707,7 +12767,7 @@ textarea.text-input {
   font-size: 3.2rem;
   line-height: 4.4rem;
   letter-spacing: -0.05rem;
-  margin-bottom: 2rem; }
+  margin-bottom: 1.8rem; }
   @media only screen and (max-width: 1024px) {
     .account__my-order-heading {
       margin-bottom: 1rem;
@@ -12748,6 +12808,15 @@ textarea.text-input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+  @media only screen and (max-width: 1024px) {
+    .account__my-order-summary {
+      max-width: 45.7rem; } }
+  @media only screen and (max-width: 768px) {
+    .account__my-order-summary {
+      max-width: 34rem; } }
+  @media only screen and (max-width: 640px) {
+    .account__my-order-summary {
+      max-width: none; } }
 
 .account__actions-link-text-content br {
   display: none; }
@@ -13087,6 +13156,51 @@ textarea.text-input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
+
+.account__my-orders-card-info-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-family: var(--roboto); }
+
+.account__my-orders-card-info-data-items {
+  margin-bottom: 1.3rem; }
+
+.account__my-orders-card-info-data-item {
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  margin-bottom: 0.8rem; }
+  .account__my-orders-card-info-data-item:last-child {
+    margin-bottom: 0; }
+  @media only screen and (max-width: 640px) {
+    .account__my-orders-card-info-data-item {
+      font-size: 1.8rem;
+      line-height: 2.6rem; }
+      .account__my-orders-card-info-data-item strong {
+        display: block; } }
+
+.account__my-orders-card-info-data-link {
+  font-weight: bold;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  color: var(--primary-color); }
+  .account__my-orders-card-info-data-link:link, .account__my-orders-card-info-data-link:visited {
+    color: var(--primary-color); }
+
+.account__my-order-summary .cart__summary-heading {
+  font-size: 3.2rem;
+  line-height: 4.4rem; }
+  @media only screen and (max-width: 1024px) {
+    .account__my-order-summary .cart__summary-heading {
+      font-size: 2.2rem;
+      line-height: 2.4rem; } }
 
 .modals__modal {
   position: fixed;
@@ -14926,7 +15040,8 @@ textarea.text-input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem;
+  position: relative; }
   @media only screen and (max-width: 640px) {
     .constructor__main-card-bottom-row {
       -webkit-box-orient: vertical;
@@ -15024,7 +15139,9 @@ textarea.text-input {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      margin: 0; } }
+      margin: 0; }
+      .constructor__main-card-submit.filled {
+        display: none; } }
 
 .constructor__main-card-box {
   position: absolute;
@@ -15389,12 +15506,12 @@ textarea.text-input {
       fill: var(--brown); }
 
 .constructor__main-card-edit-btn {
-  padding: 1.2rem 2.6rem;
+  padding: 1.6rem 2.4rem;
   font-size: 1.6rem;
   line-height: 2.2rem;
   text-align: center;
   font-family: var(--roboto);
-  margin: 0 auto;
+  margin-left: 1rem;
   background: #df633c;
   border-radius: 6rem;
   -ms-flex-negative: 0;
@@ -15412,14 +15529,38 @@ textarea.text-input {
           justify-content: center;
   color: white;
   opacity: 0;
-  visibility: hidden; }
+  visibility: hidden;
+  display: none;
+  white-space: nowrap; }
+  @media only screen and (max-width: 1024px) {
+    .constructor__main-card-edit-btn {
+      position: absolute;
+      bottom: 100%;
+      margin-bottom: 2rem;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+              transform: translateX(-50%); } }
+  @media only screen and (max-width: 768px) {
+    .constructor__main-card-edit-btn {
+      position: static;
+      bottom: auto;
+      margin-bottom: 0;
+      left: auto;
+      -webkit-transform: none;
+              transform: none; } }
+  @media only screen and (max-width: 640px) {
+    .constructor__main-card-edit-btn {
+      padding: 1rem 2.4rem;
+      -ms-flex-item-align: center;
+          align-self: center; } }
   .constructor__main-card-edit-btn:link, .constructor__main-card-edit-btn:visited {
     color: white; }
   .constructor__main-card-edit-btn.shown {
     opacity: 1;
     visibility: visible;
     -webkit-transition: opacity 0.2s, visibility 0.2s, color 0.2s, background-color 0.2s;
-    transition: opacity 0.2s, visibility 0.2s, color 0.2s, background-color 0.2s; }
+    transition: opacity 0.2s, visibility 0.2s, color 0.2s, background-color 0.2s;
+    display: block; }
   .no-touch .constructor__main-card-edit-btn:hover {
     background-color: var(--brown); }
 

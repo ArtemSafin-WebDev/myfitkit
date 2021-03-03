@@ -145,6 +145,7 @@ export default function constructor() {
                 if (sum < productData.requiredQuantity - 1) {
                     cardButton.textContent = `Добавьте ${productData.requiredQuantity - sum} шт.`;
                     cardButton.setAttribute('type', 'button');
+                    cardButton.classList.remove('filled');
 
                     popupSelectedCountText.innerHTML = `Добавьте <strong>${productData.requiredQuantity - sum}</strong> печенья`;
 
@@ -160,6 +161,7 @@ export default function constructor() {
                 } else if (sum === productData.requiredQuantity - 1) {
                     cardButton.textContent = 'Добавьте еще 1 шт.';
                     cardButton.setAttribute('type', 'button');
+                    cardButton.classList.remove('filled');
 
                     popupSelectedCountText.innerHTML = `Выбрано <strong>${sum}</strong> печенья. Добавьте еще <strong>1</strong> шт.`;
 
@@ -176,6 +178,7 @@ export default function constructor() {
                 } else {
                     cardButton.textContent = 'В корзину';
                     cardButton.setAttribute('type', 'submit');
+                    cardButton.classList.add('filled');
                     popupSelectedCountText.innerHTML = `Выбрано <strong>${sum}</strong> печенья. Бокс собран! `;
 
                     plusBtns.forEach(btn => {
