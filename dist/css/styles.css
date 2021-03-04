@@ -16406,3 +16406,78 @@ textarea.text-input {
 @media only screen and (max-width: 640px) {
   .edit-boxes .constructor__popup-cookies-list {
     margin-bottom: 7rem; } }
+
+.not-found__content {
+  min-height: 76.5rem;
+  padding: 3rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media only screen and (max-width: 1024px) {
+    .not-found__content {
+      min-height: 65rem; } }
+  @media only screen and (max-width: 640px) {
+    .not-found__content {
+      min-height: 76rem; } }
+
+.not-found__content-inner {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+  @media only screen and (max-width: 640px) {
+    .not-found__content-inner {
+      margin: 0;
+      margin-top: 12rem; } }
+
+.not-found__image {
+  width: 100%;
+  max-width: 45rem;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 1.7rem; }
+  @media only screen and (max-width: 1024px) {
+    .not-found__image {
+      max-width: 40rem; } }
+  @media only screen and (max-width: 640px) {
+    .not-found__image {
+      max-width: 100%;
+      margin: 0;
+      margin-bottom: 3.6rem; } }
+
+.not-found__text {
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
+  font-family: var(--roboto);
+  margin-bottom: 3rem; }
+
+.not-found__back-link {
+  margin: 0;
+  margin: 0 auto; }
+
+.not-found__back-link {
+  position: relative; }
+  .not-found__back-link .icon-yellow-btn-splash {
+    width: 7.7rem;
+    height: 8.5rem;
+    left: 0.3rem;
+    top: 0;
+    z-index: -1;
+    position: absolute;
+    fill: #f2cd30;
+    -webkit-transition: fill 0.2s;
+    transition: fill 0.2s; }
+  .no-touch .not-found__back-link:hover {
+    background: #f2994a;
+    color: white; }
+    .no-touch .not-found__back-link:hover .icon-yellow-btn-splash {
+      fill: #f2994a; }
