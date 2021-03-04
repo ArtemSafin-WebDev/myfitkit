@@ -65,13 +65,20 @@ function initializeCardSlider(card) {
     });
 }
 
-window.initializeCardSlider = initializeCardSlider;
 
-export function cardSliders() {
+function initializeCardSliders() {
     if (window.matchMedia('(max-width: 640px)').matches) return;
     const elements = Array.from(document.querySelectorAll('.card'));
 
     elements.forEach(card => {
         initializeCardSlider(card);
     });
+}
+
+window.catalogCards = {};
+window.catalogCards.initializeCardSlider = initializeCardSlider;
+window.catalogCards.initializeCardSliders = initializeCardSliders;
+
+export function cardSliders() {
+    initializeCardSliders();
 }
