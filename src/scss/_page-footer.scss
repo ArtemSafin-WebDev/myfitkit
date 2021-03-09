@@ -185,7 +185,7 @@
         .page-footer__nav-list-item {
             width: 50%;
 
-            @include breakpointMF(small-tablet) {
+            @include breakpointMF(tablet) {
                 &:nth-child(even) {
                     padding-left: 3.4rem;
                 }

@@ -16,6 +16,9 @@ export default function stickyGallery() {
                 pin: true,
                 pinSpacing: true
             });
+
+
+            
         }
     });
 }

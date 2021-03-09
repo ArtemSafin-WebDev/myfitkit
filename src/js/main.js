@@ -33,10 +33,13 @@ import addedToCart from './addedToCart';
 import whereToBuy from './whereToBuy';
 import editBoxes from './edit-boxes';
 import media from './media';
+import copyLink from './copyLink';
+import messages from './messages';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
     detectTouch();
+    messages();
     homeSlider();
     cardSliders();
     selectType();
@@ -51,7 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
     productGallery();
     tabs();
     productsVideoSlider();
-   
     phoneMask();
     citySearch();
     cartPopup();
@@ -69,6 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
     whereToBuy();
     editBoxes();
     media();
+    copyLink();
+    
 });
 
 window.addEventListener('load', function() {
