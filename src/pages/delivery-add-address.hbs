@@ -1,0 +1,144 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<div class="breadcrumbs">
+    <div class="container">
+        <div class="breadcrumbs__content">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__list-item">
+                    <a href="#" class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Главная
+                    </a>
+                    <a href="#" class="breadcrumbs__link">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Личный кабинет
+                    </a>
+
+
+                    <a class="breadcrumbs__link active">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-arrow-right">
+                            <use xlink:href="#arrow-right"></use>
+                        </svg>
+                        Личные данные
+                    </a>
+                </li>
+            </ul>
+            <h1 class="main-heading main-heading--hide-on-mobile">
+                Личные данные
+            </h1>
+        </div>
+    </div>
+</div>
+
+<section class="account">
+    <div class="container">
+        <div class="account__row">
+            <div class="account__left-col">
+                <div class="account__delivery-address">
+                    <h2 class="account__delivery-address-heading">
+                        Добавить адрес
+                    </h2>
+                    <a href="#city-modal" class="account__delivery-address-choose-city js-open-modal">
+                        <svg width="16" height="16" aria-hidden="true" class="icon-location">
+                            <use xlink:href="#location"></use>
+                        </svg>
+                        Москва
+                    </a>
+                    <form action="#" class="account__delivery-address-form" method="POST">
+                        <div class="account__delivery-address-form-row">
+                            <div class="account__delivery-address-form-col">
+                                <label for="index" class="text-input-label register__form-label">
+                                    Индекс *
+                                </label>
+                                <input type="text" class="text-input register__form-input" name="index" id="index"
+                                    required value="123456">
+                            </div>
+                            <div class="account__delivery-address-form-col">
+                                <label for="street" class="text-input-label register__form-label">
+                                    Улица *
+                                </label>
+                                <input type="text" class="text-input register__form-input" name="street" id="street"
+                                    required value="ул. Ленина">
+                            </div>
+                            <div class="account__delivery-address-form-col account__delivery-address-form-col--address">
+                                <div class="account__delivery-address-form-inner-row">
+                                    <div class="account__delivery-address-form-inner-col">
+                                        <label for="home" class="text-input-label register__form-label">
+                                            Дом *
+                                        </label>
+                                        <input type="text" class="text-input register__form-input" name="home" id="home"
+                                            required>
+                                    </div>
+                                    <div class="account__delivery-address-form-inner-col">
+                                        <label for="section" class="text-input-label register__form-label">
+                                            Строение
+                                        </label>
+                                        <input type="text" class="text-input register__form-input" name="section"
+                                            id="section">
+                                    </div>
+                                    <div class="account__delivery-address-form-inner-col">
+                                        <label for="flat" class="text-input-label register__form-label">
+                                            Кв. / офис *
+                                        </label>
+                                        <input type="text" class="text-input register__form-input" name="flat" id="flat"
+                                            required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn account__delivery-address-form-submit" type="submit">
+                            Сохранить
+                        </button>
+                    </form>
+                      <a href="#" class="blog-detail__back-link account__delivery-address-back">
+                        <svg width="12" height="16" aria-hidden="true" class="icon-arrow-left">
+                            <use xlink:href="#arrow-left"></use>
+                        </svg>
+                        Все адреса
+                    </a>
+                </div>
+            </div>
+            <div class="account__right-col">
+                <nav class="account__nav account__nav--compact-on-mobile">
+                    <ul class="account__nav-list">
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Кабинет
+                            </a>
+                        </li>
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Мои заказы
+                            </a>
+                        </li>
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Личные данные
+                            </a>
+                        </li>
+                        <li class="account__nav-list-item active">
+                            <a href="#" class="account__nav-link">
+                                Адреса доставки
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="#" class="account__exit-link account__exit-link--hide-on-mobile">
+                    <svg width="16" height="16" aria-hidden="true" class="icon-exit">
+                        <use xlink:href="#exit"></use>
+                    </svg>
+                    Выйти из кабинета
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{{/content}}
+{{/extend}}

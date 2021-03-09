@@ -54,7 +54,7 @@
                             Семеновский Семен<br>
                             +7 (495) 123-45-67, name@yandex.ru
                         </div>
-                        <a href="#" class="cart__checkout-edit-btn">
+                        <a href="#your-data" class="cart__checkout-edit-btn js-open-modal">
                             Редактировать
                         </a>
                     </div>
@@ -93,35 +93,37 @@
                         </div>
                         <div class="tabs-items">
                             <div class="tabs-items__item">
-                                <div class="cart__checkout-address">
-                                    <div class="cart__checkout-address-wrapper">
-                                        <label for="street" class="text-input-label register__form-label">
-                                            Улица *
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="street"
-                                            id="street" required>
-                                    </div>
-                                    <div class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
-                                        <label for="home" class="text-input-label register__form-label">
-                                            Дом *
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="home" id="home"
-                                            required>
-                                    </div>
-                                    <div class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
-                                        <label for="section" class="text-input-label register__form-label">
-                                            Строение
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="section"
-                                            id="section">
-                                    </div>
-                                    <div class="cart__checkout-address-wrapper cart__checkout-address-wrapper--medium">
-                                        <label for="flat" class="text-input-label register__form-label">
-                                            Кв. / офис *
-                                        </label>
-                                        <input type="text" class="text-input register__form-input" name="flat" id="flat"
-                                            required>
-                                    </div>
+                                <div class="cart__checkout-recent-address">
+                                    <ul class="cart__checkout-point-delivery-variants-list">
+                                        <li class="cart__checkout-point-delivery-variants-list-item">
+                                            <label class="standard-radio">
+                                                <input type="radio" name="recentaddress" value="1"
+                                                    class="standard-radio__input" checked>
+                                                <span class="standard-radio__checkmark">
+
+                                                </span>
+                                                <span class="standard-radio__text">
+                                                    103274, г. Москва, ул. Ленина, 3, кв. 125
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="cart__checkout-point-delivery-variants-list-item">
+                                            <label class="standard-radio">
+                                                <input type="radio" name="recentaddress" value="2"
+                                                    class="standard-radio__input">
+                                                <span class="standard-radio__checkmark">
+
+                                                </span>
+                                                <span class="standard-radio__text">
+                                                    103274, г. Москва, ул. Ленина, д. 8, кв. 4
+                                                </span>
+                                            </label>
+                                        </li>
+
+                                    </ul>
+                                    <a href="delivery-add-address.html" class="cart__checkout-recent-address-add">
+                                        Добавить новый адрес
+                                    </a>
                                 </div>
                             </div>
                             <div class="tabs-items__item">
