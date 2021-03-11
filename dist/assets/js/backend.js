@@ -309,4 +309,45 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+
+
+    var catalog = document.querySelector('.catalog');
+
+    if (catalog && catalogList) {
+      
+        var loadMore = catalog.querySelector('.catalog__show-more-link');
+        var catalogResults = catalog.querySelector('.catalog__results');
+        var loadMoreTextElement = catalog.querySelector('.catalog__show-more-link-text')
+        var loadMoreOriginalText = loadMoreTextElement.textContent;
+        console.log(catalogList)
+
+        loadMore.addEventListener('click', function(event) {
+            event.preventDefault();
+
+            var catalogListCopy = catalogList.cloneNode(true);
+
+            var catalogItems = Array.prototype.slice.call(catalogListCopy.querySelectorAll('.catalog__list-item'));
+
+
+            loadMore.classList.add('loading');
+            loadMoreTextElement.textContent = 'Загрузка';
+
+            setTimeout(function() {
+                loadMoreTextElement.textContent = loadMoreOriginalText;
+                loadMore.classList.remove('loading');
+                catalogResults.appendChild(catalogListCopy);
+
+                if (typeof window.revealElements === 'function') {
+                    window.revealElements(catalogItems);
+                }
+                if (typeof window.catalogCards.initializeCardSliders === 'function') {
+                    window.catalogCards.initializeCardSliders()
+                }
+
+                
+            }, 3000)
+        })
+
+    }
 });

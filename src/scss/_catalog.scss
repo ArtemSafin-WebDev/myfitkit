@@ -26,6 +26,10 @@
         border-radius: 6rem;
         position: relative;
         z-index: 1400;
+        transition: background-color .2s;
+        .touch &:active {
+            background-color: #ececec;
+        }
     }
 }
 
@@ -175,7 +179,7 @@
             width: 0.9rem;
             height: 0.9rem;
             position: absolute;
-           
+
             top: 0;
             left: 100%;
             margin-left: 0.6rem;
@@ -281,11 +285,13 @@
         border-radius: 50%;
     }
 
+    .no-touch &.loading,
     .no-touch &:hover {
         background-color: var(--primary-color);
         color: white;
     }
 
+    .touch &.loading,
     .touch &:active {
         &::before {
             transform: translate(-50%, -50%) scale(1);
@@ -307,6 +313,10 @@
     }
 }
 
+.catalog__show-more-link-text {
+    position: relative;
+}
+
 .catalog__show-more {
     display: flex;
     flex-direction: column;
@@ -315,6 +325,49 @@
 
     @include breakpoint(mobile) {
         margin-bottom: 2rem;
+    }
+}
+
+.catalog__show-more-link-inner {
+    position: relative;
+
+    .icon-loader {
+        position: absolute;
+        width: 2rem;
+        height: 2rem;
+        fill: white;
+        left: 100%;
+        top: 50%;
+        margin-top: -1rem;
+        animation-name: loader;
+        animation-duration: 0.4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        transform-origin: 0.97rem center;
+        margin-left: 1rem;
+        animation-play-state: paused;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s, visibility 0s linear 0.2s;
+
+        .touch & {
+            fill: var(--primary-color);
+        }
+        .loading & {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity 0.2s, visibility 0.2s;
+            animation-play-state: running;
+        }
+    }
+}
+
+@keyframes loader {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
     }
 }
 
@@ -819,7 +872,9 @@
     margin-left: var(--content-padding);
     margin-top: 2rem;
     margin-bottom: 3rem;
-    transition: color 0.2s;
+    transition: color 0.2s, opacity .2s, visibility .2s;
+    opacity: 0;
+    visibility: hidden;
     &:link,
     &:visited {
         color: black;
@@ -841,7 +896,28 @@
         }
     }
 
+    .changed & {
+        opacity: 1;
+        visibility: inherit;
+        transition: color .2s, visibility .2s, opacity .2s;
+    }
+
     @include breakpoint(mobile) {
         display: inline-flex;
+    }
+}
+
+.catalog__sort-heading {
+    font-weight: 900;
+    font-size: 2.6rem;
+    line-height: 1.2;
+    font-family: var(--ruda);
+    padding: 3rem 0;
+    &:first-child {
+        padding-top: 0;
+    }
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
     }
 }

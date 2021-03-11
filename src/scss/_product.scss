@@ -490,7 +490,7 @@
     }
 
     @include breakpoint(small-tablet) {
-        margin-bottom: 5.5rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -764,7 +764,7 @@
     }
 
     @include breakpoint(mobile) {
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
 }
 
@@ -1351,7 +1351,7 @@
     margin-bottom: 3rem;
 
     @include breakpoint(tablet) {
-        order: -9;
+       
         width: 100%;
         margin-bottom: 2rem;
     }
@@ -1437,7 +1437,7 @@
     font-size: 1.1rem;
     line-height: 1.8rem;
     color: white;
-    background: #6d3926;
+    background: var(--brown);
     border-radius: 2rem;
     padding: 0.2rem 0.8rem;
     white-space: nowrap;
@@ -1581,7 +1581,7 @@
         align-items: flex-start;
 
         &--product-2 {
-            margin-top: -4rem;
+            margin-top: 0;
             margin-bottom: 5rem;
         }
     }
@@ -1589,7 +1589,8 @@
         width: 3.2rem;
         height: 3.2rem;
         flex-shrink: 0;
-        margin-right: 1.5rem;
+        margin-left: 1.5rem;
+        order: 3;
     }
 }
 

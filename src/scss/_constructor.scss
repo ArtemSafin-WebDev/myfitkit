@@ -898,7 +898,7 @@
     visibility: hidden;
 
     @include breakpoint(mobile) {
-        display: none;
+       
         margin-top: 2rem;
     }
 
@@ -909,6 +909,7 @@
 
         @include breakpoint(mobile) {
             display: inline-flex;
+            padding-bottom: 2rem;
         }
     }
     svg {
