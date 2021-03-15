@@ -1573,6 +1573,14 @@
         margin-top: 0;
     }
 
+    &--constructor {
+        margin-top: 5rem;
+
+        @include breakpoint(mobile) {
+            margin-top: 10rem;
+        }
+    }
+
     &:last-child {
         margin-bottom: 0;
     }
