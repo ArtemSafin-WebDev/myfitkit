@@ -11652,7 +11652,11 @@ textarea.text-input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-  .no-touch .product__choose-taste-checkbox:hover .product__choose-taste-checkbox-input:not(:checked) ~ .product__choose-taste-checkbox-image-container {
+  .product__choose-taste-checkbox.active .product__choose-taste-checkbox-text {
+    color: var(--brown); }
+  .product__choose-taste-checkbox.active .product__choose-taste-checkbox-image-container {
+    border-color: #baa3a3; }
+  .no-touch .product__choose-taste-checkbox:not(.active):hover .product__choose-taste-checkbox-image-container {
     border-color: #f2eded; }
 
 .product__choose-taste-checkbox-input {
@@ -12440,7 +12444,7 @@ textarea.text-input {
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 5;
+  z-index: 15;
   font-weight: bold;
   font-size: 1.1rem;
   line-height: 1.8rem;

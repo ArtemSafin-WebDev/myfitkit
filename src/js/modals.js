@@ -12,6 +12,10 @@ export default function modals() {
             lockScroll(modal);
             modal.classList.add('active');
             activeModal = modal;
+
+
+            const openModalEvent = new CustomEvent('openmodal');
+            document.dispatchEvent(openModalEvent);
         } else {
             console.error(`Modal with ID: ${id} not found`);
         }
@@ -21,6 +25,9 @@ export default function modals() {
         unlockScroll();
         modal.classList.remove('active');
         activeModal = null;
+
+        const closeModalEvent = new CustomEvent('closemodal');
+        document.dispatchEvent(closeModalEvent);
     }
 
     window.openModal = openModal;

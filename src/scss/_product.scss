@@ -618,8 +618,18 @@
     display: flex;
     flex-direction: column;
 
-    .no-touch &:hover {
-        .product__choose-taste-checkbox-input:not(:checked) ~ .product__choose-taste-checkbox-image-container {
+    &.active {
+
+        .product__choose-taste-checkbox-text {
+            color: var(--brown);
+        }
+        .product__choose-taste-checkbox-image-container {
+            border-color: #baa3a3;
+        }
+    }
+
+    .no-touch &:not(.active):hover {
+        .product__choose-taste-checkbox-image-container {
             border-color: #f2eded;
         }
     }
@@ -1432,7 +1442,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    z-index: 5;
+    z-index: 15;
     font-weight: bold;
     font-size: 1.1rem;
     line-height: 1.8rem;
