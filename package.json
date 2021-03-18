@@ -27,6 +27,7 @@
     "gsap": "^3.6.0",
     "inputmask": "^4.0.8",
     "lazysizes": "^5.2.0",
+    "lodash": "^4.17.21",
     "moment": "^2.24.0",
     "object-fit-images": "^3.2.4",
     "parsleyjs": "^2.9.2",

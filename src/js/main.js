@@ -36,6 +36,7 @@ import media from './media';
 import copyLink from './copyLink';
 import messages from './messages';
 import showCatalogElements from './showCatalogElements';
+import onlyNumeric from './onlyNumeric';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -74,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
     media();
     copyLink();
     showCatalogElements();
+    onlyNumeric();
     
 });
 

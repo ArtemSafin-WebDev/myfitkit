@@ -1490,7 +1490,7 @@
     align-self: center;
     padding-left: 3.75rem;
     padding-right: 3.75rem;
-
+    margin-left: auto;
     .no-touch &:hover {
         background-color: var(--brown);
     }
@@ -1500,6 +1500,7 @@
 
     @include breakpoint(mobile) {
         display: none;
+        margin-left: 0;
     }
 }
 
@@ -1591,12 +1592,19 @@
         }
     }
 
-    &:last-child {
-        margin-bottom: 0;
+
+    @include breakpointMF(small-tablet) {
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
+
+  
 
     @include breakpoint(mobile) {
         align-items: flex-start;
+        margin-bottom: 3.5rem;
+        margin-top: 2rem;
 
         &--product-2 {
             margin-top: 0;
