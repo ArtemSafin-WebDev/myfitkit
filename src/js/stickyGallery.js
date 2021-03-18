@@ -6,13 +6,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 export default function stickyGallery() {
+    const productRightCol = document.querySelector('.product__right-col');
+    const stickyGallery = document.querySelector('.js-sticky-gallery');
+
+    if (!productRightCol || !stickyGallery) return;
     ScrollTrigger.matchMedia({
         '(min-width: 1025px)': () => {
             ScrollTrigger.create({
-                trigger: '.js-sticky-gallery',
-                start: 'top-=50px top',
-                endTrigger: '.product__right-col',
-                end: 'bottom bottom',
+                trigger: stickyGallery,
+                start: 'top top+=20%',
+                end: () => `+=${productRightCol.offsetHeight - stickyGallery.offsetHeight}`,
                 pin: true,
                 pinSpacing: true
             });

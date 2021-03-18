@@ -6090,11 +6090,6 @@ textarea.text-input {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
-  @media only screen and (max-width: 640px) {
-    .catalog__pagination {
-      -webkit-box-pack: justify;
-          -ms-flex-pack: justify;
-              justify-content: space-between; } }
 
 .catalog__pagination-link {
   -ms-flex-negative: 0;
@@ -6139,7 +6134,7 @@ textarea.text-input {
       font-size: 1.8rem;
       line-height: 2.1rem;
       letter-spacing: 0.02em;
-      margin-right: 1rem; } }
+      margin-right: 5rem; } }
   .catalog__pagination-link svg {
     width: 1.9rem;
     height: 2.4rem;
@@ -6659,7 +6654,10 @@ textarea.text-input {
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
 .mobile__nav-list-item {
   height: 7rem;

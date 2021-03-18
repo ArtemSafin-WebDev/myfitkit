@@ -378,7 +378,7 @@
     justify-content: center;
 
     @include breakpoint(mobile) {
-        justify-content: space-between;
+        
     }
 }
 
@@ -416,7 +416,7 @@
         font-size: 1.8rem;
         line-height: 2.1rem;
         letter-spacing: 0.02em;
-        margin-right: 1rem;
+        margin-right: 5rem;
     }
     svg {
         width: 1.9rem;
