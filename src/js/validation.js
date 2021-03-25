@@ -63,7 +63,7 @@ Parsley.addMessages('ru', {
 Parsley.setLocale('ru');
 
 export default function validation() {
-    const formsToValidate = Array.from(document.querySelectorAll('form[data-need-validation]'));
+    const formsToValidate = Array.from(document.querySelectorAll('form'));
 
     formsToValidate.forEach(form => {
         $(form).parsley({});

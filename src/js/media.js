@@ -10,7 +10,11 @@ export default function media() {
 
         if (insideModal) {
             document.addEventListener('openmodal', () => {
-                instance.play();
+                if (insideModal.classList.contains('active')) {
+                    instance.play();
+                } else {
+                    console.log('Not inside modal', insideModal)
+                }
             })
             document.addEventListener('closemodal', () => {
                 instance.pause();

@@ -37,6 +37,7 @@ import copyLink from './copyLink';
 import messages from './messages';
 import showCatalogElements from './showCatalogElements';
 import onlyNumeric from './onlyNumeric';
+import deliveryTabs from './deliveryTabs';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -76,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     copyLink();
     showCatalogElements();
     onlyNumeric();
+    deliveryTabs();
     
 });
 

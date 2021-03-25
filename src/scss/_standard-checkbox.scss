@@ -54,12 +54,18 @@
         .no-touch &:hover {
             border-color: transparent;
         }
+
+        
     }
 
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         line-height: 1.8rem;
         padding-top: 0.1rem;
+
+        a {
+            display: inline-block;
+        }
     }
 }
 

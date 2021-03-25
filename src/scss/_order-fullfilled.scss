@@ -181,13 +181,15 @@
         line-height: 2.4rem;
     }
     a {
+        border-bottom: 1px solid currentColor;
+        transition: border-color .2s, color .2s;
         &:link,
         &:visited {
             color: var(--primary-color);
         }
 
         .no-touch &:hover {
-            text-decoration: underline;
+            border-color: transparent;
         }
     }
 }

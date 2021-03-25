@@ -1527,7 +1527,9 @@ textarea.text-input {
     .standard-checkbox__text {
       font-size: 1.4rem;
       line-height: 1.8rem;
-      padding-top: 0.1rem; } }
+      padding-top: 0.1rem; }
+      .standard-checkbox__text a {
+        display: inline-block; } }
 
 .standard-checkbox__input:checked ~ .standard-checkbox__mark {
   border-color: var(--brown);
@@ -7076,7 +7078,19 @@ textarea.text-input {
   @media only screen and (max-width: 640px) {
     .cart__submit-btn {
       width: 100%;
-      padding: 1.4rem 2.8rem; } }
+      padding: 1.4rem 2.8rem; }
+      .cart__submit-btn--repeat {
+        background-color: transparent;
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: auto;
+        text-align: right;
+        color: var(--primary-color);
+        margin-right: 0;
+        padding: 0;
+        margin-top: -0.5rem; }
+        .cart__submit-btn--repeat:link, .cart__submit-btn--repeat:visited {
+          color: var(--primary-color); } }
 
 .cart__item {
   padding: 2rem 0;
@@ -7639,6 +7653,10 @@ textarea.text-input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media only screen and (max-width: 640px) {
+    .cart__checkout-point-delivery-row {
+      display: block;
+      position: relative; } }
 
 .cart__checkout-point-delivery-left-col {
   width: 22.4rem;
@@ -7659,7 +7677,95 @@ textarea.text-input {
           flex-grow: 1; }
   @media only screen and (max-width: 640px) {
     .cart__checkout-point-delivery-right-col {
-      display: none; } }
+      width: 100%;
+      -webkit-box-flex: 1;
+          -ms-flex-positive: 1;
+              flex-grow: 1; } }
+
+@media only screen and (max-width: 640px) {
+  .cart__checkout-point-delivery-tab-item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 5;
+    -webkit-transition: opacity 0.3s, visibility 0s linear 0.3s;
+    transition: opacity 0.3s, visibility 0s linear 0.3s; }
+    .cart__checkout-point-delivery-tab-item.active {
+      opacity: 1;
+      visibility: inherit;
+      -webkit-transition: opacity 0.3s, visibility 0.3s;
+      transition: opacity 0.3s, visibility 0.3s;
+      position: relative;
+      z-index: 10; } }
+
+.cart__checkout-point-delivery-tabs-nav {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 0.3rem solid #ececec;
+  border-radius: 6rem;
+  display: none;
+  background: #ececec;
+  margin-bottom: 3rem;
+  display: none; }
+  @media only screen and (max-width: 640px) {
+    .cart__checkout-point-delivery-tabs-nav {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+
+.cart__checkout-point-delivery-tabs-nav-btn {
+  width: 30%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #8b8b8b;
+  padding: 0.8rem 1.6rem;
+  position: relative;
+  z-index: 1;
+  font-family: var(--roboto); }
+  .cart__checkout-point-delivery-tabs-nav-btn:link, .cart__checkout-point-delivery-tabs-nav-btn:visited {
+    color: #8b8b8b; }
+  .cart__checkout-point-delivery-tabs-nav-btn:nth-child(1) {
+    margin-right: 0.3rem;
+    z-index: 2; }
+  .cart__checkout-point-delivery-tabs-nav-btn:nth-child(2) {
+    margin-left: 0.3rem; }
+    .cart__checkout-point-delivery-tabs-nav-btn:nth-child(2)::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 6rem;
+      background-color: #fff;
+      z-index: -1;
+      -webkit-transition: -webkit-transform 0.2s;
+      transition: -webkit-transform 0.2s;
+      transition: transform 0.2s;
+      transition: transform 0.2s, -webkit-transform 0.2s; }
+  .cart__checkout-point-delivery-tabs-nav-btn.active {
+    color: var(--brown); }
+    .cart__checkout-point-delivery-tabs-nav-btn.active + .cart__checkout-point-delivery-tabs-nav-btn::before {
+      -webkit-transform: translateX(calc(-100% - 0.6rem));
+              transform: translateX(calc(-100% - 0.6rem)); }
 
 .cart__checkout-point-delivery-variants-list-item {
   margin-bottom: 2rem; }
@@ -7668,6 +7774,11 @@ textarea.text-input {
   position: relative;
   border-radius: 4rem;
   overflow: hidden; }
+  @media only screen and (max-width: 640px) {
+    .cart__checkout-point-delivery-points-map-container {
+      border-radius: 0;
+      margin-left: calc(-1 * var(--content-padding));
+      margin-right: calc(-1 * var(--content-padding)); } }
   .cart__checkout-point-delivery-points-map-container::before {
     content: '';
     display: block;
@@ -7707,14 +7818,20 @@ textarea.text-input {
   font-family: var(--roboto);
   font-size: 1.8rem;
   line-height: 2.6rem; }
+  .cart__checkout-payment-text small {
+    font-size: 1.6rem;
+    line-height: 2.2rem; }
   .cart__checkout-payment-text p {
-    margin-bottom: 0.6rem; }
+    margin-bottom: 0.8rem; }
     .cart__checkout-payment-text p:last-child {
       margin-bottom: 0; }
   @media only screen and (max-width: 640px) {
     .cart__checkout-payment-text {
       font-size: 1.6rem;
-      line-height: 2.4rem; } }
+      line-height: 2.4rem; }
+      .cart__checkout-payment-text small {
+        font-size: 1.4rem;
+        line-height: 1.8rem; } }
 
 .cart__checkout-city {
   display: -webkit-inline-box;
@@ -8590,10 +8707,14 @@ textarea.text-input {
     .order-fullfilled__message {
       font-size: 1.6rem;
       line-height: 2.4rem; } }
-  .order-fullfilled__message a:link, .order-fullfilled__message a:visited {
-    color: var(--primary-color); }
-  .no-touch .order-fullfilled__message a:hover {
-    text-decoration: underline; }
+  .order-fullfilled__message a {
+    border-bottom: 1px solid currentColor;
+    -webkit-transition: border-color .2s, color .2s;
+    transition: border-color .2s, color .2s; }
+    .order-fullfilled__message a:link, .order-fullfilled__message a:visited {
+      color: var(--primary-color); }
+    .no-touch .order-fullfilled__message a:hover {
+      border-color: transparent; }
 
 .order-fullfilled__back-link {
   display: -webkit-box;
