@@ -34,6 +34,10 @@
     padding: 0.2rem 0.8rem;
     font-family: var(--roboto);
 
+    @include breakpoint(mobile) {
+        font-size: 1.1rem;
+    }
+
     &::before {
         content: '';
         position: absolute;

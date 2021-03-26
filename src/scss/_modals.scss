@@ -37,7 +37,7 @@
 
     &--write-us {
         @include breakpoint(mobile) {
-            padding: 0;
+            padding: 3.6rem 0;
         }
     }
 }
@@ -622,7 +622,7 @@
         padding-top: 2rem;
         padding-bottom: 4rem;
         filter: none;
-        border-radius: 0;
+        border-radius: 3rem;
         min-height: 100%;
         flex-shrink: 0;
         .modals__modal-close {
@@ -646,9 +646,9 @@
         background-position: center;
         z-index: -1;
 
-        @include breakpoint(mobile) {
-            display: none;
-        }
+        // @include breakpoint(mobile) {
+        //     display: none;
+        // }
     }
 
     &::before {
@@ -657,14 +657,40 @@
         background-image: url('../img/splashes/write-us-modal-top-splash.svg');
         top: -3.8rem;
         left: -5.2rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
+
+        @include breakpoint(mobile) {
+            width: 33.5rem;
+            height: 8.1rem;
+            left: 50%;
+            transform: translateX(-50%) scaleY(-1);
+            top: -3.3rem;
+            background-image: url('../img/splashes/write-us-mobile-bottom-splash.svg');
+        }
     }
 
     &::after {
         background-image: url('../img/splashes/write-us-modal-bottom-splash.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
         width: 45.6rem;
         height: 49.1rem;
         right: -4.2rem;
         bottom: -10rem;
+
+        @include breakpoint(mobile) {
+            width: 33.5rem;
+            height: 8.1rem;
+            left: 50%;
+            right: auto;
+            transform: translateX(-50%);
+            bottom: -3.3rem;
+            background-image: url('../img/splashes/write-us-mobile-bottom-splash.svg');
+        }
     }
 }
 
@@ -765,4 +791,33 @@
 
 .modals__modal {
     --plyr-color-main: #e62f48;
+}
+
+.modals__write-us {
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        padding-top: 1.5rem;
+
+       
+        .modals__write-us-submit {
+            order: 4;
+            margin-top: 2rem;
+        }
+
+        .modals__write-us-policy {
+            margin-top: 0;
+        }
+
+        .modals__write-us-textarea {
+            height: 13.3rem;
+        }
+    }
+}
+
+
+.modals__modal-inner--write-us .modals__modal-close svg {
+    @include breakpoint(mobile) {
+        fill: var(--brown);
+    }
 }

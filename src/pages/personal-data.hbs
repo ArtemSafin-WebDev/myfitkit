@@ -85,14 +85,14 @@
                                     Новый пароль
                                 </label>
                                 <input type="password" class="text-input register__form-input" id="password1"
-                                    name="password1" required>
+                                    name="password1">
                             </div>
                             <div class="account__personal-data-form-col">
                                 <label for="password2" class="text-input-label register__form-label">
                                     Повторить пароль
                                 </label>
                                 <input type="password" class="text-input register__form-input" id="password2"
-                                    name="password2" required>
+                                    name="password2" data-parsley-equalto="#password1">
                             </div>
 
                         </div>
@@ -123,6 +123,11 @@
                         <li class="account__nav-list-item">
                             <a href="#" class="account__nav-link">
                                 Адреса доставки
+                            </a>
+                        </li>
+                        <li class="account__nav-list-item">
+                            <a href="#" class="account__nav-link">
+                                Реферальная программа
                             </a>
                         </li>
                     </ul>

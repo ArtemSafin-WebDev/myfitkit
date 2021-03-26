@@ -459,7 +459,6 @@
     // flex-wrap: wrap;
     // margin: -0.5rem -1rem;
 
-
     column-count: 2;
     column-gap: 4rem;
 
@@ -473,11 +472,9 @@
 }
 
 .blog-detail__recipe-list-item {
-    
- 
     // width: 50%;
     // padding: 0.5rem 1rem;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     break-inside: avoid;
 
     @include breakpoint(mobile) {
@@ -487,8 +484,6 @@
     &::before {
         display: none;
     }
-
-    
 }
 
 .blog-detail__recipe-card {
@@ -1190,10 +1185,60 @@
     @include objectFitContain();
 }
 
+.blog-detail__about-product-advantages-modals {
+    @supports (display: grid) {
+        @include breakpointMF(small-tablet) {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 110%;
+            height: 110%;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+       
+    }
+}
+
 .blog-detail__about-product-advantages-modal {
     position: absolute;
     // transform: translate(-50%, -50%);
     z-index: 5;
+
+    @supports (display: grid) {
+        @include breakpointMF(small-tablet) {
+            position: static;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .blog-detail__about-product-advantages-modal-icon-container {
+                position: relative;
+            }
+            .blog-detail__about-product-advantages-modal-inner {
+                pointer-events: none;
+            }
+
+            &:nth-child(1) {
+                align-self: flex-start;
+                justify-self: flex-start;
+            }
+            &:nth-child(2) {
+                align-self: flex-start;
+                justify-self: flex-end;
+            }
+            &:nth-child(3) {
+                align-self: flex-end;
+                justify-self: flex-start;
+            }
+            &:nth-child(4) {
+                align-self: flex-end;
+                justify-self: flex-end;
+            }
+        }
+    }
+
     &:nth-child(1) {
         left: -2rem;
         top: -2rem;
@@ -1769,7 +1814,7 @@
         position: absolute;
         width: 14.2rem;
         height: 0.8rem;
-        background-image: url('../img/splashes/orange-top-dash.svg');
+        background-image: url('../img/splashes/orange-bottom-product-dash.svg');
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -1836,8 +1881,6 @@
     text-align: center;
     align-self: flex-start;
     margin-top: auto;
-
-  
 
     @include breakpoint(tablet) {
         padding-left: 3.4rem;

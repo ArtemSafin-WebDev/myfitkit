@@ -373,11 +373,12 @@
                     <img src="img/about-product/cake.png" alt="" class="blog-detail__about-product-advantages-image">
                     <div class="blog-detail__about-product-advantages-modals">
                         <div class="blog-detail__about-product-advantages-modal">
-                            <img src="img/about-product/modal-bg-1.svg" alt=""
-                                class="blog-detail__about-product-advantages-modal-background">
-                            <img src="img/about-product/modal-image-1.svg" alt=""
-                                class="blog-detail__about-product-advantages-modal-icon">
-
+                            <div class="blog-detail__about-product-advantages-modal-icon-container">
+                                <img src="img/about-product/modal-bg-1.svg" alt=""
+                                    class="blog-detail__about-product-advantages-modal-background">
+                                <img src="img/about-product/modal-image-1.svg" alt=""
+                                    class="blog-detail__about-product-advantages-modal-icon">
+                            </div>
                             <div class="blog-detail__about-product-advantages-modal-inner">
                                 <button class="blog-detail__about-product-advantages-modal-inner-close">
                                     <svg width="16" height="16" aria-hidden="true" class="icon-stylized-cross">
@@ -399,11 +400,14 @@
                             </div>
                         </div>
                         <div class="blog-detail__about-product-advantages-modal">
-                            <img src="img/about-product/modal-bg-2.svg" alt=""
-                                class="blog-detail__about-product-advantages-modal-background">
-                            <img src="img/about-product/modal-image-2.svg" alt=""
-                                class="blog-detail__about-product-advantages-modal-icon">
+                            <div class="blog-detail__about-product-advantages-modal-icon-container">
 
+
+                                <img src="img/about-product/modal-bg-2.svg" alt=""
+                                    class="blog-detail__about-product-advantages-modal-background">
+                                <img src="img/about-product/modal-image-2.svg" alt=""
+                                    class="blog-detail__about-product-advantages-modal-icon">
+                            </div>
                             <div class="blog-detail__about-product-advantages-modal-inner">
                                 <button
                                     class="blog-detail__about-product-advantages-modal-inner-close blog-detail__about-product-advantages-modal-inner-close--blue">
@@ -427,11 +431,15 @@
                             </div>
                         </div>
                         <div class="blog-detail__about-product-advantages-modal">
-                            <img src="img/about-product/modal-bg-3.svg" alt=""
-                                class="blog-detail__about-product-advantages-modal-background">
-                            <img src="img/about-product/modal-image-3.svg" alt=""
-                                class="blog-detail__about-product-advantages-modal-icon">
+                            <div class="blog-detail__about-product-advantages-modal-icon-container">
 
+
+
+                                <img src="img/about-product/modal-bg-3.svg" alt=""
+                                    class="blog-detail__about-product-advantages-modal-background">
+                                <img src="img/about-product/modal-image-3.svg" alt=""
+                                    class="blog-detail__about-product-advantages-modal-icon">
+                            </div>
                             <div class="blog-detail__about-product-advantages-modal-inner">
                                 <button
                                     class="blog-detail__about-product-advantages-modal-inner-close blog-detail__about-product-advantages-modal-inner-close--yellow">
@@ -454,11 +462,14 @@
                             </div>
                         </div>
                         <div class="blog-detail__about-product-advantages-modal">
-                            <img src="img/about-product/modal-bg-4.svg" alt=""
-                                class="blog-detail__about-product-advantages-modal-background">
-                            <img src="img/about-product/modal-image-4.svg" alt=""
-                                class="blog-detail__about-product-advantages-modal-icon">
+                            <div class="blog-detail__about-product-advantages-modal-icon-container">
 
+
+                                <img src="img/about-product/modal-bg-4.svg" alt=""
+                                    class="blog-detail__about-product-advantages-modal-background">
+                                <img src="img/about-product/modal-image-4.svg" alt=""
+                                    class="blog-detail__about-product-advantages-modal-icon">
+                            </div>
                             <div class="blog-detail__about-product-advantages-modal-inner">
                                 <button
                                     class="blog-detail__about-product-advantages-modal-inner-close blog-detail__about-product-advantages-modal-inner-close--orange">
@@ -1415,16 +1426,17 @@
                             Ваши данные
                         </h3>
                         <div class="modals__write-us-row">
-                            <label for="yourfirstname" class="text-input-label" >
+                            <label for="yourfirstname" class="text-input-label">
                                 Имя *
                             </label>
-                            <input type="text" class="text-input" name="firstname" id="yourfirstname" required value="Семеновский">
+                            <input type="text" class="text-input" name="firstname" id="yourfirstname" required
+                                value="Семеновский">
                         </div>
                         <div class="modals__write-us-row">
                             <label for="yourlastname" class="text-input-label">
-                                Фамилия *
+                                Фамилия
                             </label>
-                            <input type="text" class="text-input" name="lastname" id="yourlastname" required value="Семен">
+                            <input type="text" class="text-input" name="lastname" id="yourlastname" value="Семен">
                         </div>
                         <div class="modals__write-us-row">
                             <label for="yoursurname" class="text-input-label">
@@ -1432,10 +1444,15 @@
                             </label>
                             <input type="text" class="text-input" name="lastname" id="yoursurname">
                         </div>
-        
+                        <div class="modals__write-us-row">
+                            <label for="email" class="text-input-label">
+                                E-mail *
+                            </label>
+                            <input type="email" class="text-input" name="email" id="email" required value="hello@mail.ru">
+                        </div>
                         <div class="modals__write-us-row">
                             <label for="yourtel" class="text-input-label">
-                                Телефон
+                                Телефон *
                             </label>
                             <input type="tel" class="text-input js-phone-input" name="tel" id="yourtel" required
                                 data-parsley-phone value="+7 (495) 123-45-67">
@@ -1460,18 +1477,18 @@
                             Ваши данные
                         </h3>
                         <div class="modals__write-us-row">
-                            <label for="auth-login" class="text-input-label" >
+                            <label for="auth-login" class="text-input-label">
                                 Логин *
                             </label>
                             <input type="text" class="text-input" name="auth-login" id="auth-login" required>
                         </div>
                         <div class="modals__write-us-row">
-                            <label for="auth-password" class="text-input-label" >
-                                Пароль
+                            <label for="auth-password" class="text-input-label">
+                                Пароль *
                             </label>
                             <input type="password" class="text-input" name="auth-password" id="auth-password" required>
                         </div>
-                       
+        
         
                         <button class="btn modals__write-us-submit" type="submit">
                             Авторизоваться

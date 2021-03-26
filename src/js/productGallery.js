@@ -13,7 +13,6 @@ export default function productGallery() {
 
         const mainSliderOptions = {
             watchOverflow: true,
-            effect: 'fade',
             speed: 400,
             threshold: 5,
             fadeEffect: {
@@ -27,6 +26,10 @@ export default function productGallery() {
             }
         };
 
+        if (!window.matchMedia('(max-width: 640px)').matches) {
+            mainSliderOptions.effect = 'fade';
+        }
+
         mainSliderOptions.thumbs.swiper = new Swiper(thumbsContainer, {
             watchOverflow: true,
             spaceBetween: 5,
@@ -39,7 +42,7 @@ export default function productGallery() {
             breakpoints: {
                 641: {
                     spaceBetween: 20,
-                    slidesPerView: 'auto',
+                    slidesPerView: 'auto'
                 }
             }
         });

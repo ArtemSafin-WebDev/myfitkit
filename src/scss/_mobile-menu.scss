@@ -1,6 +1,6 @@
 .mobile-menu {
     position: fixed;
-    left: 0;
+    left: 100%;
     top: 0;
     width: 100%;
     height: 100%;
@@ -13,13 +13,15 @@
     padding-bottom: 4.5rem;
     display: flex;
     flex-direction: column;
-    transition: opacity 0.3s, visibility 0s linear 0.3s;
-    opacity: 0;
+    transition: opacity 0.3s, visibility 0s linear 0.3s, transform .3s;
+    // opacity: 0;
     visibility: hidden;
+   
     &.active {
         opacity: 1;
         visibility: inherit;
-        transition: opacity 0.3s, visibility 0.3s;
+        transition: opacity 0.3s, visibility 0.3s, transform .3s;
+        transform: translateX(-100%);
     }
 
     @include breakpointMF(small-tablet) {

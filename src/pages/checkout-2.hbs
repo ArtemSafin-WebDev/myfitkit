@@ -42,7 +42,7 @@
                 <div class="cart__checkout">
                     <div class="cart__checkout-authorize">
                         <p>
-                            Вы заказывали в нашем интернет- магазине, поэтому мы заполнили все данные автоматически.
+                            Вы заказывали в нашем интернет-магазине, поэтому мы заполнили все данные автоматически.
                             Если все заполнено верно, продолжите оформление заказа.
                         </p>
                     </div>
@@ -72,20 +72,21 @@
                         <div class="tabs-nav cart__checkout-tabs-nav">
                             <label class="tabs-nav__checkbox">
                                 <input type="radio" class="tabs-nav__checkbox-input" name="delivery-type"
-                                    value="courier">
+                                    value="courier" id="courier">
                                 <span class="tabs-nav__checkbox-content">
                                     Курьером
                                 </span>
                             </label>
                             <label class="tabs-nav__checkbox">
-                                <input type="radio" class="tabs-nav__checkbox-input" name="delivery-type" value="point">
+                                <input type="radio" class="tabs-nav__checkbox-input" name="delivery-type" value="point"
+                                    id="pickpoint">
                                 <span class="tabs-nav__checkbox-content">
                                     Пункт выдачи
                                 </span>
                             </label>
                             <label class="tabs-nav__checkbox">
-                                <input type="radio" class="tabs-nav__checkbox-input" name="delivery-type"
-                                    value="pochta">
+                                <input type="radio" class="tabs-nav__checkbox-input" name="delivery-type" value="pochta"
+                                    id="russian-post">
                                 <span class="tabs-nav__checkbox-content">
                                     Почта России
                                 </span>
@@ -262,17 +263,20 @@
                     </div>
                     <div class="cart__checkout-payment">
                         <h2 class="cart__checkout-heading">
-                            Оплата
+                            Оплата онлайн
                         </h2>
-                        <h3 class="cart__checkout-payment-heading">
-                            Картой онлайн
-                        </h3>
+
                         <div class="cart__checkout-payment-text">
-                           
-
-
+                            <p>
+                                <small>
+                                    Для оплаты заказа вы будете перенаправлены на сайт Robokassa, где вам предложено
+                                    оплатить заказ одним из следующих способов
+                                </small>
+                            </p>
+                            <p>
                                 Visa, MasterCard, МИР, Яндекс деньги, Qiwi Кошелек, WebMoney, Элекснет.
-                            
+                            </p>
+
                         </div>
                     </div>
                     <div class="cart__checkout-order">
@@ -430,9 +434,7 @@
                         <h2 class="cart__checkout-heading">
                             Комментарий
                         </h2>
-                        <textarea class="text-input">
-
-                        </textarea>
+                        <textarea class="text-input"></textarea>
                     </div>
 
                 </div>
@@ -449,6 +451,23 @@
                     </h3>
                     <table class="cart__summary-table">
                         <tbody>
+
+                            <tr>
+                                <th>
+                                    Цена
+                                </th>
+                                <td>
+                                    12 000 ₽
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Бонусы
+                                </th>
+                                <td>
+                                    240 ₽
+                                </td>
+                            </tr>
                             <tr>
                                 <th>
                                     Скидка

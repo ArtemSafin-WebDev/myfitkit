@@ -303,6 +303,9 @@
 
     @include breakpoint(mobile) {
         border-radius: 2rem;
+        margin: 0 calc(-1 * var(--content-padding));
+        border-radius: 0;
+        
     }
     &::before {
         content: '';
@@ -318,7 +321,7 @@
         }
 
         @include breakpoint(mobile) {
-            padding-bottom: 100%;
+            padding-bottom: 120%;
         }
     }
 }

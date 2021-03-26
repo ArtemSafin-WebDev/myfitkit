@@ -325,9 +325,10 @@
         top: 50%;
         transform: translate(-50%, -50%);
         width: 33rem;
-
+ 
         @include breakpoint(mobile) {
-            width: 27rem;
+            width: 37rem;
+            max-width: none;
         }
     }
 }
@@ -342,4 +343,10 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+
+    @include breakpoint(mobile) {
+        .advantages__list-item:nth-child(3) & {
+            width: 24rem;
+        }
+    }
 }

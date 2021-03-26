@@ -954,6 +954,10 @@
     padding-left: 4.8rem;
     padding-right: 4.8rem;
     margin-top: 3rem;
+    transition: background-color .2s;
+    .no-touch &:hover {
+        background-color: var(--brown);
+    }
 
     @include breakpoint(mobile) {
         width: 100%;

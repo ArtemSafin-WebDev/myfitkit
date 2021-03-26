@@ -26,7 +26,7 @@ export default function chooseTasteSlider() {
             spaceBetween: 20,
             watchOverflow: true,
             threshold: 5,
-            speed: 300,
+            speed: 800,
             navigation: {
                 nextEl: element.querySelector('.product__choose-taste-slider-arrow--next'),
                 prevEl: element.querySelector('.product__choose-taste-slider-arrow--prev'),

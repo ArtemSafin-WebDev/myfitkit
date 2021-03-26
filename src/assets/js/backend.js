@@ -1,81 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Backend JS');
 
-    var checkoutPointsMap = document.querySelector('#points-map');
+    var mapElements = [document.querySelector('#where-to-buy'), document.querySelector('#points-map')];
 
-    if (checkoutPointsMap) {
-        ymaps.ready(initCheckoutPointsMap);
-
-        function initCheckoutPointsMap() {
-            console.log('Initializing points map');
-            var pin = {
-                iconLayout: 'default#image',
-                iconImageHref: 'img/pin.svg',
-                iconImageSize: [26, 36],
-                iconImageOffset: [-13, -36]
-            };
-
-            var center = [55.796554, 49.104752];
-
-            var pointsMapData = [
-                {
-                    coords: [55.831082, 49.079644]
-                },
-                {
-                    coords: [55.815159, 49.101276]
-                },
-                {
-                    coords: [55.812957, 49.183735]
-                },
-                {
-                    coords: [55.79474, 49.114071]
-                },
-                {
-                    coords: [55.833308, 49.132141]
-                },
-                {
-                    coords: [55.776266, 49.140724]
-                }
-            ];
-
-            var mapInstance = new ymaps.Map(checkoutPointsMap, {
-                center: center,
-                zoom: 10,
-                controls: []
-            });
-
-            var objectManager = new ymaps.ObjectManager({
-                clusterize: true,
-                clusterHasBalloon: false,
-                geoObjectOpenBalloonOnClick: true,
-                clusterIconColor: '#e62f48'
-            });
-            mapInstance.geoObjects.add(objectManager);
-
-            pointsMapData.forEach(function(item) {
-                var objectToAdd = {
-                    id: item.coords.join('-'),
-                    type: 'Feature',
-                    geometry: {
-                        type: 'Point',
-                        coordinates: item.coords
-                    },
-                    options: pin,
-                    properties: {
-                        // type: item.type,
-                        // allDay: item.allDay,
-                        // cash: item.cash,
-                        // balloonContent: item.content
-                    }
-                };
-                objectManager.add(objectToAdd);
-            });
-        }
-    }
-
-    var whereToBuyMap = document.querySelector('#where-to-buy');
-
-    if (whereToBuyMap) {
+    mapElements.forEach(mapElement => {
+        if (!mapElement) return;
         ymaps.ready(initWhereToBuy);
 
         function initWhereToBuy() {
@@ -122,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             ];
 
-            var mapInstance = new ymaps.Map(whereToBuyMap, {
+            var mapInstance = new ymaps.Map(mapElement, {
                 center: center,
                 zoom: 10,
                 controls: []
@@ -281,14 +210,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         // allDay: item.allDay,
                         // cash: item.cash,
                         balloonContent: item.content,
-                        balloonHeader: item.title,
-                       
+                        balloonHeader: item.title
                     }
                 };
                 objectManager.add(objectToAdd);
             });
         }
-    }
+    });
 
     var writeUsForm = document.querySelector('#write-us-form');
     if (writeUsForm) {
@@ -310,17 +238,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-
-
     var catalog = document.querySelector('.catalog');
 
     if (catalog && catalogList) {
-      
         var loadMore = catalog.querySelector('.catalog__show-more-link');
         var catalogResults = catalog.querySelector('.catalog__results');
-        var loadMoreTextElement = catalog.querySelector('.catalog__show-more-link-text')
+        var loadMoreTextElement = catalog.querySelector('.catalog__show-more-link-text');
         var loadMoreOriginalText = loadMoreTextElement.textContent;
-        console.log(catalogList)
+        console.log(catalogList);
 
         loadMore.addEventListener('click', function(event) {
             event.preventDefault();
@@ -328,7 +253,6 @@ document.addEventListener('DOMContentLoaded', function() {
             var catalogListCopy = catalogList.cloneNode(true);
 
             var catalogItems = Array.prototype.slice.call(catalogListCopy.querySelectorAll('.catalog__list-item'));
-
 
             loadMore.classList.add('loading');
             loadMoreTextElement.textContent = 'Загрузка';
@@ -342,12 +266,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     window.revealElements(catalogItems);
                 }
                 if (typeof window.catalogCards.initializeCardSliders === 'function') {
-                    window.catalogCards.initializeCardSliders()
+                    window.catalogCards.initializeCardSliders();
                 }
-
-                
-            }, 3000)
-        })
-
+            }, 3000);
+        });
     }
 });

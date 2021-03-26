@@ -720,7 +720,7 @@
                                     Самовывоз из пункта выдачи
                                 </h4>
                                 <div class="payment-and-shipping__shipping-choices-card-details">
-                                    Стоимость: <strong>270</strong>₽<br>Срок: <strong>2-3</strong> дня
+                                    Стоимость: <strong>270</strong> ₽<br>Срок: <strong>2-3</strong> дня
                                 </div>
                             </div>
                         </div>
@@ -738,7 +738,7 @@
                                     Курьером
                                 </h4>
                                 <div class="payment-and-shipping__shipping-choices-card-details">
-                                    Стоимость: <strong>200</strong>₽<br>Срок: <strong>2-3</strong> дня
+                                    Стоимость: <strong>200</strong> ₽<br>Срок: <strong>2-3</strong> дня
                                 </div>
                             </div>
                         </div>
@@ -757,7 +757,7 @@
                                     Почта России
                                 </h4>
                                 <div class="payment-and-shipping__shipping-choices-card-details">
-                                    Стоимость: <strong>500</strong>₽<br>Срок: до <strong>14</strong> дней
+                                    Стоимость: <strong>500</strong> ₽<br>Срок: до <strong>14</strong> дней
                                 </div>
                             </div>
                         </div>
@@ -1794,16 +1794,17 @@
                             Ваши данные
                         </h3>
                         <div class="modals__write-us-row">
-                            <label for="yourfirstname" class="text-input-label" >
+                            <label for="yourfirstname" class="text-input-label">
                                 Имя *
                             </label>
-                            <input type="text" class="text-input" name="firstname" id="yourfirstname" required value="Семеновский">
+                            <input type="text" class="text-input" name="firstname" id="yourfirstname" required
+                                value="Семеновский">
                         </div>
                         <div class="modals__write-us-row">
                             <label for="yourlastname" class="text-input-label">
-                                Фамилия *
+                                Фамилия
                             </label>
-                            <input type="text" class="text-input" name="lastname" id="yourlastname" required value="Семен">
+                            <input type="text" class="text-input" name="lastname" id="yourlastname" value="Семен">
                         </div>
                         <div class="modals__write-us-row">
                             <label for="yoursurname" class="text-input-label">
@@ -1811,10 +1812,15 @@
                             </label>
                             <input type="text" class="text-input" name="lastname" id="yoursurname">
                         </div>
-        
+                        <div class="modals__write-us-row">
+                            <label for="email" class="text-input-label">
+                                E-mail *
+                            </label>
+                            <input type="email" class="text-input" name="email" id="email" required value="hello@mail.ru">
+                        </div>
                         <div class="modals__write-us-row">
                             <label for="yourtel" class="text-input-label">
-                                Телефон
+                                Телефон *
                             </label>
                             <input type="tel" class="text-input js-phone-input" name="tel" id="yourtel" required
                                 data-parsley-phone value="+7 (495) 123-45-67">
@@ -1839,18 +1845,18 @@
                             Ваши данные
                         </h3>
                         <div class="modals__write-us-row">
-                            <label for="auth-login" class="text-input-label" >
+                            <label for="auth-login" class="text-input-label">
                                 Логин *
                             </label>
                             <input type="text" class="text-input" name="auth-login" id="auth-login" required>
                         </div>
                         <div class="modals__write-us-row">
-                            <label for="auth-password" class="text-input-label" >
-                                Пароль
+                            <label for="auth-password" class="text-input-label">
+                                Пароль *
                             </label>
                             <input type="password" class="text-input" name="auth-password" id="auth-password" required>
                         </div>
-                       
+        
         
                         <button class="btn modals__write-us-submit" type="submit">
                             Авторизоваться

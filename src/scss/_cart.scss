@@ -840,8 +840,8 @@
     font-size: 1.2rem;
     line-height: 1.8rem;
     font-family: var(--roboto);
-    align-self: flex-end;
-    padding-bottom: 0.8rem;
+    align-self: flex-start;
+    padding-top: 3.3rem;
     max-width: 28rem;
     @include breakpoint(mobile) {
         padding: 0.6rem 1rem;
@@ -862,6 +862,10 @@
     &--short {
         width: 6.4rem;
 
+        .parsley-errors-list {
+            display: none;
+        }
+
         @include breakpoint(mobile) {
             width: 33.33%;
         }
@@ -869,6 +873,10 @@
 
     &--medium {
         width: 7.6rem;
+
+        .parsley-errors-list {
+            display: none;
+        }
         @include breakpoint(mobile) {
             width: 33.33%;
         }

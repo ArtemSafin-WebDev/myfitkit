@@ -11,7 +11,8 @@ export default function newProductsSlider() {
         new Swiper(container, {
             slidesPerView: 'auto',
             watchOverflow: true,
-            spaceBetween: 20
+            spaceBetween: 20,
+            speed: 800
         })
     })
 }

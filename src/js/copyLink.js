@@ -19,12 +19,24 @@ export default function copyLink() {
 
         btn.addEventListener('click', event => {
             event.preventDefault();
-            copyToClipboard(text);
-            if (window.showMessage) {
-                console.log('Showing message')
-                window.showMessage('#link-copied');
+
+            if (navigator.clipboard) {
+                navigator.clipboard
+                    .writeText(text)
+                    .then(() => {
+                        window.showMessage('#link-copied');
+                    })
+                    .catch(err => {
+                        console.error(err);
+                    });
+            } else {
+                copyToClipboard(text);
+                if (window.showMessage) {
+                    console.log('Showing message');
+                    window.showMessage('#link-copied');
+                }
             }
-        })
+        });
 
        
     });

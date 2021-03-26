@@ -188,6 +188,18 @@
 .product__gallery-main-slider-card {
     position: relative;
     z-index: 1;
+
+    @include breakpoint(mobile) {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 1s, visibility 0s linear 1s;
+
+        .swiper-slide-active & {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity 1s ease .05s, visibility 1s ease .05s;
+        }
+    }
     &::before {
         content: '';
         position: absolute;
@@ -1587,9 +1599,7 @@
     &--constructor {
         margin-top: 5rem;
 
-        @include breakpoint(mobile) {
-            margin-top: 10rem;
-        }
+       
     }
 
 
@@ -1609,6 +1619,10 @@
         &--product-2 {
             margin-top: 0;
             margin-bottom: 5rem;
+        }
+
+        &--constructor {
+            margin-top: 10rem;
         }
     }
     .icon-score {

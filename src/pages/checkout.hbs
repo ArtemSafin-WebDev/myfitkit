@@ -105,20 +105,20 @@
                         <div class="tabs-nav cart__checkout-tabs-nav">
                             <label class="tabs-nav__checkbox">
                                 <input type="radio" class="tabs-nav__checkbox-input" name="delivery-type"
-                                    value="courier">
+                                    value="courier" id="courier">
                                 <span class="tabs-nav__checkbox-content">
                                     Курьером
                                 </span>
                             </label>
                             <label class="tabs-nav__checkbox">
-                                <input type="radio" class="tabs-nav__checkbox-input" name="delivery-type" value="point">
+                                <input type="radio" class="tabs-nav__checkbox-input" name="delivery-type" value="point" id="pickpoint">
                                 <span class="tabs-nav__checkbox-content">
                                     Пункт выдачи
                                 </span>
                             </label>
                             <label class="tabs-nav__checkbox">
                                 <input type="radio" class="tabs-nav__checkbox-input" name="delivery-type"
-                                    value="pochta">
+                                    value="pochta" id="russian-post">
                                 <span class="tabs-nav__checkbox-content">
                                     Почта России
                                 </span>
@@ -132,14 +132,16 @@
                                             Улица *
                                         </label>
                                         <input type="text" class="text-input register__form-input" name="street"
-                                            id="street" required>
+                                            id="street" data-parsley-validate-if-empty=""
+                                                data-parsley-required-if-checked="#courier">
                                     </div>
                                     <div class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
                                         <label for="home" class="text-input-label register__form-label">
                                             Дом *
                                         </label>
                                         <input type="text" class="text-input register__form-input" name="home" id="home"
-                                            required>
+                                            data-parsley-validate-if-empty=""
+                                                data-parsley-required-if-checked="#courier">
                                     </div>
                                     <div class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
                                         <label for="section" class="text-input-label register__form-label">
@@ -153,7 +155,8 @@
                                             Кв. / офис *
                                         </label>
                                         <input type="text" class="text-input register__form-input" name="flat" id="flat"
-                                            required>
+                                            data-parsley-validate-if-empty=""
+                                                data-parsley-required-if-checked="#courier">
                                     </div>
                                 </div>
                             </div>
@@ -170,7 +173,8 @@
                                         </div>
 
                                         <div class="cart__checkout-point-delivery-row">
-                                            <div class="cart__checkout-point-delivery-left-col cart__checkout-point-delivery-tab-item">
+                                            <div
+                                                class="cart__checkout-point-delivery-left-col cart__checkout-point-delivery-tab-item">
                                                 <div class="cart__checkout-point-delivery-variants">
                                                     <ul class="cart__checkout-point-delivery-variants-list">
                                                         <li class="cart__checkout-point-delivery-variants-list-item">
@@ -232,7 +236,8 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="cart__checkout-point-delivery-right-col cart__checkout-point-delivery-tab-item">
+                                            <div
+                                                class="cart__checkout-point-delivery-right-col cart__checkout-point-delivery-tab-item">
                                                 <div class="cart__checkout-point-delivery-points-map-container">
                                                     <div class="cart__checkout-point-delivery-points-map"
                                                         id="points-map">
@@ -256,7 +261,8 @@
                                                 Улица *
                                             </label>
                                             <input type="text" class="text-input register__form-input" name="street"
-                                                id="street" required>
+                                                id="street" data-parsley-validate-if-empty=""
+                                                data-parsley-required-if-checked="#russian-post">
                                         </div>
                                         <div
                                             class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
@@ -264,7 +270,8 @@
                                                 Дом *
                                             </label>
                                             <input type="text" class="text-input register__form-input" name="home"
-                                                id="home" required>
+                                                id="home" data-parsley-validate-if-empty=""
+                                                data-parsley-required-if-checked="#russian-post">
                                         </div>
                                         <div
                                             class="cart__checkout-address-wrapper cart__checkout-address-wrapper--short">
@@ -280,7 +287,8 @@
                                                 Кв. / офис *
                                             </label>
                                             <input type="text" class="text-input register__form-input" name="flat"
-                                                id="flat" required>
+                                                id="flat" data-parsley-validate-if-empty=""
+                                                data-parsley-required-if-checked="#russian-post">
                                         </div>
                                     </div>
                                 </div>
@@ -292,8 +300,9 @@
                                             <label for="surname" class="text-input-label register__form-label">
                                                 Отчество *
                                             </label>
-                                            <input type="text" class="text-input register__form-input" name="street"
-                                                id="surname" required>
+                                            <input type="text" class="text-input register__form-input" name="surname"
+                                                id="surname" data-parsley-validate-if-empty=""
+                                                data-parsley-required-if-checked="#russian-post">
                                         </div>
                                         <div class="cart__checkout-address-message">
                                             Для оформления заказа через Почту России обязательно заполнить полностью
@@ -307,7 +316,7 @@
                     </div>
                     <div class="cart__checkout-payment">
                         <h2 class="cart__checkout-heading">
-                            Оплата
+                            Оплата онлайн
                         </h2>
 
                         <div class="cart__checkout-payment-text">
@@ -566,9 +575,7 @@
                         <h2 class="cart__checkout-heading">
                             Комментарий
                         </h2>
-                        <textarea class="text-input">
-
-                        </textarea>
+                        <textarea class="text-input"></textarea>
                     </div>
 
                 </div>
@@ -587,10 +594,18 @@
                         <tbody>
                             <tr>
                                 <th>
+                                    Цена
+                                </th>
+                                <td>
+                                    12 000 ₽
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>
                                     Бонусы
                                 </th>
                                 <td>
-                                    240
+                                    240 ₽
                                 </td>
                             </tr>
                             <tr>

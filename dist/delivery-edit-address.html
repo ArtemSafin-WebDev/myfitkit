@@ -333,7 +333,7 @@
                 </li>
             </ul>
             <h1 class="main-heading main-heading--hide-on-mobile">
-                Личные данные
+                Адреса доставки
             </h1>
         </div>
     </div>
@@ -1293,16 +1293,17 @@
                             Ваши данные
                         </h3>
                         <div class="modals__write-us-row">
-                            <label for="yourfirstname" class="text-input-label" >
+                            <label for="yourfirstname" class="text-input-label">
                                 Имя *
                             </label>
-                            <input type="text" class="text-input" name="firstname" id="yourfirstname" required value="Семеновский">
+                            <input type="text" class="text-input" name="firstname" id="yourfirstname" required
+                                value="Семеновский">
                         </div>
                         <div class="modals__write-us-row">
                             <label for="yourlastname" class="text-input-label">
-                                Фамилия *
+                                Фамилия
                             </label>
-                            <input type="text" class="text-input" name="lastname" id="yourlastname" required value="Семен">
+                            <input type="text" class="text-input" name="lastname" id="yourlastname" value="Семен">
                         </div>
                         <div class="modals__write-us-row">
                             <label for="yoursurname" class="text-input-label">
@@ -1310,10 +1311,15 @@
                             </label>
                             <input type="text" class="text-input" name="lastname" id="yoursurname">
                         </div>
-        
+                        <div class="modals__write-us-row">
+                            <label for="email" class="text-input-label">
+                                E-mail *
+                            </label>
+                            <input type="email" class="text-input" name="email" id="email" required value="hello@mail.ru">
+                        </div>
                         <div class="modals__write-us-row">
                             <label for="yourtel" class="text-input-label">
-                                Телефон
+                                Телефон *
                             </label>
                             <input type="tel" class="text-input js-phone-input" name="tel" id="yourtel" required
                                 data-parsley-phone value="+7 (495) 123-45-67">
@@ -1338,18 +1344,18 @@
                             Ваши данные
                         </h3>
                         <div class="modals__write-us-row">
-                            <label for="auth-login" class="text-input-label" >
+                            <label for="auth-login" class="text-input-label">
                                 Логин *
                             </label>
                             <input type="text" class="text-input" name="auth-login" id="auth-login" required>
                         </div>
                         <div class="modals__write-us-row">
-                            <label for="auth-password" class="text-input-label" >
-                                Пароль
+                            <label for="auth-password" class="text-input-label">
+                                Пароль *
                             </label>
                             <input type="password" class="text-input" name="auth-password" id="auth-password" required>
                         </div>
-                       
+        
         
                         <button class="btn modals__write-us-submit" type="submit">
                             Авторизоваться
